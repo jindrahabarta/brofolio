@@ -5,7 +5,7 @@ import { Source_Serif_4, Charm } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import Footer from '@/_components/Footer/Footer'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 const source_serif_4 = Source_Serif_4({
     subsets: ['latin'],
@@ -27,11 +27,15 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
+    const lenis = useRef<null | Lenis>(null)
+
     useEffect(() => {
         //Inicializace lenisu
-        const lenis = new Lenis()
+        lenis.current = new Lenis()
         function raf(time: number) {
-            lenis.raf(time)
+            if (!lenis.current) return
+
+            lenis.current.raf(time)
             requestAnimationFrame(raf)
         }
         requestAnimationFrame(raf)
@@ -42,7 +46,7 @@ export default function RootLayout({
             <body
                 className={`antialiased ${charm.variable} ${owners.variable} ${source_serif_4.variable}`}
             >
-                <Navigation></Navigation>
+                <Navigation lenis={lenis}></Navigation>
 
                 <main>{children}</main>
 

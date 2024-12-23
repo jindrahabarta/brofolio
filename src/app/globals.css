@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 * {
-    @apply font-sourceSerif;
-}
-
-.container {
-    max-width: 1350px;
+    @apply font-sourceSerif text-white;
 }
 
 a {
@@ -38,4 +34,24 @@ strong {
 
 em {
     @apply font-charm italic font-bold;
+}
+
+.disableScroll {
+    @apply h-screen overflow-y-hidden;
+}
+
+/* ScrollBar */
+
+body::-webkit-scrollbar {
+    width: 7px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: black; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: white; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
 }
