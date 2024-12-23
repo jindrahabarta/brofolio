@@ -13,6 +13,11 @@ export default {
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
             },
+            fontFamily: {
+                sourceSerif: ['var(--source-serif)'],
+                charm: ['var(--charm)'],
+                owners: ['var(--owners)'],
+            },
         },
     },
     plugins: [],

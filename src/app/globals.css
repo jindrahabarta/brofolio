@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply font-sourceSerif;
+}
+
 .container {
     max-width: 1350px;
 }
@@ -13,6 +17,7 @@ p {
 }
 
 h1 {
+    @apply text-6xl;
 }
 
 h2 {
@@ -25,4 +30,12 @@ h4 {
 }
 
 h5 {
+}
+
+strong {
+    @apply font-owners font-extrabold uppercase;
+}
+
+em {
+    @apply font-charm italic font-bold;
 }
