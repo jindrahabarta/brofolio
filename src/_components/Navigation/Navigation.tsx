@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Navigation = () => {
-    return <nav>Navigation</nav>
+    return <nav className='fixed '>Navigation</nav>
 }
 
 export default Navigation
