@@ -1,5 +1,6 @@
 import Navigation from '@/_components/Navigation/Navigation'
 import './globals.css'
+import Footer from '@/_components/Footer/Footer'
 
 export default function RootLayout({
     children,
@@ -11,7 +12,9 @@ export default function RootLayout({
             <body className={`antialiased`}>
                 <Navigation></Navigation>
 
-                {children}
+                <main>{children}</main>
+
+                <Footer />
             </body>
         </html>
     )

@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Navigation = () => {
-    return <nav className='fixed '>Navigation</nav>
+    return (
+        <header className='fixed '>
+            <nav>Navigation</nav>
+        </header>
+    )
 }
 
 export default Navigation
