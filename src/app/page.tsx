@@ -12,7 +12,6 @@ export default function Home() {
             <AboutUs />
             <Projects />
             <FAQ />
-            <Contact />
             <Technology />
             <Contact />
         </>

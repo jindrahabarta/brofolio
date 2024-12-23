@@ -21,6 +21,7 @@ h1 {
 }
 
 h2 {
+    @apply text-3xl;
 }
 
 h3 {
@@ -38,4 +39,23 @@ strong {
 
 em {
     @apply font-charm italic font-bold;
+}
+
+form {
+    fieldset {
+        @apply flex flex-col gap-2;
+    }
+
+    label {
+        @apply text-xl;
+    }
+
+    input,
+    textarea {
+        @apply border-2 border-black focus:outline-none rounded-3xl px-4 py-3;
+    }
+
+    input {
+        @apply rounded-full;
+    }
 }
