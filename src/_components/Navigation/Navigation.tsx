@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Navigation = () => {
-    return <nav>Navigation</nav>
+    return (
+        <header>
+            <nav>Navigation</nav>
+        </header>
+    )
 }
 
 export default Navigation
