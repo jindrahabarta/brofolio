@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    @apply font-sourceSerif text-white;
+    @apply font-sourceSerif;
 }
 
 a {

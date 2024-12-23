@@ -34,7 +34,7 @@ const Contact = () => {
     }
 
     return (
-        <section className='flex flex-col md:flex-row-reverse gap-8 p-8'>
+        <section className='flex flex-col md:flex-row-reverse gap-8 text-black p-8'>
             <div className='flex-1 flex items-center justify-center'>
                 <Image
                     src='https://upload.wikimedia.org/wikipedia/en/d/d0/Dogecoin_Logo.png'

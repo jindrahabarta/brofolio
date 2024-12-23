@@ -45,7 +45,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     }
 
     return (
-        <header className='fixed w-screen px-8 py-3 z-50'>
+        <header className='fixed w-screen text-white px-8 py-3 z-50'>
             <nav className='flex z-40 items-center justify-between gap-2'>
                 <div>Logo</div>
 
