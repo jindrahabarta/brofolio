@@ -53,10 +53,14 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                 },
                 '<'
             )
-            .to('.navBarTitle', {
-                opacity: 1,
-                stagger: 0.1,
-            })
+            .to(
+                '.navBarTitle',
+                {
+                    opacity: 1,
+                    stagger: 0.1,
+                },
+                '<'
+            )
 
         navTl.play()
     }
@@ -65,6 +69,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
         if (!lenis.current) return
 
         navTl.reverse()
+
         document.body.classList.remove('disableScroll')
         lenis.current.start()
     }
@@ -106,7 +111,25 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                     id='navAside'
                     className='absolute top-0 right-0 h-screen w-full sm:w-3/5 lg:w-2/5 py-3 px-4 translate-x-full flex gap-4'
                 >
-                    <div className='bg-red-500 h-full w-16 rounded-xl hidden sm:block'></div>
+                    <div
+                        id='navRainbowBar'
+                        className='h-full w-12 rounded-xl hidden sm:block select-none overflow-hidden'
+                    >
+                        <div className='text-black rotate-180 w-full flex gap-8 items-center justify-center'>
+                            <span>●</span>
+                            <span className='font-owners text-xl text-nowrap'>
+                                Motion Labs
+                            </span>
+                            <span>●</span>
+                            <span className='font-owners text-xl text-nowrap'>
+                                Motion Labs
+                            </span>
+                            <span>●</span>
+                            <span className='font-owners text-xl text-nowrap'>
+                                Motion Labs
+                            </span>
+                        </div>
+                    </div>
                     <div className='flex flex-col gap-4 w-full'>
                         <div className='group/navMainBlock bg-gray-100/70 backdrop-blur-sm rounded-xl h-full p-4 px-4 flex flex-col justify-between'>
                             <div className='flex justify-end'>
@@ -137,9 +160,9 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
 
                 <div className='absolute bottom-10 left-10'>
                     <h1 className='navBarTitle  opacity-0'>
-                        <em>Motion</em> <strong>Labs.</strong>
+                        <em>Motion</em> <strong>Labs</strong>
                     </h1>
-                    <p className='navBarTitle opacity-0 font-charm text-gray-400 text-3xl'>
+                    <p className='navBarTitle opacity-0 font-instrument text-gray-400 text-2xl'>
                         Design, web dev, etc..
                     </p>
                 </div>
