@@ -17,6 +17,7 @@ export default {
                 sourceSerif: ['var(--source-serif)'],
                 charm: ['var(--charm)'],
                 owners: ['var(--owners)'],
+                instrument: ['var(--instrument)'],
             },
         },
     },

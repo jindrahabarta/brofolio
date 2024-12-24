@@ -1,7 +1,7 @@
 'use client'
 import Lenis from 'lenis'
 import Navigation from '@/_components/Navigation/Navigation'
-import { Source_Serif_4, Charm } from 'next/font/google'
+import { Source_Serif_4, Charm, Instrument_Serif } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import Footer from '@/_components/Footer/Footer'
@@ -20,6 +20,11 @@ const charm = Charm({
 const owners = localFont({
     src: '../_assets/fonts/owners-xxwide.ttf',
     variable: '--owners',
+})
+const instrument = Instrument_Serif({
+    subsets: ['latin'],
+    weight: ['400'],
+    variable: '--instrument',
 })
 
 export default function RootLayout({
@@ -44,7 +49,7 @@ export default function RootLayout({
     return (
         <html lang='cs'>
             <body
-                className={`antialiased ${charm.variable} ${owners.variable} ${source_serif_4.variable}`}
+                className={`antialiased ${charm.variable} ${owners.variable} ${source_serif_4.variable} ${instrument.variable}`}
             >
                 <Navigation lenis={lenis}></Navigation>
 
