@@ -18,6 +18,7 @@ export default {
                 charm: 'var(--charm)',
                 owners: 'var(--owners)',
                 emberlyRegular: 'var(--emberly-regular)',
+                instrument: ['var(--instrument)'],
             },
         },
     },

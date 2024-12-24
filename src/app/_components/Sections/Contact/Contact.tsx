@@ -1,16 +1,32 @@
 'use client'
 
-import Image from 'next/image'
-import React from 'react'
+// import Image from 'next/image'
+import React, { ChangeEventHandler } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import validator from 'validator'
 
 const validationSchema = z.object({
-    name: z.string().min(3).max(255),
-    email: z.string().email(),
-    phone: z.string().min(9).max(15),
-    message: z.string().min(10).max(1000),
+    name: z
+        .string()
+        .nonempty('Toto pole je povinné.')
+        .min(3, 'Minimálně 3 znaky.')
+        .max(255, 'Maximálně 255 znaků.'),
+    email: z
+        .string()
+        .nonempty('Toto pole je povinné.')
+        .email('E-mail není ve správném formátu.'),
+    phone: z
+        .string()
+        .nonempty('Toto pole je povinné.')
+        .max(13, 'Maximálně 13 znaků.')
+        .refine(validator.isMobilePhone, 'Telefon není ve správném formátu'),
+    message: z
+        .string()
+        .nonempty('Toto pole je povinné.')
+        .min(10, 'Minimálně 10 znaků.')
+        .max(1000, 'Maximálně 1000 znaků.'),
 })
 
 interface IFormData {
@@ -24,20 +40,53 @@ const Contact = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm<IFormData>({
         resolver: zodResolver(validationSchema),
     })
 
+    const {
+        name: phoneName,
+        onChange: phoneOnChange,
+        onBlur: phoneOnBlur,
+        ref: phoneRef,
+    } = register('phone')
+
+    const handlePhoneChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+        const value = e.target.value.split('')
+
+        if (!value.includes('+')) {
+            if (
+                value.length >= 4 &&
+                !(value[3] === ' ' || value[3] === '\xa0')
+            ) {
+                value.splice(3, 0, '\xa0')
+            }
+            if (
+                value.length >= 8 &&
+                !(value[7] === ' ' || value[7] === '\xa0')
+            ) {
+                value.splice(7, 0, '\xa0')
+            }
+        }
+
+        e.target.value = value.join('')
+
+        phoneOnChange(e)
+    }
+
     const onSubmit = (data: IFormData) => {
         console.log(data)
+
+        reset()
     }
 
     return (
         <section className='flex flex-col items-center gap-12 text-black px-8 py-16'>
-            <h1>
+            {/* <h1>
                 <strong>Contact us</strong>
-            </h1>
+            </h1> */}
             <div className='w-full flex flex-col md:flex-row-reverse gap-8'>
                 <div className='flex-1 flex items-center justify-center'>
                     {/* <Image
@@ -55,10 +104,10 @@ const Contact = () => {
                 >
                     <header className='flex flex-col gap-4'>
                         <h2>
-                            <em>Whats the tea?</em>
+                            <em>What&apos;s the tea?</em>
                         </h2>
                         <h1>
-                            <strong>Let's chat</strong>
+                            <strong>Let&apos;s chat</strong>
                         </h1>
                     </header>
 
@@ -103,7 +152,11 @@ const Contact = () => {
                             </label>
                             <input
                                 id='phone'
-                                {...register('phone')}
+                                ref={phoneRef}
+                                name={phoneName}
+                                onChange={handlePhoneChange}
+                                onBlur={phoneOnBlur}
+                                maxLength={13}
                                 placeholder='776 275 657'
                                 aria-describedby='phone-error'
                             />
@@ -132,14 +185,16 @@ const Contact = () => {
                                 </span>
                             )}
                         </fieldset>
+                    </section>
 
+                    <footer>
                         <button
                             type='submit'
-                            className='self-start text-2xl border-2 border-black rounded-full mt-8 py-2 px-4'
+                            className='self-start text-2xl border-2 border-black rounded-full py-2 px-4'
                         >
                             <em>Odeslat</em>
                         </button>
-                    </section>
+                    </footer>
                 </form>
             </div>
         </section>
