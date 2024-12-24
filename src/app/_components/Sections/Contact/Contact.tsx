@@ -40,13 +40,13 @@ const Contact = () => {
             </h1>
             <div className='w-full flex flex-col md:flex-row-reverse gap-8'>
                 <div className='flex-1 flex items-center justify-center'>
-                    <Image
+                    {/* <Image
                         src={''}
                         width={500}
                         height={500}
                         alt='Contact form'
                         className='w-full aspect-square object-cover object-center'
-                    />
+                    /> */}
                 </div>
 
                 <form
@@ -55,7 +55,7 @@ const Contact = () => {
                 >
                     <header className='flex flex-col gap-4'>
                         <h2>
-                            <em>What's the tea?</em>
+                            <em>Whats the tea?</em>
                         </h2>
                         <h1>
                             <strong>Let's chat</strong>

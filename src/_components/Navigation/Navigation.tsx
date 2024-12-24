@@ -20,8 +20,8 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
             })
             .to('#navBg', {
                 css: {
-                    backdropFilter: 'blur(12px)',
-                    WebkitBackdropFilter: 'blur(12px)',
+                    backdropFilter: 'blur(8px)',
+                    WebkitBackdropFilter: 'blur(8px)',
                 },
             })
             .to(
@@ -52,23 +52,28 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                 <div className='flex items-center gap-4'>
                     <button>Call us</button>
 
-                    <HamburgerIcon handleClick={openMenu}></HamburgerIcon>
+                    <HamburgerIcon
+                        handleClick={openMenu}
+                        variant='open'
+                    ></HamburgerIcon>
                 </div>
             </nav>
 
             <figure
                 id='navBg'
                 className='absolute top-0 left-0 w-screen h-screen z-30 hidden'
+                onClick={closeMenu}
             >
                 <aside
                     id='navAside'
-                    className='absolute top-0 right-[7px] h-screen w-2/5 py-3 translate-x-full'
+                    className='absolute top-0 right-0 h-screen w-2/5 py-3 px-4 translate-x-full'
                 >
-                    <div className='bg-red-400/80 rounded-xl h-full p-4 px-8 '>
+                    <div className='bg-red-400/80 rounded-xl h-full p-4 px-4 '>
                         <div className='flex justify-end'>
-                            <button className=' bg-black' onClick={closeMenu}>
-                                close Navbar
-                            </button>
+                            <HamburgerIcon
+                                handleClick={closeMenu}
+                                variant='close'
+                            ></HamburgerIcon>
                         </div>
 
                         <div>

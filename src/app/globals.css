@@ -75,3 +75,40 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px; /* roundness of the scroll thumb */
     /* creates padding around scroll thumb */
 }
+
+/* Hamburger Icon */
+
+.hamburgerIcon {
+    position: relative;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.5rem; /* Zakulacené rohy */
+    background-color: rgba(255, 255, 255, 0.2); /* Vnitřní pozadí */
+    backdrop-filter: blur(20px) brightness(0.12) contrast(1) saturate(20)
+        hue-rotate(8deg);
+    z-index: 1; /* Zajištění překrytí pseudo-elementu */
+}
+
+.hamburgerIcon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.5rem; /* Shodné zakulacení jako hlavní element */
+    padding: 1px; /* Tloušťka gradientního okraje */
+    background: linear-gradient(
+        to bottom right,
+        #b827fc 0%,
+        #2c90fc 25%,
+        #b8fd33 50%,
+        #fec837 75%,
+        #fd1892 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude; /*5*/
+    z-index: -1; /* Umístění pod hlavní element */
+}
