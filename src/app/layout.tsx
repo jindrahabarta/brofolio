@@ -21,6 +21,10 @@ const owners = localFont({
     src: '../_assets/fonts/owners-xxwide.ttf',
     variable: '--owners',
 })
+const emberly_regular = localFont({
+    src: '../_assets/fonts/Emberly-Regular.otf',
+    variable: '--emberly-regular',
+})
 
 export default function RootLayout({
     children,
@@ -30,7 +34,7 @@ export default function RootLayout({
     const lenis = useRef<null | Lenis>(null)
 
     useEffect(() => {
-        //Inicializace lenisu
+        //Lenis
         lenis.current = new Lenis()
         function raf(time: number) {
             if (!lenis.current) return
@@ -44,7 +48,7 @@ export default function RootLayout({
     return (
         <html lang='cs'>
             <body
-                className={`antialiased ${charm.variable} ${owners.variable} ${source_serif_4.variable}`}
+                className={`antialiased ${charm.variable} ${owners.variable} ${source_serif_4.variable} ${emberly_regular.variable}`}
             >
                 <Navigation lenis={lenis}></Navigation>
 

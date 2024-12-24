@@ -14,9 +14,10 @@ export default {
                 foreground: 'var(--foreground)',
             },
             fontFamily: {
-                sourceSerif: ['var(--source-serif)'],
-                charm: ['var(--charm)'],
-                owners: ['var(--owners)'],
+                sourceSerif: 'var(--source-serif)',
+                charm: 'var(--charm)',
+                owners: 'var(--owners)',
+                emberlyRegular: 'var(--emberly-regular)',
             },
         },
     },

@@ -63,17 +63,16 @@ form {
 /* ScrollBar */
 
 body::-webkit-scrollbar {
-    width: 7px; /* width of the entire scrollbar */
+    width: 7px;
 }
 
 body::-webkit-scrollbar-track {
-    background: black; /* color of the tracking area */
+    background: black;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: white; /* color of the scroll thumb */
-    border-radius: 20px; /* roundness of the scroll thumb */
-    /* creates padding around scroll thumb */
+    background-color: white;
+    border-radius: 20px;
 }
 
 /* Hamburger Icon */
@@ -82,11 +81,8 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     display: inline-block;
     padding: 1rem;
-    border-radius: 0.5rem; /* Zakulacené rohy */
-    background-color: rgba(255, 255, 255, 0.2); /* Vnitřní pozadí */
-    backdrop-filter: blur(20px) brightness(0.12) contrast(1) saturate(20)
-        hue-rotate(8deg);
-    z-index: 1; /* Zajištění překrytí pseudo-elementu */
+    border-radius: 0.5rem;
+    z-index: 1;
 }
 
 .hamburgerIcon::before {
@@ -96,8 +92,8 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 0.5rem; /* Shodné zakulacení jako hlavní element */
-    padding: 1px; /* Tloušťka gradientního okraje */
+    border-radius: 0.5rem;
+    padding: 1px;
     background: linear-gradient(
         to bottom right,
         #b827fc 0%,
@@ -109,6 +105,31 @@ body::-webkit-scrollbar-thumb {
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude; /*5*/
-    z-index: -1; /* Umístění pod hlavní element */
+    mask-composite: exclude;
+    z-index: -1;
+    filter: saturate(0.8);
+
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.hamburgerIcon:hover::before {
+    filter: saturate(1.1);
+}
+
+/* @keyframes moveBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+} */
+
+/* Button */
+
+.btnFilter {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px) brightness(0.35) contrast(1) saturate(20)
+        hue-rotate(8deg);
 }
