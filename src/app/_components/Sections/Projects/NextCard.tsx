@@ -1,9 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 
-const NextCard = () => {
+const NextCard: React.FC<{ className?: string }> = ({ className }) => {
     return (
-        <li className='absolute w-52 aspect-video rounded-lg overflow-hidden'>
+        <li
+            className={`absolute w-52 aspect-video rounded-lg duration-300 ease-out overflow-hidden ${
+                className ?? ''
+            }`}
+        >
             <Image
                 width={150}
                 height={84}

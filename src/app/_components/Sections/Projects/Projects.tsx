@@ -4,8 +4,8 @@ import Next from './Next'
 
 const Projects = () => {
     return (
-        <section>
-            <header className='h-96 flex items-center border-b border-gray-400 overflow-hidden px-8'>
+        <section className='overflow-hidden'>
+            <header className='h-96 flex items-center border-b border-gray-400 overflow-x-hidden px-8'>
                 <h1 className='text-[clamp(1rem,8vw,3.75rem)]'>
                     <em>Naše</em>
                     <strong> portfolio</strong>
