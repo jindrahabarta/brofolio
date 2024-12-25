@@ -124,11 +124,11 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
             >
                 <aside
                     id='navAside'
-                    className='absolute top-0 right-0 h-screen w-full sm:w-3/5 lg:w-2/5 py-3 px-4 translate-x-full flex gap-4'
+                    className='absolute top-0 right-0 h-dvh w-full sm:w-3/5 lg:w-2/5 py-3 px-4 translate-x-full flex gap-4'
                 >
                     <RainbowBar></RainbowBar>
                     <div className='flex flex-col gap-4 w-full'>
-                        <div className='group/navMainBlock bg-gray-100/70 backdrop-blur-sm rounded-xl h-full p-4 px-4 flex flex-col justify-between'>
+                        <div className='group/navMainBlock bg-gray-100/70 backdrop-blur-sm rounded-xl h-full p-4 px-4 flex flex-col justify-between overflow-hidden'>
                             <div className='flex justify-end'>
                                 <HamburgerIcon
                                     handleClick={closeMenu}

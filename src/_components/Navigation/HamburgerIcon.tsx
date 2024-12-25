@@ -33,11 +33,9 @@ const HamburgerIcon = ({
             <button
                 onClick={handleClick}
                 aria-label='Hamburger icon open'
-                className='hamburgerIcon btnFilter w-fit h-14 rounded-lg cursor-pointer flex items-center justify-center'
+                className='hamburgerIcon  bg-black/30 w-fit h-14 rounded-lg cursor-pointer flex items-center justify-center'
             >
                 <span className='font-owners'>Close</span>
-                {/* <span className='rounded-full w-8 h-[2px] bg-white/70 rotate-45 -translate-x-1/2 absolute'></span>
-                <span className='rounded-full w-8 h-[2px] bg-white/70 -rotate-45 -translate-x-1/2 absolute'></span> */}
             </button>
         )
 }

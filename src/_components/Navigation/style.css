@@ -17,6 +17,12 @@
     bottom: 0;
     border-radius: 0.5rem;
     padding: 1px;
+
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
     background: linear-gradient(
         160deg,
         rgb(247, 149, 51),
@@ -28,11 +34,6 @@
         rgb(7, 179, 155),
         rgb(74 222 128)
     );
-
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
     z-index: -1;
     filter: saturate(0.8);
 
@@ -46,7 +47,6 @@
 
 .hamburgerIcon::before {
     content: '';
-
     background: linear-gradient(
         160deg,
         rgb(247, 149, 51),
@@ -65,11 +65,34 @@
     filter: blur(15px);
     opacity: 0;
     transition: all;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
 }
 
 .hamburgerIcon:hover::before {
     opacity: 0.4;
+    animation: navEffect 5s linear infinite;
+}
+
+@keyframes navEffect {
+    0% {
+        opacity: 0;
+        filter: blur(15px);
+    }
+    20% {
+        opacity: 0.4;
+        filter: blur(18px);
+    }
+    40% {
+        opacity: 0.5;
+        filter: blur(20px);
+    }
+    80% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        filter: blur(15px);
+    }
 }
 
 /*Navbar rainbow bar*/
