@@ -1,7 +1,13 @@
 'use client'
 import Lenis from 'lenis'
 import Navigation from '@/_components/Navigation/Navigation'
-import { Source_Serif_4, Charm, Instrument_Serif } from 'next/font/google'
+import {
+    Source_Serif_4,
+    Charm,
+    Instrument_Serif,
+    Six_Caps,
+    League_Gothic,
+} from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import Footer from '@/_components/Footer/Footer'
@@ -30,6 +36,11 @@ const instrument = Instrument_Serif({
     weight: ['400'],
     variable: '--instrument',
 })
+const league = League_Gothic({
+    subsets: ['latin'],
+    weight: ['400'],
+    variable: '--league',
+})
 
 export default function RootLayout({
     children,
@@ -53,7 +64,14 @@ export default function RootLayout({
     return (
         <html lang='cs'>
             <body
-                className={`antialiased ${charm.variable} ${owners.variable} ${source_serif_4.variable} ${emberly_regular.variable} ${instrument.variable}`}
+                className={`antialiased
+                    ${charm.variable}
+                    ${owners.variable}
+                    ${source_serif_4.variable}
+                    ${emberly_regular.variable}
+                    ${instrument.variable}
+                    ${league.variable}
+                `}
             >
                 <Navigation lenis={lenis}></Navigation>
 
