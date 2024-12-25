@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react'
+import React, { RefObject, useEffect } from 'react'
 import gsap from 'gsap'
 import Lenis from 'lenis'
 import Image from 'next/image'
@@ -6,18 +6,22 @@ import HamburgerIcon from './HamburgerIcon'
 import Button from '../Button'
 import Link from 'next/link'
 import NavLink from './NavLink'
+import GreenBox from './GreenBox'
+import RainbowBar from './RainbowBar'
+
+import './style.css'
 
 const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const navTl = gsap.timeline({
-        defaults: { duration: 0.3, ease: 'power1.in' },
+        defaults: {
+            duration: 0.3,
+            ease: 'power1.inOut',
+            delay: 0,
+        },
+        paused: true,
     })
 
-    const openMenu = () => {
-        if (!lenis.current) return
-
-        document.body.classList.add('disableScroll')
-        lenis.current.stop()
-
+    useEffect(() => {
         navTl
             .set('#navBg', {
                 display: 'block',
@@ -61,6 +65,17 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                 },
                 '<'
             )
+
+        return () => {
+            navTl.kill()
+        }
+    }, [])
+
+    const openMenu = () => {
+        if (!lenis.current) return
+
+        document.body.classList.add('disableScroll')
+        lenis.current.stop()
 
         navTl.play()
     }
@@ -109,29 +124,11 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
             >
                 <aside
                     id='navAside'
-                    className='absolute top-0 right-0 h-screen w-full sm:w-3/5 lg:w-2/5 py-3 px-4 translate-x-full flex gap-4'
+                    className='absolute top-0 right-0 h-dvh w-full sm:w-3/5 lg:w-2/5 py-3 px-4 translate-x-full flex gap-4'
                 >
-                    <div
-                        id='navRainbowBar'
-                        className='h-full w-12 rounded-xl hidden sm:block select-none overflow-hidden'
-                    >
-                        <div className='text-black rotate-180 w-full flex gap-8 items-center justify-center'>
-                            <span>●</span>
-                            <span className='font-owners text-xl text-nowrap'>
-                                Motion Labs
-                            </span>
-                            <span>●</span>
-                            <span className='font-owners text-xl text-nowrap'>
-                                Motion Labs
-                            </span>
-                            <span>●</span>
-                            <span className='font-owners text-xl text-nowrap'>
-                                Motion Labs
-                            </span>
-                        </div>
-                    </div>
+                    <RainbowBar></RainbowBar>
                     <div className='flex flex-col gap-4 w-full'>
-                        <div className='group/navMainBlock bg-gray-100/70 backdrop-blur-sm rounded-xl h-full p-4 px-4 flex flex-col justify-between'>
+                        <div className='group/navMainBlock bg-gray-100/70 backdrop-blur-sm rounded-xl h-full p-4 px-4 flex flex-col justify-between overflow-hidden'>
                             <div className='flex justify-end'>
                                 <HamburgerIcon
                                     handleClick={closeMenu}
@@ -154,12 +151,12 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className='bg-green-400 rounded-xl h-20'></div>
+                        <GreenBox></GreenBox>
                     </div>
                 </aside>
 
-                <div className='absolute bottom-10 left-10'>
-                    <h1 className='navBarTitle  opacity-0'>
+                <div className='absolute bottom-10 left-10 -z-10 hidden sm:block'>
+                    <h1 className='navBarTitle  opacity-0 sm:flex flex-col lg:block'>
                         <em>Motion</em> <strong>Labs</strong>
                     </h1>
                     <p className='navBarTitle opacity-0 font-instrument text-gray-400 text-2xl'>
