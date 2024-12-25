@@ -63,6 +63,7 @@ form {
 /* ScrollBar */
 body::-webkit-scrollbar {
     width: 7px;
+    height: 7px;
 }
 
 body::-webkit-scrollbar-track {
@@ -73,80 +74,6 @@ body::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 20px;
 }
-
-/* Hamburger Icon */
-
-.hamburgerIcon {
-    position: relative;
-    display: inline-block;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    z-index: 1;
-}
-
-.hamburgerIcon::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 0.5rem;
-    padding: 1px;
-    background: linear-gradient(
-        160deg,
-        rgb(247, 149, 51),
-        rgb(243, 112, 85),
-        rgb(239, 78, 123),
-        rgb(161, 102, 171),
-        rgb(80, 115, 184),
-        rgb(16, 152, 173),
-        rgb(7, 179, 155),
-        rgb(74 222 128)
-    );
-
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    z-index: -1;
-    filter: saturate(0.8);
-
-    transition: all;
-    transition-duration: 0.2s;
-}
-
-.hamburgerIcon:hover::before {
-    filter: saturate(1.1);
-}
-
-/*Navbar rainbow bar*/
-
-#navRainbowBar {
-    background-image: linear-gradient(
-        180deg,
-        rgb(247, 149, 51),
-        rgb(243, 112, 85),
-        rgb(239, 78, 123),
-        rgb(161, 102, 171),
-        rgb(80, 115, 184),
-        rgb(16, 152, 173),
-        rgb(7, 179, 155),
-        rgb(74 222 128)
-    );
-
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-}
-
-/* @keyframes backgroundMovement {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}  */
 
 /* Button */
 
