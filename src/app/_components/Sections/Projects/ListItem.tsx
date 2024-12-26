@@ -15,13 +15,13 @@ const ListItem: React.FC<{ project: IProject }> = ({ project }) => {
                         <span className='font-owners uppercase'>
                             {project.name}
                         </span>
-                        <span className='font-owners uppercase text-xl'>
+                        <span className='font-owners uppercase text-[10rem]'>
                             &#9679;
                         </span>
                         <span className='font-owners uppercase'>
                             {project.name}
                         </span>
-                        <span className='font-owners uppercase text-xl'>
+                        <span className='font-owners uppercase text-[10rem]'>
                             &#9679;
                         </span>
                     </span>
@@ -30,13 +30,13 @@ const ListItem: React.FC<{ project: IProject }> = ({ project }) => {
                         <span className='font-owners uppercase'>
                             {project.name}
                         </span>
-                        <span className='font-owners uppercase text-xl'>
+                        <span className='font-owners uppercase text-[10rem]'>
                             &#9679;
                         </span>
                         <span className='font-owners uppercase'>
                             {project.name}
                         </span>
-                        <span className='font-owners uppercase text-xl'>
+                        <span className='font-owners uppercase text-[10rem]'>
                             &#9679;
                         </span>
                     </span>
