@@ -1,6 +1,6 @@
 'use client'
 
-// import Image from 'next/image'
+import Image from 'next/image'
 import React, { ChangeEventHandler } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -92,13 +92,13 @@ const Contact = () => {
             </h1> */}
             <div className='w-full flex flex-col md:flex-row-reverse gap-8'>
                 <div className='flex-1 flex items-center justify-center'>
-                    {/* <Image
-                        src={''}
-                        width={500}
-                        height={500}
+                    <Image
+                        src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                        width={300}
+                        height={300}
                         alt='Contact form'
-                        className='w-full aspect-square object-cover object-center'
-                    /> */}
+                        className='w-2/3 aspect-square object-cover object-center'
+                    />
                 </div>
 
                 <form
