@@ -3,13 +3,14 @@ import gsap from 'gsap'
 import Lenis from 'lenis'
 import Image from 'next/image'
 import HamburgerIcon from './HamburgerIcon'
-import Button from '../Button'
+
 import Link from 'next/link'
 import NavLink from './NavLink'
 import GreenBox from './GreenBox'
 import RainbowBar from './RainbowBar'
 
 import './style.css'
+import BlurryButton from '../BlurryButton'
 
 const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const navTl = gsap.timeline({
@@ -74,7 +75,6 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const openMenu = () => {
         if (!lenis.current) return
 
-        document.body.classList.add('disableScroll')
         lenis.current.stop()
 
         navTl.play()
@@ -82,17 +82,14 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
 
     const closeMenu = () => {
         if (!lenis.current) return
-
         navTl.reverse()
-
-        document.body.classList.remove('disableScroll')
         lenis.current.start()
     }
 
     return (
-        <header className='fixed w-screen text-white px-8 py-8 z-50'>
-            <nav className='flex z-40 items-center justify-between gap-2'>
-                <div className='z-50'>
+        <header className='fixed w-screen text-white p-4 sm:p-8 z-50'>
+            <nav className='flex z-40 items-center justify-between gap-2 '>
+                <div className='z-50 select-none'>
                     <Link id='navLogo' href='/'>
                         <Image
                             id='navLogo'
@@ -100,15 +97,21 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                             src={
                                 'https://daydrift.design/images/daydrift_logo.svg'
                             }
-                            width={120}
-                            height={120}
+                            width={100}
+                            height={100}
                             alt='Logo'
                         ></Image>
                     </Link>
                 </div>
 
                 <div className='flex items-center gap-4'>
-                    <Button text='Call us' link='tel:444444444'></Button>
+                    <BlurryButton
+                        text='Kontakt'
+                        link='/'
+                        id='blurry1'
+                    ></BlurryButton>
+
+                    {/* <Button text='Kontakt' link='tel:444444444'></Button> */}
 
                     <HamburgerIcon
                         handleClick={openMenu}
@@ -138,15 +141,21 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
 
                             <div className='text-right'>
                                 <ul>
-                                    <NavLink text='Home' link='/'></NavLink>
-                                    <NavLink text='About us' link='/'></NavLink>
                                     <NavLink
-                                        text='Portfolio'
-                                        link='/'
+                                        lenis={lenis}
+                                        text='Home'
+                                        link='#home'
                                     ></NavLink>
+                                    {/* <NavLink text='About us' link='/' onClick={}></NavLink> */}
+                                    {/* <NavLink
+                                        text='Portfolio'
+                                        link='/#projects'
+                                        onClick={}
+                                    ></NavLink> */}
                                     <NavLink
                                         text='Contact us'
-                                        link='/'
+                                        link='#contact'
+                                        lenis={lenis}
                                     ></NavLink>
                                 </ul>
                             </div>

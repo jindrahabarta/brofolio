@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'gratisography.com',
+                hostname: 'letsenhance.io',
                 port: '',
                 pathname: '/**',
                 search: '',

@@ -6,6 +6,28 @@
     @apply font-sourceSerif;
 }
 
+/*LENIS*/
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
 a {
 }
 
@@ -56,10 +78,6 @@ form {
     }
 }
 
-.disableScroll {
-    @apply h-screen overflow-y-hidden;
-}
-
 /* ScrollBar */
 body::-webkit-scrollbar {
     width: 7px;
@@ -75,10 +93,43 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-/* Button */
+/* Buttons */
 
 .btnFilter {
     background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px) brightness(0.35) contrast(1) saturate(20)
+    backdrop-filter: blur(12px) brightness(0.35) contrast(0.8) saturate(8)
         hue-rotate(8deg);
+    -webkit-backdrop-filter: blur(12px) brightness(0.35) contrast(0.8)
+        saturate(8) hue-rotate(8deg);
+}
+
+.blurryBtn {
+    box-shadow: inset 0px 0px 0px 1px rgba(256, 256, 256, 0.2);
+    transition: all;
+    transition-duration: 400ms;
+}
+
+.blurryBtnFill {
+    background: radial-gradient(
+        rgb(247, 149, 51),
+        rgb(243, 112, 85),
+        rgb(161, 102, 171),
+        rgb(16, 152, 173),
+        rgb(7, 179, 155),
+        rgb(74 222 128)
+    );
+
+    filter: blur(26px) saturate(6.5);
+    opacity: 0.6;
+}
+
+.blurryBtnText {
+    mix-blend-mode: exclusion;
+    filter: contrast(1) invert(0);
+}
+
+.blurryBtn:hover {
+    .blurryBtnText {
+        filter: contrast(0.8) invert(0.1);
+    }
 }

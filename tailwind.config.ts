@@ -10,8 +10,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                background: 'var(--background)',
-                foreground: 'var(--foreground)',
+                motionBlue: '#1098AD',
             },
             scale: {
                 '115': '1.15',

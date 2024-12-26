@@ -5,13 +5,14 @@ import {
     Source_Serif_4,
     Charm,
     Instrument_Serif,
-    Six_Caps,
     League_Gothic,
 } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import Footer from '@/_components/Footer/Footer'
 import { useEffect, useRef } from 'react'
+import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
+import { usePathname } from 'next/navigation'
 
 const source_serif_4 = Source_Serif_4({
     subsets: ['latin'],
@@ -47,6 +48,7 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
+    const path = usePathname()
     const lenis = useRef<null | Lenis>(null)
 
     useEffect(() => {
@@ -59,6 +61,8 @@ export default function RootLayout({
             requestAnimationFrame(raf)
         }
         requestAnimationFrame(raf)
+
+        gsapAnimationsInit(path)
     }, [])
 
     return (

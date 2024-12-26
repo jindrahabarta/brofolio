@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Projects = () => {
     return (
-        <section className='overflow-hidden'>
+        <section id='projects' className='overflow-hidden'>
             <header className='h-96 flex items-center border-b border-gray-400 overflow-hidden px-8'>
                 <h1>
                     <em>Our</em> <strong>projects</strong>
@@ -13,10 +13,13 @@ const Projects = () => {
             </header>
             <ul className='flex flex-col'>
                 {projectList.map((project, index) => (
-                    <li key={`${index}-${project.name}`}>
+                    <li
+                        className='projectsItem opacity-0 -translate-x-80'
+                        key={`${index}-${project.name}`}
+                    >
                         <Link
                             href='#'
-                            className='group h-96 block relative border-b border-gray-400 bg-white hover:bg-[rgb(16,152,173)] ease-out duration-200'
+                            className='group h-96 block relative border-b border-gray-400 bg-white hover:bg-motionBlue ease-out duration-200'
                         >
                             <span className='absolute top-2 left-0 h-full w-full flex items-center font-owners uppercase text-[28rem] text-nowrap text-white text-opacity-20 opacity-0 group-hover:opacity-100 overflow-hidden'>
                                 <span className='flex flex-row items-center gap-20 pr-20 animate-marqueeX'>
@@ -51,7 +54,7 @@ const Projects = () => {
                             </span>
 
                             <article className='relative z-10 h-full w-full flex justify-between items-center gap-4 overflow-hidden p-8'>
-                                <section className='flex flex-col gap-1'>
+                                <section className='flex flex-col gap-1 flex-1 xl:flex-none'>
                                     <h2 className='font-instrument text-3xl group-hover:text-white duration-200'>
                                         {project.description}
                                     </h2>
@@ -69,11 +72,11 @@ const Projects = () => {
                                         ))}
                                     </ul>
                                 </section>
-                                <section className='hidden md:block w-full md:w-[35rem] bg-red-600 aspect-video rounded-xl group-hover:scale-105 duration-300 ease-out overflow-hidden'>
+                                <section className='flex-1 xl:flex-none hidden md:block w-full md:w-[35rem] aspect-video rounded-xl group-hover:scale-105 duration-300 ease-out overflow-hidden'>
                                     <Image
                                         width={300}
                                         height={168}
-                                        src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                                        src={project.image}
                                         alt={project.name}
                                         className='w-full h-full aspect-video group-hover:scale-120 duration-500 ease-out'
                                     />

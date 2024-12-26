@@ -12,7 +12,7 @@ const HamburgerIcon = ({
             <button
                 onClick={handleClick}
                 aria-label='Hamburger icon open'
-                className='hamburgerIcon btnFilter group w-14 h-14 rounded-lg cursor-pointer flex items-center justify-center'
+                className='hamburgerIcon btnFilter group w-14 h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
                 <div className='flex flex-col justify-center items-center gap-2'>
                     <div className='rounded-full w-8 h-[2px] bg-white/50 '>
@@ -33,7 +33,7 @@ const HamburgerIcon = ({
             <button
                 onClick={handleClick}
                 aria-label='Hamburger icon open'
-                className='hamburgerIcon  bg-black/30 w-fit h-14 rounded-lg cursor-pointer flex items-center justify-center'
+                className='hamburgerIcon  bg-black/30 w-fit h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
                 <span className='font-owners'>Close</span>
             </button>

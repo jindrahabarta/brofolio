@@ -83,7 +83,10 @@ const Contact = () => {
     }
 
     return (
-        <section className='flex flex-col items-center gap-12 text-black px-8 py-16'>
+        <section
+            id='contact'
+            className='flex flex-col items-center gap-12 text-black px-8 py-16'
+        >
             {/* <h1>
                 <strong>Contact us</strong>
             </h1> */}
