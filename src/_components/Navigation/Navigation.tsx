@@ -1,5 +1,4 @@
-import React, { RefObject, useEffect } from 'react'
-import gsap from 'gsap'
+import React, { RefObject } from 'react'
 import Lenis from 'lenis'
 import Image from 'next/image'
 import HamburgerIcon from './HamburgerIcon'
@@ -11,78 +10,22 @@ import RainbowBar from './RainbowBar'
 
 import './style.css'
 import BlurryButton from '../BlurryButton'
+import useNavTimeline from '@/_animations/useNavTimeline'
 
 const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
-    const navTl = gsap.timeline({
-        defaults: {
-            duration: 0.3,
-            ease: 'power1.inOut',
-            delay: 0,
-        },
-        paused: true,
-    })
-
-    useEffect(() => {
-        navTl
-            .set('#navBg', {
-                display: 'block',
-            })
-            .to('#navBg', {
-                css: {
-                    backdropFilter: 'blur(8px)',
-                    WebkitBackdropFilter: 'blur(8px)',
-
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                },
-            })
-            .to(
-                '#navLogo',
-                {
-                    scale: 1,
-                },
-                '<'
-            )
-            .to(
-                '#navAside',
-                {
-                    translateX: 0,
-                },
-                '<'
-            )
-            .to(
-                '.navLink',
-                {
-                    translateX: 0,
-                    opacity: 1,
-                    stagger: 0.1,
-                },
-                '<'
-            )
-            .to(
-                '.navBarTitle',
-                {
-                    opacity: 1,
-                    stagger: 0.1,
-                },
-                '<'
-            )
-
-        return () => {
-            navTl.kill()
-        }
-    }, [])
+    const navTl = useNavTimeline()
 
     const openMenu = () => {
         if (!lenis.current) return
 
         lenis.current.stop()
-
-        navTl.play()
+        navTl.current.play()
     }
 
     const closeMenu = () => {
         if (!lenis.current) return
-        navTl.reverse()
+
+        navTl.current.reverse()
         lenis.current.start()
     }
 
