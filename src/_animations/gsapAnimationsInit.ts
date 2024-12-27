@@ -6,12 +6,8 @@ const gsapAnimationsInit = (path: string) => {
     gsap.registerPlugin(ScrollTrigger)
 
     if (path === '/') {
-        console.log(path)
-
         gsap.utils.toArray('.projectsItem').forEach((item) => {
             if (!item) return
-
-            console.log(item)
 
             gsap.to(item, {
                 opacity: 1,
@@ -23,7 +19,7 @@ const gsapAnimationsInit = (path: string) => {
                     trigger: item as HTMLElement,
                     start: 'top 80%',
                     end: 'bottom 80%',
-                    toggleActions: 'play none none reverse',
+                    toggleActions: 'play none none none',
                 },
             })
         })
