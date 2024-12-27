@@ -25,7 +25,7 @@ export default {
                 league: 'var(--league)',
             },
             animation: {
-                marqueeX: 'marqueeX 40s linear infinite',
+                marqueeX: 'marqueeX 10s linear infinite',
             },
             keyframes: {
                 marqueeX: {

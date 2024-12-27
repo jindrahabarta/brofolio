@@ -5,7 +5,7 @@ import ListItem from './ListItem'
 const ProjectList = () => {
     return (
         <ul className='flex flex-col'>
-            {projectList.map((project, index) => (
+            {projectList.slice(0, 3).map((project, index) => (
                 <ListItem key={`${index}-${project.name}`} project={project} />
             ))}
         </ul>

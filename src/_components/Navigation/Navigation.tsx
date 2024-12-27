@@ -85,16 +85,16 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                             <div className='text-right'>
                                 <ul>
                                     <NavLink
-                                        lenis={lenis}
                                         text='Home'
                                         link='#home'
+                                        lenis={lenis}
                                     ></NavLink>
                                     {/* <NavLink text='About us' link='/' onClick={}></NavLink> */}
-                                    {/* <NavLink
+                                    <NavLink
                                         text='Portfolio'
-                                        link='/#projects'
-                                        onClick={}
-                                    ></NavLink> */}
+                                        link='#projects'
+                                        lenis={lenis}
+                                    ></NavLink>
                                     <NavLink
                                         text='Contact us'
                                         link='#contact'
