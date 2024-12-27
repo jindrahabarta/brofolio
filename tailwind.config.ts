@@ -13,6 +13,7 @@ export default {
                 motionBlue: '#1098AD',
             },
             scale: {
+                '33': '0.33',
                 '115': '1.15',
                 '120': '1.2',
             },
