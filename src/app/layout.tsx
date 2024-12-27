@@ -63,7 +63,7 @@ export default function RootLayout({
         requestAnimationFrame(raf)
 
         gsapAnimationsInit(path)
-    }, [])
+    }, [path])
 
     return (
         <html lang='cs'>

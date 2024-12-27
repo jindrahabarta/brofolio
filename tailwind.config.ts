@@ -13,6 +13,7 @@ export default {
                 motionBlue: '#1098AD',
             },
             scale: {
+                '33': '0.33',
                 '115': '1.15',
                 '120': '1.2',
             },
@@ -25,7 +26,7 @@ export default {
                 league: 'var(--league)',
             },
             animation: {
-                marqueeX: 'marqueeX 40s linear infinite',
+                marqueeX: 'marqueeX 10s linear infinite',
             },
             keyframes: {
                 marqueeX: {

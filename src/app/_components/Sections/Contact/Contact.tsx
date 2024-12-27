@@ -107,10 +107,10 @@ const Contact = () => {
                 >
                     <header className='flex flex-col gap-4'>
                         <h2>
-                            <em>What&apos;s the tea?</em>
+                            <em>Chceš rozjet projekt?</em>
                         </h2>
                         <h1>
-                            <strong>Let&apos;s chat</strong>
+                            <strong>Napiš nám</strong>
                         </h1>
                     </header>
 
@@ -151,7 +151,7 @@ const Contact = () => {
 
                         <fieldset>
                             <label htmlFor='phone'>
-                                <em>Phone</em>
+                                <em>Telefon</em>
                             </label>
                             <input
                                 id='phone'

@@ -1,69 +1,40 @@
 import React from 'react'
 import NextCard from './NextCard'
+import Marquee from '@/_components/Marquee/Marquee'
 
 const Next = () => {
     return (
         <div className='group flex justify-center items-center hover:cursor-pointer mt-4'>
-            <span className='absolute w-full flex items-center text-xl text-nowrap bg-black text-white opacity-0 group-hover:opacity-100 duration-200 py-2'>
-                <span className='flex flex-row items-center gap-4 pr-4 animate-marqueeX'>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                </span>
-
-                <span className='flex flex-row items-center gap-4 pr-4 animate-marqueeX delay-[40s]'>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                    <span className='font-owners uppercase'>next</span>
-                    <span className='font-owners uppercase text-sm'>
-                        &#9679;
-                    </span>
-                </span>
-            </span>
+            <Marquee
+                sets={6}
+                containerClassName='absolute bg-black text-white text-xl opacity-0 group-hover:opacity-100 duration-200 py-2'
+                className='gap-4 pr-4'
+            >
+                <span className='font-owners uppercase'>next</span>
+                <span className='font-owners uppercase text-sm'>&#9679;</span>
+                <span className='font-owners uppercase'>next</span>
+                <span className='font-owners uppercase text-sm'>&#9679;</span>
+                <span className='font-owners uppercase'>next</span>
+                <span className='font-owners uppercase text-sm'>&#9679;</span>
+                <span className='font-owners uppercase'>next</span>
+                <span className='font-owners uppercase text-sm'>&#9679;</span>
+                <span className='font-owners uppercase'>next</span>
+                <span className='font-owners uppercase text-sm'>&#9679;</span>
+            </Marquee>
 
             <ul className='relative z-10 w-52 aspect-video'>
-                <NextCard className='rotate-6 group-hover:rotate-9 group-hover:-translate-x-28 group-hover:translate-y-14' />
-                <NextCard className='group-hover:rotate-2 group-hover:-translate-y-3' />
-                <NextCard className='-rotate-1 group-hover:rotate-[-18deg] group-hover:translate-x-36 group-hover:translate-y-6' />
+                <NextCard
+                    src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                    className='rotate-6 group-hover:rotate-9 group-hover:-translate-x-28 group-hover:translate-y-14'
+                />
+                <NextCard
+                    src='https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg'
+                    className='group-hover:rotate-2 group-hover:-translate-y-3'
+                />
+                <NextCard
+                    src='https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg'
+                    className='-rotate-1 group-hover:rotate-[-18deg] group-hover:translate-x-36 group-hover:translate-y-6'
+                />
             </ul>
         </div>
     )
