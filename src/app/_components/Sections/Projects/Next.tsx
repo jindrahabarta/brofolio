@@ -4,22 +4,17 @@ import Marquee from '@/_components/Marquee/Marquee'
 
 const Next = () => {
     return (
-        <div className='group flex justify-center items-center hover:cursor-pointer mt-4'>
+        <div className='group flex justify-center items-center hover:cursor-pointer mt-6'>
             <Marquee
                 sets={6}
                 containerClassName='absolute bg-black text-white text-xl opacity-0 group-hover:opacity-100 duration-200 py-2'
-                className='gap-4 pr-4'
+                className='gap-16 pr-16'
             >
                 <span className='font-owners uppercase'>next</span>
-                <span className='font-owners uppercase text-sm'>&#9679;</span>
                 <span className='font-owners uppercase'>next</span>
-                <span className='font-owners uppercase text-sm'>&#9679;</span>
                 <span className='font-owners uppercase'>next</span>
-                <span className='font-owners uppercase text-sm'>&#9679;</span>
                 <span className='font-owners uppercase'>next</span>
-                <span className='font-owners uppercase text-sm'>&#9679;</span>
                 <span className='font-owners uppercase'>next</span>
-                <span className='font-owners uppercase text-sm'>&#9679;</span>
             </Marquee>
 
             <ul className='relative z-10 w-52 aspect-video'>
@@ -33,7 +28,7 @@ const Next = () => {
                 />
                 <NextCard
                     src='https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg'
-                    className='-rotate-1 group-hover:rotate-[-18deg] group-hover:translate-x-36 group-hover:translate-y-6'
+                    className='-rotate-1 group-hover:rotate-[-18deg] group-hover:translate-x-28 group-hover:translate-y-9'
                 />
             </ul>
         </div>

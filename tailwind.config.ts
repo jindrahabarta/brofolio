@@ -10,7 +10,12 @@ export default {
     theme: {
         extend: {
             colors: {
-                motionBlue: '#1098AD',
+                motionOrange: '#f79533',
+                motionGrape: '#f37055',
+                motionPurple: '#a166ab',
+                motionBlue: '#1098ad',
+                motionEmerald: '#07b39b',
+                motionGreen: '#4ade90',
             },
             scale: {
                 '33': '0.33',
@@ -26,12 +31,17 @@ export default {
                 league: 'var(--league)',
             },
             animation: {
-                marqueeX: 'marqueeX 10s linear infinite',
+                marqueeLeft: 'marqueeLeft 10s linear infinite',
+                marqueeRight: 'marqueeRight 10s linear infinite',
             },
             keyframes: {
-                marqueeX: {
+                marqueeLeft: {
                     from: { transform: 'translateX(0)' },
                     to: { transform: 'translateX(-100%)' },
+                },
+                marqueeRight: {
+                    from: { transform: 'translateX(0)' },
+                    to: { transform: 'translateX(100%)' },
                 },
             },
         },
