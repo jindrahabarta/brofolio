@@ -116,7 +116,7 @@ body::-webkit-scrollbar-thumb {
         rgb(161, 102, 171),
         rgb(16, 152, 173),
         rgb(7, 179, 155),
-        rgb(74 222 128)
+        rgb(74, 222, 128)
     );
 
     filter: blur(26px) saturate(6.5);

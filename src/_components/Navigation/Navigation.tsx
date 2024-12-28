@@ -96,6 +96,11 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                         lenis={lenis}
                                     ></NavLink>
                                     <NavLink
+                                        link='#technology'
+                                        text='Technology'
+                                        lenis={lenis}
+                                    />
+                                    <NavLink
                                         text='Contact us'
                                         link='#contact'
                                         lenis={lenis}
