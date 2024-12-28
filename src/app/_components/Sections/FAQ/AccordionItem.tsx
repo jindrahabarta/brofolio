@@ -12,21 +12,24 @@ const AccordionItem = ({
     answer: string
     onClick: React.MouseEventHandler<HTMLButtonElement>
     accordionOpen: boolean
-    id: string
+    id: number
 }) => {
     return (
         <div className='py-2'>
             <button
                 onClick={onClick}
-                id={id}
+                id={id.toString()}
                 className='flex justify-between w-full border-b border-black/40 pb-2'
             >
-                <span>
-                    <p className='font-semibold text-left '>{title}</p>
-                </span>
+                <h3 className='font-semibold text-left pointer-events-none'>
+                    <span className='min-w-12 inline-block'>
+                        <strong>{(id + 1).toString().padStart(2, '0')}</strong>
+                    </span>{' '}
+                    {title}
+                </h3>
 
                 <svg
-                    className='fill-orange shrink-0 ml-8'
+                    className='fill-orange shrink-0 ml-8 pointer-events-none'
                     width='16'
                     height='16'
                     xmlns='http://www.w3.org/2000/svg'

@@ -19,14 +19,14 @@ const Accordion = () => {
     }
 
     return (
-        <div className=' p-4 rounded-2xl bg-gray-100 text-black flex-[2]'>
+        <div className=' p-4 rounded-2xl bg-gray-100/80 text-black flex-[2]'>
             {Faq.map((faqItem, i) => {
                 return (
                     <AccordionItem
+                        key={i.toString()}
                         title={faqItem.question}
                         answer={faqItem.answer}
-                        key={i}
-                        id={i.toString()}
+                        id={i}
                         onClick={openItem}
                         accordionOpen={selected === i.toString() ? true : false}
                     />
