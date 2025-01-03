@@ -5,7 +5,7 @@ import Accordion from './Accordion'
 const FAQ = () => {
     return (
         <section className='bg-black text-white px-8 py-16'>
-            <div className='flex gap-10'>
+            <div className=''>
                 <div className='flex-1'>
                     <h1>
                         <strong>FAQ</strong>

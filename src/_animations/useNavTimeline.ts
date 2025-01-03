@@ -24,7 +24,6 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
                 css: {
                     backdropFilter: 'blur(8px)',
                     WebkitBackdropFilter: 'blur(8px)',
-
                     backgroundColor: 'rgba(0,0,0,0.5)',
                 },
             })

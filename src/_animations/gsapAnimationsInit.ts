@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const gsapAnimationsInit = (path: string) => {
     gsap.registerPlugin(ScrollTrigger)
+    ScrollTrigger.killAll()
 
     if (path === '/') {
         gsap.utils.toArray('.projectsItem').forEach((item) => {
@@ -24,6 +25,35 @@ const gsapAnimationsInit = (path: string) => {
             })
         })
     }
+
+    const aboutUsTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#aboutus',
+            start: 'top top',
+            end: '80% bottom',
+            scrub: 0.1,
+
+            snap: 'labels',
+        },
+    })
+
+    aboutUsTimeline
+        .to(
+            '.aboutUs-scale',
+            {
+                scale: 5,
+                x: 70,
+                y: -150,
+            },
+            0
+        )
+        .to(
+            '#aboutus-TVFill',
+            {
+                opacity: 0,
+            },
+            'AUTLend'
+        )
 }
 
 export default gsapAnimationsInit

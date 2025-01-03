@@ -6,9 +6,9 @@ const Hero = () => {
             id='home'
             className='text-white pt-9 h-screen bg-black overflow-hidden'
         >
-            <h1 className='absolute bottom-4 left-4'>
+            {/* <h1 className='absolute bottom-4 left-4'>
                 <em>We make it</em> <strong>breezy.</strong>
-            </h1>
+            </h1> */}
         </section>
     )
 }

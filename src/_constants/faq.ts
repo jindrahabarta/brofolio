@@ -5,60 +5,11 @@ export interface IFaq {
 
 export const Faq: IFaq[] = [
     {
-        question: 'q1',
-        answer: 'a1',
+        question: 'Jak se máš?',
+        answer: 'Ale jo, jde to. Jen jsem trochu unavený...',
     },
     {
-        question: 'q2',
-        answer: 'a2',
-    },
-    {
-        question: 'q1',
-        answer: 'a1',
-    },
-    {
-        question: 'q2',
-        answer: 'a2',
-    },
-
-    {
-        question: 'q1',
-        answer: 'a1',
-    },
-    {
-        question: 'q2',
-        answer: 'a2',
-    },
-    {
-        question: 'q1',
-        answer: 'a1',
-    },
-    {
-        question: 'q2',
-        answer: 'a2',
-    },
-    {
-        question: 'q1',
-        answer: 'a1',
-    },
-    {
-        question: 'q2',
-        answer: 'a2',
-    },
-    {
-        question: 'q1',
-        answer: 'a1',
-    },
-    {
-        question: 'q2',
-        answer: 'a2',
-    },
-    {
-        question: 'q1',
-        answer: 'a1',
-    },
-    {
-        question: 'q2',
-        answer: 'a2',
+        question: 'Uděláte mi web zadarmo?',
+        answer: 'Ano, samozřejmě že ne.',
     },
 ]

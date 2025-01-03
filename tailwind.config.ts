@@ -16,6 +16,7 @@ export default {
                 motionBlue: '#1098ad',
                 motionEmerald: '#07b39b',
                 motionGreen: '#4ade90',
+                motionPink: '#c184a0',
             },
             scale: {
                 '33': '0.33',
