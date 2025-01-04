@@ -81,7 +81,7 @@ export default function RootLayout({
 
                 <main>{children}</main>
 
-                <Footer />
+                <Footer lenis={lenis} />
             </body>
         </html>
     )

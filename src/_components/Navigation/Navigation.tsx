@@ -9,7 +9,7 @@ import GreenBox from './GreenBox'
 import RainbowBar from './RainbowBar'
 
 import './style.css'
-import BlurryButton from '../BlurryButton'
+import BlurryButton from '../Buttons/BlurryButton'
 import useNavTimeline from '@/_animations/useNavTimeline'
 
 const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
