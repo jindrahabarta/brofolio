@@ -9,7 +9,7 @@ const Technology = () => {
     return (
         <section
             id='technology'
-            className='min-h-screen flex flex-col justify-center bg-black py-16'
+            className='min-h-screen flex flex-col justify-center bg-white py-16'
         >
             <div className='flex flex-col gap-2 md:gap-4'>
                 <Marquee duration='30s' className='gap-2 md:gap-4 pr-2 md:pr-4'>

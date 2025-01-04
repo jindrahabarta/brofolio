@@ -93,7 +93,7 @@ const Contact = () => {
             <div className='w-full flex flex-col md:flex-row-reverse gap-8'>
                 <div className='flex-1 flex items-center justify-center'>
                     <Image
-                        src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                        src='https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/42549638-3207-452d-9f52-41e057be59c4/2ac41247-57bf-4313-bfb7-38f9bf7b8715.png'
                         width={300}
                         height={300}
                         alt='Contact form'

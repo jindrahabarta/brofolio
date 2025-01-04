@@ -4,7 +4,10 @@ import Next from './Next'
 
 const Projects = () => {
     return (
-        <section id='projects' className='rounded-t-4xl overflow-hidden pb-16'>
+        <section
+            id='projects'
+            className='bg-white rounded-t-[4rem] overflow-hidden pb-16'
+        >
             <header className='h-96 flex items-center border-b border-gray-400 overflow-x-hidden px-8'>
                 <h1 className='text-[clamp(1rem,8vw,3.75rem)]'>
                     <em>Naše</em>
