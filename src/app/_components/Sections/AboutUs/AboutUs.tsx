@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import TVImg from '@/../public/images/AboutUs/TV.png'
-import BackgroundImg from '@/../public/images/AboutUs/Background.png'
+
 import Background2Img from '@/../public/images/AboutUs/Background_without_tv.png'
 import TVFillImg from '@/../public/images/AboutUs/TVfill.png'
 

@@ -85,7 +85,7 @@ const Contact = () => {
     return (
         <section
             id='contact'
-            className='flex flex-col items-center gap-12 text-black px-8 py-16'
+            className='flex flex-col items-center gap-12 text-black px-8 py-16 bg-yellow-100'
         >
             {/* <h1>
                 <strong>Contact us</strong>

@@ -9,6 +9,7 @@ export default function Home() {
     return (
         <>
             <Hero />
+            <section className='h-24 bg-gradient-to-b from-0% from-black to-[#dfe8e9]'></section>
             <AboutUs />
             <Projects />
             <Technology />
