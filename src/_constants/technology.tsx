@@ -52,7 +52,7 @@ export const technology: ITech = {
         {
             name: 'Next',
             image: <Next />,
-            background: 'black',
+            background: '#171717',
             text: 'white',
         },
         {
@@ -116,7 +116,7 @@ export const technology: ITech = {
         {
             name: 'Framer motion',
             image: <Framer />,
-            background: 'black',
+            background: '#171717',
             text: 'white',
         },
         {
