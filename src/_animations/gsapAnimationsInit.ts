@@ -7,6 +7,7 @@ const gsapAnimationsInit = (path: string) => {
     ScrollTrigger.killAll()
 
     if (path === '/') {
+        //PROJECTS
         gsap.utils.toArray('.projectsItem').forEach((item) => {
             if (!item) return
 
@@ -26,6 +27,7 @@ const gsapAnimationsInit = (path: string) => {
         })
     }
 
+    //ABOUT US
     const aboutUsTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: '#aboutus',
@@ -54,6 +56,32 @@ const gsapAnimationsInit = (path: string) => {
             },
             'AUTLend'
         )
+
+    //FOOTER
+
+    gsap.to('.footerHeading', {
+        translateY: 0,
+        stagger: 0.2,
+        ease: 'power1.out',
+        scrollTrigger: {
+            trigger: '#footer',
+            start: 'bottom-=10px bottom',
+            end: 'bottom-=10px bottom',
+            toggleActions: 'play none none reverse',
+        },
+    })
+
+    // gsap.to('.footerHeading', {
+    //     scrollTrigger: {
+    //         trigger: '#footer',
+    //         start: 'bottom bottom',
+    //         end: 'bottom bottom',
+    //         markers: true,
+    //     },
+    //     delay: 10,
+    //     stagger: 0.2,
+    //     translateY: 100,
+    // })
 }
 
 export default gsapAnimationsInit
