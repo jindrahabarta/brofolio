@@ -2,8 +2,8 @@ import React from 'react'
 
 const FooterBottom = () => {
     return (
-        <section>
-            <div className='w-fit max-w-full mx-auto overflow-hidden'>
+        <section className='select-none mt-10'>
+            <div className='w-full max-w-full overflow-hidden'>
                 <h1 className='text-[11.1vw] sm:text-[12vw] leading-tight text-center text-nowrap overflow-hidden'>
                     <span className='footerHeading translate-y-full inline-block'>
                         <em>Motion</em>

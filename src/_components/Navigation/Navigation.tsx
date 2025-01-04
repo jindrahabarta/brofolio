@@ -54,8 +54,6 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                         id='blurry1'
                     ></BlurryButton>
 
-                    {/* <Button text='Kontakt' link='tel:444444444'></Button> */}
-
                     <HamburgerIcon
                         handleClick={openMenu}
                         variant='open'
@@ -89,7 +87,6 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                         link='#home'
                                         lenis={lenis}
                                     ></NavLink>
-                                    {/* <NavLink text='About us' link='/' onClick={}></NavLink> */}
                                     <NavLink
                                         text='Portfolio'
                                         link='#projects'

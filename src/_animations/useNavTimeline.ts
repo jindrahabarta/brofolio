@@ -31,6 +31,10 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
                 '#navLogo',
                 {
                     scale: 1,
+                    ...(window.matchMedia('(max-width: 640px)').matches && {
+                        translateX: 15,
+                        translateY: 10,
+                    }),
                 },
                 '<'
             )

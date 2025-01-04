@@ -129,3 +129,20 @@ body::-webkit-scrollbar-thumb {
         filter: contrast(0.8) invert(0.1);
     }
 }
+
+.retroButton {
+    text-shadow: black 1px 2px 1px;
+}
+.retroButton:hover {
+    text-shadow: none;
+}
+
+#footerMail {
+    text-shadow: rgb(249, 158, 11) -4px -4px 6px,
+        rgb(249, 158, 11) -8px -10px 20px, black 2px 2px 1px;
+}
+
+#footerMail:hover {
+    text-shadow: black 2px 2px 1px;
+    color: red;
+}

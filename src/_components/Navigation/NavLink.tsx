@@ -22,7 +22,7 @@ const NavLink = ({
         <li className='navLink translate-x-full opacity-0 select-none'>
             <a
                 onClick={handleScrollTo}
-                className='font-instrument text-7xl text-black group-hover/navMainBlock:text-black/50 hover:!text-black/100 duration-200'
+                className='font-instrument text-6xl sm:text-7xl text-black group-hover/navMainBlock:text-black/50 hover:!text-black/100 duration-200'
                 href={link}
             >
                 {text}

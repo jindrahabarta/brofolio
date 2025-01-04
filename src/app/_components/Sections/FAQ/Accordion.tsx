@@ -7,9 +7,7 @@ const Accordion = () => {
     const [selected, setSelected] = useState<null | string>(null)
 
     const openItem: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-        if (!e.target.id) return
-
-        const id = e.target.id
+        const id = (e.target as HTMLButtonElement).id
 
         if (selected === id) {
             setSelected(null)

@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import Lenis from 'lenis'
 import Link from 'next/link'
+import RetroButton from '../Buttons/RetroButton'
 
 const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const scrollToTop = () => {
@@ -13,10 +14,13 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
 
     return (
         <footer id='footer' className='bg-black text-white pb-10'>
-            <section className='flex'>
+            <section className='flex flex-col sm:grid grid-cols-2 md:flex md:flex-row'>
                 <div className='flex-1 p-4 border-white border flex flex-col justify-between'>
                     <div>
-                        <div className='cursor-pointer' onClick={scrollToTop}>
+                        <div
+                            className='cursor-pointer w-fit'
+                            onClick={scrollToTop}
+                        >
                             <Image
                                 id='navLogo'
                                 src={
@@ -34,10 +38,25 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                         </ul>
                     </div>
 
-                    <p className='text-right mt-12'>@copyright MotionLabs.cz</p>
+                    <p className='text-right mt-12'>
+                        @2025 -{' '}
+                        <Link className='hover:underline' href={'/'}>
+                            MotionLabs.cz
+                        </Link>
+                    </p>
                 </div>
-                <div className='flex-1 border-white border bg-motionPink'></div>
-                <div className='border-white border relative group'>
+                <div className='flex-1 p-4 flex flex-col justify-between gap-4 border-white border bg-motionPink shadow-inner shadow-gray-800'>
+                    <h2 className='text-2xl'>Napište nám</h2>
+
+                    <Link
+                        id='footerMail'
+                        className='text-2xl md:text-4xl'
+                        href={'mailto:motionlabs.cz'}
+                    >
+                        motionlabs@info.cz
+                    </Link>
+                </div>
+                <div className='border-white border relative group '>
                     <div className='absolute w-full h-full'>
                         <Image
                             alt='Follow Us Gif'
@@ -46,44 +65,44 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                             }
                             width={300}
                             height={400}
-                            className='absolute w-full h-full object-cover'
+                            className='absolute w-full h-full object-cover group-hover:hidden'
                         ></Image>
-                        <div className='absolute w-full h-full bg-black/20 group-hover:bg-black/100'></div>
+                        <div className='absolute w-full h-full bg-black/20'></div>
                     </div>
-                    <div className='p-4 h-full flex flex-col justify-between relative'>
-                        <h2>Naše sítě</h2>
+                    <div className='p-4 h-full flex flex-col gap-20 justify-between relative'>
+                        <h2 className='font-semibold'>Naše sítě</h2>
 
                         <ul>
                             <li>
-                                <Link href={'/'}>
-                                    <button className='px-4 py-2 w-full text-center bg-gradient-to-b from-orange-600 to-yellow-400 rounded-full shadow-inner shadow-yellow-600 hover:to-orange-600 hover:from-yellow-400 hover:shadow-orange-700 hover:underline'>
-                                        ig: @motionlabs
-                                    </button>
-                                </Link>
+                                <RetroButton
+                                    link='/'
+                                    text='ig: @MotionLabs'
+                                    blank
+                                ></RetroButton>
                             </li>
                             <li className='mt-2'>
-                                <Link href={'/'}>
-                                    <button className='px-4 py-2 w-full text-center bg-gradient-to-b from-orange-600 to-yellow-400 rounded-full shadow-inner shadow-yellow-600 hover:to-orange-600 hover:from-yellow-400 hover:shadow-orange-700 hover:underline'>
-                                        fb: @motionlabs
-                                    </button>
-                                </Link>
+                                <RetroButton
+                                    link='/'
+                                    text='fb: Motion labs'
+                                    blank
+                                ></RetroButton>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div className='border-white border p-4 flex flex-col justify-between bg-motionOrange shadow-inner shadow-gray-800'>
-                    <h2>Odkazy</h2>
+                <div className='border-white border p-4 flex flex-col gap-8 justify-between bg-motionOrange shadow-inner shadow-gray-800'>
+                    <h2 className='font-semibold'>Odkazy</h2>
                     <ul>
-                        <li className=' hover:underline hover:text-black'>
+                        <li className='text-lg hover:underline hover:text-black'>
                             <Link href={'/'}>Uvod</Link>
                         </li>
-                        <li className=' hover:underline hover:text-black'>
+                        <li className='text-lg hover:underline hover:text-black'>
                             <Link href={'/'}>O nas</Link>
                         </li>
-                        <li className=' hover:underline hover:text-black'>
+                        <li className='text-lg hover:underline hover:text-black'>
                             <Link href={'/'}>Projects</Link>
                         </li>
-                        <li className=' hover:underline hover:text-black '>
+                        <li className='text-lg hover:underline hover:text-black '>
                             <Link href={'/'}>Kontakt</Link>
                         </li>
                     </ul>
