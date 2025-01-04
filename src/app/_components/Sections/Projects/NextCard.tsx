@@ -7,7 +7,7 @@ const NextCard: React.FC<{ src: string; className?: string }> = ({
 }) => {
     return (
         <li
-            className={`absolute w-52 aspect-video rounded-lg duration-500 ease-out overflow-hidden ${
+            className={`absolute w-40 sm:w-52 aspect-video rounded-lg duration-500 ease-out overflow-hidden ${
                 className ?? ''
             }`}
         >
