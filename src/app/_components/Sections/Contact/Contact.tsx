@@ -8,7 +8,12 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import validator from 'validator'
 
 const validationSchema = z.object({
-    name: z
+    firstName: z
+        .string()
+        .nonempty('Toto pole je povinné.')
+        .min(3, 'Minimálně 3 znaky.')
+        .max(255, 'Maximálně 255 znaků.'),
+    lastName: z
         .string()
         .nonempty('Toto pole je povinné.')
         .min(3, 'Minimálně 3 znaky.')
@@ -22,6 +27,7 @@ const validationSchema = z.object({
         .nonempty('Toto pole je povinné.')
         .max(13, 'Maximálně 13 znaků.')
         .refine(validator.isMobilePhone, 'Telefon není ve správném formátu'),
+    company: z.string().optional(),
     message: z
         .string()
         .nonempty('Toto pole je povinné.')
@@ -30,9 +36,11 @@ const validationSchema = z.object({
 })
 
 interface IFormData {
-    name: string
+    firstName: string
+    lastName: string
     email: string
     phone: string
+    company: string
     message: string
 }
 
@@ -90,14 +98,14 @@ const Contact = () => {
             {/* <h1>
                 <strong>Contact us</strong>
             </h1> */}
-            <div className='w-full flex flex-col md:flex-row-reverse gap-8'>
+            <div className='w-full flex flex-col lg:flex-row-reverse gap-16 lg:gap-8'>
                 <div className='flex-1 flex items-center justify-center'>
                     <Image
                         src='https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/42549638-3207-452d-9f52-41e057be59c4/2ac41247-57bf-4313-bfb7-38f9bf7b8715.png'
                         width={300}
                         height={300}
                         alt='Contact form'
-                        className='w-2/3 aspect-square object-cover object-center'
+                        className='w-4/5 aspect-square object-cover object-center'
                     />
                 </div>
 
@@ -114,79 +122,109 @@ const Contact = () => {
                         </h1>
                     </header>
 
-                    <section className='flex flex-col gap-6'>
+                    <section className='flex flex-col gap-4'>
                         <fieldset>
-                            <label htmlFor='name'>
-                                <em>Jméno</em>
+                            <label htmlFor='firstName'>
+                                <em>Jméno*</em>
+                                <input
+                                    id='firstName'
+                                    {...register('firstName')}
+                                    placeholder='John'
+                                    aria-describedby='name-error'
+                                />
+                                {errors.firstName && (
+                                    <span role='alert' id='name-error'>
+                                        {errors.firstName.message}
+                                    </span>
+                                )}
                             </label>
-                            <input
-                                id='name'
-                                {...register('name')}
-                                placeholder='John Wick'
-                                aria-describedby='name-error'
-                            />
-                            {errors.name && (
-                                <span role='alert' id='name-error'>
-                                    {errors.name.message}
-                                </span>
-                            )}
+
+                            <label htmlFor='lastName'>
+                                <em>Příjmení*</em>
+                                <input
+                                    id='lastName'
+                                    {...register('lastName')}
+                                    placeholder='Wick'
+                                    aria-describedby='name-error'
+                                />
+                                {errors.lastName && (
+                                    <span role='alert' id='name-error'>
+                                        {errors.lastName.message}
+                                    </span>
+                                )}
+                            </label>
                         </fieldset>
 
                         <fieldset>
                             <label htmlFor='email'>
-                                <em>E-mail</em>
+                                <em>E-mail*</em>
+                                <input
+                                    id='email'
+                                    {...register('email')}
+                                    placeholder='john@wick.com'
+                                    aria-describedby='email-error'
+                                />
+                                {errors.email && (
+                                    <span role='alert' id='email-error'>
+                                        {errors.email.message}
+                                    </span>
+                                )}
                             </label>
-                            <input
-                                id='email'
-                                {...register('email')}
-                                placeholder='john@wick.com'
-                                aria-describedby='email-error'
-                            />
-                            {errors.email && (
-                                <span role='alert' id='email-error'>
-                                    {errors.email.message}
-                                </span>
-                            )}
+
+                            <label htmlFor='phone'>
+                                <em>Telefon*</em>
+                                <input
+                                    id='phone'
+                                    ref={phoneRef}
+                                    name={phoneName}
+                                    onChange={handlePhoneChange}
+                                    onBlur={phoneOnBlur}
+                                    maxLength={13}
+                                    placeholder='776 275 657'
+                                    aria-describedby='phone-error'
+                                />
+                                {errors.phone && (
+                                    <span role='alert' id='email-error'>
+                                        {errors.phone.message}
+                                    </span>
+                                )}
+                            </label>
                         </fieldset>
 
                         <fieldset>
-                            <label htmlFor='phone'>
-                                <em>Telefon</em>
+                            <label htmlFor='company'>
+                                <em>Společnost</em>
+                                <input
+                                    id='company'
+                                    {...register('company')}
+                                    placeholder='Apple'
+                                    aria-describedby='name-error'
+                                />
+                                {errors.company && (
+                                    <span role='alert' id='name-error'>
+                                        {errors.company.message}
+                                    </span>
+                                )}
                             </label>
-                            <input
-                                id='phone'
-                                ref={phoneRef}
-                                name={phoneName}
-                                onChange={handlePhoneChange}
-                                onBlur={phoneOnBlur}
-                                maxLength={13}
-                                placeholder='776 275 657'
-                                aria-describedby='phone-error'
-                            />
-                            {errors.phone && (
-                                <span role='alert' id='email-error'>
-                                    {errors.phone.message}
-                                </span>
-                            )}
                         </fieldset>
 
                         <fieldset>
                             <label htmlFor='message'>
                                 <em>Zpráva</em>
+                                <textarea
+                                    id='message'
+                                    {...register('message')}
+                                    rows={5}
+                                    placeholder='Hello, I want best website ever.'
+                                    aria-describedby='message-error'
+                                    className='resize-none'
+                                />
+                                {errors.message && (
+                                    <span role='alert' id='email-error'>
+                                        {errors.message.message}
+                                    </span>
+                                )}
                             </label>
-                            <textarea
-                                id='message'
-                                {...register('message')}
-                                rows={5}
-                                placeholder='Hello, I want best website ever.'
-                                aria-describedby='message-error'
-                                className='resize-none'
-                            />
-                            {errors.message && (
-                                <span role='alert' id='email-error'>
-                                    {errors.message.message}
-                                </span>
-                            )}
                         </fieldset>
                     </section>
 

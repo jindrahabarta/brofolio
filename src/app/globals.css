@@ -61,20 +61,16 @@ em {
 
 form {
     fieldset {
-        @apply flex flex-col gap-2;
+        @apply w-full flex flex-col md:flex-row gap-4;
     }
 
     label {
-        @apply text-xl;
+        @apply w-full flex flex-col gap-2 text-xl;
     }
 
     input,
     textarea {
-        @apply border-2 border-black focus:outline-none hover:cursor-text rounded-3xl px-4 py-3;
-    }
-
-    input {
-        @apply rounded-full;
+        @apply border-2 border-black focus:outline-none hover:cursor-text rounded-2xl px-4 py-3;
     }
 }
 
