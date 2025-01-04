@@ -7,7 +7,6 @@ import TechBadge from './TechBadge'
 
 const Technology = () => {
     const topFadeContainer = useRef<HTMLDivElement | null>(null)
-    const bottomFadeContainer = useRef<HTMLDivElement | null>(null)
 
     const { coding, design, other } = technology
 
@@ -55,8 +54,8 @@ const Technology = () => {
                 ref={topFadeContainer}
                 className='absolute -top-24 left-0 w-full h-24 overflow-hidden'
             />
-            <div className='flex flex-col gap-2 md:gap-4'>
-                <Marquee duration='30s' className='gap-2 md:gap-4 pr-2 md:pr-4'>
+            <div className='flex flex-col gap-2 sm:gap-4'>
+                <Marquee duration='30s' className='gap-2 sm:gap-4 pr-2 md:pr-4'>
                     {coding.map((item, index) => (
                         <TechBadge
                             key={`${index}-coding-${item.name}`}
@@ -69,7 +68,7 @@ const Technology = () => {
                     duration='20s'
                     sets={4}
                     direction='right'
-                    className='gap-2 md:gap-4 pr-2 md:pr-4'
+                    className='gap-2 sm:gap-4 pr-2 sm:pr-4'
                 >
                     {design.map((item, index) => (
                         <TechBadge

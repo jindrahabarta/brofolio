@@ -61,7 +61,7 @@ em {
 
 form {
     fieldset {
-        @apply w-full flex flex-col md:flex-row gap-4;
+        @apply w-full flex flex-col sm:flex-row gap-4;
     }
 
     label {
