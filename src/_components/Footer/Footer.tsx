@@ -45,12 +45,12 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                         </Link>
                     </p>
                 </div>
-                <div className='flex-1 p-4 flex flex-col justify-between gap-4 border-white border bg-motionPink shadow-inner shadow-gray-800'>
+                <div className='flex-1 p-4 flex flex-col justify-between gap-6 border-white border bg-motionPink shadow-inner shadow-gray-800'>
                     <h2 className='text-2xl'>Napište nám</h2>
 
                     <Link
                         id='footerMail'
-                        className='text-2xl md:text-4xl'
+                        className='text-3xl sm:text-2xl md:text-3xl lg:text-4xl'
                         href={'mailto:motionlabs.cz'}
                     >
                         motionlabs@info.cz
@@ -65,7 +65,7 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                             }
                             width={300}
                             height={400}
-                            className='absolute w-full h-full object-cover group-hover:hidden'
+                            className='absolute w-full h-full object-cover sm:group-hover:hidden'
                         ></Image>
                         <div className='absolute w-full h-full bg-black/20'></div>
                     </div>
@@ -93,16 +93,16 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                 <div className='border-white border p-4 flex flex-col gap-8 justify-between bg-motionOrange shadow-inner shadow-gray-800'>
                     <h2 className='font-semibold'>Odkazy</h2>
                     <ul>
-                        <li className='text-lg hover:underline hover:text-black'>
+                        <li className='text-lg hover:underline hover:text-black w-fit'>
                             <Link href={'/'}>Uvod</Link>
                         </li>
-                        <li className='text-lg hover:underline hover:text-black'>
+                        <li className='text-lg hover:underline hover:text-black w-fit'>
                             <Link href={'/'}>O nas</Link>
                         </li>
-                        <li className='text-lg hover:underline hover:text-black'>
+                        <li className='text-lg hover:underline hover:text-black w-fit'>
                             <Link href={'/'}>Projects</Link>
                         </li>
-                        <li className='text-lg hover:underline hover:text-black '>
+                        <li className='text-lg hover:underline hover:text-black w-fit'>
                             <Link href={'/'}>Kontakt</Link>
                         </li>
                     </ul>
