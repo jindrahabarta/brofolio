@@ -129,3 +129,8 @@ body::-webkit-scrollbar-thumb {
         filter: contrast(0.8) invert(0.1);
     }
 }
+
+#contact {
+    background-image: url('/images/contact/paper_texture.jpg');
+    background-repeat: repeat;
+}
