@@ -93,19 +93,23 @@ const Contact = () => {
     return (
         <section
             id='contact'
-            className='flex flex-col items-center gap-12 bg-yellow-100 text-black px-4 sm:px-8 py-16'
+            className='bg-yellow-100 text-black overflow-x-hidden'
         >
-            {/* <h1>
-                <strong>Contact us</strong>
-            </h1> */}
-            <div className='w-full flex flex-col lg:flex-row-reverse gap-16 lg:gap-8'>
+            <Image
+                src='/images/contact/paper_texture_edge.png'
+                alt='Paper edge'
+                width={3427}
+                height={318}
+                className='relative -top-2'
+            />
+            <div className='w-full flex flex-col lg:flex-row-reverse gap-16 lg:gap-8 px-4 sm:px-8 py-16'>
                 <div className='flex-1 flex items-center justify-center'>
                     <Image
                         src='https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/42549638-3207-452d-9f52-41e057be59c4/2ac41247-57bf-4313-bfb7-38f9bf7b8715.png'
                         width={300}
                         height={300}
                         alt='Contact form'
-                        className='w-4/5 aspect-square object-cover object-center'
+                        className='w-4/5 aspect-square object-cover object-center mix-blend-multiply'
                     />
                 </div>
 
