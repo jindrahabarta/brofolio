@@ -30,9 +30,9 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     }
 
     return (
-        <header className='fixed w-screen text-white p-4 sm:p-8 z-50'>
+        <header className='fixed w-screen text-white p-4 sm:p-8 z-50 pointer-events-none'>
             <nav className='flex z-40 items-center justify-between gap-2 '>
-                <div className='z-50 select-none'>
+                <div className='z-50 select-none pointer-events-auto'>
                     <Link id='navLogo' href='/'>
                         <Image
                             id='navLogo'
@@ -47,7 +47,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                     </Link>
                 </div>
 
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center gap-4 pointer-events-auto'>
                     <BlurryButton
                         text='Kontakt'
                         link='/'
@@ -63,7 +63,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
 
             <figure
                 id='navBg'
-                className='absolute top-0 left-0 w-screen h-screen z-30 hidden'
+                className='absolute top-0 left-0 w-screen h-screen z-30 hidden pointer-events-auto'
                 onClick={closeMenu}
             >
                 <aside

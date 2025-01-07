@@ -100,7 +100,7 @@ const Contact = () => {
                 alt='Paper edge'
                 width={3427}
                 height={318}
-                className='relative -top-2'
+                className='relative top-[-2px]'
             />
             <div className='w-full flex flex-col lg:flex-row-reverse gap-16 lg:gap-8 px-4 sm:px-8 py-16'>
                 <div className='flex-1 flex items-center justify-center'>

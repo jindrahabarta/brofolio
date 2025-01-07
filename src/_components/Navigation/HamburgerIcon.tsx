@@ -12,16 +12,16 @@ const HamburgerIcon = ({
             <button
                 onClick={handleClick}
                 aria-label='Hamburger icon open'
-                className='hamburgerIcon btnFilter group w-14 h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
+                className='hamburgerIcon btnFilter group w-12 h-12 sm:w-14 sm:h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
-                <div className='flex flex-col justify-center items-center gap-2'>
-                    <div className='rounded-full w-8 h-[2px] bg-white/50 '>
+                <div className='flex flex-col justify-center items-center gap-[0.4rem] sm:gap-2'>
+                    <div className='rounded-full w-7 sm:w-8 h-[2px] bg-white/50 '>
                         <div className='rounded-full h-full w-0 bg-white group-hover:w-full duration-200'></div>
                     </div>
-                    <div className='rounded-full w-8 h-[2px] bg-white/65'>
+                    <div className='rounded-full w-7 sm:w-8 h-[2px] bg-white/65'>
                         <div className='rounded-full h-full w-0 bg-white group-hover:w-full duration-200 delay-100'></div>
                     </div>
-                    <div className='rounded-full w-8 h-[2px] bg-white/75 '>
+                    <div className='rounded-full w-7 sm:w-8 h-[2px] bg-white/75 '>
                         <div className='rounded-full h-full w-0 bg-white group-hover:w-full duration-200 delay-200'></div>
                     </div>
                 </div>

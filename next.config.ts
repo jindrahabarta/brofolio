@@ -35,10 +35,6 @@ const nextConfig: NextConfig = {
                     '/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/42549638-3207-452d-9f52-41e057be59c4/2ac41247-57bf-4313-bfb7-38f9bf7b8715.png',
                 search: '',
             },
-            {
-                protocol: 'https',
-                hostname: 'i.pinimg.com',
-            },
         ],
     },
 }

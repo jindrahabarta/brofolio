@@ -5,6 +5,8 @@ import Image from 'next/image'
 import Lenis from 'lenis'
 import Link from 'next/link'
 import RetroButton from '../Buttons/RetroButton'
+import MailButton from './MailButton'
+import SadCat from '@/../public/images/Footer/sadcat.gif'
 
 const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const scrollToTop = () => {
@@ -48,21 +50,14 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                 <div className='flex-1 p-4 flex flex-col justify-between gap-6 border-white border bg-motionPink shadow-inner shadow-gray-800'>
                     <h2 className='text-2xl'>Napište nám</h2>
 
-                    <Link
-                        id='footerMail'
-                        className='text-3xl sm:text-2xl md:text-3xl lg:text-4xl'
-                        href={'mailto:motionlabs.cz'}
-                    >
-                        motionlabs@info.cz
-                    </Link>
+                    <MailButton></MailButton>
                 </div>
                 <div className='border-white border relative group '>
                     <div className='absolute w-full h-full'>
                         <Image
                             alt='Follow Us Gif'
-                            src={
-                                'https://i.pinimg.com/originals/9a/3c/3f/9a3c3fb5f73822af8514df07f6676392.gif'
-                            }
+                            src={SadCat}
+                            unoptimized
                             width={300}
                             height={400}
                             className='absolute w-full h-full object-cover sm:group-hover:hidden'

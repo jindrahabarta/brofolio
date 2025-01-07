@@ -55,7 +55,7 @@ const Technology = () => {
                 className='absolute -top-24 left-0 w-full h-24 overflow-hidden'
             />
 
-            <h1 className='text-[clamp(1rem,7.5vw,3.75rem)] text-white px-4 sm:px-8'>
+            <h1 className='text-[clamp(1rem,7vw,3.75rem)] text-white px-4 sm:px-8'>
                 <strong>Technologie</strong>
             </h1>
 
