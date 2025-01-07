@@ -55,12 +55,8 @@ const Technology = () => {
                 className='absolute -top-24 left-0 w-full h-24 overflow-hidden'
             />
 
-            <h1 className='text-[clamp(1rem,7vw,3.75rem)] text-white px-4 sm:px-8'>
-                <strong>Technologie</strong>
-            </h1>
-
-            <div className='flex flex-col gap-2 sm:gap-4'>
-                <Marquee duration='30s' className='gap-2 sm:gap-4 pr-2 md:pr-4'>
+            <div className='flex flex-col gap-2 sm:gap-3'>
+                <Marquee duration='30s' className='gap-2 sm:gap-3 pr-2 md:pr-4'>
                     {coding.map((item, index) => (
                         <TechBadge
                             key={`${index}-coding-${item.name}`}
