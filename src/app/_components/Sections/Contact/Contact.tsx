@@ -130,12 +130,20 @@ const Contact = () => {
                         <fieldset>
                             <label htmlFor='firstName'>
                                 <em>Jméno*</em>
-                                <input
-                                    id='firstName'
-                                    {...register('firstName')}
-                                    placeholder='John'
-                                    aria-describedby='name-error'
-                                />
+                                <div className='container'>
+                                    <Image
+                                        src='/images/contact/input1.png'
+                                        width={418}
+                                        height={95}
+                                        alt='input'
+                                    />
+                                    <input
+                                        id='firstName'
+                                        {...register('firstName')}
+                                        placeholder='John'
+                                        aria-describedby='name-error'
+                                    />
+                                </div>
                                 {errors.firstName && (
                                     <span role='alert' id='name-error'>
                                         {errors.firstName.message}
@@ -145,12 +153,20 @@ const Contact = () => {
 
                             <label htmlFor='lastName'>
                                 <em>Příjmení*</em>
-                                <input
-                                    id='lastName'
-                                    {...register('lastName')}
-                                    placeholder='Wick'
-                                    aria-describedby='name-error'
-                                />
+                                <div className='container'>
+                                    <Image
+                                        src='/images/contact/input2.png'
+                                        width={418}
+                                        height={95}
+                                        alt='input'
+                                    />
+                                    <input
+                                        id='lastName'
+                                        {...register('lastName')}
+                                        placeholder='Wick'
+                                        aria-describedby='name-error'
+                                    />
+                                </div>
                                 {errors.lastName && (
                                     <span role='alert' id='name-error'>
                                         {errors.lastName.message}
@@ -162,12 +178,20 @@ const Contact = () => {
                         <fieldset>
                             <label htmlFor='email'>
                                 <em>E-mail*</em>
-                                <input
-                                    id='email'
-                                    {...register('email')}
-                                    placeholder='john@wick.com'
-                                    aria-describedby='email-error'
-                                />
+                                <div className='container'>
+                                    <Image
+                                        src='/images/contact/input3.png'
+                                        width={418}
+                                        height={95}
+                                        alt='input'
+                                    />
+                                    <input
+                                        id='email'
+                                        {...register('email')}
+                                        placeholder='john@wick.cz'
+                                        aria-describedby='name-error'
+                                    />
+                                </div>
                                 {errors.email && (
                                     <span role='alert' id='email-error'>
                                         {errors.email.message}
@@ -177,16 +201,24 @@ const Contact = () => {
 
                             <label htmlFor='phone'>
                                 <em>Telefon*</em>
-                                <input
-                                    id='phone'
-                                    ref={phoneRef}
-                                    name={phoneName}
-                                    onChange={handlePhoneChange}
-                                    onBlur={phoneOnBlur}
-                                    maxLength={13}
-                                    placeholder='776 275 657'
-                                    aria-describedby='phone-error'
-                                />
+                                <div className='container'>
+                                    <Image
+                                        src='/images/contact/input3.png'
+                                        width={418}
+                                        height={95}
+                                        alt='input'
+                                    />
+                                    <input
+                                        id='phone'
+                                        ref={phoneRef}
+                                        name={phoneName}
+                                        onChange={handlePhoneChange}
+                                        onBlur={phoneOnBlur}
+                                        maxLength={13}
+                                        placeholder='776 275 657'
+                                        aria-describedby='phone-error'
+                                    />
+                                </div>
                                 {errors.phone && (
                                     <span role='alert' id='email-error'>
                                         {errors.phone.message}
@@ -198,12 +230,20 @@ const Contact = () => {
                         <fieldset>
                             <label htmlFor='company'>
                                 <em>Společnost</em>
-                                <input
-                                    id='company'
-                                    {...register('company')}
-                                    placeholder='Apple'
-                                    aria-describedby='name-error'
-                                />
+                                <div className='container'>
+                                    <Image
+                                        src='/images/contact/input3.png'
+                                        width={418}
+                                        height={95}
+                                        alt='input'
+                                    />
+                                    <input
+                                        id='company'
+                                        {...register('company')}
+                                        placeholder='Apple'
+                                        aria-describedby='name-error'
+                                    />
+                                </div>
                                 {errors.company && (
                                     <span role='alert' id='name-error'>
                                         {errors.company.message}
