@@ -34,8 +34,6 @@ const gsapAnimationsInit = (path: string) => {
             start: 'top top',
             end: '80% bottom',
             scrub: 0.1,
-
-            snap: 'labels',
         },
     })
 
@@ -44,17 +42,17 @@ const gsapAnimationsInit = (path: string) => {
             '.aboutUs-scale',
             {
                 scale: 5,
-                x: 70,
-                y: -150,
             },
             0
         )
         .to(
-            '#aboutus-TVFill',
+            '#aboutUs-TvFill',
             {
-                opacity: 0,
+                scale: 1,
+                width: '100%',
+                translateY: '-30%',
             },
-            'AUTLend'
+            '<'
         )
 
     //FOOTER
@@ -70,18 +68,6 @@ const gsapAnimationsInit = (path: string) => {
             toggleActions: 'play none none reverse',
         },
     })
-
-    // gsap.to('.footerHeading', {
-    //     scrollTrigger: {
-    //         trigger: '#footer',
-    //         start: 'bottom bottom',
-    //         end: 'bottom bottom',
-    //         markers: true,
-    //     },
-    //     delay: 10,
-    //     stagger: 0.2,
-    //     translateY: 100,
-    // })
 }
 
 export default gsapAnimationsInit

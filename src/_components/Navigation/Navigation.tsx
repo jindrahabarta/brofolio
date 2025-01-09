@@ -83,22 +83,32 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                             <div className='text-right'>
                                 <ul>
                                     <NavLink
-                                        text='Home'
+                                        text='Úvod'
                                         link='#home'
                                         lenis={lenis}
                                     ></NavLink>
                                     <NavLink
-                                        text='Portfolio'
+                                        text='O nás'
+                                        link='#about'
+                                        lenis={lenis}
+                                    ></NavLink>
+                                    <NavLink
+                                        text='Projekty'
                                         link='#projects'
                                         lenis={lenis}
                                     ></NavLink>
                                     <NavLink
                                         link='#technology'
-                                        text='Technology'
+                                        text='Technologie'
                                         lenis={lenis}
                                     />
                                     <NavLink
-                                        text='Contact us'
+                                        link='#technology'
+                                        text='Proces'
+                                        lenis={lenis}
+                                    />
+                                    <NavLink
+                                        text='Kontakt'
                                         link='#contact'
                                         lenis={lenis}
                                     ></NavLink>

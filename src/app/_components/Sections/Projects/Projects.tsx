@@ -21,8 +21,8 @@ const Projects = () => {
                 <h3>
                     <strong>Ostatní</strong>
                 </h3>
-                <h2 className='font-instrument text-3xl sm:text-5xl text-center max-w-[9em]'>
-                    An assortment of visuals not in a project.
+                <h2 className='font-instrument text-3xl sm:text-5xl text-center max-w-[10em]'>
+                    Všechny realizované projekty na kterých jsme se pracovali
                 </h2>
                 <Next />
             </footer>

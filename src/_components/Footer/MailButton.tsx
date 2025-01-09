@@ -3,10 +3,8 @@ import React, { useState } from 'react'
 import gsap from 'gsap'
 import Image from 'next/image'
 
-import LetterImage from '@/../public/images/Footer/letter.png'
-
 const MailButton = () => {
-    const [letterVisible, setLetterVisible] = useState(false)
+    const [cursor, setLetterVisible] = useState(false)
 
     const mouseEnter: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
         const buttonRect = e.currentTarget.getBoundingClientRect()
@@ -27,11 +25,21 @@ const MailButton = () => {
         const offsetX = e.clientX - buttonRect.left
         const offsetY = e.clientY - buttonRect.top
 
-        gsap.to('#mailBtnLetter', {
-            left: offsetX + 30,
-            top: offsetY - 20,
-            ease: 'power1.out',
-        })
+        console.log(buttonRect.width / 2)
+
+        if (buttonRect.width / 2 <= offsetX) {
+            gsap.to('#mailBtnLetter', {
+                left: offsetX + 30,
+                top: offsetY - 20,
+                ease: 'power1.out',
+            })
+        } else {
+            gsap.to('#mailBtnLetter', {
+                left: offsetX - 70,
+                top: offsetY - 20,
+                ease: 'power1.out',
+            })
+        }
     }
 
     return (
@@ -40,18 +48,20 @@ const MailButton = () => {
             onMouseLeave={() => setLetterVisible(false)}
             onMouseMove={mouseMove}
             id='footerMail'
-            className='text-[clamp(1rem,7vw,3.75rem)] sm:text-2xl md:text-3xl lg:text-4xl relative w-fit'
+            className='text-[clamp(1rem,7vw,3.75rem)] sm:text-2xl md:text-2xl lg:text-4xl relative w-fit'
             href={'mailto:motionlabs.cz'}
         >
             motionlabs@info.cz
             <Image
-                src={LetterImage}
-                width={50}
-                height={20}
+                src={
+                    'https://media.tenor.com/m-OEv4Zz1zEAAAAM/mailman-postman.gif'
+                }
+                width={120}
+                height={100}
                 alt='Letter icon'
                 id='mailBtnLetter'
-                className={`absolute  ${
-                    letterVisible ? 'opacity-100' : 'opacity-0'
+                className={`absolute duration-200  ${
+                    cursor ? 'opacity-70' : 'opacity-0'
                 }`}
             ></Image>
         </Link>

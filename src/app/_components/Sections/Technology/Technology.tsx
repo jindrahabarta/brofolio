@@ -56,7 +56,11 @@ const Technology = () => {
             />
 
             <div className='flex flex-col gap-2 sm:gap-3'>
-                <Marquee duration='30s' className='gap-2 sm:gap-3 pr-2 md:pr-4'>
+                <Marquee
+                    duration='30s'
+                    sets={3}
+                    className='gap-2 sm:gap-3 pr-2 md:pr-4'
+                >
                     {coding.map((item, index) => (
                         <TechBadge
                             key={`${index}-coding-${item.name}`}
