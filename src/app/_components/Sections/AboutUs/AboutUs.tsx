@@ -69,7 +69,67 @@ const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <div className='h-screen bg-red-400'></div>
+
+            <div className='flex flex-col bg-gray-200 text-red-500'>
+                <div className='relative self-start w-full lg:h-[120vh] aspect-square'>
+                    <Image
+                        src={
+                            'https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                        }
+                        alt={'Jindra Habarta'}
+                        width={1920}
+                        height={1080}
+                        className='w-full h-full object-cover'
+                    />
+
+                    <h1 className='absolute top-[3%] left-[3%] flex flex-col font-league uppercase text-[12vw] leading-[80%]'>
+                        Jindra
+                        <span className='font-league indent-[8.4%]'>
+                            Habarta
+                        </span>
+                    </h1>
+
+                    <span className='absolute left-[3%] top-[45%] max-w-md'>
+                        <p className='font-instrument text-justify text-lg indent-4'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Dicta aut voluptatem voluptas tenetur quam
+                            illum eaque expedita commodi fuga, cupiditate
+                            provident veniam necessitatibus facilis eius
+                            nesciunt. Ducimus veniam dignissimos praesentium.
+                        </p>
+                        <p className='font-instrument text-justify text-lg indent-4'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Nam quasi laudantium iusto saepe excepturi
+                            autem assumenda consectetur? Id temporibus maiores
+                            molestias similique vero praesentium eum cupiditate
+                            dolores ducimus. Nulla, sit?
+                        </p>
+                    </span>
+                </div>
+
+                <div className='flex flex-col sm:flex-row-reverse sm:justify-end items-center'>
+                    <div className='relative w-full lg:w-2/3 max-w-[1240px] lg:h-[120vh] aspect-square'>
+                        <Image
+                            src={
+                                'https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                            }
+                            alt={'Jindra Habarta'}
+                            width={1240}
+                            height={1240}
+                            className='w-full h-full object-cover'
+                        />
+
+                        <h1 className='flex flex-col absolute bottom-[3%] right-[3%] font-league uppercase text-[12vw] leading-[80%] text-red-500'>
+                            <span className='font-league indent-[-12%]'>
+                                Luba
+                            </span>
+                            Habarta
+                        </h1>
+                    </div>
+
+                    <div className='flex-1'></div>
+                </div>
+            </div>
         </section>
     )
 }
