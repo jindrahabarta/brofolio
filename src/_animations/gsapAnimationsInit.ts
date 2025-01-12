@@ -30,10 +30,11 @@ const gsapAnimationsInit = (path: string) => {
     //ABOUT US
     const aboutUsTimeline = gsap.timeline({
         scrollTrigger: {
-            trigger: '#aboutus',
+            trigger: '#aboutusScroller',
             start: 'top top',
-            end: '80% bottom',
-            scrub: 0.1,
+            end: '50% bottom',
+            scrub: 1,
+            markers: true,
         },
     })
 
@@ -49,8 +50,7 @@ const gsapAnimationsInit = (path: string) => {
             '#aboutUs-TvFill',
             {
                 scale: 1,
-                width: '100%',
-                translateY: '-30%',
+                translateY: 0,
             },
             '<'
         )
