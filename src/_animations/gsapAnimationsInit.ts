@@ -28,13 +28,14 @@ const gsapAnimationsInit = (path: string) => {
     }
 
     //ABOUT US
+
+    //TV Transition
     const aboutUsTimeline = gsap.timeline({
         scrollTrigger: {
-            trigger: '#aboutusScroller',
+            trigger: '#about',
             start: 'top top',
             end: '50% bottom',
-            scrub: 1,
-            markers: true,
+            scrub: 0.1,
         },
     })
 
@@ -47,13 +48,28 @@ const gsapAnimationsInit = (path: string) => {
             0
         )
         .to(
-            '#aboutUs-TvFill',
+            '#aboutUsContent',
             {
                 scale: 1,
                 translateY: 0,
             },
             '<'
         )
+        .set('#aboutUsScrollSection', {
+            display: 'none',
+        })
+
+    //TV Transition
+    gsap.to('.aboutUsScrollSpeed', {
+        scrollTrigger: {
+            trigger: '#aboutUsContent',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.1,
+        },
+
+        translateY: 0,
+    })
 
     //FOOTER
 

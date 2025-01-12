@@ -6,7 +6,10 @@ import TVImg from '@/../public/images/AboutUs/bg-tv2.png'
 
 const ScrollEffect = () => {
     return (
-        <div className='h-[200vh] absolute top-0 w-full'>
+        <div
+            id='aboutUsScrollSection'
+            className='h-[300vh] absolute top-0 w-full select-none pointer-events-none'
+        >
             <div className='h-screen sticky top-0 overflow-hidden'>
                 <div className='relative w-full h-screen'>
                     <Image

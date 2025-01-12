@@ -4,17 +4,22 @@ import Image from 'next/image'
 const Content = () => {
     return (
         <div
-            id='aboutUs-TvFill'
+            id='aboutUsContent'
             className=' bg-blue-400 h-fit flex flex-col justify-start scale-[0.5]'
             style={{ transformOrigin: 'center 15%' }}
         >
-            <div className='h-screen'>
+            <div className='h-screen relative'>
                 <video
                     className='w-full h-screen object-cover'
                     autoPlay
                     loop
                     src='https://media.istockphoto.com/id/649431220/cs/video/k%C3%B3d-obrazovky-po%C4%8D%C3%ADta%C4%8De-z%C3%A1vadov%C3%BD-efekt-4k.mp4?s=mp4-640x640-is&k=20&c=NzqFy_RmQPW34BSKh8m6cSVK_ws-n6fDLFKtJz_m9EI='
                 ></video>
+                <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
+                    <h1 className=' text-yellow-400 text-center '>
+                        <strong>O nás</strong>
+                    </h1>
+                </div>
             </div>
 
             <div className='flex flex-col bg-gray-200 uppercase text-red-500'>
@@ -28,7 +33,7 @@ const Content = () => {
                     />
 
                     <section className='md:w-3/5 md:relative z-10 flex flex-col gap-16 p-4 sm:p-8'>
-                        <h1 className='flex flex-col font-league text-[12vw] leading-[80%]'>
+                        <h1 className='aboutUsScrollSpeed translate-y-32 flex flex-col font-league text-[12vw] leading-[80%]'>
                             Jindra
                             <span className='font-league indent-[2.5vw]'>
                                 Habarta
@@ -36,7 +41,7 @@ const Content = () => {
                         </h1>
 
                         <span className='w-full max-w-sm'>
-                            <p className='font-instrument text-justify text-lg indent-4'>
+                            <p className='aboutUsScrollSpeed translate-y-72 font-instrument text-justify text-lg indent-4'>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Dicta aut voluptatem voluptas
                                 tenetur quam illum eaque expedita commodi fuga,
@@ -44,7 +49,7 @@ const Content = () => {
                                 facilis eius nesciunt. Ducimus veniam
                                 dignissimos praesentium.
                             </p>
-                            <p className='font-instrument text-justify text-lg indent-4 mt-4'>
+                            <p className='aboutUsScrollSpeed translate-y-96 font-instrument text-justify text-lg indent-4 mt-4'>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Nam quasi laudantium iusto
                                 saepe excepturi autem assumenda consectetur?

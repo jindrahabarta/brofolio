@@ -93,7 +93,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: black;
+    background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -166,4 +166,11 @@ body::-webkit-scrollbar-thumb {
 
 .about-photo {
     transform: rotate3d(-1, -1, 0, 20deg);
+}
+
+/* FOOTER */
+
+#footerTop {
+    box-shadow: 5px 5px 10px blue, 10px 10px 10px green, 15px 15px 10px yellow,
+        20px 20px 12px red;
 }

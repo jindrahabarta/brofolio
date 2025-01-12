@@ -136,6 +136,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
+                                        className='pointer-events-none'
                                     />
                                     <input
                                         id='firstName'
@@ -159,6 +160,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
+                                        className='pointer-events-none'
                                     />
                                     <input
                                         id='lastName'
@@ -184,6 +186,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
+                                        className='pointer-events-none'
                                     />
                                     <input
                                         id='email'
@@ -207,6 +210,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
+                                        className='pointer-events-none'
                                     />
                                     <input
                                         id='phone'
@@ -236,6 +240,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
+                                        className='pointer-events-none'
                                     />
                                     <input
                                         id='company'
