@@ -6,6 +6,10 @@
     @apply font-sourceSerif;
 }
 
+html {
+    @apply bg-black;
+}
+
 /*LENIS*/
 
 html.lenis,
@@ -68,9 +72,17 @@ form {
         @apply w-full flex flex-col gap-2 text-xl;
     }
 
+    .container {
+        @apply w-full relative;
+
+        img {
+            @apply absolute h-full w-full scale-105;
+        }
+    }
+
     input,
     textarea {
-        @apply text-base bg-transparent border border-black focus:outline-none hover:cursor-text px-3 py-2;
+        @apply w-full text-base bg-transparent border-none focus:outline-none hover:cursor-text px-3 py-2;
     }
 }
 
@@ -150,4 +162,8 @@ body::-webkit-scrollbar-thumb {
 #contact {
     background-image: url('/images/contact/paper_texture.jpg');
     background-repeat: repeat;
+}
+
+.about-photo {
+    transform: rotate3d(-1, -1, 0, 20deg);
 }
