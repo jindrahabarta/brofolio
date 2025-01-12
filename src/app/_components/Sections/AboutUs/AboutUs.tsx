@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Content from './Content'
 import ScrollEffect from './ScrollEffect'
 
@@ -14,10 +15,8 @@ const AboutUs = () => {
             <div className='flex flex-col bg-gray-200 uppercase text-red-500'>
                 <article className='relative w-full md:h-[120vh] flex flex-col md:flex-row aspect-square'>
                     <Image
-                        src={
-                            'https://c.pxhere.com/photos/c2/1b/black_and_white_fun_happy_laughing_man_person_portrait_smile-913378.jpg!d'
-                        }
-                        alt={'Jindra Habarta'}
+                        src='https://c.pxhere.com/photos/c2/1b/black_and_white_fun_happy_laughing_man_person_portrait_smile-913378.jpg!d'
+                        alt='Jindra Habarta'
                         width={1920}
                         height={1080}
                         className='md:absolute w-full h-full object-cover'
@@ -67,10 +66,8 @@ const AboutUs = () => {
                 <article className='flex flex-col sm:flex-row-reverse sm:justify-end items-center'>
                     <div className='relative w-full lg:w-3/5 max-w-[1240px] lg:h-[120vh] aspect-square'>
                         <Image
-                            src={
-                                'https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
-                            }
-                            alt={'Jindra Habarta'}
+                            src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                            alt='Jindra Habarta'
                             width={1240}
                             height={1240}
                             className='w-full h-full object-cover'
