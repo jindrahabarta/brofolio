@@ -14,6 +14,7 @@ export const projectList: IProject[] = [
         image: 'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
         url: 'https://example.com/project1',
         badges: ['TypeScript', 'Angular'],
+        color: 'bg-red-400',
     },
     {
         name: 'Project Two',
@@ -21,7 +22,7 @@ export const projectList: IProject[] = [
         image: 'https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg',
         url: 'https://example.com/project2',
         badges: ['JavaScript', 'React'],
-        color: '#33FF57',
+        color: 'bg-gray-400',
     },
     {
         name: 'Project Three',
@@ -29,5 +30,6 @@ export const projectList: IProject[] = [
         image: 'https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg',
         url: 'https://example.com/project3',
         badges: ['Python', 'Django'],
+        color: 'bg-orange-400',
     },
 ]
