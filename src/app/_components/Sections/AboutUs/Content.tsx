@@ -52,76 +52,71 @@ const Content = () => {
                         </span>
                     </section>
 
-                    <section className='md:w-2/5 md:relative z-10 flex flex-col justify-end gap-16 p-4 sm:p-8'>
+                    <section className='md:w-2/5 md:relative z-10 self-end md:self-auto flex flex-col justify-end gap-16 p-4 sm:p-8'>
                         <h1 className='font-league text-[12vw] leading-[80%]'>
                             Role
                         </h1>
 
-                        <span className='w-full max-w-sm'>
+                        <p className='w-full max-w-sm font-instrument text-justify text-lg indent-4'>
+                            Dicta aut voluptatem voluptas tenetur quam illum
+                            eaque expedita commodi fuga, cupiditate provident
+                            veniam necessitatibus facilis eius nesciunt.
+                        </p>
+                    </section>
+                </article>
+
+                <article className='flex flex-col md:flex-row-reverse md:justify-end items-center'>
+                    <section className='relative w-full md:w-3/5 md:h-[120vh] flex flex-col justify-end items-end aspect-square'>
+                        <Image
+                            src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                            alt='Luba Habarta'
+                            width={1240}
+                            height={1240}
+                            className='md:absolute w-full h-full object-cover'
+                        />
+
+                        <div className='p-4 sm:p-8'>
+                            <h1 className='md:relative z-10 flex flex-col font-league uppercase text-right text-[12vw] leading-[80%] text-red-500'>
+                                Luba
+                                <span className='font-league indent-[-2.5vw]'>
+                                    Habarta
+                                </span>
+                            </h1>
+                        </div>
+                    </section>
+
+                    <section className='w-full md:flex-1 flex flex-col items-center justify-center'>
+                        <span className='w-full max-w-sm self-end md:self-auto p-4 sm:p-8'>
                             <p className='font-instrument text-justify text-lg indent-4'>
                                 Dicta aut voluptatem voluptas tenetur quam illum
                                 eaque expedita commodi fuga, cupiditate
                                 provident veniam necessitatibus facilis eius
                                 nesciunt.
                             </p>
+
+                            <p className='font-instrument text-justify text-lg indent-4 mt-4'>
+                                Dicta aut voluptatem voluptas tenetur quam illum
+                                eaque expedita commodi fuga, cupiditate
+                                provident veniam necessitatibus facilis eius
+                                nesciunt.
+                            </p>
                         </span>
+
+                        <div className='self-start md:self-auto flex flex-col gap-16 p-4 sm:p-8'>
+                            <h1 className='font-league text-[12vw] leading-[80%]'>
+                                Role
+                            </h1>
+
+                            <p className='w-full max-w-sm font-instrument text-justify text-lg indent-4'>
+                                Dicta aut voluptatem voluptas tenetur quam illum
+                                eaque expedita commodi fuga, cupiditate
+                                provident veniam necessitatibus facilis eius
+                                nesciunt.
+                            </p>
+                        </div>
                     </section>
                 </article>
-
-                <article className='flex flex-col sm:flex-row-reverse sm:justify-end items-center'>
-                    <div className='relative w-full lg:w-3/5 max-w-[1240px] lg:h-[120vh] aspect-square'>
-                        <Image
-                            src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
-                            alt='Jindra Habarta'
-                            width={1240}
-                            height={1240}
-                            className='w-full h-full object-cover'
-                        />
-
-                        <h1 className='flex flex-col absolute bottom-[3%] right-[3%] font-league uppercase text-[12vw] leading-[80%] text-red-500'>
-                            <span className='font-league indent-[-12%]'>
-                                Luba Habarta
-                            </span>
-                        </h1>
-                    </div>
-
-                    <div className='flex-1 flex flex-col items-center justify-center'></div>
-                </article>
             </div>
-
-            {/* <div className='h-fit bg-yellow-400'>
-                <h1 className='text-center text-amber-500'>
-                    <strong>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo nemo recusandae magni corporis? Non illum tenetur
-                        quisquam, ipsum voluptatum, consequuntur deleniti sed
-                        obcaecati praesentium provident corporis repellendus
-                        esse. Illo, corporis!
-                    </strong>
-                </h1>
-            </div>
-            <div className='h-fit bg-blue-400'>
-                <h1 className='text-center text-amber-500'>
-                    <strong>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo nemo recusandae magni corporis? Non illum tenetur
-                        quisquam, ipsum voluptatum, consequuntur deleniti sed
-                        obcaecati praesentium provident corporis repellendus
-                        esse. Illo, corporis!
-                    </strong>
-                </h1>
-            </div>
-            <div className='h-fit bg-orange-400'>
-                <h1 className='text-center text-amber-500'>
-                    <strong>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo nemo recusandae magni corporis? Non illum tenetur
-                        quisquam, ipsum voluptatum, consequuntur deleniti sed
-                        obcaecati praesentium provident corporis repellendus
-                        esse. Illo, corporis!
-                    </strong>
-                </h1>
-            </div> */}
         </div>
     )
 }

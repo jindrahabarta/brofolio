@@ -9,7 +9,9 @@ const ListItem: React.FC<{ project: IProject }> = ({ project }) => {
         <li className='projectsItem opacity-0 -translate-x-80'>
             <Link
                 href={project.url}
-                className='group h-60 sm:h-80 block relative bg-gray-200 hover:bg-[rgb(16,152,173)]  border-b border-gray-300 ease-out duration-200'
+                className={`group h-60 sm:h-80 block relative bg-opacity-0 hover:bg-opacity-100 ${
+                    project.color || ''
+                } border-b border-gray-300 ease-out duration-200`}
             >
                 <Marquee
                     duration='40s'
