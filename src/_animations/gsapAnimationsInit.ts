@@ -3,8 +3,8 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const gsapAnimationsInit = (path: string) => {
-    gsap.registerPlugin(ScrollTrigger)
     ScrollTrigger.killAll()
+    gsap.registerPlugin(ScrollTrigger)
 
     if (path === '/') {
         //PROJECTS
@@ -32,9 +32,9 @@ const gsapAnimationsInit = (path: string) => {
     //TV Transition
     const aboutUsTimeline = gsap.timeline({
         scrollTrigger: {
-            trigger: '#about',
+            trigger: '#aboutUsScrollSection',
             start: 'top top',
-            end: '50% bottom',
+            end: '50% 110%',
             scrub: 0.1,
         },
     })
@@ -44,6 +44,8 @@ const gsapAnimationsInit = (path: string) => {
             '.aboutUs-scale',
             {
                 scale: 5,
+
+                rotate: 4,
             },
             0
         )
