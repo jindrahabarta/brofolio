@@ -25,8 +25,6 @@ const MailButton = () => {
         const offsetX = e.clientX - buttonRect.left
         const offsetY = e.clientY - buttonRect.top
 
-        console.log(buttonRect.width / 2)
-
         if (buttonRect.width / 2 <= offsetX) {
             gsap.to('#mailBtnLetter', {
                 left: offsetX + 30,
