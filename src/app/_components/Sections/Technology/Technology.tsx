@@ -1,59 +1,57 @@
-'use client'
-
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { technology } from '@/_constants/technology'
 import Marquee from '@/_components/Marquee/Marquee'
 import TechBadge from './TechBadge'
 
 const Technology = () => {
-    const topFadeContainer = useRef<HTMLDivElement | null>(null)
+    // const topFadeContainer = useRef<HTMLDivElement | null>(null)
 
     const { coding, design, other } = technology
 
-    const generateTopFade = () => {
-        if (!topFadeContainer.current) return
+    // const generateTopFade = () => {
+    //     if (!topFadeContainer.current) return
 
-        const ROWS = 15
-        const { offsetWidth, offsetHeight } = topFadeContainer.current
-        const width = Math.floor(offsetHeight / ROWS)
-        const rowLength = Math.ceil(offsetWidth / width)
-        let innerHtml = ''
+    //     const ROWS = 15
+    //     const { offsetWidth, offsetHeight } = topFadeContainer.current
+    //     const width = Math.floor(offsetHeight / ROWS)
+    //     const rowLength = Math.ceil(offsetWidth / width)
+    //     let innerHtml = ''
 
-        for (let i = 0; i < ROWS + 1; i++) {
-            let row = '<span class="flex">'
+    //     for (let i = 0; i < ROWS + 1; i++) {
+    //         let row = '<span class="flex">'
 
-            for (let j = 0; j < rowLength; j++) {
-                const possibility = Math.random() * ROWS <= i
-                row += `<span class="w-[0.4rem] h-[0.4rem] ${
-                    possibility ? 'bg-black' : ''
-                }"></span>`
-            }
-            row += '</span>'
-            innerHtml += row
-        }
+    //         for (let j = 0; j < rowLength; j++) {
+    //             const possibility = Math.random() * ROWS <= i
+    //             row += `<span class="w-[0.4rem] h-[0.4rem] ${
+    //                 possibility ? 'bg-black' : ''
+    //             }"></span>`
+    //         }
+    //         row += '</span>'
+    //         innerHtml += row
+    //     }
 
-        topFadeContainer.current.innerHTML = innerHtml
-    }
+    //     topFadeContainer.current.innerHTML = innerHtml
+    // }
 
-    useEffect(() => {
-        generateTopFade()
+    // useEffect(() => {
+    //     generateTopFade()
 
-        window.addEventListener('resize', generateTopFade)
+    //     window.addEventListener('resize', generateTopFade)
 
-        return () => {
-            window.removeEventListener('resize', generateTopFade)
-        }
-    }, [])
+    //     return () => {
+    //         window.removeEventListener('resize', generateTopFade)
+    //     }
+    // }, [])
 
     return (
         <section
             id='technology'
-            className='relative flex flex-col gap-12 justify-center bg-black py-32'
+            className='relative flex flex-col gap-12 justify-center bg-gray-200 py-16'
         >
-            <div
+            {/* <div
                 ref={topFadeContainer}
                 className='absolute -top-24 left-0 w-full h-24 overflow-hidden'
-            />
+            /> */}
 
             <div className='flex flex-col gap-2 sm:gap-3'>
                 <Marquee

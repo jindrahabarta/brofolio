@@ -23,7 +23,7 @@ const Content = () => {
             </div>
 
             <div className='flex flex-col bg-gray-200 uppercase text-red-500'>
-                <article className='relative w-full md:h-[120vh] flex flex-col md:flex-row aspect-square overflow-y-hidden'>
+                <article className='relative w-full md:h-[120vh] flex flex-col md:flex-row'>
                     <Image
                         src='https://c.pxhere.com/photos/c2/1b/black_and_white_fun_happy_laughing_man_person_portrait_smile-913378.jpg!d'
                         alt='Jindra Habarta'
@@ -33,7 +33,7 @@ const Content = () => {
                     />
 
                     <section className='md:w-3/5 md:relative z-10 flex flex-col gap-12 p-4 sm:p-8'>
-                        <h1 className='aboutUsScrollSpeed translate-y-20 flex flex-col font-league text-[12vw] leading-[80%]'>
+                        <h1 className='aboutUsScrollSpeed md:translate-y-20 flex flex-col font-league text-[12vw] leading-[80%]'>
                             Jindra
                             <span className='font-league indent-[2.5vw]'>
                                 Habarta
@@ -41,7 +41,7 @@ const Content = () => {
                         </h1>
 
                         <span className='w-full max-w-sm'>
-                            <p className='aboutUsScrollSpeed translate-y-44 font-instrument text-justify text-lg indent-4'>
+                            <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-lg indent-4'>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Dicta aut voluptatem voluptas
                                 tenetur quam illum eaque expedita commodi fuga,
@@ -49,7 +49,7 @@ const Content = () => {
                                 facilis eius nesciunt. Ducimus veniam
                                 dignissimos praesentium.
                             </p>
-                            <p className='aboutUsScrollSpeed translate-y-72 font-instrument text-justify text-lg indent-4 mt-4'>
+                            <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-lg indent-4 mt-4'>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Nam quasi laudantium iusto
                                 saepe excepturi autem assumenda consectetur?
@@ -58,11 +58,11 @@ const Content = () => {
                     </section>
 
                     <section className='md:w-2/5 md:relative z-10 self-end md:self-auto flex flex-col justify-end gap-12 p-4 sm:p-8 overflow-y-hidden'>
-                        <h1 className='aboutUsScrollSpeed -translate-y-72 font-league text-[12vw] leading-[80%]'>
+                        <h1 className='aboutUsScrollSpeed md:-translate-y-72 font-league text-[12vw] leading-[80%]'>
                             Role
                         </h1>
 
-                        <p className='aboutUsScrollSpeed -translate-y-44 w-full max-w-sm font-instrument text-justify text-lg indent-4'>
+                        <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-lg indent-4'>
                             Dicta aut voluptatem voluptas tenetur quam illum
                             eaque expedita commodi fuga, cupiditate provident
                             veniam necessitatibus facilis eius nesciunt.
@@ -71,7 +71,7 @@ const Content = () => {
                 </article>
 
                 <article className='flex flex-col md:flex-row-reverse md:justify-end items-center'>
-                    <section className='relative w-full md:w-3/5 md:h-[120vh] flex flex-col justify-end items-end aspect-square'>
+                    <section className='relative w-full md:w-3/5 md:h-[120vh] flex flex-col justify-end items-end aspect-square overflow-y-hidden'>
                         <Image
                             src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
                             alt='Luba Habarta'
@@ -81,7 +81,7 @@ const Content = () => {
                         />
 
                         <div className='p-4 sm:p-8'>
-                            <h1 className='md:relative z-10 flex flex-col font-league uppercase text-right text-[12vw] leading-[80%] text-red-500 aboutUsScrollSpeed -translate-y-72'>
+                            <h1 className='md:relative z-10 flex flex-col font-league uppercase text-right text-[12vw] leading-[80%] text-red-500 aboutUsScrollSpeed md:-translate-y-96'>
                                 Luba
                                 <span className='font-league indent-[-2.5vw]'>
                                     Habarta
@@ -90,8 +90,8 @@ const Content = () => {
                         </div>
                     </section>
 
-                    <section className='w-full md:flex-1 flex flex-col items-center justify-center'>
-                        <span className='w-full max-w-sm self-end md:self-auto p-4 sm:p-8'>
+                    <section className='w-full md:flex-1 flex flex-col items-center justify-center gap-12 overflow-hidden p-4 sm:p-8'>
+                        <span className='w-full max-w-sm self-end md:self-auto'>
                             <p className='font-instrument text-justify text-lg indent-4'>
                                 Dicta aut voluptatem voluptas tenetur quam illum
                                 eaque expedita commodi fuga, cupiditate
@@ -107,7 +107,7 @@ const Content = () => {
                             </p>
                         </span>
 
-                        <div className='self-start md:self-auto flex flex-col gap-12 p-4 sm:p-8'>
+                        <div className='self-start md:self-auto flex flex-col gap-12 '>
                             <h1 className='font-league text-[12vw] leading-[80%]'>
                                 Role
                             </h1>

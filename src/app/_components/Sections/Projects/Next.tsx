@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Next = () => {
     return (
         <Link href={''}>
-            <div className='group flex justify-center items-center hover:cursor-pointer mt-6'>
+            <div className='group flex justify-center items-center hover:cursor-pointer mt-10'>
                 <Marquee
                     sets={6}
                     containerClassName='absolute bg-black text-white text-xl sm:opacity-0 group-hover:opacity-100 duration-200 py-2'
