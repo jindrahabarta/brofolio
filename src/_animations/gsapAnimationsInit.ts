@@ -37,17 +37,31 @@ const gsapAnimationsInit = (path: string) => {
             end: '50% 110%',
             scrub: 0.1,
         },
+        defaults: { ease: 'power1.inOut' },
     })
 
     aboutUsTimeline
         .to(
             '.aboutUs-scale',
             {
-                scale: 5,
-
-                rotate: 4,
+                scale: 4.5,
             },
             0
+        )
+        .to(
+            '#aboutusTV',
+            {
+                rotate: 5,
+            },
+            '<'
+        )
+        .to(
+            '#aboutusBg',
+            {
+                filter: 'blur(0px)',
+                duration: 0.3,
+            },
+            '<'
         )
         .to(
             '#aboutUsContent',
@@ -72,6 +86,54 @@ const gsapAnimationsInit = (path: string) => {
 
         translateY: 0,
     })
+
+    //Technology Bg Transition
+    const techTl = gsap
+        .timeline({ defaults: { duration: 0.2, ease: 'power1' }, paused: true })
+        .to(document.body, {
+            duration: 0.2,
+            backgroundColor: 'black',
+        })
+        .to(
+            '#nextTitle',
+            {
+                color: 'white',
+            },
+            '<'
+        )
+        .to(
+            '#nextMarquee',
+            {
+                filter: 'invert(1)',
+            },
+            '<'
+        )
+
+    ScrollTrigger.create({
+        trigger: '#technology',
+        start: 'center center',
+        end: 'center center',
+        toggleActions: 'play none none reverse',
+
+        onEnter: () => {
+            techTl.play()
+        },
+        onLeaveBack: () => {
+            techTl.reverse()
+        },
+    })
+
+    // gsap.to(document.body, {
+    //     scrollTrigger: {
+    //         trigger: '#technology',
+    //         start: 'top center',
+    //         end: 'bottom center',
+    //         toggleActions: 'play none none reverse',
+    //         markers: true,
+    //     },
+    //     duration: 0.2,
+    //     backgroundColor: 'black',
+    // })
 
     //FOOTER
 

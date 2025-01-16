@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
-import BackgroundImg from '@/../public/images/AboutUs/bg-test.png'
-import TVImg from '@/../public/images/AboutUs/bg-tv2.png'
+import BackgroundImg from '@/../public/images/AboutUs/BGImage.png'
+import TVImg from '@/../public/images/AboutUs/TVImage.png'
 
 const ScrollEffect = () => {
     return (
@@ -13,16 +13,16 @@ const ScrollEffect = () => {
             <div className='h-screen sticky top-0 overflow-hidden'>
                 <div className='relative w-full h-screen'>
                     <Image
-                        id='aboutus-bg'
+                        id='aboutusBg'
                         src={BackgroundImg}
                         width={1200}
                         height={1000}
                         alt='Television image'
-                        className='aboutUs-scale w-full h-full object-cover object-center absolute'
+                        className='aboutUs-scale w-full h-full object-cover object-center absolute blur-sm'
                     ></Image>
 
-                    {/* <div
-                        id='aboutus-tv'
+                    <div
+                        id='aboutusTV'
                         className='aboutUs-scale w-full h-full absolute z-10'
                     >
                         <Image
@@ -32,7 +32,7 @@ const ScrollEffect = () => {
                             alt='Television image'
                             className='w-full h-full object-cover object-center'
                         ></Image>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>

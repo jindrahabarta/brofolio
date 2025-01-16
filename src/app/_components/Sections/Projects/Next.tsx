@@ -11,6 +11,7 @@ const Next = () => {
                     sets={6}
                     containerClassName='absolute bg-black text-white text-xl sm:opacity-0 group-hover:opacity-100 duration-200 py-2'
                     className='gap-16 pr-16'
+                    id='nextMarquee'
                 >
                     <span className='font-owners uppercase'>next</span>
                     <span className='font-owners uppercase'>next</span>

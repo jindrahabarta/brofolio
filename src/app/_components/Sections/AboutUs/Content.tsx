@@ -5,7 +5,7 @@ const Content = () => {
     return (
         <div
             id='aboutUsContent'
-            className=' bg-blue-400 h-fit flex flex-col justify-start scale-[0.5]'
+            className=' bg-blue-400 h-fit flex flex-col justify-start scale-[0.6]'
             style={{ transformOrigin: 'center 15%' }}
         >
             <div className='h-screen relative'>
@@ -13,6 +13,7 @@ const Content = () => {
                     className='w-full h-screen object-cover'
                     autoPlay
                     loop
+                    controls={false}
                     src='https://media.istockphoto.com/id/649431220/cs/video/k%C3%B3d-obrazovky-po%C4%8D%C3%ADta%C4%8De-z%C3%A1vadov%C3%BD-efekt-4k.mp4?s=mp4-640x640-is&k=20&c=NzqFy_RmQPW34BSKh8m6cSVK_ws-n6fDLFKtJz_m9EI='
                 ></video>
                 <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>

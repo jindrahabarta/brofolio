@@ -2,7 +2,7 @@ import React from 'react'
 
 const Process = () => {
     return (
-        <section className=' text-white flex'>
+        <section className=' text-black flex'>
             <div>
                 <h1>
                     <strong>Order process</strong>

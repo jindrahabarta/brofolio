@@ -46,7 +46,7 @@ const Technology = () => {
     return (
         <section
             id='technology'
-            className='relative flex flex-col gap-12 justify-center bg-gray-200 py-16'
+            className='relative flex flex-col gap-12 justify-center py-16'
         >
             {/* <div
                 ref={topFadeContainer}

@@ -7,6 +7,7 @@ const Marquee: React.FC<{
     sets?: number
     containerClassName?: string
     className?: string
+    id?: string
 }> = ({
     children,
     direction = 'left',
@@ -14,8 +15,10 @@ const Marquee: React.FC<{
     sets = 2,
     containerClassName,
     className,
+    id,
 }) => (
     <span
+        id={id && id}
         className={`w-full flex items-center ${
             direction === 'right' ? 'justify-end' : ''
         } text-nowrap overflow-hidden select-none ${containerClassName ?? ''}`}
