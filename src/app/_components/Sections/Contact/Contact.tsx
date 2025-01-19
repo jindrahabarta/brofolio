@@ -105,9 +105,9 @@ const Contact = () => {
             <div className='w-full flex flex-col lg:flex-row-reverse justify-evenly items-center gap-16 lg:gap-8 px-4 sm:px-8 py-16'>
                 <div className='flex-1 sm:max-w-xl'>
                     <Image
-                        src='https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/42549638-3207-452d-9f52-41e057be59c4/2ac41247-57bf-4313-bfb7-38f9bf7b8715.png'
-                        width={300}
-                        height={300}
+                        src='/images/contact/drawing1.png'
+                        width={600}
+                        height={600}
                         alt='Contact form'
                         className='w-full sm:max-w-xl aspect-square object-cover object-center mix-blend-multiply'
                     />
