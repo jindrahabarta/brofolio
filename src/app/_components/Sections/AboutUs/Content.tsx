@@ -73,18 +73,22 @@ const Content = () => {
 
                 <article className='flex flex-col md:flex-row-reverse md:justify-end items-center'>
                     <section className='relative w-full md:w-3/5 md:h-[120vh] flex flex-col justify-end items-end aspect-square overflow-y-hidden'>
-                        <Image
-                            src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
-                            alt='Luba Habarta'
-                            width={1240}
-                            height={1240}
-                            className='md:absolute w-full h-full object-cover'
-                        />
+                        <div className='md:absolute w-full h-full flex justify-center items-center overflow-hidden'>
+                            <Image
+                                src='https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg'
+                                alt='Luba Habarta'
+                                width={1240}
+                                height={1240}
+                                className='w-full h-[calc(100%+18rem)] object-cover aboutUsScrollSpeed md:translate-y-72'
+                            />
+                        </div>
 
-                        <div className='p-4 sm:p-8'>
-                            <h1 className='md:relative z-10 flex flex-col font-league uppercase text-right text-[12vw] leading-[80%] text-red-500 aboutUsScrollSpeed md:-translate-y-96'>
-                                Luba
-                                <span className='font-league indent-[-2.5vw]'>
+                        <div className='md:relative z-10 flex flex-col p-4 sm:p-8'>
+                            <h1 className='flex flex-col font-league uppercase text-right text-[12vw] leading-[80%] text-red-500'>
+                                <span className='font-league aboutUsScrollSpeed md:-translate-y-96'>
+                                    Luba
+                                </span>
+                                <span className='font-league indent-[-2.5vw] aboutUsScrollSpeed md:-translate-y-32'>
                                     Habarta
                                 </span>
                             </h1>
