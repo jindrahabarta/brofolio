@@ -78,7 +78,7 @@ const gsapAnimationsInit = (path: string) => {
     //TV Transition
     gsap.to('.aboutUsScrollSpeed', {
         scrollTrigger: {
-            trigger: '#aboutUsContent',
+            trigger: '#about',
             start: 'top top',
             end: 'bottom top',
             scrub: 0.1,
