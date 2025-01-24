@@ -71,7 +71,10 @@ const Content = () => {
                     </section>
                 </article>
 
-                <article className='flex flex-col md:flex-row-reverse md:justify-end items-center'>
+                <article
+                    id='aboutUsThemeSwitcher'
+                    className='flex flex-col md:flex-row-reverse md:justify-end items-center'
+                >
                     <section className='relative w-full md:w-3/5 md:h-[120vh] flex flex-col justify-end items-end aspect-square overflow-y-hidden'>
                         <div className='md:absolute w-full h-full flex justify-center items-center overflow-hidden'>
                             <Image

@@ -1,5 +1,6 @@
 'use client'
 import Lenis from 'lenis'
+import Head from 'next/head'
 import Navigation from '@/_components/Navigation/Navigation'
 import {
     Source_Serif_4,
@@ -8,6 +9,7 @@ import {
     League_Gothic,
 } from 'next/font/google'
 import localFont from 'next/font/local'
+
 import './globals.css'
 import Footer from '@/_components/Footer/Footer'
 import { useEffect, useRef } from 'react'
@@ -67,6 +69,15 @@ export default function RootLayout({
 
     return (
         <html lang='cs'>
+            <Head>
+                <link
+                    rel='preload'
+                    href='../_assets/fonts/owners-xxwide.ttf'
+                    as='font'
+                    type='font/woff2'
+                />
+            </Head>
+
             <body
                 className={`antialiased
                     bg-gray-200

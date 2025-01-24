@@ -2,7 +2,7 @@ import AboutUs from './_components/Sections/AboutUs/AboutUs'
 import Contact from './_components/Sections/Contact/Contact'
 // import FAQ from './_components/Sections/FAQ/FAQ'
 import Hero from './_components/Sections/Hero/Hero'
-import Process from './_components/Sections/Process/Process'
+// import Process from './_components/Sections/Process/Process'
 import Projects from './_components/Sections/Projects/Projects'
 // import Technology from './_components/Sections/Technology/Technology'
 
@@ -13,7 +13,7 @@ export default function Home() {
             <AboutUs />
             <Projects />
             {/* <Technology /> */}
-            <Process />
+            {/* <Process /> */}
             {/* <FAQ /> */}
             <Contact />
         </>
