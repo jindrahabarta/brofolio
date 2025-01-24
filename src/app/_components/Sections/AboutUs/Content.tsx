@@ -5,7 +5,7 @@ const Content = () => {
     return (
         <div
             id='aboutUsContent'
-            className=' bg-blue-400 h-fit flex flex-col justify-start scale-[0.6]'
+            className='h-fit flex flex-col justify-start scale-[0.6]'
             style={{ transformOrigin: 'center 15%' }}
         >
             <div className='h-screen relative'>
@@ -17,13 +17,13 @@ const Content = () => {
                     src='https://media.istockphoto.com/id/649431220/cs/video/k%C3%B3d-obrazovky-po%C4%8D%C3%ADta%C4%8De-z%C3%A1vadov%C3%BD-efekt-4k.mp4?s=mp4-640x640-is&k=20&c=NzqFy_RmQPW34BSKh8m6cSVK_ws-n6fDLFKtJz_m9EI='
                 ></video>
                 <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
-                    <h1 className=' text-yellow-400 text-center '>
+                    <h1 className='text-yellow-400 text-center '>
                         <strong>O nás</strong>
                     </h1>
                 </div>
             </div>
 
-            <div className='flex flex-col bg-gray-200 uppercase text-red-500'>
+            <div className='flex flex-col uppercase text-red-500'>
                 <article className='relative w-full md:h-[120vh] flex flex-col md:flex-row'>
                     <Image
                         src='https://c.pxhere.com/photos/c2/1b/black_and_white_fun_happy_laughing_man_person_portrait_smile-913378.jpg!d'

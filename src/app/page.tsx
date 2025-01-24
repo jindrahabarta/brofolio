@@ -4,7 +4,7 @@ import Contact from './_components/Sections/Contact/Contact'
 import Hero from './_components/Sections/Hero/Hero'
 import Process from './_components/Sections/Process/Process'
 import Projects from './_components/Sections/Projects/Projects'
-import Technology from './_components/Sections/Technology/Technology'
+// import Technology from './_components/Sections/Technology/Technology'
 
 export default function Home() {
     return (
@@ -12,7 +12,7 @@ export default function Home() {
             <Hero />
             <AboutUs />
             <Projects />
-            <Technology />
+            {/* <Technology /> */}
             <Process />
             {/* <FAQ /> */}
             <Contact />
