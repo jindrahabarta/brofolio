@@ -5,10 +5,9 @@ import Next from './Next'
 const Projects = () => {
     return (
         <section id='projects' className=' overflow-hidden'>
-            <header className='h-60 sm:h-80 flex items-center border-b border-gray-300 overflow-x-hidden px-4 sm:px-8'>
-                <h1 className='flex flex-col text-[clamp(1rem,7.5vw,3.75rem)]'>
-                    <em>Naše</em>
-                    <strong> portfolio</strong>
+            <header className='h-60 sm:h-80 flex items-center border-b border-gray-700 overflow-x-hidden px-4 sm:px-8'>
+                <h1 className='flex flex-col text-9xl font-league uppercase text-[clamp(1rem,7.5vw,3.75rem)] text-gray-200'>
+                    Naše portfolio
                 </h1>
             </header>
 
