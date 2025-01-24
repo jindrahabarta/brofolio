@@ -100,7 +100,7 @@ const Contact = () => {
                 alt='Paper edge'
                 width={3427}
                 height={318}
-                className='relative top-[-2px]'
+                className='relative top-[-2px] select-none'
             />
             <div className='w-full flex flex-col-reverse lg:flex-row-reverse justify-evenly items-center gap-16 lg:gap-8 px-4 sm:px-8 py-16'>
                 <div className='flex-1 sm:max-w-xl'>
@@ -109,7 +109,7 @@ const Contact = () => {
                         width={600}
                         height={600}
                         alt='Contact form'
-                        className='w-full sm:max-w-xl aspect-square object-cover object-center mix-blend-multiply'
+                        className='w-full sm:max-w-xl aspect-square object-cover object-center mix-blend-multiply select-none pointer-events-none'
                     />
                 </div>
 
@@ -136,7 +136,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
-                                        className='pointer-events-none'
+                                        className='pointer-events-none select-none'
                                     />
                                     <input
                                         id='firstName'
@@ -160,7 +160,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
-                                        className='pointer-events-none'
+                                        className='pointer-events-none select-none'
                                     />
                                     <input
                                         id='lastName'
@@ -186,7 +186,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
-                                        className='pointer-events-none'
+                                        className='pointer-events-none select-none'
                                     />
                                     <input
                                         id='email'
@@ -210,7 +210,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
-                                        className='pointer-events-none'
+                                        className='pointer-events-none select-none'
                                     />
                                     <input
                                         id='phone'
@@ -240,7 +240,7 @@ const Contact = () => {
                                         width={418}
                                         height={95}
                                         alt='input'
-                                        className='pointer-events-none'
+                                        className='pointer-events-none select-none'
                                     />
                                     <input
                                         id='company'

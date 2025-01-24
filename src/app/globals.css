@@ -83,6 +83,19 @@ form {
     input,
     textarea {
         @apply w-full text-base bg-transparent border-none focus:outline-none hover:cursor-text px-3 py-2;
+
+        -webkit-text-fill-color: black;
+        -webkit-background-clip: text;
+
+        &::placeholder {
+            color: red;
+            opacity: 1; /* Firefox */
+        }
+
+        &::-ms-input-placeholder {
+            /* Edge 12 -18 */
+            color: red;
+        }
     }
 }
 

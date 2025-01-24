@@ -6,7 +6,10 @@ const Projects = () => {
     return (
         <section id='projects' className=' overflow-hidden'>
             <header className='h-60 sm:h-80 flex items-center border-b border-gray-700 overflow-x-hidden px-4 sm:px-8'>
-                <h1 className='flex flex-col text-9xl font-league uppercase text-[clamp(1rem,7.5vw,3.75rem)] text-gray-200'>
+                <h1
+                    id='projectsTitle'
+                    className='flex flex-col text-9xl font-league uppercase text-[clamp(1rem,7.5vw,3.75rem)] '
+                >
                     Naše portfolio
                 </h1>
             </header>

@@ -108,11 +108,18 @@ const gsapAnimationsInit = (path: string) => {
             },
             '<'
         )
+        .to(
+            '#projectsTitle',
+            {
+                color: '#e5e7eb',
+            },
+            '<'
+        )
 
     ScrollTrigger.create({
-        trigger: '#technology',
-        start: 'center center',
-        end: 'center center',
+        trigger: '#projects',
+        start: 'top center',
+        end: 'top center',
         toggleActions: 'play none none reverse',
 
         onEnter: () => {
@@ -122,18 +129,6 @@ const gsapAnimationsInit = (path: string) => {
             techTl.reverse()
         },
     })
-
-    // gsap.to(document.body, {
-    //     scrollTrigger: {
-    //         trigger: '#technology',
-    //         start: 'top center',
-    //         end: 'bottom center',
-    //         toggleActions: 'play none none reverse',
-    //         markers: true,
-    //     },
-    //     duration: 0.2,
-    //     backgroundColor: 'black',
-    // })
 
     //FOOTER
 
