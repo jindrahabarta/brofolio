@@ -34,7 +34,7 @@ const ListItem: React.FC<{ project: IProject }> = ({ project }) => {
 
                 <article className='relative z-10 h-full w-full flex justify-between items-center gap-4 overflow-hidden px-4 sm:px-8'>
                     <section className='flex-1 flex flex-col gap-1'>
-                        <h2 className='font-instrument text-xl sm:text-3xl group-hover:text-white duration-200'>
+                        <h2 className='font-instrument text-xl sm:text-3xl group-hover:text-white duration-200 projectDescription'>
                             {project.description}
                         </h2>
                         <h1 className='font-league text-5xl sm:text-8xl uppercase text-gray-400 group-hover:text-white duration-200'>

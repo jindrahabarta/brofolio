@@ -119,7 +119,7 @@ const Contact = () => {
                 >
                     <header className='flex flex-col gap-4'>
                         <h2>
-                            <em>Chceš rozjet projekt?</em>
+                            <em>Chceš s náma rozjet projekt?</em>
                         </h2>
                         <h1 className='text-[clamp(1rem,7.5vw,3.75rem)]'>
                             <strong>Napiš nám</strong>

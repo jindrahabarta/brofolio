@@ -115,6 +115,13 @@ const gsapAnimationsInit = (path: string) => {
             },
             '<'
         )
+        .to(
+            '.projectDescription',
+            {
+                color: 'white',
+            },
+            '<'
+        )
 
     ScrollTrigger.create({
         trigger: '#projects',

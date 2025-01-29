@@ -1,37 +1,43 @@
 import React from 'react'
 import Image from 'next/image'
 
+import JindraImg from '@/../public/images/AboutUs/JindraHabarta.jpg'
+
 const Content = () => {
     return (
         <div
             id='aboutUsContent'
-            className='h-fit flex flex-col justify-start scale-[0.6]'
+            className='h-fit flex flex-col justify-start scale-[0.6] '
             style={{ transformOrigin: 'center 15%' }}
         >
-            <div className='h-screen relative'>
+            <div className='h-screen relative bg-black'>
                 <video
-                    className='w-full h-screen object-cover'
+                    className='w-full h-screen object-cover opacity-80'
                     autoPlay
                     loop
                     controls={false}
-                    src='https://media.istockphoto.com/id/649431220/cs/video/k%C3%B3d-obrazovky-po%C4%8D%C3%ADta%C4%8De-z%C3%A1vadov%C3%BD-efekt-4k.mp4?s=mp4-640x640-is&k=20&c=NzqFy_RmQPW34BSKh8m6cSVK_ws-n6fDLFKtJz_m9EI='
+                    muted
+                    src={'/images/AboutUs/video.mp4'}
                 ></video>
                 <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
-                    <h1 className='text-yellow-400 text-center '>
-                        <strong>O nás</strong>
+                    <h1 className='text-yellow-400 text-[3vw] text-center '>
+                        <strong>_About_us</strong>
                     </h1>
                 </div>
             </div>
 
             <div className='flex flex-col uppercase text-red-500'>
                 <article className='relative w-full md:h-[120vh] flex flex-col md:flex-row'>
-                    <Image
-                        src='https://c.pxhere.com/photos/c2/1b/black_and_white_fun_happy_laughing_man_person_portrait_smile-913378.jpg!d'
-                        alt='Jindra Habarta'
-                        width={1920}
-                        height={1080}
-                        className='md:absolute w-full h-full object-cover'
-                    />
+                    <div className='md:absolute w-full h-full'>
+                        <div className='bg-black/50 absolute top-0 left-0 w-full h-full'></div>
+                        <Image
+                            src={JindraImg}
+                            alt='Jindra Habarta'
+                            width={1920}
+                            height={1080}
+                            className=' w-full h-full object-cover object-[0%_25%]'
+                        />
+                    </div>
 
                     <section className='md:w-3/5 md:relative z-10 flex flex-col gap-12 p-4 sm:p-8'>
                         <h1 className='aboutUsScrollSpeed md:translate-y-20 flex flex-col font-league text-[12vw] leading-[80%]'>
@@ -59,8 +65,8 @@ const Content = () => {
                     </section>
 
                     <section className='md:w-2/5 md:relative z-10 self-end md:self-auto flex flex-col justify-end gap-12 p-4 sm:p-8 overflow-y-hidden'>
-                        <h1 className='aboutUsScrollSpeed md:-translate-y-72 font-league text-[12vw] leading-[80%]'>
-                            Role
+                        <h1 className='aboutUsScrollSpeed md:-translate-y-72 font-league text-[8vw] leading-[80%]'>
+                            Front-end developer
                         </h1>
 
                         <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-lg indent-4'>
