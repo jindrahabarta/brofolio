@@ -8,7 +8,7 @@ const ScrollEffect = () => {
     return (
         <div
             id='aboutUsScrollSection'
-            className='h-[400vh] z-50 absolute top-0 w-full select-none pointer-events-none'
+            className='h-[400vh] absolute top-0 w-full select-none pointer-events-none'
         >
             <div className='h-screen sticky top-0 overflow-hidden'>
                 <div className='relative w-full h-screen'>
