@@ -4,7 +4,7 @@ import Next from './Next'
 
 const Projects = () => {
     return (
-        <section id='projects' className=' overflow-hidden'>
+        <section id='projects' className='overflow-hidden sm:pt-20'>
             <header className='h-60 sm:h-80 flex items-center border-b border-gray-700 overflow-x-hidden px-4 sm:px-8'>
                 <h1
                     id='projectsTitle'

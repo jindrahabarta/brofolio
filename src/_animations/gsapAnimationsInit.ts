@@ -71,6 +71,9 @@ const gsapAnimationsInit = (path: string) => {
             },
             '<'
         )
+        .set(document.body, {
+            backgroundColor: '#e5e7eb',
+        })
         .set('#aboutUsScrollSection', {
             display: 'none',
         })

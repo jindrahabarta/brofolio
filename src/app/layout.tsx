@@ -80,7 +80,7 @@ export default function RootLayout({
 
             <body
                 className={`antialiased
-                    bg-gray-200
+                    bg-black
                     ${charm.variable}
                     ${owners.variable}
                     ${source_serif_4.variable}
