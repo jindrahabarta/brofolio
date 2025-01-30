@@ -137,6 +137,7 @@ const Contact = () => {
                                         height={95}
                                         alt='input'
                                         className='pointer-events-none select-none'
+                                        unoptimized
                                     />
                                     <input
                                         id='firstName'

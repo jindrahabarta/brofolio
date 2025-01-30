@@ -56,14 +56,6 @@ const gsapAnimationsInit = (path: string) => {
             '<'
         )
         .to(
-            '#aboutusBg',
-            {
-                filter: 'blur(0px)',
-                duration: 0.3,
-            },
-            '<'
-        )
-        .to(
             '#aboutUsContent',
             {
                 scale: 1,

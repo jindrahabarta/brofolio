@@ -26,7 +26,7 @@ const Content = () => {
                         alt='Jindra Habarta'
                         width={1920}
                         height={1080}
-                        className=' w-full h-full absolute object-cover object-[0%_25%]'
+                        className='w-full h-full absolute object-cover object-[0%_25%]'
                     />
 
                     <section className='md:w-3/5 md:relative z-10 flex flex-col gap-12 p-4 pt-16 sm:pt-12 sm:p-8'>

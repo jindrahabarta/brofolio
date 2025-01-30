@@ -1,14 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 
-import BackgroundImg from '@/../public/images/AboutUs/BGImage.png'
-import TVImg from '@/../public/images/AboutUs/TVImage.png'
+import BackgroundImg from '@/../public/images/AboutUs/BGImage blur.webp'
+import TVImg from '@/../public/images/AboutUs/TVImage.webp'
 
 const ScrollEffect = () => {
     return (
         <div
             id='aboutUsScrollSection'
-            className='h-[400vh] absolute top-0 w-full select-none pointer-events-none'
+            className='h-[400vh] z-50 absolute top-0 w-full select-none pointer-events-none'
         >
             <div className='h-screen sticky top-0 overflow-hidden'>
                 <div className='relative w-full h-screen'>
