@@ -1,5 +1,6 @@
 export interface IProject {
     name: string
+    slug: string
     description: string
     image: string
     url: string
@@ -10,6 +11,7 @@ export interface IProject {
 export const projectList: IProject[] = [
     {
         name: 'Drippy Rugs',
+        slug: 'drippy-rugs',
         description: 'Zakázková výroba koberečků',
         image: 'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
         url: 'https://example.com/project1',
@@ -18,6 +20,7 @@ export const projectList: IProject[] = [
     },
     {
         name: 'Habartovi.cz',
+        slug: 'habartovi',
         description: 'Soukromé ubytování a keramická dílna',
         image: 'https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg',
         url: 'https://example.com/project2',
@@ -26,6 +29,7 @@ export const projectList: IProject[] = [
     },
     {
         name: 'Printujto',
+        slug: 'printujto',
         description: 'Zakázkový 3D tisk',
         image: 'https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg',
         url: 'https://example.com/project3',
@@ -34,6 +38,7 @@ export const projectList: IProject[] = [
     },
     {
         name: 'Avantgarda',
+        slug: 'avantgarda',
         description: 'Solární studio',
         image: 'https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small_2x/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg',
         url: 'https://example.com/project3',

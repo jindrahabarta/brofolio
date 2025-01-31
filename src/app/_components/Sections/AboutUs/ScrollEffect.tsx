@@ -18,7 +18,7 @@ const ScrollEffect = () => {
                         width={1200}
                         height={1000}
                         alt='Television image'
-                        className='aboutUs-scale w-full h-full object-cover object-center absolute blur-sm'
+                        className='aboutUs-scale w-full h-full object-cover object-center absolute'
                     ></Image>
 
                     <div
