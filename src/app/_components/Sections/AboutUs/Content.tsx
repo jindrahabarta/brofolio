@@ -1,15 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 
-import JindraImg from '@/../public/images/AboutUs/JindraHabarta2.webp'
+import JindraImg from '@/../public/images/AboutUs/JindraHabarta.webp'
 import LubaImg from '@/../public/images/AboutUs/LubaHabarta.webp'
 
 const Content = () => {
     return (
         <div
             id='aboutUsContent'
-            className='h-fit flex flex-col justify-start scale-[0.6] '
-            style={{ transformOrigin: 'center 15%' }}
+            className='h-fit flex flex-col justify-start sm:scale-[0.6] origin-[center_19%] sm:origin-[center_15%]'
         >
             <div className='h-screen relative bg-black'>
                 <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
@@ -24,8 +23,8 @@ const Content = () => {
                     <Image
                         src={JindraImg}
                         alt='Jindra Habarta'
-                        width={1920}
-                        height={1080}
+                        width={1500}
+                        height={2000}
                         className='w-full h-full absolute object-cover object-[0%_25%]'
                     />
 
@@ -76,8 +75,8 @@ const Content = () => {
                             <Image
                                 src={LubaImg}
                                 alt='Luba Habarta'
-                                width={1240}
-                                height={1240}
+                                width={1500}
+                                height={200}
                                 className='w-full h-full md:h-[calc(100%+18rem)] object-cover aboutUsScrollSpeed md:translate-y-72'
                             />
                         </div>

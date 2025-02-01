@@ -6,6 +6,8 @@ const gsapAnimationsInit = (path: string) => {
     ScrollTrigger.killAll()
     gsap.registerPlugin(ScrollTrigger)
 
+    const mm = gsap.matchMedia()
+
     if (path === '/') {
         //PROJECTS
         gsap.utils.toArray('.projectsItem').forEach((item) => {
@@ -25,112 +27,140 @@ const gsapAnimationsInit = (path: string) => {
                 },
             })
         })
+        //ABOUT US
+        //TV Transition
+        const aboutUsTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#aboutUsScrollSection',
+                start: 'top top',
+                end: '50% 110%',
+                scrub: 0.1,
+            },
+            defaults: { ease: 'power1.inOut' },
+        })
+
+        //PC
+        mm.add('(min-width: 640px)', () => {
+            aboutUsTimeline
+                .to(
+                    '.aboutUs-scale',
+                    {
+                        scale: 4.5,
+                    },
+                    0
+                )
+                .to(
+                    '#aboutusTV',
+                    {
+                        rotate: 5,
+                    },
+                    '<'
+                )
+                .to(
+                    '#aboutUsContent',
+                    {
+                        scale: 1,
+                        translateY: 0,
+                    },
+                    '<'
+                )
+                .set(document.body, {
+                    backgroundColor: '#e5e7eb',
+                })
+                .set('#aboutUsScrollSection', {
+                    display: 'none',
+                })
+        })
+        //MOBILE
+        mm.add('(max-width: 639px)', () => {
+            aboutUsTimeline
+                .to(
+                    '.aboutUs-scale',
+                    {
+                        scale: 7,
+                    },
+                    0
+                )
+                .to(
+                    '#aboutUsContent',
+                    {
+                        translateY: 0,
+                    },
+                    '<'
+                )
+                .set(document.body, {
+                    backgroundColor: '#e5e7eb',
+                })
+                .set('#aboutUsScrollSection', {
+                    display: 'none',
+                })
+        })
+
+        //SCROLL SPEED
+        gsap.to('.aboutUsScrollSpeed', {
+            scrollTrigger: {
+                trigger: '#about',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 0.1,
+            },
+
+            translateY: 0,
+        })
+
+        //Technology Bg Transition
+        const techTl = gsap
+            .timeline({
+                defaults: { duration: 0.2, ease: 'power1' },
+                paused: true,
+            })
+            .to(document.body, {
+                duration: 0.2,
+                backgroundColor: 'black',
+            })
+            .to(
+                '#nextTitle',
+                {
+                    color: 'white',
+                },
+                '<'
+            )
+            .to(
+                '#nextMarquee',
+                {
+                    filter: 'invert(1)',
+                },
+                '<'
+            )
+            .to(
+                '#projectsTitle',
+                {
+                    color: '#e5e7eb',
+                },
+                '<'
+            )
+            .to(
+                '.projectDescription',
+                {
+                    color: 'white',
+                },
+                '<'
+            )
+
+        ScrollTrigger.create({
+            trigger: '#projects',
+            start: 'top center',
+            end: 'top center',
+            toggleActions: 'play none none reverse',
+
+            onEnter: () => {
+                techTl.play()
+            },
+            onLeaveBack: () => {
+                techTl.reverse()
+            },
+        })
     }
-
-    //ABOUT US
-
-    //TV Transition
-    const aboutUsTimeline = gsap.timeline({
-        scrollTrigger: {
-            trigger: '#aboutUsScrollSection',
-            start: 'top top',
-            end: '50% 110%',
-            scrub: 0.1,
-        },
-        defaults: { ease: 'power1.inOut' },
-    })
-
-    aboutUsTimeline
-        .to(
-            '.aboutUs-scale',
-            {
-                scale: 4.5,
-            },
-            0
-        )
-        .to(
-            '#aboutusTV',
-            {
-                rotate: 5,
-            },
-            '<'
-        )
-        .to(
-            '#aboutUsContent',
-            {
-                scale: 1,
-                translateY: 0,
-            },
-            '<'
-        )
-        .set(document.body, {
-            backgroundColor: '#e5e7eb',
-        })
-        .set('#aboutUsScrollSection', {
-            display: 'none',
-        })
-
-    //TV Transition
-    gsap.to('.aboutUsScrollSpeed', {
-        scrollTrigger: {
-            trigger: '#about',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 0.1,
-        },
-
-        translateY: 0,
-    })
-
-    //Technology Bg Transition
-    const techTl = gsap
-        .timeline({ defaults: { duration: 0.2, ease: 'power1' }, paused: true })
-        .to(document.body, {
-            duration: 0.2,
-            backgroundColor: 'black',
-        })
-        .to(
-            '#nextTitle',
-            {
-                color: 'white',
-            },
-            '<'
-        )
-        .to(
-            '#nextMarquee',
-            {
-                filter: 'invert(1)',
-            },
-            '<'
-        )
-        .to(
-            '#projectsTitle',
-            {
-                color: '#e5e7eb',
-            },
-            '<'
-        )
-        .to(
-            '.projectDescription',
-            {
-                color: 'white',
-            },
-            '<'
-        )
-
-    ScrollTrigger.create({
-        trigger: '#projects',
-        start: 'top center',
-        end: 'top center',
-        toggleActions: 'play none none reverse',
-
-        onEnter: () => {
-            techTl.play()
-        },
-        onLeaveBack: () => {
-            techTl.reverse()
-        },
-    })
 
     //FOOTER
 

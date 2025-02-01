@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
-import BackgroundImg from '@/../public/images/AboutUs/BGImage blur.webp'
-import TVImg from '@/../public/images/AboutUs/TVImage.webp'
+import TVImg from '@/../public/images/AboutUs/TVTransitionImage.webp'
+import MobileTVImg from '@/../public/images/AboutUs/MobileTVTransitionImage.webp'
 
 const ScrollEffect = () => {
     return (
@@ -12,25 +12,23 @@ const ScrollEffect = () => {
         >
             <div className='h-screen sticky top-0 overflow-hidden'>
                 <div className='relative w-full h-screen'>
-                    <Image
-                        id='aboutusBg'
-                        src={BackgroundImg}
-                        width={1200}
-                        height={1000}
-                        alt='Television image'
-                        className='aboutUs-scale w-full h-full object-cover object-center absolute'
-                    ></Image>
-
                     <div
                         id='aboutusTV'
                         className='aboutUs-scale w-full h-full absolute z-10'
                     >
                         <Image
-                            src={TVImg}
-                            width={1200}
-                            height={1000}
+                            src={MobileTVImg}
+                            width={1500}
+                            height={857}
                             alt='Television image'
-                            className='w-full h-full object-cover object-center'
+                            className='w-full h-full object-cover object-center block sm:hidden'
+                        ></Image>
+                        <Image
+                            src={TVImg}
+                            width={1080}
+                            height={1920}
+                            alt='Television image'
+                            className='w-full h-full object-cover object-center hidden sm:block'
                         ></Image>
                     </div>
                 </div>

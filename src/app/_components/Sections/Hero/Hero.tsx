@@ -9,7 +9,7 @@ const Hero = () => {
             <h1 className=' bottom-4 text-[4vw] left-4 text-center'>
                 <strong>Hero section in progress</strong>
             </h1>
-            <h1 className='absolute bottom-4 left-4'>
+            <h1 className='absolute text-[10vw] md:text-[4.5vw] bottom-4 left-4'>
                 <em>We make it</em> <strong>breezy.</strong>
             </h1>
         </section>
