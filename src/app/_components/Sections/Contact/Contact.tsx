@@ -105,7 +105,8 @@ const Contact = () => {
             <div className='w-full flex flex-col-reverse lg:flex-row-reverse justify-evenly items-center gap-16 lg:gap-8 px-4 sm:px-8 py-16'>
                 <div className='flex-1 sm:max-w-xl'>
                     <Image
-                        src='/images/contact/ContactGif2.gif'
+                        src='/images/contact/ContactGif2.webp'
+                        unoptimized
                         width={600}
                         height={600}
                         alt='Contact form'

@@ -15,53 +15,101 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
 
     useEffect(() => {
         const timeline = navTimeline.current
+        gsap.registerPlugin()
+        const mm = gsap.matchMedia()
 
-        timeline
-            .set('#navBg', {
-                display: 'block',
-            })
-            .to('#navBg', {
-                css: {
-                    backdropFilter: 'blur(8px)',
-                    WebkitBackdropFilter: 'blur(8px)',
-                    backgroundColor: 'rgba(0,0,0,0.5)',
-                },
-            })
-            .to(
-                '#navLogo',
-                {
-                    scale: 1,
-                    ...(window.matchMedia('(max-width: 640px)').matches && {
+        mm.add('(min-width: 640px)', () => {
+            timeline
+                .set('#navBg', {
+                    display: 'block',
+                })
+                .to('#navBg', {
+                    css: {
+                        backdropFilter: 'blur(8px)',
+                        WebkitBackdropFilter: 'blur(8px)',
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                    },
+                })
+                .to(
+                    '#navLogo',
+                    {
+                        scale: 1,
+                    },
+                    '<'
+                )
+                .to(
+                    '#navAside',
+                    {
+                        translateX: 0,
+                    },
+                    '<'
+                )
+                .to(
+                    '.navLink',
+                    {
+                        translateX: 0,
+                        opacity: 1,
+                        stagger: 0.1,
+                    },
+                    '<'
+                )
+                .to(
+                    '.navBarTitle',
+                    {
+                        opacity: 1,
+                        stagger: 0.1,
+                    },
+                    '<'
+                )
+        })
+
+        mm.add('(max-width: 639px)', () => {
+            timeline
+                .set('#navBg', {
+                    display: 'block',
+                })
+                .to('#navBg', {
+                    css: {
+                        backdropFilter: 'blur(8px)',
+                        WebkitBackdropFilter: 'blur(8px)',
+                        backgroundColor: 'rgba(0,0,0,0.5)',
+                    },
+                })
+                .to(
+                    '#navLogo',
+                    {
+                        scale: 1,
+
                         translateX: 15,
                         translateY: 10,
-                    }),
-                },
-                '<'
-            )
-            .to(
-                '#navAside',
-                {
-                    translateX: 0,
-                },
-                '<'
-            )
-            .to(
-                '.navLink',
-                {
-                    translateX: 0,
-                    opacity: 1,
-                    stagger: 0.1,
-                },
-                '<'
-            )
-            .to(
-                '.navBarTitle',
-                {
-                    opacity: 1,
-                    stagger: 0.1,
-                },
-                '<'
-            )
+                    },
+                    '<'
+                )
+                .to(
+                    '#navAside',
+                    {
+                        translateX: 0,
+                    },
+                    '<'
+                )
+                .to(
+                    '.navLink',
+                    {
+                        translateX: 0,
+                        opacity: 1,
+                        stagger: 0.1,
+                    },
+                    '<'
+                )
+                .to(
+                    '.navBarTitle',
+                    {
+                        opacity: 1,
+                        stagger: 0.1,
+                    },
+                    '<'
+                )
+        })
 
         return () => {
             timeline.kill()

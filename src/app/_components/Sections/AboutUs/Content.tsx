@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import JindraImg from '@/../public/images/AboutUs/JindraHabarta.webp'
 import LubaImg from '@/../public/images/AboutUs/LubaHabarta.webp'
+import DicaprioGif from '@/../public/images/AboutUs/DicaprioGif.gif'
 
 const Content = () => {
     return (
@@ -12,9 +13,18 @@ const Content = () => {
         >
             <div className='h-screen relative bg-black'>
                 <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
-                    <h1 className='text-yellow-400 text-[3vw] text-center '>
-                        <strong>_About_us</strong>
-                    </h1>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='w-1/2 scale-[0.9] sm:scale-[0.6]'
+                    ></Image>
+                    <div className='absolute top-0 left-0 w-full h-full  flex items-center justify-center'>
+                        <h1 className='text-yellow-400 text-[3vw] text-center '>
+                            <strong>_About_us</strong>
+                        </h1>
+                    </div>
                 </div>
             </div>
 

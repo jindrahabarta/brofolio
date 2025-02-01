@@ -71,6 +71,21 @@ const gsapAnimationsInit = (path: string) => {
                     display: 'none',
                 })
         })
+        //TABLET + PC
+        mm.add('(min-width: 768px)', () => {
+            //SCROLL SPEED
+            gsap.to('.aboutUsScrollSpeed', {
+                scrollTrigger: {
+                    trigger: '#about',
+                    start: 'top top',
+                    end: 'bottom top',
+                    scrub: 0.1,
+                },
+
+                translateY: 0,
+            })
+        })
+
         //MOBILE
         mm.add('(max-width: 639px)', () => {
             aboutUsTimeline
@@ -94,18 +109,6 @@ const gsapAnimationsInit = (path: string) => {
                 .set('#aboutUsScrollSection', {
                     display: 'none',
                 })
-        })
-
-        //SCROLL SPEED
-        gsap.to('.aboutUsScrollSpeed', {
-            scrollTrigger: {
-                trigger: '#about',
-                start: 'top top',
-                end: 'bottom top',
-                scrub: 0.1,
-            },
-
-            translateY: 0,
         })
 
         //Technology Bg Transition
