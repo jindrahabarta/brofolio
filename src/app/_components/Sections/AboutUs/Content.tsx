@@ -18,11 +18,11 @@ const Content = () => {
                         alt={'Dicaprio Gif'}
                         width={320}
                         height={280}
-                        className='w-1/2 scale-[0.9] sm:scale-[0.6]'
+                        className='w-3/5 sm:w-[90%] scale-[0.9] sm:scale-[0.6]'
                     ></Image>
                     <div className='absolute top-0 left-0 w-full h-full  flex items-center justify-center'>
                         <h1 className='text-yellow-400 text-[3vw] text-center '>
-                            <strong>_About_us</strong>
+                            {/* <strong>TODO:</strong> */}
                         </h1>
                     </div>
                 </div>

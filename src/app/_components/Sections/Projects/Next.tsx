@@ -9,7 +9,7 @@ const Next = () => {
             <div className='group flex justify-center items-center hover:cursor-pointer mt-10'>
                 <Marquee
                     sets={6}
-                    containerClassName='absolute bg-black text-white text-xl sm:opacity-0 group-hover:opacity-100 duration-200 py-2'
+                    containerClassName='absolute bg-white text-white text-xl sm:opacity-0 group-hover:opacity-100 duration-200 py-2'
                     className='gap-16 pr-16'
                     id='nextMarquee'
                 >

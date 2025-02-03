@@ -129,13 +129,6 @@ const gsapAnimationsInit = (path: string) => {
                 '<'
             )
             .to(
-                '#nextMarquee',
-                {
-                    filter: 'invert(1)',
-                },
-                '<'
-            )
-            .to(
                 '#projectsTitle',
                 {
                     color: '#e5e7eb',

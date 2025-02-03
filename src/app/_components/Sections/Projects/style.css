@@ -1,0 +1,47 @@
+#nextMarquee {
+    background: linear-gradient(
+        90deg,
+        rgb(247, 149, 51),
+        rgb(243, 112, 85),
+        rgb(239, 78, 123),
+        rgb(161, 102, 171),
+        rgb(80, 115, 184),
+        rgb(161, 102, 171),
+        rgb(239, 78, 123),
+        rgb(243, 112, 85),
+        rgb(247, 149, 51)
+    );
+    background-repeat: repeat-x;
+    animation: rainbowKeyframes 15s infinite linear;
+
+    @media (width >= 48rem) {
+        background: linear-gradient(
+            90deg,
+            rgb(247, 149, 51),
+            rgb(243, 112, 85),
+            rgb(239, 78, 123),
+            rgb(161, 102, 171),
+            rgb(80, 115, 184),
+            rgb(16, 152, 173),
+            rgb(7, 179, 155),
+            rgb(74 222 128),
+            rgb(7, 179, 155),
+            rgb(16, 152, 173),
+            rgb(80, 115, 184),
+            rgb(161, 102, 171),
+            rgb(239, 78, 123),
+            rgb(243, 112, 85),
+            rgb(247, 149, 51)
+        );
+    }
+}
+
+@keyframes rainbowKeyframes {
+    from {
+        background-position: initial;
+    }
+
+    to {
+        background-position: 100vw;
+    }
+}

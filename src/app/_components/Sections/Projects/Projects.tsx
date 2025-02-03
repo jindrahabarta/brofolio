@@ -1,6 +1,7 @@
 import React from 'react'
 import ProjectList from './ProjectList'
 import Next from './Next'
+import './style.css'
 
 const Projects = () => {
     return (
@@ -8,9 +9,9 @@ const Projects = () => {
             <header className='h-60 sm:h-80 flex items-center border-b border-gray-700 overflow-x-hidden px-4 sm:px-8'>
                 <h1
                     id='projectsTitle'
-                    className='flex flex-col text-9xl font-league uppercase text-[clamp(1rem,7.5vw,3.75rem)] '
+                    className='flex flex-col font-league uppercase text-[clamp(1rem,25vw,12rem)]'
                 >
-                    Naše portfolio
+                    Projekty
                 </h1>
             </header>
 
