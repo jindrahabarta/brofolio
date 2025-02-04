@@ -184,7 +184,21 @@ body::-webkit-scrollbar-thumb {
         20px 20px 12px red;
 
     &:nth-child(1) {
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNhhAIxy5bDpaMJCHAve1_nsQKQG5MSrQJSw&s');
+        background-image: url('/images/Footer/space.jfif');
         background-repeat: repeat;
+        background-attachment: fixed;
+        animation: moveSpace 550s infinite linear;
+    }
+}
+
+@keyframes moveSpace {
+    from {
+        background-position-x: 0%;
+        background-position-y: 0%;
+    }
+
+    to {
+        background-position-x: 100%;
+        background-position-y: 200%;
     }
 }
