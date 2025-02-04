@@ -1,6 +1,5 @@
 'use client'
 import Lenis from 'lenis'
-import Head from 'next/head'
 import Navigation from '@/_components/Navigation/Navigation'
 import {
     Source_Serif_4,
@@ -25,6 +24,7 @@ const charm = Charm({
     subsets: ['latin'],
     weight: ['400', '700'],
     variable: '--charm',
+    display: 'swap',
 })
 const owners = localFont({
     src: '../_assets/fonts/owners-xxwide.ttf',
@@ -69,15 +69,6 @@ export default function RootLayout({
 
     return (
         <html lang='cs'>
-            <Head>
-                <link
-                    rel='preload'
-                    href='../_assets/fonts/owners-xxwide.ttf'
-                    as='font'
-                    type='font/woff2'
-                />
-            </Head>
-
             <body
                 className={`antialiased
                     bg-black

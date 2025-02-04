@@ -64,6 +64,20 @@ const gsapAnimationsInit = (path: string) => {
                     },
                     '<'
                 )
+                .to(
+                    '.aboutUsGifScale',
+                    {
+                        scale: 1,
+                    },
+                    '<'
+                )
+                .to(
+                    '.aboutUsGridScrollSpeed',
+                    {
+                        translateY: 0,
+                    },
+                    '<'
+                )
                 .set(document.body, {
                     backgroundColor: '#e5e7eb',
                 })
@@ -103,6 +117,7 @@ const gsapAnimationsInit = (path: string) => {
                     },
                     '<'
                 )
+
                 .set(document.body, {
                     backgroundColor: '#e5e7eb',
                 })

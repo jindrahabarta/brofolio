@@ -11,20 +11,71 @@ const Content = () => {
             id='aboutUsContent'
             className='h-fit flex flex-col justify-start sm:scale-[0.6] origin-[center_19%] sm:origin-[center_15%]'
         >
-            <div className='h-screen relative bg-black'>
-                <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
+            <div className='h-screen relative bg-black overflow-hidden flex justify-center'>
+                <div className='aboutUsGifScale grid h-full sm:scale-[1.9] w-full sm:grid-cols-3 grid-rows-3 '>
                     <Image
                         src={DicaprioGif}
                         alt={'Dicaprio Gif'}
                         width={320}
                         height={280}
-                        className='w-3/5 sm:w-[90%] scale-[0.9] sm:scale-[0.6]'
+                        className='hidden sm:block w-full h-full translate-y-80 object-cover aboutUsGridScrollSpeed'
                     ></Image>
-                    <div className='absolute top-0 left-0 w-full h-full  flex items-center justify-center'>
-                        <h1 className='text-yellow-400 text-[3vw] text-center '>
-                            {/* <strong>TODO:</strong> */}
-                        </h1>
-                    </div>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='w-full h-full object-cover'
+                    ></Image>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
+                    ></Image>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='hidden sm:block w-full h-full translate-y-80 object-cover aboutUsGridScrollSpeed'
+                    ></Image>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='w-full h-full  object-cover '
+                    ></Image>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
+                    ></Image>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='hidden sm:block w-full h-full translate-y-80 object-cover aboutUsGridScrollSpeed'
+                    ></Image>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='w-full h-full object-cover'
+                    ></Image>
+                    <Image
+                        src={DicaprioGif}
+                        alt={'Dicaprio Gif'}
+                        width={320}
+                        height={280}
+                        className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
+                    ></Image>
                 </div>
             </div>
 
@@ -103,7 +154,7 @@ const Content = () => {
                         </div>
                     </section>
 
-                    <section className='relative w-full md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-40 sm:pt-56 md:p-8'>
+                    <section className='relative w-full md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-8translate-y-80 sm:pt-56 md:p-8'>
                         <span className='w-full max-w-md self-end md:self-auto'>
                             <h1 className='font-league text-[10vw] md:text-[8vw] leading-[80%] md:hidden pb-10'>
                                 Full-stack developer
