@@ -98,16 +98,6 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                         lenis={lenis}
                                     ></NavLink>
                                     <NavLink
-                                        link='#technology'
-                                        text='Technologie'
-                                        lenis={lenis}
-                                    />
-                                    <NavLink
-                                        link='#technology'
-                                        text='Proces'
-                                        lenis={lenis}
-                                    />
-                                    <NavLink
                                         text='Kontakt'
                                         link='#contact'
                                         lenis={lenis}

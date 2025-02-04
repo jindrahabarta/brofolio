@@ -40,6 +40,10 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: '**',
             },
+            {
+                protocol: 'https',
+                hostname: 'cristiandavideconte.github.io',
+            },
         ],
     },
 }
