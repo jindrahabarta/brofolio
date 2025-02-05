@@ -54,8 +54,8 @@ const ListItem: React.FC<{ project: IProject }> = ({ project }) => {
 
                     <section className='flex-1 hidden md:block w-full max-w-[28rem] aspect-video rounded-xl group-hover:scale-105 duration-300 ease-out overflow-hidden'>
                         <Image
-                            width={300}
-                            height={168}
+                            width={700}
+                            height={393}
                             src={project.image}
                             alt={project.name}
                             className='w-full h-full aspect-video group-hover:scale-120 duration-500 ease-out'
