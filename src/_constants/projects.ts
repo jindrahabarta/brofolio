@@ -4,7 +4,9 @@ export interface IProject {
     description: string
     image: string
     url: string
+    target: '_blank' | '_self'
     badges: string[]
+    pin: boolean
     color?: string
 }
 
@@ -14,26 +16,21 @@ export const projectList: IProject[] = [
         slug: 'drippy-rugs',
         description: 'Zakázková výroba koberečků',
         image: '/images/Projects/DrippyRugs.webp',
-        url: 'https://example.com/project1',
+        url: 'https://drippyrugs.netlify.app/',
+        target: '_blank',
         badges: ['TypeScript', 'Next.js'],
+        pin: false,
         color: 'bg-red-400',
-    },
-    {
-        name: 'Habartovi.cz',
-        slug: 'habartovi',
-        description: 'Soukromé ubytování a keramická dílna',
-        image: '/images/Projects/Habartovi.webp',
-        url: 'https://example.com/project2',
-        badges: ['WordPress', 'Next.js'],
-        color: 'bg-green-500',
     },
     {
         name: 'Printujto',
         slug: 'printujto',
         description: 'Zakázkový 3D tisk',
         image: '/images/Projects/Printujto.webp',
-        url: 'https://example.com/project3',
+        url: 'https://printujto.cz/',
+        target: '_blank',
         badges: ['Next.js', 'React', 'Express.js'],
+        pin: true,
         color: 'bg-violet-500',
     },
     {
@@ -41,8 +38,21 @@ export const projectList: IProject[] = [
         slug: 'avantgarda',
         description: 'Solární studio',
         image: '/images/Projects/Avantgarda.webp',
-        url: 'https://example.com/project3',
+        url: 'https://solariumolomouc.cz/',
+        target: '_blank',
         badges: ['Next.js'],
+        pin: true,
         color: 'bg-orange-500',
+    },
+    {
+        name: 'Habartovi.cz',
+        slug: 'habartovi',
+        description: 'Soukromé ubytování a keramická dílna',
+        image: '/images/Projects/Habartovi.webp',
+        url: 'https://www.habartovi.cz/',
+        target: '_blank',
+        badges: ['WordPress', 'Next.js'],
+        pin: true,
+        color: 'bg-orange-400',
     },
 ]
