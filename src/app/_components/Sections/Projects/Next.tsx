@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Next = () => {
     return (
-        <Link href={''}>
+        <Link href={'/projects'}>
             <div className='group flex justify-center items-center hover:cursor-pointer mt-10'>
                 <Marquee
                     sets={6}
