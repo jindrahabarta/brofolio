@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import validator from 'validator'
+import Input1 from '@/../public/images/contact/Input1.svg'
 
 const validationSchema = z.object({
     firstName: z
@@ -137,7 +138,7 @@ const Contact = () => {
                                 <em>Jméno*</em>
                                 <div className='container'>
                                     <Image
-                                        src='/images/contact/input1.png'
+                                        src={Input1}
                                         width={418}
                                         height={95}
                                         alt='input'
@@ -162,7 +163,7 @@ const Contact = () => {
                                 <em>Příjmení*</em>
                                 <div className='container'>
                                     <Image
-                                        src='/images/contact/input2.png'
+                                        src={Input1}
                                         width={418}
                                         height={95}
                                         alt='input'
@@ -188,7 +189,7 @@ const Contact = () => {
                                 <em>E-mail*</em>
                                 <div className='container'>
                                     <Image
-                                        src='/images/contact/input3.png'
+                                        src={Input1}
                                         width={418}
                                         height={95}
                                         alt='input'
@@ -212,7 +213,7 @@ const Contact = () => {
                                 <em>Telefon*</em>
                                 <div className='container'>
                                     <Image
-                                        src='/images/contact/input3.png'
+                                        src={Input1}
                                         width={418}
                                         height={95}
                                         alt='input'
@@ -242,7 +243,7 @@ const Contact = () => {
                                 <em>Společnost</em>
                                 <div className='container'>
                                     <Image
-                                        src='/images/contact/input3.png'
+                                        src={Input1}
                                         width={418}
                                         height={95}
                                         alt='input'

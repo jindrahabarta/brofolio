@@ -154,8 +154,8 @@ const Content = () => {
                         </div>
                     </section>
 
-                    <section className='relative w-full md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-8translate-y-80 sm:pt-56 md:p-8'>
-                        <span className='w-full max-w-md self-end md:self-auto'>
+                    <section className='relative w-full md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-[35vw] md:p-8'>
+                        <span className='w-full max-w-md self-end md:self-start'>
                             <h1 className='font-league text-[10vw] md:text-[8vw] leading-[80%] md:hidden pb-10'>
                                 Full-stack developer
                             </h1>
@@ -174,8 +174,8 @@ const Content = () => {
                             </p>
                         </span>
 
-                        <div className='self-start md:self-auto flex flex-col-reverse sm:flex-col gap-12 '>
-                            <h1 className='font-league text-[10vw] sm:text-[8vw] leading-[80%] hidden sm:block'>
+                        <div className='self-start md:self-end flex flex-col-reverse gap-12'>
+                            <h1 className='font-league text-[10vw] sm:text-[8vw] leading-[80%] hidden md:block'>
                                 Full-stack developer
                             </h1>
 
