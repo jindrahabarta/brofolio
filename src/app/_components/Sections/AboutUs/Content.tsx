@@ -77,57 +77,65 @@ const Content = () => {
                         className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
                     ></Image>
                 </div>
-                <div className='absolute bottom-0 w-full h-full z-30 justify-start flex items-end overflow-hidden'>
-                    {/* <h1 className='text-nowrap '>
-                        <strong className='text-[5rem] text-red-500/60 blur-sm'>
-                            {' '}
-                            About us{' '}
-                        </strong>
-                        <em className='text-[7rem]'>• About us •</em>
-                    </h1> */}
 
+                <div className='absolute bottom-0 w-full h-full'>
                     <div
                         id='aboutUsHeadingBg'
-                        className='absolute opacity-0 w-full h-full flex'
+                        className='absolute opacity-0 w-full h-full flex flex-col'
                     >
-                        <div className='flex-1 h-full bg-white'></div>
-                        <div className='flex-1 h-full bg-yellow-300'></div>
-                        <div className='flex-1 h-full bg-blue-500'></div>
-                        <div className='flex-1 h-full bg-green-400'></div>
-                        <div className='flex-1 h-full bg-pink-400'></div>
-                        <div className='flex-1 h-full bg-red-500'></div>
-                    </div>
-                    <div
-                        id='aboutUsHeading'
-                        className='flex gap-10 justify-start'
-                    >
-                        <h1 className='text-nowrap relative'>
-                            <strong className='text-[3rem] md:text-[5rem'>
-                                {' '}
-                                About us{' '}
-                            </strong>
-                            <em className='text-[4rem] md:text-[7rem]'>
-                                • About us •
-                            </em>
-                        </h1>
-                        <h1 className='text-nowrap relative text-green-300'>
-                            <strong className='text-[3rem] md:text-[5rem]'>
-                                {' '}
-                                About us{' '}
-                            </strong>
-                            <em className='text-[4rem] md:text-[7rem]'>
-                                • About us •
-                            </em>
-                        </h1>
-                        <h1 className='text-nowrap relative text-pink-300'>
-                            <strong className='text-[3rem] md:text-[5rem]'>
-                                {' '}
-                                About us{' '}
-                            </strong>
-                            <em className='text-[4rem] md:text-[7rem]'>
-                                • About us •
-                            </em>
-                        </h1>
+                        <div className='flex h-full'>
+                            <div className='flex-1 h-full bg-white'></div>
+                            <div className='flex-1 h-full bg-[#ffff02]'></div>
+                            <div className='flex-1 h-full bg-[#01ffff]'></div>
+                            <div className='flex-1 h-full bg-[#00ff01]'></div>
+                            <div className='flex-1 h-full bg-[#ff00fc]'></div>
+                            <div className='flex-1 h-full bg-red-600'></div>
+                            <div className='flex-1 h-full bg-[#0000ff]'></div>
+                        </div>
+
+                        <div className='flex h-20'>
+                            <div className='flex-1 h-full bg-[#0000ff]'></div>
+                            <div className='flex-1 h-full bg-white'></div>
+                            <div className='flex-1 h-full bg-[#ffff02]'></div>
+                            <div className='flex-1 h-full bg-[#01ffff]'></div>
+                            <div className='flex-1 h-full bg-[#00ff01]'></div>
+                            <div className='flex-1 h-full bg-[#ff00fc]'></div>
+                            <div className='flex-1 h-full bg-[#fe0000]'></div>
+                        </div>
+                        <div className='bg-black w-full md:w-4/5 overflow-hidden absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center'>
+                            <div
+                                id='aboutUsHeading'
+                                className='flex gap-10 justify-start'
+                            >
+                                <h1 className='text-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
+                                    <strong className='text-[1rem] md:text-[5rem] '>
+                                        {' '}
+                                        About us{' '}
+                                    </strong>
+                                    <em className='text-[2rem] md:text-[7rem] '>
+                                        • About us •
+                                    </em>
+                                </h1>
+                                <h1 className='text-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
+                                    <strong className='text-[1rem] md:text-[5rem] '>
+                                        {' '}
+                                        About us{' '}
+                                    </strong>
+                                    <em className='text-[2rem] md:text-[7rem] '>
+                                        • About us •
+                                    </em>
+                                </h1>
+                                <h1 className='text-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
+                                    <strong className='text-[1rem] md:text-[5rem] '>
+                                        {' '}
+                                        About us{' '}
+                                    </strong>
+                                    <em className='text-[2rem] md:text-[7rem]'>
+                                        • About us •
+                                    </em>
+                                </h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
