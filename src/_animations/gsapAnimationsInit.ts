@@ -147,9 +147,13 @@ const gsapAnimationsInit = (path: string) => {
             .to('#aboutUsHeadingBg', {
                 opacity: 1,
             })
-            .to('#aboutUsHeadingBg', {
-                filter: 'brightness(2)',
-            })
+            .to(
+                '#aboutUsHeadingBg',
+                {
+                    filter: 'brightness(2)',
+                },
+                '<'
+            )
             .to('#aboutUsHeadingBg', {
                 filter: 'brightness(1)',
             })
