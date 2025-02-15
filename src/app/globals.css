@@ -63,42 +63,6 @@ em {
     @apply font-charm italic font-bold;
 }
 
-form {
-    fieldset {
-        @apply w-full flex flex-col sm:flex-row gap-4;
-    }
-
-    label {
-        @apply w-full flex flex-col gap-2 text-xl;
-    }
-
-    .container {
-        @apply w-full relative;
-
-        img {
-            @apply absolute h-full w-full scale-105;
-        }
-    }
-
-    input,
-    textarea {
-        @apply w-full text-base bg-transparent border-none focus:outline-none hover:cursor-text px-3 py-2;
-
-        -webkit-text-fill-color: black;
-        -webkit-background-clip: text;
-
-        &::placeholder {
-            color: red;
-            opacity: 1; /* Firefox */
-        }
-
-        &::-ms-input-placeholder {
-            /* Edge 12 -18 */
-            color: red;
-        }
-    }
-}
-
 /* ScrollBar */
 body::-webkit-scrollbar {
     width: 7px;

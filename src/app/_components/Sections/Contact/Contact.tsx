@@ -1,40 +1,15 @@
 'use client'
 
 import Image from 'next/image'
-import React, { ChangeEventHandler, useEffect } from 'react'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
+import React, { useEffect, useState } from 'react'
+import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import validator from 'validator'
 import Input1 from '@/_assets/inputs/Input1'
-
-const validationSchema = z.object({
-    firstName: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .min(3, 'Minimálně 3 znaky.')
-        .max(255, 'Maximálně 255 znaků.'),
-    lastName: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .min(3, 'Minimálně 3 znaky.')
-        .max(255, 'Maximálně 255 znaků.'),
-    email: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .email('E-mail není ve správném formátu.'),
-    phone: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .max(13, 'Maximálně 13 znaků.')
-        .refine(validator.isMobilePhone, 'Telefon není ve správném formátu'),
-    company: z.string().optional(),
-    message: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .min(10, 'Minimálně 10 znaků.')
-        .max(1000, 'Maximálně 1000 znaků.'),
-})
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
+import './style.css'
+import { nextClient } from '@/_axios/axios'
+import contactFormValidationSchema from '@/_validators/contact'
 
 interface IFormData {
     firstName: string
@@ -45,32 +20,33 @@ interface IFormData {
     message: string
 }
 
+enum FormState {
+    IDLE,
+    SENDING,
+    SUCCESS,
+    ERROR,
+}
+
 const Contact = () => {
+    const [formState, setFormState] = useState<FormState>(FormState.IDLE)
+
     const {
         register,
         handleSubmit,
+        control,
         reset,
         formState: { errors },
     } = useForm<IFormData>({
-        resolver: zodResolver(validationSchema),
+        resolver: zodResolver(contactFormValidationSchema),
     })
 
-    const {
-        name: phoneName,
-        onChange: phoneOnChange,
-        onBlur: phoneOnBlur,
-        ref: phoneRef,
-    } = register('phone')
-
     const handlePageResize = () => {
-        const inputContainers = document.querySelectorAll('fieldset .container')
+        const inputContainers = document.querySelectorAll(
+            'fieldset .container'
+        ) as NodeListOf<HTMLDivElement>
         inputContainers.forEach((inputContainer) => {
-            let input: HTMLInputElement | HTMLTextAreaElement | null =
-                inputContainer.querySelector('input')
-            if (!input) input = inputContainer.querySelector('textarea')
-            if (!input) return
-
-            const { offsetWidth, offsetHeight } = input
+            const { offsetWidth, offsetHeight } = inputContainer
+            if (!offsetWidth || !offsetHeight) return
 
             const svg = inputContainer.querySelector('svg')
             if (!svg) return
@@ -94,34 +70,28 @@ const Contact = () => {
         }
     }, [])
 
-    const handlePhoneChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-        const value = e.target.value.split('')
-
-        if (!value.includes('+')) {
-            if (
-                value.length >= 4 &&
-                !(value[3] === ' ' || value[3] === '\xa0')
-            ) {
-                value.splice(3, 0, '\xa0')
-            }
-            if (
-                value.length >= 8 &&
-                !(value[7] === ' ' || value[7] === '\xa0')
-            ) {
-                value.splice(7, 0, '\xa0')
-            }
-        }
-
-        e.target.value = value.join('')
-
-        phoneOnChange(e)
-    }
-
     const onSubmit = (data: IFormData) => {
-        console.log(data)
+        if (formState === FormState.SENDING) return
 
-        reset()
+        setFormState(FormState.SENDING)
+
+        nextClient
+            .post('/email', data)
+            .then(() => {
+                setFormState(FormState.SUCCESS)
+                reset()
+            })
+            .catch(() => {
+                setFormState(FormState.ERROR)
+            })
     }
+
+    useEffect(() => {
+        if (formState === FormState.SUCCESS || formState === FormState.ERROR)
+            setTimeout(() => {
+                setFormState(FormState.IDLE)
+            }, 5000)
+    }, [formState])
 
     return (
         <section
@@ -149,7 +119,7 @@ const Contact = () => {
 
                 <form
                     onSubmit={handleSubmit(onSubmit)}
-                    className='flex-1 sm:max-w-xl flex flex-col gap-12'
+                    className='flex-1 sm:max-w-xl flex flex-col gap-4'
                 >
                     <header className='flex flex-col gap-4'>
                         <h2 className='leading-normal '>
@@ -244,20 +214,22 @@ const Contact = () => {
                                         strokeWidth={7}
                                         className='input-svg absolute pointer-events-none select-none'
                                     />
-                                    <input
-                                        id='phone'
-                                        ref={phoneRef}
-                                        name={phoneName}
-                                        onChange={handlePhoneChange}
-                                        onBlur={phoneOnBlur}
-                                        maxLength={13}
-                                        placeholder='776 275 657'
-                                        aria-describedby='phone-error'
+                                    <Controller
+                                        name='phone'
+                                        control={control}
+                                        render={({ field }) => (
+                                            <PhoneInput
+                                                {...field}
+                                                defaultCountry='CZ'
+                                            />
+                                        )}
                                     />
                                 </div>
                                 {errors.phone && (
                                     <span role='alert' id='email-error'>
-                                        {errors.phone.message}
+                                        {errors.phone.message === 'Required'
+                                            ? 'Toto pole je povinné.'
+                                            : errors.phone.message}
                                     </span>
                                 )}
                             </label>
@@ -317,9 +289,26 @@ const Contact = () => {
                     </section>
 
                     <footer>
+                        {formState === FormState.SENDING && (
+                            <span role='alert' className='text-yellow-600'>
+                                <em>Odesílání formuláře</em>
+                            </span>
+                        )}
+                        {formState === FormState.ERROR && (
+                            <span role='alert' className='text-red-600'>
+                                <em>Nepodařilo se odeslat formulář</em>
+                            </span>
+                        )}
+                        {formState === FormState.SUCCESS && (
+                            <span role='alert' className='text-green-600'>
+                                <em>Zpráva byla odeslána</em>
+                            </span>
+                        )}
+
                         <button
                             type='submit'
-                            className='self-start text-2xl border-2 border-black rounded-full py-2 px-4'
+                            className='self-start text-2xl border-2 border-black rounded-full px-4 mt-4'
+                            disabled={formState === FormState.SENDING}
                         >
                             <em>Odeslat</em>
                         </button>
