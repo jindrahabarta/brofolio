@@ -1,12 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import React, { ChangeEventHandler } from 'react'
+import React, { ChangeEventHandler, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import validator from 'validator'
-import Input1 from '@/../public/images/contact/Input1.svg'
+import Input1 from '@/_assets/inputs/Input1'
 
 const validationSchema = z.object({
     firstName: z
@@ -61,6 +61,38 @@ const Contact = () => {
         onBlur: phoneOnBlur,
         ref: phoneRef,
     } = register('phone')
+
+    const handlePageResize = () => {
+        const inputContainers = document.querySelectorAll('fieldset .container')
+        inputContainers.forEach((inputContainer) => {
+            let input: HTMLInputElement | HTMLTextAreaElement | null =
+                inputContainer.querySelector('input')
+            if (!input) input = inputContainer.querySelector('textarea')
+            if (!input) return
+
+            const { offsetWidth, offsetHeight } = input
+
+            const svg = inputContainer.querySelector('svg')
+            if (!svg) return
+            svg.setAttribute('width', offsetWidth.toString())
+            svg.setAttribute('height', offsetHeight.toString())
+
+            const rect = svg.querySelector('rect')
+            if (!rect) return
+            rect.setAttribute('width', offsetWidth.toString())
+            rect.setAttribute('height', offsetHeight.toString())
+        })
+    }
+
+    useEffect(() => {
+        handlePageResize()
+
+        window.addEventListener('resize', handlePageResize)
+
+        return () => {
+            window.removeEventListener('resize', handlePageResize)
+        }
+    }, [])
 
     const handlePhoneChange: ChangeEventHandler<HTMLInputElement> = (e) => {
         const value = e.target.value.split('')
@@ -137,13 +169,11 @@ const Contact = () => {
                             <label htmlFor='firstName'>
                                 <em>Jméno*</em>
                                 <div className='container'>
-                                    <Image
-                                        src={Input1}
-                                        width={418}
-                                        height={95}
-                                        alt='input'
-                                        className='pointer-events-none select-none'
-                                        unoptimized
+                                    <Input1
+                                        width='100%'
+                                        height='100%'
+                                        strokeWidth={7}
+                                        className='input-svg absolute pointer-events-none select-none'
                                     />
                                     <input
                                         id='firstName'
@@ -162,12 +192,11 @@ const Contact = () => {
                             <label htmlFor='lastName'>
                                 <em>Příjmení*</em>
                                 <div className='container'>
-                                    <Image
-                                        src={Input1}
-                                        width={418}
-                                        height={95}
-                                        alt='input'
-                                        className='pointer-events-none select-none'
+                                    <Input1
+                                        width='100%'
+                                        height='100%'
+                                        strokeWidth={7}
+                                        className='input-svg absolute pointer-events-none select-none'
                                     />
                                     <input
                                         id='lastName'
@@ -188,12 +217,11 @@ const Contact = () => {
                             <label htmlFor='email'>
                                 <em>E-mail*</em>
                                 <div className='container'>
-                                    <Image
-                                        src={Input1}
-                                        width={418}
-                                        height={95}
-                                        alt='input'
-                                        className='pointer-events-none select-none'
+                                    <Input1
+                                        width='100%'
+                                        height='100%'
+                                        strokeWidth={7}
+                                        className='input-svg absolute pointer-events-none select-none'
                                     />
                                     <input
                                         id='email'
@@ -212,12 +240,11 @@ const Contact = () => {
                             <label htmlFor='phone'>
                                 <em>Telefon*</em>
                                 <div className='container'>
-                                    <Image
-                                        src={Input1}
-                                        width={418}
-                                        height={95}
-                                        alt='input'
-                                        className='pointer-events-none select-none'
+                                    <Input1
+                                        width='100%'
+                                        height='100%'
+                                        strokeWidth={7}
+                                        className='input-svg absolute pointer-events-none select-none'
                                     />
                                     <input
                                         id='phone'
@@ -242,12 +269,11 @@ const Contact = () => {
                             <label htmlFor='company'>
                                 <em>Společnost</em>
                                 <div className='container'>
-                                    <Image
-                                        src={Input1}
-                                        width={418}
-                                        height={95}
-                                        alt='input'
-                                        className='pointer-events-none select-none'
+                                    <Input1
+                                        width='100%'
+                                        height='100%'
+                                        strokeWidth={7}
+                                        className='input-svg absolute pointer-events-none select-none'
                                     />
                                     <input
                                         id='company'
@@ -267,14 +293,22 @@ const Contact = () => {
                         <fieldset>
                             <label htmlFor='message'>
                                 <em>Zpráva</em>
-                                <textarea
-                                    id='message'
-                                    {...register('message')}
-                                    rows={5}
-                                    placeholder='Hello, I want best website ever.'
-                                    aria-describedby='message-error'
-                                    className='resize-none'
-                                />
+                                <div className='container'>
+                                    <Input1
+                                        width='100%'
+                                        height='100%'
+                                        strokeWidth={7}
+                                        className='input-svg absolute pointer-events-none select-none'
+                                    />
+                                    <textarea
+                                        id='message'
+                                        {...register('message')}
+                                        rows={5}
+                                        placeholder='Hello, I want best website ever.'
+                                        aria-describedby='message-error'
+                                        className='resize-none'
+                                    />
+                                </div>
                                 {errors.message && (
                                     <span role='alert' id='email-error'>
                                         {errors.message.message}

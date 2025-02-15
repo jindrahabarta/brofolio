@@ -1,57 +1,64 @@
 import * as React from 'react'
 import { SVGProps } from 'react'
 
-const Input1 = (props: SVGProps<SVGSVGElement>) => (
-    <svg width={500} height={100} {...props}>
+const Input1: React.FC<
+    SVGProps<SVGSVGElement> & {
+        strokeWidth: number
+    }
+> = ({ strokeWidth, ...props }) => (
+    <svg xmlns='http://www.w3.org/2000/svg' {...props}>
         <defs>
             <filter
-                id='a'
+                x={0}
+                y={0}
                 width='100%'
                 height='100%'
-                x='0%'
-                y='0%'
                 filterUnits='objectBoundingBox'
+                id='pencilTexture3'
             >
                 <feTurbulence
-                    baseFrequency={0.5}
-                    numOctaves={5}
-                    result='f1'
+                    type='fractalNoise'
+                    baseFrequency='0.5'
+                    numOctaves='5'
                     stitchTiles='stitch'
-                    type='fractalNoise'
-                />
+                    result='f1'
+                ></feTurbulence>
                 <feColorMatrix
-                    result='f2'
+                    type='matrix'
                     values='0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 -1.5 1.5'
-                />
+                    result='f2'
+                ></feColorMatrix>
                 <feComposite
-                    in='SourceGraphic'
-                    in2='f2b'
                     operator='in'
+                    in2='f2'
+                    in='SourceGraphic'
                     result='f3'
-                />
+                ></feComposite>
                 <feTurbulence
-                    baseFrequency={1.2}
-                    numOctaves={3}
-                    result='noise'
                     type='fractalNoise'
-                />
+                    baseFrequency='1.2'
+                    numOctaves='3'
+                    result='noise'
+                ></feTurbulence>
                 <feDisplacementMap
-                    in='f3'
-                    result='f4'
-                    scale={2.5}
                     xChannelSelector='R'
                     yChannelSelector='G'
-                />
+                    scale='2.5'
+                    in='f3'
+                    result='f4'
+                ></feDisplacementMap>
             </filter>
         </defs>
-        <g filter='url(#a)'>
-            <path
-                fill='none'
-                stroke='#000'
-                strokeWidth={15}
-                d='M5 5h480v80H5z'
-            />
-        </g>
+        <rect
+            width='100%'
+            height='100%'
+            x={0}
+            y={0}
+            strokeWidth={strokeWidth}
+            stroke='black'
+            fill='none'
+            style={{ filter: 'url(#pencilTexture3)' }}
+        />
     </svg>
 )
 
