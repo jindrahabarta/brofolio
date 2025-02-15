@@ -85,22 +85,22 @@ const Content = () => {
                     >
                         <div className='flex h-full'>
                             <div className='flex-1 h-full bg-white'></div>
-                            <div className='flex-1 h-full bg-[#ffff02]'></div>
-                            <div className='flex-1 h-full bg-[#01ffff]'></div>
-                            <div className='flex-1 h-full bg-[#00ff01]'></div>
-                            <div className='flex-1 h-full bg-[#ff00fc]'></div>
+                            <div className='flex-1 h-full bg-yellow-300'></div>
+                            <div className='flex-1 h-full bg-cyan-400'></div>
+                            <div className='flex-1 h-full bg-green-400'></div>
+                            <div className='flex-1 h-full bg-pink-600'></div>
                             <div className='flex-1 h-full bg-red-600'></div>
-                            <div className='flex-1 h-full bg-[#0000ff]'></div>
+                            <div className='flex-1 h-full bg-blue-600'></div>
                         </div>
 
                         <div className='flex h-20'>
-                            <div className='flex-1 h-full bg-[#0000ff]'></div>
+                            <div className='flex-1 h-full bg-blue-600'></div>
                             <div className='flex-1 h-full bg-white'></div>
-                            <div className='flex-1 h-full bg-[#ffff02]'></div>
-                            <div className='flex-1 h-full bg-[#01ffff]'></div>
-                            <div className='flex-1 h-full bg-[#00ff01]'></div>
-                            <div className='flex-1 h-full bg-[#ff00fc]'></div>
-                            <div className='flex-1 h-full bg-[#fe0000]'></div>
+                            <div className='flex-1 h-full bg-yellow-300'></div>
+                            <div className='flex-1 h-full bg-cyan-400'></div>
+                            <div className='flex-1 h-full bg-green-400'></div>
+                            <div className='flex-1 h-full bg-pink-600'></div>
+                            <div className='flex-1 h-full bg-red-600'></div>
                         </div>
                         <div className='bg-black w-full md:w-4/5 overflow-hidden absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center'>
                             <div
