@@ -1,0 +1,52 @@
+form {
+    fieldset {
+        @apply w-full flex flex-col sm:flex-row gap-4;
+    }
+
+    label {
+        @apply w-full flex flex-col gap-2 text-xl;
+    }
+
+    .container {
+        @apply w-full relative;
+
+        img {
+            @apply absolute h-full w-full scale-105;
+        }
+    }
+
+    input,
+    textarea {
+        @apply w-full text-base bg-transparent border-none focus:outline-none hover:cursor-text p-3;
+
+        -webkit-text-fill-color: black;
+        -webkit-background-clip: text;
+
+        &::placeholder {
+            color: red;
+            opacity: 1; /* Firefox */
+        }
+
+        &::-ms-input-placeholder {
+            /* Edge 12 -18 */
+            color: red;
+        }
+    }
+
+    footer {
+        @apply flex flex-col;
+    }
+}
+
+.PhoneInput {
+    @apply px-3;
+}
+
+.PhoneInputCountryIcon {
+    @apply flex items-center justify-center bg-transparent shadow-none;
+}
+
+img.PhoneInputCountryIconImg {
+    width: 60% !important;
+    height: 60% !important;
+}
