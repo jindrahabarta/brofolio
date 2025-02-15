@@ -12,7 +12,7 @@ const Content = () => {
             className='h-fit flex flex-col justify-start sm:scale-[0.6] origin-[center_19%] sm:origin-[center_15%]'
         >
             <div className='h-screen relative bg-black overflow-hidden flex justify-center'>
-                <div className='aboutUsGifScale grid h-full sm:scale-[1.9] w-full sm:grid-cols-3 grid-rows-3 '>
+                <div className='aboutUsGifScale grid h-full sm:scale-[1.9] w-full sm:grid-cols-3 grid-rows-3'>
                     <Image
                         src={DicaprioGif}
                         alt={'Dicaprio Gif'}
@@ -77,9 +77,69 @@ const Content = () => {
                         className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
                     ></Image>
                 </div>
+                <div className='absolute bottom-0 w-full h-full z-30 justify-start flex items-end overflow-hidden'>
+                    {/* <h1 className='text-nowrap '>
+                        <strong className='text-[5rem] text-red-500/60 blur-sm'>
+                            {' '}
+                            About us{' '}
+                        </strong>
+                        <em className='text-[7rem]'>• About us •</em>
+                    </h1> */}
+
+                    <div
+                        id='aboutUsHeadingBg'
+                        className='absolute opacity-0 w-full h-full flex'
+                    >
+                        <div className='flex-1 h-full bg-white'></div>
+                        <div className='flex-1 h-full bg-yellow-300'></div>
+                        <div className='flex-1 h-full bg-blue-500'></div>
+                        <div className='flex-1 h-full bg-green-400'></div>
+                        <div className='flex-1 h-full bg-pink-400'></div>
+                        <div className='flex-1 h-full bg-red-500'></div>
+                    </div>
+                    <div
+                        id='aboutUsHeading'
+                        className='flex gap-10 justify-start'
+                    >
+                        <h1 className='text-nowrap relative'>
+                            <strong className='text-[3rem] md:text-[5rem'>
+                                {' '}
+                                About us{' '}
+                            </strong>
+                            <em className='text-[4rem] md:text-[7rem]'>
+                                • About us •
+                            </em>
+                        </h1>
+                        <h1 className='text-nowrap relative text-green-300'>
+                            <strong className='text-[3rem] md:text-[5rem]'>
+                                {' '}
+                                About us{' '}
+                            </strong>
+                            <em className='text-[4rem] md:text-[7rem]'>
+                                • About us •
+                            </em>
+                        </h1>
+                        <h1 className='text-nowrap relative text-pink-300'>
+                            <strong className='text-[3rem] md:text-[5rem]'>
+                                {' '}
+                                About us{' '}
+                            </strong>
+                            <em className='text-[4rem] md:text-[7rem]'>
+                                • About us •
+                            </em>
+                        </h1>
+                    </div>
+                </div>
             </div>
 
-            <div className='flex flex-col uppercase text-red-500'>
+            <div className='flex flex-col uppercase text-red-500 relative'>
+                {/* <div className='absolute -translate-y-1/2 z-20 top-0 left-0 w-full flex justify-center'>
+                    <div className='bg-red-500 -rotate-3 text-white px-6 py-4 shadow-[-10px_10px_0px_0px_black] hover:shadow-[-5px_5px_0px_0px_black] duration-200 hover:mt-2 hover:mr-2'>
+                        <h1 className='text-[2rem]'>
+                            <strong>About us</strong>
+                        </h1>
+                    </div>
+                </div> */}
                 <article className='relative w-full md:h-[120vh] flex flex-col md:flex-row'>
                     <Image
                         src={JindraImg}

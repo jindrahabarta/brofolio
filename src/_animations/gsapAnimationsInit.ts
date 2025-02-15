@@ -126,6 +126,48 @@ const gsapAnimationsInit = (path: string) => {
                 })
         })
 
+        //AboutUsSideScrollText
+        ScrollTrigger.create({
+            trigger: '.aboutUsGifScale',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 2,
+
+            onUpdate: (e) => {
+                const progress = e.progress * -50
+
+                gsap.set('#aboutUsHeading', {
+                    translateX: `${progress}%`,
+                })
+            },
+        })
+
+        const aboutUsHeadingTl = gsap
+            .timeline({ defaults: { duration: 0.2 }, paused: true })
+            .to('#aboutUsHeadingBg', {
+                opacity: 1,
+            })
+            .to('#aboutUsHeadingBg', {
+                filter: 'brightness(2)',
+            })
+            .to('#aboutUsHeadingBg', {
+                filter: 'brightness(1)',
+            })
+
+        ScrollTrigger.create({
+            trigger: '#aboutUsHeadingBg',
+            start: '90% center',
+            end: '90% center',
+
+            onEnter: () => {
+                aboutUsHeadingTl.play()
+            },
+
+            onEnterBack: () => {
+                aboutUsHeadingTl.reverse()
+            },
+        })
+
         //Technology Bg Transition
         const techTl = gsap
             .timeline({

@@ -152,15 +152,13 @@ const Contact = () => {
                     className='flex-1 sm:max-w-xl flex flex-col gap-12'
                 >
                     <header className='flex flex-col gap-4'>
-                        <h2 className='leading-normal overflow-hidden'>
-                            <em className='block origin-left translate-y-12'>
+                        <h2 className='leading-normal '>
+                            <em className='block origin-left '>
                                 Chceš s náma rozjet projekt?
                             </em>
                         </h2>
-                        <h1 className='text-[clamp(1rem,7.5vw,3.75rem)] leading-[1.1em] overflow-hidden'>
-                            <strong className='inline-block translate-y-[1.2em]'>
-                                Napiš nám
-                            </strong>
+                        <h1 className='text-[clamp(1rem,7.5vw,3.75rem)] leading-[1.1em] '>
+                            <strong className='inline-block '>Napiš nám</strong>
                         </h1>
                     </header>
 
