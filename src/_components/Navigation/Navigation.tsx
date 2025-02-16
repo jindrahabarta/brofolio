@@ -1,6 +1,6 @@
 import React, { RefObject } from 'react'
 import Lenis from 'lenis'
-import Image from 'next/image'
+
 import HamburgerIcon from './HamburgerIcon'
 
 import Link from 'next/link'
@@ -11,7 +11,6 @@ import RainbowBar from './RainbowBar'
 import './style.css'
 import BlurryButton from '../Buttons/BlurryButton'
 import useNavTimeline from '@/_animations/useNavTimeline'
-import Logo from '../../../public/brand/Logo'
 
 const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const navTl = useNavTimeline()

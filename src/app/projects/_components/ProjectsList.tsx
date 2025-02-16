@@ -30,6 +30,8 @@ const ProjectsList = () => {
         let newX = x
         let xd = -10
 
+        if (!cursor.current) return
+
         if (x + cursor.current?.offsetWidth > window.innerWidth) {
             newX = window.innerWidth - cursor.current?.offsetWidth - 30
             xd = -110

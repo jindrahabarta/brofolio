@@ -38,7 +38,7 @@ const Content = () => {
                         className='w-full h-full absolute object-cover object-[0%_25%]'
                     />
 
-                    <section className='md:w-3/5 md:relative z-10 flex flex-col gap-12 p-4 pt-16 sm:pt-12 sm:p-8'>
+                    <section className='md:w-3/5 md:relative z-10 flex flex-col gap-12 p-4 pt-16 sm:pt-12 sm:p-8 select-text'>
                         <h1 className='aboutUsScrollSpeed md:translate-y-20 flex flex-col font-league text-[14vw] sm:text-[12vw] leading-[80%]'>
                             Jindra
                             <span className='font-league indent-[2.5vw]'>
@@ -78,7 +78,7 @@ const Content = () => {
 
                 <article
                     id='aboutUsThemeSwitcher'
-                    className='flex flex-col md:flex-row-reverse md:justify-end items-center'
+                    className='flex flex-col md:flex-row-reverse md:justify-end items-center select-text'
                 >
                     <section className='absolute md:relative w-full md:w-3/5 h-[-webkit-fill-available] md:h-[120vh] md:flex md:flex-col justify-end items-end aspect-square overflow-y-hidden'>
                         <div className='absolute md:relative w-full h-full flex justify-center items-center overflow-hidden'>

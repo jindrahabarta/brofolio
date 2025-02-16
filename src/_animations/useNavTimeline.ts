@@ -33,7 +33,7 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
                 .to(
                     '#navLogo',
                     {
-                        scale: 1,
+                        transform: 'scale(1.4, 1.4)',
                     },
                     '<'
                 )
@@ -78,9 +78,8 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
                 .to(
                     '#navLogo',
                     {
-                        scale: 1,
+                        transform: 'translate(10px, 10px) scale(1.4)',
 
-                        translateX: 15,
                         translateY: 10,
                     },
                     '<'
