@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import DiCaprioGifs from './DiCaprioGifs'
 
 import JindraImg from '@/../public/images/AboutUs/JindraHabarta.webp'
 import LubaImg from '@/../public/images/AboutUs/LubaHabarta.webp'
-import DicaprioGif from '@/../public/images/AboutUs/DicaprioGif.gif'
+import TVGLitch from './TVGLitch'
 
 const Content = () => {
     return (
@@ -12,132 +13,9 @@ const Content = () => {
             className='h-fit flex flex-col justify-start sm:scale-[0.6] origin-[center_19%] sm:origin-[center_15%]'
         >
             <div className='h-screen relative bg-black overflow-hidden flex justify-center'>
-                <div className='aboutUsGifScale grid h-full sm:scale-[1.9] w-full sm:grid-cols-3 grid-rows-3'>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='hidden sm:block w-full h-full translate-y-80 object-cover aboutUsGridScrollSpeed'
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='w-full h-full object-cover'
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='hidden sm:block w-full h-full translate-y-80 object-cover aboutUsGridScrollSpeed'
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='w-full h-full  object-cover '
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='hidden sm:block w-full h-full translate-y-80 object-cover aboutUsGridScrollSpeed'
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='w-full h-full object-cover'
-                    ></Image>
-                    <Image
-                        src={DicaprioGif}
-                        alt={'Dicaprio Gif'}
-                        width={320}
-                        height={280}
-                        className='hidden sm:block w-full h-full -translate-y-56 object-cover aboutUsGridScrollSpeed'
-                    ></Image>
-                </div>
+                <DiCaprioGifs></DiCaprioGifs>
 
-                <div className='absolute bottom-0 w-full h-full'>
-                    <div
-                        id='aboutUsHeadingBg'
-                        className='absolute opacity-0 w-full h-full flex flex-col'
-                    >
-                        <div className='flex h-full'>
-                            <div className='flex-1 h-full bg-white'></div>
-                            <div className='flex-1 h-full bg-yellow-300'></div>
-                            <div className='flex-1 h-full bg-cyan-400'></div>
-                            <div className='flex-1 h-full bg-green-400'></div>
-                            <div className='flex-1 h-full bg-pink-600'></div>
-                            <div className='flex-1 h-full bg-red-600'></div>
-                            <div className='flex-1 h-full bg-blue-600'></div>
-                        </div>
-
-                        <div className='flex h-20'>
-                            <div className='flex-1 h-full bg-blue-600'></div>
-                            <div className='flex-1 h-full bg-white'></div>
-                            <div className='flex-1 h-full bg-yellow-300'></div>
-                            <div className='flex-1 h-full bg-cyan-400'></div>
-                            <div className='flex-1 h-full bg-green-400'></div>
-                            <div className='flex-1 h-full bg-pink-600'></div>
-                            <div className='flex-1 h-full bg-red-600'></div>
-                        </div>
-                        <div className='bg-black w-full md:w-4/5 overflow-hidden absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center'>
-                            <div
-                                id='aboutUsHeading'
-                                className='flex gap-10 justify-start'
-                            >
-                                <h1 className='text-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
-                                    <strong className='text-[1rem] md:text-[5rem] '>
-                                        {' '}
-                                        About us{' '}
-                                    </strong>
-                                    <em className='text-[2rem] md:text-[7rem] '>
-                                        • About us •
-                                    </em>
-                                </h1>
-                                <h1 className='text-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
-                                    <strong className='text-[1rem] md:text-[5rem] '>
-                                        {' '}
-                                        About us{' '}
-                                    </strong>
-                                    <em className='text-[2rem] md:text-[7rem] '>
-                                        • About us •
-                                    </em>
-                                </h1>
-                                <h1 className='text-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
-                                    <strong className='text-[1rem] md:text-[5rem] '>
-                                        {' '}
-                                        About us{' '}
-                                    </strong>
-                                    <em className='text-[2rem] md:text-[7rem]'>
-                                        • About us •
-                                    </em>
-                                </h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <TVGLitch></TVGLitch>
             </div>
 
             <div className='flex flex-col uppercase text-red-500 relative'>
@@ -148,7 +26,10 @@ const Content = () => {
                         </h1>
                     </div>
                 </div> */}
-                <article className='relative w-full md:h-[120vh] flex flex-col md:flex-row'>
+                <article
+                    id='sectionJindra'
+                    className='relative w-full md:h-[120vh] flex flex-col md:flex-row'
+                >
                     <Image
                         src={JindraImg}
                         alt='Jindra Habarta'

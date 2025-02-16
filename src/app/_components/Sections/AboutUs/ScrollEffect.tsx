@@ -24,6 +24,7 @@ const ScrollEffect = () => {
                             className='w-full h-full object-cover object-center block sm:hidden'
                         ></Image>
                         <Image
+                            id='aboutGradient'
                             src={TVImg}
                             width={1080}
                             height={1920}

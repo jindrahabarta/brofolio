@@ -27,6 +27,7 @@ const gsapAnimationsInit = (path: string) => {
                 },
             })
         })
+
         //ABOUT US
         //TV Transition
         const aboutUsTimeline = gsap.timeline({
@@ -37,6 +38,29 @@ const gsapAnimationsInit = (path: string) => {
                 scrub: 0.1,
             },
             defaults: { ease: 'power1.inOut' },
+        })
+
+        //MOBILE
+        mm.add('(max-width: 639px)', () => {
+            aboutUsTimeline
+                .to(
+                    '.aboutUs-scale',
+                    {
+                        scale: 7,
+                    },
+                    0
+                )
+                .to(
+                    '#aboutUsContent',
+                    {
+                        translateY: 0,
+                    },
+                    '<'
+                )
+
+                .set('#aboutUsScrollSection', {
+                    display: 'none',
+                })
         })
 
         //PC
@@ -78,13 +102,37 @@ const gsapAnimationsInit = (path: string) => {
                     },
                     '<'
                 )
-                .set(document.body, {
-                    backgroundColor: '#e5e7eb',
-                })
+
                 .set('#aboutUsScrollSection', {
                     display: 'none',
                 })
         })
+
+        ScrollTrigger.create({
+            trigger: '#sectionJindra',
+            start: 'bottom bottom',
+            end: 'bottom bottom',
+            markers: true,
+            onEnter: () => {
+                gsap.set(document.body, { backgroundColor: '#e5e7eb' })
+            },
+            onEnterBack: () => {
+                gsap.set(document.body, { backgroundColor: 'black' })
+            },
+            onLeave: () => {
+                gsap.set(document.body, { backgroundColor: '#e5e7eb' })
+            },
+            onLeaveBack: () => {
+                gsap.set(document.body, { backgroundColor: 'black' })
+            },
+            onRefresh: (self) => {
+                const isInViewport = self.isActive
+                gsap.set(document.body, {
+                    backgroundColor: isInViewport ? '#e5e7eb' : 'black',
+                })
+            },
+        })
+
         //TABLET + PC
         mm.add('(min-width: 768px)', () => {
             //SCROLL SPEED
@@ -98,32 +146,6 @@ const gsapAnimationsInit = (path: string) => {
 
                 translateY: 0,
             })
-        })
-
-        //MOBILE
-        mm.add('(max-width: 639px)', () => {
-            aboutUsTimeline
-                .to(
-                    '.aboutUs-scale',
-                    {
-                        scale: 7,
-                    },
-                    0
-                )
-                .to(
-                    '#aboutUsContent',
-                    {
-                        translateY: 0,
-                    },
-                    '<'
-                )
-
-                .set(document.body, {
-                    backgroundColor: '#e5e7eb',
-                })
-                .set('#aboutUsScrollSection', {
-                    display: 'none',
-                })
         })
 
         //AboutUsSideScrollText
@@ -178,10 +200,6 @@ const gsapAnimationsInit = (path: string) => {
                 defaults: { duration: 0.2, ease: 'power1' },
                 paused: true,
             })
-            .to(document.body, {
-                duration: 0.2,
-                backgroundColor: 'black',
-            })
             .to(
                 '#nextTitle',
                 {
@@ -200,6 +218,15 @@ const gsapAnimationsInit = (path: string) => {
                 '.projectDescription',
                 {
                     color: 'white',
+                },
+                '<'
+            )
+            .to(
+                document.body,
+
+                {
+                    duration: 0.2,
+                    backgroundColor: 'black',
                 },
                 '<'
             )

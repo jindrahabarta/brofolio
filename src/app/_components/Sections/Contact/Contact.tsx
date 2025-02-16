@@ -178,6 +178,7 @@ const Contact = () => {
                                         {...register('firstName')}
                                         placeholder='John'
                                         aria-describedby='name-error'
+                                        className=' focus:outline-dashed outline-offset-0 focus:outline-red-600'
                                     />
                                 </div>
                                 {errors.firstName && (
@@ -201,6 +202,7 @@ const Contact = () => {
                                         {...register('lastName')}
                                         placeholder='Wick'
                                         aria-describedby='name-error'
+                                        className='focus:outline-dashed  focus:outline-2 focus:outline-red-600'
                                     />
                                 </div>
                                 {errors.lastName && (
