@@ -11,6 +11,7 @@ import RainbowBar from './RainbowBar'
 import './style.css'
 import BlurryButton from '../Buttons/BlurryButton'
 import useNavTimeline from '@/_animations/useNavTimeline'
+import Logo from '../../../public/brand/Logo'
 
 const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const navTl = useNavTimeline()
@@ -33,8 +34,12 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
         <header className='fixed w-screen text-white p-4 sm:p-8 z-50 pointer-events-none'>
             <nav className='flex z-40 items-center justify-between gap-2 '>
                 <div className='z-50 select-none pointer-events-auto'>
-                    <Link id='navLogo' href='/'>
-                        <Image
+                    <Link
+                        id='navLogo'
+                        href='/'
+                        className='inline-block w-40 h-10 origin-left'
+                    >
+                        {/* <Image
                             id='navLogo'
                             className='scale-[0.6]'
                             src={
@@ -43,7 +48,8 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                             width={100}
                             height={100}
                             alt='Logo'
-                        ></Image>
+                        ></Image> */}
+                        {/* <Logo className='origin-left scale-[0.6] w-full'></Logo> */}
                     </Link>
                 </div>
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import React from 'react'
-import ProjectsScroller from './_components/ProjectsScroller'
+import ProjectsList from './_components/ProjectsList'
 
 export const metadata: Metadata = {
     title: 'Projects | Motionlabs.cz',
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const Projects = () => {
     return (
-        <section className='text-white h-screen bg-black overflow-hidden '>
-            <ProjectsScroller></ProjectsScroller>
-        </section>
+        <div className='pt-28 text-white h-screen bg-black w-screen overflow-hidden'>
+            <ProjectsList></ProjectsList>
+        </div>
     )
 }
 

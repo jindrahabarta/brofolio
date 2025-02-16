@@ -112,7 +112,7 @@ const gsapAnimationsInit = (path: string) => {
             trigger: '#sectionJindra',
             start: 'bottom bottom',
             end: 'bottom bottom',
-            markers: true,
+
             onEnter: () => {
                 gsap.set(document.body, { backgroundColor: '#e5e7eb' })
             },

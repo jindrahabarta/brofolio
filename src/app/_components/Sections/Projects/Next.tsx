@@ -23,15 +23,15 @@ const Next = () => {
                 <ul className='relative z-10 w-40 sm:w-52 aspect-video'>
                     <NextCard
                         src='/images/Projects/Habartovi.webp'
-                        className='rotate-6 group-hover:rotate-9 group-hover:-translate-x-16 group-hover:translate-y-10 sm:group-hover:-translate-x-28 sm:group-hover:translate-y-14'
+                        className='rotate-6 sm:group-hover:rotate-9 sm:group-hover:-translate-x-28 sm:group-hover:translate-y-14'
                     />
                     <NextCard
                         src='/images/Projects/Avantgarda.webp'
-                        className='group-hover:rotate-2 group-hover:-translate-y-1 sm:group-hover:-translate-y-3'
+                        className=' sm:group-hover:-translate-y-3'
                     />
                     <NextCard
                         src='/images/Projects/Printujto.webp'
-                        className='-rotate-1 group-hover:rotate-[-18deg] group-hover:translate-x-16 group-hover:translate-y-6 sm:group-hover:translate-x-28 sm:group-hover:translate-y-9'
+                        className='-rotate-6 sm:group-hover:rotate-[-18deg] sm:group-hover:translate-x-28 sm:group-hover:translate-y-9'
                     />
                 </ul>
             </div>
