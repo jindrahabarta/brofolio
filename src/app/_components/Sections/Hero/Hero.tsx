@@ -75,15 +75,15 @@ const Hero = () => {
             <div className='h-44 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black z-10 absolute '></div>
 
             <main className='w-full h-full overflow-hidden flex flex-col justify-center items-center z-20 relative'>
-                <h1 className='relative text-[10vw] md:text-[4.5vw] bottom-4 left-4 flex flex-col w-1/2'>
+                <h1 className='relative text-[10vw] lg:text-[4.5vw] bottom-4 left-4 flex flex-col w-[90%] lg:w-1/2'>
                     <span>
                         <strong>Motion</strong>
                     </span>
 
-                    <span className='self-end flex gap-4 items-end'>
+                    <span className='self-end flex flex-col-reverse sm:flex-row gap-4 items-end'>
                         <span
                             id='heroText1'
-                            className=' leading-none pb-1 text-6xl text-motionGreen'
+                            className=' leading-none pb-1 text-4xl md:text-6xl text-motionGreen'
                         >
                             <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0'>
                                 W
@@ -133,7 +133,7 @@ const Hero = () => {
                         </span>
                         <span
                             id='heroText2'
-                            className='hidden leading-none pb-1 text-6xl text-motionGrape'
+                            className='hidden leading-none pb-1 text-4xl md:text-6xl text-motionGrape'
                         >
                             <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
                                 M
