@@ -97,18 +97,17 @@ const Contact = () => {
     }, [formState])
 
     return (
-        <section
-            id='contact'
-            className='bg-yellow-100 text-black overflow-x-hidden'
-        >
+        <section id='contact' className='relative overflow-x-hidden'>
             <Image
                 src='/images/contact/paper_edge.png'
                 alt='Paper edge'
-                width={3427}
-                height={318}
-                className='relative top-[-2px] select-none'
+                width={2500}
+                height={212}
+                className='absolute top-0 select-none'
             />
-            <div className='w-full flex flex-col lg:flex-row-reverse justify-evenly items-center gap-16 lg:gap-8 px-4 sm:px-8 py-16'>
+            <div id='contact-bg' className='absolute inset-0' />
+
+            <div className='relative w-full flex flex-col lg:flex-row-reverse justify-evenly items-center gap-16 lg:gap-8 px-4 sm:px-8 py-16 pt-[11.8vw]'>
                 <div className='flex-1 sm:max-w-xl'>
                     <Image
                         src='/images/contact/ContactGif2.webp'
