@@ -1,15 +1,19 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import Image from 'next/image'
 import Project from './Project'
+import { useRouter } from 'next/navigation'
 
-import testImg from '@/../public/images/Projects/Avantgarda_.webp'
+import { projectList } from '@/_constants/projects'
 
 const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a
 
 const ProjectsList = () => {
+    const [hoveredProject, setHoveredProject] = useState<null | string>(null)
     const cursor = useRef<HTMLImageElement | null>(null)
+    const router = useRouter()
+
     const mousePosition = useRef({
         x: 0,
         y: 0,
@@ -34,7 +38,7 @@ const ProjectsList = () => {
 
         if (x + cursor.current?.offsetWidth > window.innerWidth) {
             newX = window.innerWidth - cursor.current?.offsetWidth - 30
-            xd = -110
+            xd = -10
         }
 
         gsap.set(cursor.current, {
@@ -49,8 +53,8 @@ const ProjectsList = () => {
         const { x, y } = delayedMousePosition.current
 
         delayedMousePosition.current = {
-            x: lerp(x, mousePosition.current.x, 0.1),
-            y: lerp(y, mousePosition.current.y, 0.1),
+            x: lerp(x, mousePosition.current.x, 0.2),
+            y: lerp(y, mousePosition.current.y, 0.2),
         }
 
         moveMouse(
@@ -60,27 +64,79 @@ const ProjectsList = () => {
         window.requestAnimationFrame(animate)
     }
 
+    const handleClick = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+        slug: string
+    ) => {
+        e.preventDefault()
+        cursor.current = null
+        console.log(slug)
+
+        gsap.to('.projectsListItem', {
+            opacity: 0,
+            x: 25,
+            duration: 0.1,
+            stagger: 0.1,
+            onComplete: () => {
+                gsap.to('#projectsImage', {
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100vw',
+                    height: '50vh',
+                    duration: 0.5,
+                    aspectRatio: 'auto',
+                    xPercent: 0,
+                    yPercent: 0,
+                    x: 0,
+                    y: 0,
+
+                    onComplete: () => {
+                        router.push(`/projects/${slug}`)
+                    },
+                })
+            },
+        })
+    }
+
     useEffect(() => {
         animate()
         window.addEventListener('mousemove', getMousePosition)
         return () => window.removeEventListener('mousemove', getMousePosition)
     }, [])
     return (
-        <ul className='overflow-hidden'>
-            <Project></Project>
-            <Project></Project>
-            <Project></Project>
-            <Project></Project>
+        <>
+            <ul className=''>
+                {projectList.map((project) => (
+                    <React.Fragment key={project.name}>
+                        <Project
+                            title={project.name}
+                            handleMouseEnter={() =>
+                                setHoveredProject(project.image)
+                            }
+                            handleMouseLeave={() => setHoveredProject(null)}
+                            handleClick={(e) => handleClick(e, project.slug)}
+                        ></Project>
+                    </React.Fragment>
+                ))}
+            </ul>
 
             <Image
                 ref={cursor}
-                className={`projectImage w-48 pointer-events-none origin-center select-none absolute top-0 left-0 aspect-[4/5] object-cover rounded-lg z-20 -translate-y-1/2`}
-                src={testImg}
-                alt={'alsdjfas'}
-                width={500}
-                height={800}
+                id='projectsImage'
+                className={`${
+                    hoveredProject !== null ? 'w-48' : 'w-0'
+                } duration-200 origin-center pointer-events-none select-none absolute top-0 left-0 aspect-[4/5] object-cover rounded-lg z-20 -translate-y-1/2`}
+                src={
+                    hoveredProject !== null
+                        ? hoveredProject
+                        : '/images/AboutUs/JindraHabarta.webp'
+                }
+                alt={'ProjectsImage'}
+                width={1200}
+                height={1000}
             ></Image>
-        </ul>
+        </>
     )
 }
 
