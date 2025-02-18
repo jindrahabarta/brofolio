@@ -1,18 +1,26 @@
 import React from 'react'
 
-const Project = () => {
-    const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
-        e.preventDefault()
-    }
-
+const Project = ({
+    handleMouseEnter,
+    handleMouseLeave,
+    handleClick,
+    title,
+}: {
+    handleMouseEnter: () => void
+    handleMouseLeave: () => void
+    handleClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void
+    title: string
+}) => {
     return (
-        <li className='relative w-full border-t-[1px] border-b-[1px] border-white/20'>
+        <li className='projectsListItem relative w-full border-t-[1px] border-white/20 group hover:pl-4 duration-200'>
             <a
-                className='py-4 px-4 inline-block w-full select-none'
+                className='py-4 px-4 inline-block w-full select-none font-emberlyRegular text-8xl'
                 href='xd'
                 onClick={(e) => handleClick(e)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             >
-                lasjfl;asdjf;j
+                {title}
             </a>
         </li>
     )

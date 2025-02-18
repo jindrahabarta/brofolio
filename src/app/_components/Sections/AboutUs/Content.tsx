@@ -48,30 +48,30 @@ const Content = () => {
 
                         <span className='w-full max-w-sm'>
                             <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-base sm:text-lg font-semibold indent-4'>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Dicta aut voluptatem voluptas
-                                tenetur quam illum eaque expedita commodi fuga,
-                                cupiditate provident veniam necessitatibus
-                                facilis eius nesciunt. Ducimus veniam
-                                dignissimos praesentium.
+                                Kreativec, tak trochu snílek a tvůrce. Kromě
+                                projektu MotionLabs se věnuji své vlastní značce
+                                @drippy_rugs. Jelikož mě neskutečně naplňuje
+                                tvořit originální, neotřelé a &quot;cool&quot;
+                                věci, toto je skvělá forma, jak ukojit své
+                                potřeby.
                             </p>
                             <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-base sm:text-lg font-semibold indent-4 mt-4'>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Nam quasi laudantium iusto
-                                saepe excepturi autem assumenda consectetur?
+                                Tento můj zápal bych chtěl projevit i v tomto
+                                projektu a doufám, že se nám společně podaří
+                                naplnit tvé očekávání.
                             </p>
                         </span>
                     </section>
 
-                    <section className='md:w-2/5 md:relative z-10 self-end md:self-auto flex flex-col justify-end gap-12 p-4 py-16 sm:py-4 sm:p-8'>
+                    <section className='md:w-2/5 md:relative z-10 self-end md:self-auto flex flex-col justify-end gap-12 p-4 py-16 sm:py-4 sm:p-8 select-text'>
                         <h1 className='aboutUsScrollSpeed md:-translate-y-72 font-league text-[10vw] sm:text-[8vw] leading-[80%]'>
                             Front-end developer
                         </h1>
 
                         <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-base sm:text-lg font-semibold indent-4'>
-                            Dicta aut voluptatem voluptas tenetur quam illum
-                            eaque expedita commodi fuga, cupiditate provident
-                            veniam necessitatibus facilis eius nesciunt.
+                            Nudí tě standardy ve webové tvorbě? Chceš pro sebe
+                            něco víc, než kam ti dovolí jít nudná šablona?
+                            Pokusím se, tvé nápady zhmotnit v realitu!
                         </p>
                     </section>
                 </article>

@@ -18,8 +18,7 @@ const Hero = () => {
                 display: 'none',
             })
             .set('.heroHeadingSpan', {
-                transform: 'translate(0,15px)',
-                opacity: 0,
+                transform: 'translate(0,15px) ',
             })
             .to('.heroHeadingSpan', {
                 transform: 'translate(0,0)',
@@ -28,10 +27,10 @@ const Hero = () => {
                 opacity: 1,
             })
             .to('.heroHeadingSpan', {
-                transform: 'translate(0,-15px)',
+                transform: 'translate(0,-0.1em) rotateX(-90deg)',
+
                 duration: 0.2,
                 stagger: 0.05,
-                opacity: 0,
             })
             .set('#heroText1', {
                 display: 'none',
@@ -41,7 +40,6 @@ const Hero = () => {
             })
             .set('.heroHeadingSpan', {
                 transform: 'translate(0,15px)',
-                opacity: 0,
             })
             .to('.heroHeadingSpan', {
                 transform: 'translate(0,0)',

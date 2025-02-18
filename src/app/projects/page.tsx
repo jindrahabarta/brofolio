@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const Projects = () => {
     return (
-        <div className='pt-28 text-white h-screen bg-black w-screen overflow-hidden'>
+        <div className='pt-28 text-white h-screen bg-black overflow-hidden'>
             <ProjectsList></ProjectsList>
         </div>
     )
