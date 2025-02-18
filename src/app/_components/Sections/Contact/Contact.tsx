@@ -29,6 +29,7 @@ enum FormState {
 
 const Contact = () => {
     const [formState, setFormState] = useState<FormState>(FormState.IDLE)
+    const [mounted, setMounted] = useState(false)
 
     const {
         register,
@@ -61,6 +62,8 @@ const Contact = () => {
     }
 
     useEffect(() => {
+        setMounted(true)
+
         handlePageResize()
 
         window.addEventListener('resize', handlePageResize)
@@ -99,7 +102,7 @@ const Contact = () => {
             className='bg-yellow-100 text-black overflow-x-hidden'
         >
             <Image
-                src='/images/contact/paper_texture_edge.png'
+                src='/images/contact/paper_edge.png'
                 alt='Paper edge'
                 width={3427}
                 height={318}
@@ -216,16 +219,18 @@ const Contact = () => {
                                         strokeWidth={7}
                                         className='input-svg absolute pointer-events-none select-none'
                                     />
-                                    <Controller
-                                        name='phone'
-                                        control={control}
-                                        render={({ field }) => (
-                                            <PhoneInput
-                                                {...field}
-                                                defaultCountry='CZ'
-                                            />
-                                        )}
-                                    />
+                                    {mounted && (
+                                        <Controller
+                                            name='phone'
+                                            control={control}
+                                            render={({ field }) => (
+                                                <PhoneInput
+                                                    {...field}
+                                                    defaultCountry='CZ'
+                                                />
+                                            )}
+                                        />
+                                    )}
                                 </div>
                                 {errors.phone && (
                                     <span role='alert' id='email-error'>
