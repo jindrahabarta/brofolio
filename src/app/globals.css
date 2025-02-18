@@ -139,6 +139,12 @@ body::-webkit-scrollbar-thumb {
 #contact {
     background-image: url('/images/contact/paper_texture.jpg');
     background-repeat: repeat;
+
+    /* -webkit-mask-image: url('/images/contact/paper_edge_mask.png');
+    mask-image: url('/images/contact/paper_edge_mask.png');
+    mask-size: contain;
+    mask-composite: exclude;
+    mask-repeat: no-repeat; */
 }
 
 /* FOOTER */

@@ -50,8 +50,8 @@ const Input1: React.FC<
             </filter>
         </defs>
         <rect
-            width='95%'
-            height='95%'
+            width='100%'
+            height='100%'
             x='0'
             y='0'
             strokeWidth={strokeWidth}
