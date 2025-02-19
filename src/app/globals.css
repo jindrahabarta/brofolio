@@ -136,19 +136,6 @@ body::-webkit-scrollbar-thumb {
     color: red;
 }
 
-#contact {
-    #contact-bg {
-        background-image: url('/images/contact/paper_texture.jpg');
-        background-repeat: repeat;
-
-        -webkit-mask-image: url('/images/contact/paper_edge_mask.png');
-        mask-image: url('/images/contact/paper_edge_mask.png');
-        mask-size: 100% auto;
-        mask-position: top left;
-        mask-repeat: no-repeat;
-    }
-}
-
 /* FOOTER */
 
 #footerTop {

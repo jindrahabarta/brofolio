@@ -1,23 +1,40 @@
+#contact {
+    #contact-bg {
+        background-image: url('/images/contact/paper_texture.jpg');
+        background-repeat: repeat;
+
+        -webkit-mask-image: url('/images/contact/paper_edge_mask.png');
+        mask-image: url('/images/contact/paper_edge_mask.png');
+        mask-size: 100% auto;
+        mask-position: top left;
+        mask-repeat: no-repeat;
+    }
+}
+
 form {
     fieldset {
-        @apply w-full flex flex-col sm:flex-row gap-4;
+        @apply w-full flex flex-col sm:flex-row gap-3;
     }
 
     label {
-        @apply w-full flex flex-col gap-2 text-xl;
+        @apply w-full flex flex-col gap-2 text-base;
+
+        & > span {
+            @apply text-xs leading-tight text-red-600;
+        }
     }
 
     .container {
         @apply w-full relative;
 
-        img {
-            @apply absolute h-full w-full scale-105;
+        &.focused {
+            @apply outline-dashed outline-2 outline-offset-2 outline-red-600;
         }
     }
 
     input,
     textarea {
-        @apply w-full text-base bg-transparent border-none focus:outline-none hover:cursor-text p-3;
+        @apply w-full text-sm bg-transparent border-none focus:outline-none hover:cursor-text p-3;
 
         -webkit-text-fill-color: black;
         -webkit-background-clip: text;
@@ -44,6 +61,14 @@ form {
 
 .PhoneInputCountryIcon {
     @apply flex items-center justify-center bg-transparent shadow-none;
+}
+
+.PhoneInputCountryIcon--border {
+    box-shadow: none !important;
+}
+
+.PhoneInputCountrySelectArrow {
+    color: black !important;
 }
 
 img.PhoneInputCountryIconImg {

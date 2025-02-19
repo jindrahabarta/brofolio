@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { FocusEventHandler, useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Input1 from '@/_assets/inputs/Input1'
@@ -61,6 +61,18 @@ const Contact = () => {
         })
     }
 
+    const handleInputFocus: FocusEventHandler<HTMLElement> = (e) => {
+        const container = e.target.closest('.container')
+        if (!container) return
+        container.classList.add('focused')
+    }
+
+    const handleInputBlur: FocusEventHandler<HTMLElement> = (e) => {
+        const container = e.target.closest('.container')
+        if (!container) return
+        container.classList.remove('focused')
+    }
+
     useEffect(() => {
         setMounted(true)
 
@@ -97,17 +109,17 @@ const Contact = () => {
     }, [formState])
 
     return (
-        <section id='contact' className='relative overflow-x-hidden'>
+        <section id='contact' className='relative overflow-x-hidden w-full'>
             <Image
                 src='/images/contact/paper_edge.png'
                 alt='Paper edge'
                 width={2500}
                 height={212}
-                className='absolute top-0 select-none'
+                className='absolute top-[2px] z-10 w-full select-none'
             />
             <div id='contact-bg' className='absolute inset-0' />
 
-            <div className='relative w-full flex flex-col lg:flex-row-reverse justify-evenly items-center gap-16 lg:gap-8 px-4 sm:px-8 py-16 pt-[11.8vw]'>
+            <div className='relative w-full flex flex-col lg:flex-row-reverse justify-evenly items-center gap-12 lg:gap-8 px-4 sm:px-8 py-16 pt-[11.8vw]'>
                 <div className='flex-1 sm:max-w-xl'>
                     <Image
                         src='/images/contact/ContactGif2.webp'
@@ -115,21 +127,21 @@ const Contact = () => {
                         width={600}
                         height={600}
                         alt='Contact form'
-                        className='w-full sm:max-w-xl aspect-square object-cover object-center mix-blend-multiply select-none pointer-events-none'
+                        className='w-full sm:max-w-lg aspect-square object-cover object-center mix-blend-multiply select-none pointer-events-none'
                     />
                 </div>
 
                 <form
                     onSubmit={handleSubmit(onSubmit)}
-                    className='flex-1 sm:max-w-xl flex flex-col gap-4'
+                    className='flex-1 sm:max-w-xl flex flex-col gap-2'
                 >
-                    <header className='flex flex-col gap-4'>
-                        <h2 className='leading-normal '>
-                            <em className='block origin-left '>
+                    <header>
+                        <h2 className='leading-normal text-xl'>
+                            <em className='block origin-left'>
                                 Chceš s náma rozjet projekt?
                             </em>
                         </h2>
-                        <h1 className='text-[clamp(1rem,7.5vw,3.75rem)] leading-[1.1em] '>
+                        <h1 className='text-[clamp(1rem,7.5vw,3rem)] leading-[1.1em] mt-2'>
                             <strong className='inline-block '>Napiš nám</strong>
                         </h1>
                     </header>
@@ -149,12 +161,13 @@ const Contact = () => {
                                         id='firstName'
                                         {...register('firstName')}
                                         placeholder='John'
-                                        aria-describedby='name-error'
-                                        className=' focus:outline-dashed outline-offset-0 focus:outline-red-600'
+                                        aria-describedby='firstName-error'
+                                        onFocus={handleInputFocus}
+                                        onBlur={handleInputBlur}
                                     />
                                 </div>
                                 {errors.firstName && (
-                                    <span role='alert' id='name-error'>
+                                    <span role='alert' id='firstName-error'>
                                         {errors.firstName.message}
                                     </span>
                                 )}
@@ -173,12 +186,13 @@ const Contact = () => {
                                         id='lastName'
                                         {...register('lastName')}
                                         placeholder='Wick'
-                                        aria-describedby='name-error'
-                                        className='focus:outline-dashed  focus:outline-2 focus:outline-red-600'
+                                        aria-describedby='lastName-error'
+                                        onFocus={handleInputFocus}
+                                        onBlur={handleInputBlur}
                                     />
                                 </div>
                                 {errors.lastName && (
-                                    <span role='alert' id='name-error'>
+                                    <span role='alert' id='lastName-error'>
                                         {errors.lastName.message}
                                     </span>
                                 )}
@@ -199,7 +213,9 @@ const Contact = () => {
                                         id='email'
                                         {...register('email')}
                                         placeholder='john@wick.cz'
-                                        aria-describedby='name-error'
+                                        aria-describedby='email-error'
+                                        onFocus={handleInputFocus}
+                                        onBlur={handleInputBlur}
                                     />
                                 </div>
                                 {errors.email && (
@@ -226,13 +242,16 @@ const Contact = () => {
                                                 <PhoneInput
                                                     {...field}
                                                     defaultCountry='CZ'
+                                                    aria-describedby='phone-error'
+                                                    onFocus={handleInputFocus}
+                                                    onBlur={handleInputBlur}
                                                 />
                                             )}
                                         />
                                     )}
                                 </div>
                                 {errors.phone && (
-                                    <span role='alert' id='email-error'>
+                                    <span role='alert' id='phone-error'>
                                         {errors.phone.message === 'Required'
                                             ? 'Toto pole je povinné.'
                                             : errors.phone.message}
@@ -255,11 +274,13 @@ const Contact = () => {
                                         id='company'
                                         {...register('company')}
                                         placeholder='Apple'
-                                        aria-describedby='name-error'
+                                        aria-describedby='company-error'
+                                        onFocus={handleInputFocus}
+                                        onBlur={handleInputBlur}
                                     />
                                 </div>
                                 {errors.company && (
-                                    <span role='alert' id='name-error'>
+                                    <span role='alert' id='company-error'>
                                         {errors.company.message}
                                     </span>
                                 )}
@@ -282,11 +303,13 @@ const Contact = () => {
                                         rows={5}
                                         placeholder='Hello, I want best website ever.'
                                         aria-describedby='message-error'
+                                        onFocus={handleInputFocus}
+                                        onBlur={handleInputBlur}
                                         className='resize-none'
                                     />
                                 </div>
                                 {errors.message && (
-                                    <span role='alert' id='email-error'>
+                                    <span role='alert' id='message-error'>
                                         {errors.message.message}
                                     </span>
                                 )}
