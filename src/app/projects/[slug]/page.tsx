@@ -23,7 +23,7 @@ const Project = () => {
 
     return (
         <section className='text-white  h-screen bg-black overflow-hidden'>
-            <div className='w-full h-[50vh]'>
+            <div className=' h-[50vh]'>
                 <Image
                     src={selectedProject.image}
                     alt={`${selectedProject.name} Banner Image`}

@@ -82,14 +82,15 @@ const ProjectsList = () => {
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    width: '100vw',
+                    width: '100%',
                     height: '50vh',
-                    duration: 0.5,
                     aspectRatio: 'auto',
                     xPercent: 0,
                     yPercent: 0,
                     x: 0,
                     y: 0,
+                    duration: 1.2,
+                    ease: 'power2.out',
 
                     onComplete: () => {
                         router.push(`/projects/${slug}`)
@@ -104,6 +105,14 @@ const ProjectsList = () => {
         window.addEventListener('mousemove', getMousePosition)
         return () => window.removeEventListener('mousemove', getMousePosition)
     }, [])
+
+    useEffect(() => {
+        gsap.to('#projectsImage', {
+            width: '12rem',
+            duration: 0.2,
+        })
+    }, [hoveredProject])
+
     return (
         <>
             <ul className=''>
@@ -121,21 +130,17 @@ const ProjectsList = () => {
                 ))}
             </ul>
 
-            <Image
-                ref={cursor}
-                id='projectsImage'
-                className={`${
-                    hoveredProject !== null ? 'w-48' : 'w-0'
-                } duration-200 origin-center pointer-events-none select-none absolute top-0 left-0 aspect-[4/5] object-cover rounded-lg z-20 -translate-y-1/2`}
-                src={
-                    hoveredProject !== null
-                        ? hoveredProject
-                        : '/images/AboutUs/JindraHabarta.webp'
-                }
-                alt={'ProjectsImage'}
-                width={1200}
-                height={1000}
-            ></Image>
+            {hoveredProject !== null && (
+                <Image
+                    ref={cursor}
+                    id='projectsImage'
+                    className='w-0 origin-center pointer-events-none select-none absolute top-0 left-0 aspect-[4/5] object-cover rounded-lg z-20 -translate-y-1/2'
+                    src={hoveredProject}
+                    alt={'ProjectsImage'}
+                    width={1200}
+                    height={1000}
+                ></Image>
+            )}
         </>
     )
 }
