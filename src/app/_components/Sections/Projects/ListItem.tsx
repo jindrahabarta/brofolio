@@ -57,7 +57,7 @@ const ListItem: React.FC<{ project: IProject }> = ({ project }) => {
                         <Image
                             width={700}
                             height={393}
-                            src={project.image}
+                            src={project.coverImage}
                             alt={project.name}
                             className='w-full h-full aspect-video group-hover:scale-120 duration-500 ease-out'
                         />

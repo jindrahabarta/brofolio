@@ -2,7 +2,8 @@ export interface IProject {
     name: string
     slug: string
     description: string
-    image: string
+    coverImage: string
+    bannerImage: string
     url: string
     target: '_blank' | '_self'
     badges: string[]
@@ -15,7 +16,8 @@ export const projectList: IProject[] = [
         name: 'Drippy Rugs',
         slug: 'drippy-rugs',
         description: 'Zakázková výroba koberečků',
-        image: '/images/Projects/DrippyRugs.webp',
+        coverImage: '/images/Projects/DrippyRugs.webp',
+        bannerImage: '/images/Projects/DrippyRugs.webp',
         url: 'https://drippyrugs.netlify.app/',
         target: '_blank',
         badges: ['TypeScript', 'Next.js'],
@@ -26,7 +28,8 @@ export const projectList: IProject[] = [
         name: 'Printujto',
         slug: 'printujto',
         description: 'Zakázkový 3D tisk',
-        image: '/images/Projects/Printujto.webp',
+        coverImage: '/images/Projects/Printujto.webp',
+        bannerImage: '/images/Projects/Printujto.webp',
         url: 'https://printujto.cz/',
         target: '_blank',
         badges: ['Next.js', 'React', 'Express.js'],
@@ -37,7 +40,8 @@ export const projectList: IProject[] = [
         name: 'Avantgarda',
         slug: 'avantgarda',
         description: 'Solární studio',
-        image: '/images/Projects/Avantgarda.webp',
+        coverImage: '/images/Projects/Avantgarda.webp',
+        bannerImage: '/images/Projects/Avantgarda.webp',
         url: 'https://solariumolomouc.cz/',
         target: '_blank',
         badges: ['Next.js'],
@@ -48,7 +52,8 @@ export const projectList: IProject[] = [
         name: 'Habartovi.cz',
         slug: 'habartovi',
         description: 'Soukromé ubytování a keramická dílna',
-        image: '/images/Projects/Habartovi.webp',
+        coverImage: '/images/Projects/Habartovi.webp',
+        bannerImage: '/images/Projects/Habartovi.webp',
         url: 'https://www.habartovi.cz/',
         target: '_blank',
         badges: ['WordPress', 'Next.js'],

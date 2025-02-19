@@ -73,8 +73,8 @@ const ProjectsList = () => {
         console.log(slug)
 
         gsap.to('.projectsListItem', {
+            x: 50,
             opacity: 0,
-            x: 25,
             duration: 0.1,
             stagger: 0.1,
             onComplete: () => {
@@ -82,6 +82,7 @@ const ProjectsList = () => {
                     position: 'absolute',
                     top: 0,
                     left: 0,
+                    borderRadius: 0,
                     width: '100%',
                     height: '50vh',
                     aspectRatio: 'auto',
@@ -108,7 +109,8 @@ const ProjectsList = () => {
 
     useEffect(() => {
         gsap.to('#projectsImage', {
-            width: '12rem',
+            height: 'auto',
+            scale: 1,
             duration: 0.2,
         })
     }, [hoveredProject])
@@ -116,15 +118,16 @@ const ProjectsList = () => {
     return (
         <>
             <ul className=''>
-                {projectList.map((project) => (
+                {projectList.map((project, i) => (
                     <React.Fragment key={project.name}>
                         <Project
-                            title={project.name}
                             handleMouseEnter={() =>
-                                setHoveredProject(project.image)
+                                setHoveredProject(project.coverImage)
                             }
                             handleMouseLeave={() => setHoveredProject(null)}
                             handleClick={(e) => handleClick(e, project.slug)}
+                            project={project}
+                            i={i + 1}
                         ></Project>
                     </React.Fragment>
                 ))}
@@ -134,7 +137,7 @@ const ProjectsList = () => {
                 <Image
                     ref={cursor}
                     id='projectsImage'
-                    className='w-0 origin-center pointer-events-none select-none absolute top-0 left-0 aspect-[4/5] object-cover rounded-lg z-20 -translate-y-1/2'
+                    className='w-72 scale-0 object-[0_15%] opacity-80 aspect-video origin-center pointer-events-none select-none absolute top-0 left-0 object-cover rounded-lg z-20 -translate-y-1/2'
                     src={hoveredProject}
                     alt={'ProjectsImage'}
                     width={1200}
