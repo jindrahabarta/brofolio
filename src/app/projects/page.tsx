@@ -9,8 +9,14 @@ export const metadata: Metadata = {
 
 const Projects = () => {
     return (
-        <div className='pt-28 text-white h-screen bg-black overflow-hidden'>
+        <div className='pt-[7.5rem] text-white min-h-screen bg-black overflow-hidden'>
             <ProjectsList></ProjectsList>
+
+            <section className=' pt-24 pb-32'>
+                <p className='font-charm text-center text-3xl'>
+                    ...víc toho tady už není :(
+                </p>
+            </section>
         </div>
     )
 }
