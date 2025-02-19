@@ -71,7 +71,7 @@ export default function RootLayout({
         <html lang='cs'>
             <body
                 className={`antialiased
-                    bg-black
+                    bg-black 
                     ${charm.variable}
                     ${owners.variable}
                     ${source_serif_4.variable}

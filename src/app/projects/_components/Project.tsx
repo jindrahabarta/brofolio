@@ -12,9 +12,9 @@ const Project = ({
     title: string
 }) => {
     return (
-        <li className='projectsListItem relative w-full border-t-[1px] border-white/20 group hover:pl-4 duration-200'>
+        <li className='projectsListItem py-4 relative w-full border-t-[1px] border-white/20 group hover:pl-4 duration-200'>
             <a
-                className='py-4 px-4 inline-block w-full select-none font-emberlyRegular text-8xl'
+                className=' px-4 inline-block w-full select-none font-emberlyRegular text-8xl'
                 href='xd'
                 onClick={(e) => handleClick(e)}
                 onMouseEnter={handleMouseEnter}
