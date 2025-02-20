@@ -35,10 +35,10 @@ const Next = () => {
                         className='-rotate-6 sm:group-hover:rotate-[-18deg] sm:group-hover:translate-x-28 sm:group-hover:translate-y-9'
                     />
                 </ul>
-                <div className='absolute z-30  '>
-                    <button className='border relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group/arrowBtn hover:scale-110 duration-200 scale-0 group-hover:scale-100 ease-out origin-center'>
+                <div className='absolute z-30'>
+                    <button className='border relatve border-white rounded-full w-20 aspect-square group/arrowBtn hover:scale-110 duration-200 sm:scale-0 group-hover:scale-100 ease-out origin-center'>
                         <figure className='w-full h-full bg-gray-300 opacity-0 group-hover/arrowBtn:opacity-100 absolute top-0 rounded-full flex items-center justify-center scale-0 group-hover/arrowBtn:scale-100 delay-100 duration-300 ease-out'>
-                            <div className='w-full h-full bg-white rounded-full  scale-0 group-hover/arrowBtn:scale-100 delay-200 duration-300 ease-out'></div>
+                            <div className='w-full h-full bg-white rounded-full  sm:scale-0 group-hover/arrowBtn:scale-100 delay-200 duration-300 ease-out'></div>
                         </figure>
 
                         <span className='relative font-semibold duration-200 delay-100 flex flex-col justify-start h-8 overflow-hidden'>

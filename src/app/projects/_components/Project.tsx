@@ -17,25 +17,25 @@ const Project = ({
     i: number
 }) => {
     return (
-        <li className='projectsListItem h-[8.5rem] overflow-hidden relative w-full border-t-[1px] border-white/20 group bg-black hover:bg-white duration-500 ease-out '>
+        <li className='projectsListItem h-20 sm:h-[8.5rem] overflow-hidden relative w-full border-t-[1px] border-white/20 group bg-black hover:bg-white duration-500 ease-out '>
             <a
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className='px-4 group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none text-8xl h-[8.5rem]'
+                className='px-4 group-hover:-translate-y-[6.5rem] sm:group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none     h-20 sm:h-[8.5rem]'
                 href={`/projects/${project.slug}`}
                 onClick={(e) => handleClick(e)}
             >
                 <div className='flex items-center'>
-                    <div className='h-full  flex items-center text-3xl font-charm text-gray-300 group-hover:text-black'>
+                    <div className='h-full flex items-center text-[clamp(5vw,9vw,10%)] sm:text-3xl font-charm text-gray-300 group-hover:text-black'>
                         {i.toString().padStart(2, '0')}
                     </div>
 
-                    <div className='pl-10 group-hover:pl-12 ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black'>
+                    <div className='pl-4 sm:pl-10 text-[clamp(11vw,14vw,10%)] md:text-[10vw] lg:text-7xl ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black'>
                         {project.name}
                     </div>
                 </div>
 
-                <div className='flex gap-4'>
+                <div className=' gap-4 hidden md:flex'>
                     {project.badges.map((tag) => {
                         return (
                             <div
@@ -51,21 +51,21 @@ const Project = ({
             <a
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className='px-4 group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none text-8xl  h-[8.5rem]'
+                className='px-4 group-hover:-translate-y-[6.5rem] sm:group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none text-8xl  h-[8.5rem]'
                 href={`/projects/${project.slug}`}
                 onClick={(e) => handleClick(e)}
             >
                 <div className='flex items-center'>
-                    <div className='h-full  flex items-center text-3xl font-charm text-gray-300 group-hover:text-black'>
+                    <div className='h-full  flex items-center text-[clamp(5vw,9vw,10%)] sm:text-3xl font-charm text-gray-300 group-hover:text-black'>
                         {i.toString().padStart(2, '0')}
                     </div>
 
-                    <div className='pl-10 group-hover:pl-12 ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black'>
+                    <div className='pl-4 sm:pl-10 text-[clamp(11vw,14vw,10%)] md:text-[10vw] lg:text-7xl  ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black'>
                         {project.name}
                     </div>
                 </div>
 
-                <div className='flex gap-4'>
+                <div className='hidden md:flex gap-4'>
                     {project.badges.map((tag) => {
                         return (
                             <div
