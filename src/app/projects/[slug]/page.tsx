@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import { projectList } from '@/_constants/projects'
 import { useParams } from 'next/navigation'
 import ArrowBack from '@/_assets/icons/global/ArrowBack'
+import Link from 'next/link'
 
 const Project = () => {
     const { slug } = useParams()
@@ -17,6 +18,9 @@ const Project = () => {
     useEffect(() => {
         const landingTl = gsap
             .timeline({ defaults: { duration: 1 } })
+            .set('#footer', {
+                opacity: 1,
+            })
             .to('#bannerOverlay', {
                 backgroundColor: 'rgba(0,0,0,0.2)',
             })
@@ -41,7 +45,7 @@ const Project = () => {
                 style={{
                     background: `url(${selectedProject.bannerImage})`,
                     backgroundAttachment: 'fixed',
-                    backgroundPosition: '0 180%',
+                    backgroundPosition: '0 15%',
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                 }}
@@ -51,7 +55,10 @@ const Project = () => {
                     id='bannerOverlay'
                     className='absolute top-0 left-0 w-full h-full bg-black/0 flex items-end justify-start px-10'
                 >
-                    <button className='border relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'>
+                    <Link
+                        href={'/projects'}
+                        className='flex justify-center items-center border relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'
+                    >
                         <figure className='w-full h-full bg-gray-300 absolute top-0 rounded-full flex items-center justify-center scale-0 group-hover:scale-100 delay-100 duration-300 ease-out'>
                             <div className='w-full h-full bg-white rounded-full scale-0 group-hover:scale-100 delay-200 duration-300 ease-out'></div>
                         </figure>
@@ -61,8 +68,11 @@ const Project = () => {
                                 <ArrowBack className='h-8'></ArrowBack>
                             </span>
                         </span>
-                    </button>
-                    <button className='border relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'>
+                    </Link>
+                    <Link
+                        href={'/projects'}
+                        className='border flex justify-center items-center relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'
+                    >
                         <figure className='w-full h-full bg-gray-300 absolute top-0 rounded-full flex items-center justify-center scale-0 group-hover:scale-100 delay-100 duration-300 ease-out'>
                             <div className='w-full h-full bg-white rounded-full scale-0 group-hover:scale-100 delay-200 duration-300 ease-out'></div>
                         </figure>
@@ -75,7 +85,7 @@ const Project = () => {
                                 Jít zpět
                             </span>
                         </span>
-                    </button>
+                    </Link>
                 </figure>
             </section>
 

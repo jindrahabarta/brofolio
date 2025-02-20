@@ -12,7 +12,7 @@ const Projects = () => {
         <div className='pt-[7.5rem] text-white min-h-screen bg-black overflow-hidden'>
             <ProjectsList></ProjectsList>
 
-            <section className=' pt-24 pb-32'>
+            <section className='projectsListItem pt-24 pb-32'>
                 <p className='font-charm text-center text-3xl'>
                     ...víc toho tady už není :(
                 </p>

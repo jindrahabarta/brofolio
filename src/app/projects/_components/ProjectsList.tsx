@@ -74,6 +74,10 @@ const ProjectsList = () => {
         setIsTransitioning(true)
         setHoveredProject(hoveredProject)
 
+        gsap.to('#footer', {
+            opacity: 0,
+        })
+
         gsap.to('.projectsListItem', {
             x: 50,
             opacity: 0,
@@ -81,7 +85,6 @@ const ProjectsList = () => {
             stagger: 0.1,
             onComplete: () => {
                 gsap.to('#projectsImage', {
-                    position: 'absolute',
                     top: 0,
                     left: 0,
                     borderRadius: 0,
