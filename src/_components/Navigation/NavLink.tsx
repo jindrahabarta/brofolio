@@ -1,21 +1,28 @@
 import Lenis from 'lenis'
+import { usePathname } from 'next/navigation'
 import React, { RefObject } from 'react'
 
 const NavLink = ({
     link,
+    altLink,
     text,
     lenis,
 }: {
     link: string
+    altLink: string
     text: string
     lenis: RefObject<Lenis | null>
 }) => {
+    const path = usePathname()
+
     const handleScrollTo: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
-        e.preventDefault()
         if (!lenis.current) return
 
-        lenis.current.start()
-        lenis.current.scrollTo(link)
+        if (path === '/') {
+            e.preventDefault()
+            lenis.current.start()
+            lenis.current.scrollTo(link)
+        }
     }
 
     return (
@@ -23,7 +30,7 @@ const NavLink = ({
             <a
                 onClick={handleScrollTo}
                 className='font-instrument text-6xl md:text-7xl text-black group-hover/navMainBlock:text-black/50 hover:!text-black/100 duration-200'
-                href={link}
+                href={path === '/' ? link : altLink}
             >
                 {text}
             </a>

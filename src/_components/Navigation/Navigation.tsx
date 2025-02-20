@@ -37,19 +37,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                         id='navLogo'
                         href='/'
                         className='inline-block w-40 h-10 origin-left'
-                    >
-                        {/* <Image
-                            id='navLogo'
-                            className='scale-[0.6]'
-                            src={
-                                'https://daydrift.design/images/daydrift_logo.svg'
-                            }
-                            width={100}
-                            height={100}
-                            alt='Logo'
-                        ></Image> */}
-                        {/* <Logo className='origin-left scale-[0.6] w-full'></Logo> */}
-                    </Link>
+                    ></Link>
                 </div>
 
                 <div className='flex items-center gap-4 pointer-events-auto'>
@@ -90,21 +78,25 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                     <NavLink
                                         text='Úvod'
                                         link='#home'
+                                        altLink='/'
                                         lenis={lenis}
                                     ></NavLink>
                                     <NavLink
                                         text='O nás'
                                         link='#about'
+                                        altLink='/#about'
                                         lenis={lenis}
                                     ></NavLink>
                                     <NavLink
                                         text='Projekty'
                                         link='#projects'
+                                        altLink='/#projects'
                                         lenis={lenis}
                                     ></NavLink>
                                     <NavLink
                                         text='Kontakt'
                                         link='#contact'
+                                        altLink='/#contact'
                                         lenis={lenis}
                                     ></NavLink>
                                 </ul>
