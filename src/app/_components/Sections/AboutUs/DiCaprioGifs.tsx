@@ -7,6 +7,7 @@ const DiCaprioGifs = () => {
         <div className='aboutUsGifScale grid h-full sm:scale-[1.9] w-full sm:grid-cols-3 grid-rows-3'>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -14,6 +15,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -21,6 +23,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -28,6 +31,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -35,6 +39,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -42,6 +47,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -49,6 +55,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -56,6 +63,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}
@@ -63,6 +71,7 @@ const DiCaprioGifs = () => {
             ></Image>
             <Image
                 src={DicaprioGif}
+                unoptimized
                 alt={'Dicaprio Gif'}
                 width={320}
                 height={280}

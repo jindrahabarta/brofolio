@@ -11,6 +11,7 @@ const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a
 
 const ProjectsList = () => {
     const [hoveredProject, setHoveredProject] = useState<null | string>(null)
+    const [isTransitioning, setIsTransitioning] = useState(false)
     const cursor = useRef<HTMLImageElement | null>(null)
     const router = useRouter()
 
@@ -70,7 +71,8 @@ const ProjectsList = () => {
     ) => {
         e.preventDefault()
         cursor.current = null
-        console.log(slug)
+        setIsTransitioning(true)
+        setHoveredProject(hoveredProject)
 
         gsap.to('.projectsListItem', {
             x: 50,
@@ -86,6 +88,7 @@ const ProjectsList = () => {
                     width: '100%',
                     height: '50vh',
                     aspectRatio: 'auto',
+                    opacity: 1,
                     xPercent: 0,
                     yPercent: 0,
                     x: 0,
@@ -108,11 +111,18 @@ const ProjectsList = () => {
     }, [])
 
     useEffect(() => {
-        gsap.to('#projectsImage', {
-            height: 'auto',
-            scale: 1,
-            duration: 0.2,
-        })
+        if (hoveredProject !== null) {
+            gsap.set('#projectsImage', {
+                scale: 0,
+                height: 0,
+            })
+
+            gsap.to('#projectsImage', {
+                height: 'auto',
+                scale: 1,
+                duration: 0.2,
+            })
+        }
     }, [hoveredProject])
 
     return (
@@ -121,11 +131,21 @@ const ProjectsList = () => {
                 {projectList.map((project, i) => (
                     <React.Fragment key={project.name}>
                         <Project
-                            handleMouseEnter={() =>
+                            handleMouseEnter={() => {
+                                if (isTransitioning) return
+
                                 setHoveredProject(project.coverImage)
-                            }
-                            handleMouseLeave={() => setHoveredProject(null)}
-                            handleClick={(e) => handleClick(e, project.slug)}
+                            }}
+                            handleMouseLeave={() => {
+                                if (isTransitioning) return
+
+                                setHoveredProject(null)
+                            }}
+                            handleClick={(e) => {
+                                if (isTransitioning) return
+
+                                handleClick(e, project.slug)
+                            }}
                             project={project}
                             i={i + 1}
                         ></Project>
@@ -137,7 +157,7 @@ const ProjectsList = () => {
                 <Image
                     ref={cursor}
                     id='projectsImage'
-                    className='w-72 scale-0 object-[0_15%] opacity-80 aspect-video origin-center pointer-events-none select-none absolute top-0 left-0 object-cover rounded-lg z-20 -translate-y-1/2'
+                    className='w-72 scale-0 object-[0_15%] opacity-80 aspect-video origin-center pointer-events-none select-none fixed top-0 left-0 object-cover rounded-lg z-20 -translate-y-1/2'
                     src={hoveredProject}
                     alt={'ProjectsImage'}
                     width={1200}

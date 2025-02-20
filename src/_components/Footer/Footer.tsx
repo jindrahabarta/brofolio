@@ -37,9 +37,9 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                             ></Image>
                         </div>
                         <ul className='mt-12'>
-                            <li>Ic: 123 23</li>
-                            <li>Moravsky Karlov 103</li>
-                            <li>Cervena Voda</li>
+                            <li>IČO: 123 23</li>
+                            <li>Moravský Karlov 103</li>
+                            <li>Červená Voda</li>
                         </ul>
                     </div>
 
