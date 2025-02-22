@@ -24,9 +24,17 @@ const Project = () => {
             .to('#bannerOverlay', {
                 backgroundColor: 'rgba(0,0,0,0.2)',
             })
-            .to('#heading', {
+            .to('#backBtn', {
                 opacity: 1,
             })
+            .to(
+                '.staggerText',
+                {
+                    opacity: 1,
+                    stagger: 0.2,
+                },
+                '<'
+            )
         landingTl.play()
     }, [])
 
@@ -54,20 +62,6 @@ const Project = () => {
                     id='bannerOverlay'
                     className='absolute top-0 left-0 w-full h-full bg-black/0 flex items-end justify-start px-10'
                 >
-                    <Link
-                        href={'/projects'}
-                        className='flex z-40 justify-center items-center border relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'
-                    >
-                        <figure className='w-full h-full bg-gray-300 absolute top-0 rounded-full flex items-center justify-center scale-0 group-hover:scale-100 delay-100 duration-300 ease-out'>
-                            <div className='w-full h-full bg-white rounded-full scale-0 group-hover:scale-100 delay-200 duration-300 ease-out'></div>
-                        </figure>
-
-                        <span className='relative font-semibold duration-200 delay-100 flex flex-col justify-start h-8 overflow-hidden'>
-                            <span className='h-8 text-white group-hover:text-black duration-200 delay-100 flex justify-center items-center '>
-                                <ArrowBack className='h-8'></ArrowBack>
-                            </span>
-                        </span>
-                    </Link>
                     {/* <Links
                         href={'/projects'}
                         className='border flex justify-center items-center relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'
@@ -88,21 +82,39 @@ const Project = () => {
                 </figure>
             </section>
             <div className=' text-white min-h-screen overflow-hidden relative'>
-                <section className='h-[50vh]'></section>
+                <section className='h-[50vh] flex justify-start items-end px-10'>
+                    <Link
+                        href={'/projects'}
+                        id='backBtn'
+                        className='opacity-0 flex justify-center items-center border relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'
+                    >
+                        <figure className='w-full h-full bg-gray-300 absolute top-0 rounded-full flex items-center justify-center scale-0 group-hover:scale-100 delay-100 duration-300 ease-out'>
+                            <div className='w-full h-full bg-white rounded-full scale-0 group-hover:scale-100 delay-200 duration-300 ease-out'></div>
+                        </figure>
+
+                        <span className='relative font-semibold duration-200 delay-100 flex flex-col justify-start h-8 overflow-hidden'>
+                            <span className='h-8 text-white group-hover:text-black duration-200 delay-100 flex justify-center items-center '>
+                                <ArrowBack className='h-8'></ArrowBack>
+                            </span>
+                        </span>
+                    </Link>
+                </section>
                 <section className='py-16 px-10 bg-black '>
-                    <div className='flex w-full items-center justify-between'>
+                    <div className='flex w-full sm:items-center justify-between flex-col sm:flex-row gap-8'>
                         <div className=''>
                             <h1
                                 id='heading'
-                                className=' bottom-4 text-[2.5vw] '
+                                className=' bottom-4 text-[5vw] sm:text-[2.5vw] '
                             >
-                                <div className='font-charm text-[2vw] leading-relaxed'>
+                                <div className='staggerText opacity-0 font-charm text-[7vw] sm:text-[2vw] leading-relaxed'>
                                     Projekt
                                 </div>
-                                <strong>{selectedProject.name}</strong>
+                                <strong className='staggerText opacity-0'>
+                                    {selectedProject.name}
+                                </strong>
                             </h1>
 
-                            <p className='mt-4 max-w-3xl'>
+                            <p className='mt-4 max-w-3xl staggerText opacity-0'>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Corrupti fuga ab veriasdfasdf
                                 asd fasd fasd fa sdfas
@@ -114,11 +126,12 @@ const Project = () => {
                                 alt={'ProjectLogo'}
                                 width={300}
                                 height={300}
+                                className='staggerText opacity-0'
                             ></Image>
                         </div>
                     </div>
 
-                    <p className='mt-16'>
+                    <p className='mt-16 staggerText opacity-0'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Corrupti fuga ab veriasdfasdf asd fasd fasd fa sdfas
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -127,7 +140,7 @@ const Project = () => {
                         ipsam excepturi totam delectus cumque? Soluta, ipsa
                         nesciunt.
                     </p>
-                    <p className='mt-16'>
+                    <p className='mt-16 staggerText opacity-0'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Corrupti fuga ab veriasdfasdf asd fasd fasd fa sdfas
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -138,7 +151,7 @@ const Project = () => {
                     </p>
                 </section>
 
-                <section className='py-16 px-10'>
+                <section className='py-16 px-10 bg-black'>
                     <header>
                         <h2 className='leading-normal text-xl text-center'>
                             <em className='block origin-left'>
@@ -151,7 +164,7 @@ const Project = () => {
                     </header>
                 </section>
             </div>
-            ]{' '}
+            ]
         </>
     )
 }

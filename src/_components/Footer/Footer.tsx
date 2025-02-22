@@ -15,7 +15,7 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     }
 
     return (
-        <footer id='footer' className='bg-black text-white pb-10'>
+        <footer id='footer' className='bg-black text-white pb-10 relative'>
             <section
                 id='footerTop'
                 className='flex flex-col sm:grid grid-cols-2 md:flex md:flex-row'
