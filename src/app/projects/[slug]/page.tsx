@@ -45,8 +45,8 @@ const Project = () => {
                 style={{
                     background: `url(${selectedProject.bannerImage})`,
                     backgroundAttachment: 'fixed',
-                    backgroundPosition: '0 15%',
                     backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
                     backgroundRepeat: 'no-repeat',
                 }}
                 className='h-[50vh] w-full relative'

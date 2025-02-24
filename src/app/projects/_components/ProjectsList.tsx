@@ -160,7 +160,7 @@ const ProjectsList = () => {
                 <Image
                     ref={cursor}
                     id='projectsImage'
-                    className='w-40 sm:w-72 scale-0 object-[0_15%] opacity-80 aspect-video origin-center pointer-events-none select-none fixed top-0 left-0 object-cover rounded-lg z-20 -translate-y-1/2'
+                    className='w-40 sm:w-72 scale-0 object-ćenter opacity-80 aspect-video origin-center pointer-events-none select-none fixed top-0 left-0 object-cover rounded-lg z-20 -translate-y-1/2'
                     src={hoveredProject}
                     alt={'ProjectsImage'}
                     width={1200}

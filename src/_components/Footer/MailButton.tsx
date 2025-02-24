@@ -54,6 +54,7 @@ const MailButton = () => {
                 src={
                     'https://media.tenor.com/m-OEv4Zz1zEAAAAM/mailman-postman.gif'
                 }
+                unoptimized
                 width={120}
                 height={100}
                 alt='Letter icon'

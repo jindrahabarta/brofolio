@@ -63,7 +63,7 @@ const Hero = () => {
             className='text-white pt-9 h-screen bg-black relative '
         >
             <Image
-                src={'/images/Hero/img1.png'}
+                src={'/images/Hero/motion_labs_fade.jpg'}
                 alt={'Hero image'}
                 width={1500}
                 height={1000}
