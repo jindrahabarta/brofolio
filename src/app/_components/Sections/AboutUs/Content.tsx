@@ -5,6 +5,7 @@ import DiCaprioGifs from './DiCaprioGifs'
 import JindraImg from '@/../public/images/AboutUs/JindraHabarta.webp'
 import LubaImg from '@/../public/images/AboutUs/LubaHabarta.webp'
 import TVGLitch from './TVGLitch'
+import Link from 'next/link'
 
 const Content = () => {
     return (
@@ -48,15 +49,23 @@ const Content = () => {
 
                         <span className='w-full max-w-sm'>
                             <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-base sm:text-lg font-semibold indent-4'>
-                                Kreativec, tak trochu snílek a tvůrce. Kromě
-                                projektu MotionLabs se věnuji své vlastní značce
-                                @drippy_rugs. Jelikož mě neskutečně naplňuje
-                                tvořit originální, neotřelé a &quot;cool&quot;
-                                věci, toto je skvělá forma, jak ukojit své
-                                potřeby.
+                                Kreativec a tvůrce. Kromě projektu MotionLabs se
+                                věnuji své vlastní značce{' '}
+                                <Link
+                                    className='font-semibold hover:underline'
+                                    target='_blank'
+                                    href={
+                                        'https://www.instagram.com/drippy_rugs'
+                                    }
+                                >
+                                    @drippy_rugs
+                                </Link>
+                                . Jelikož mě neskutečně naplňuje tvořit
+                                originální, neotřelé a &quot;cool&quot; věci,
+                                toto je skvělá forma, jak ukojit své potřeby.
                             </p>
                             <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-base sm:text-lg font-semibold indent-4 mt-4'>
-                                Tento můj zápal bych chtěl projevit i v tomto
+                                Tento zápal bych chtěl projevit i v tomto
                                 projektu a doufám, že se nám společně podaří
                                 naplnit tvé očekávání.
                             </p>

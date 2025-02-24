@@ -49,16 +49,16 @@ const Project = () => {
 
     return (
         <>
-            <section
-                style={{
-                    background: `url(${selectedProject.bannerImage})`,
-                    backgroundPosition: '0 15%',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                    backgroundRepeat: 'no-repeat',
-                }}
-                className='h-[50vh] w-full fixed '
-            >
+            <section className='h-[50vh] w-full fixed'>
+                <Image
+                    src={selectedProject.bannerImage}
+                    alt={'Banner image'}
+                    width={1500}
+                    height={1000}
+                    className='object-cover w-full h-full object-center'
+                    priority
+                ></Image>
+                /
                 <figure
                     id='bannerOverlay'
                     className='absolute top-0 left-0 w-full h-full bg-black/0 flex items-end justify-start px-10'
@@ -165,7 +165,6 @@ const Project = () => {
                     </header>
                 </section>
             </div>
-            ]
         </>
     )
 }
