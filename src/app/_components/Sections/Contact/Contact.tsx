@@ -10,6 +10,10 @@ import 'react-phone-number-input/style.css'
 import './style.css'
 import { nextClient } from '@/_axios/axios'
 import contactFormValidationSchema from '@/_validators/contact'
+import Btn1 from '@/../public/images/contact/btn1.png'
+import Btn2 from '@/../public/images/contact/btn2.png'
+import Btn3 from '@/../public/images/contact/btn3.png'
+import Btn4 from '@/../public/images/contact/btn4.png'
 
 interface IFormData {
     firstName: string
@@ -336,10 +340,15 @@ const Contact = () => {
 
                         <button
                             type='submit'
-                            className='self-start text-2xl border-2 border-black rounded-full px-4 mt-4'
+                            className='self-start mt-4'
                             disabled={formState === FormState.SENDING}
                         >
-                            <em>Odeslat</em>
+                            <Image
+                                src={Btn4}
+                                alt={'btn1'}
+                                width={160}
+                                height={77}
+                            />
                         </button>
                     </footer>
                 </form>
