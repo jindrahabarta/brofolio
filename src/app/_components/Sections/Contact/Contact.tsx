@@ -1,7 +1,13 @@
 'use client'
 
 import Image from 'next/image'
-import React, { FocusEventHandler, useEffect, useState } from 'react'
+import React, {
+    FocusEventHandler,
+    MouseEventHandler,
+    useEffect,
+    useRef,
+    useState,
+} from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Input1 from '@/_assets/inputs/Input1'
@@ -32,8 +38,11 @@ enum FormState {
 }
 
 const Contact = () => {
-    const [formState, setFormState] = useState<FormState>(FormState.IDLE)
     const [mounted, setMounted] = useState(false)
+    const [formState, setFormState] = useState<FormState>(FormState.IDLE)
+    const [currentBtn, setCurrentBtn] = useState(4)
+    const [btnHovering, setBtnHovering] = useState(false)
+    const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
     const {
         register,
@@ -88,6 +97,46 @@ const Contact = () => {
             window.removeEventListener('resize', handlePageResize)
         }
     }, [])
+
+    const changeBtn = () => {
+        switch (currentBtn) {
+            case 1:
+                setCurrentBtn(2)
+                break
+            case 2:
+                setCurrentBtn(3)
+                break
+            case 3:
+                setCurrentBtn(4)
+                break
+            default:
+                setCurrentBtn(1)
+                break
+        }
+    }
+
+    const handleBtnMouseOver: MouseEventHandler<HTMLButtonElement> = () => {
+        if (btnHovering || intervalRef.current) return
+
+        console.log(btnHovering)
+        console.log(intervalRef.current)
+
+        intervalRef.current = setInterval(changeBtn, 300)
+
+        setBtnHovering(true)
+    }
+
+    const handleBtnMouseOut: MouseEventHandler<HTMLButtonElement> = () => {
+        if (!btnHovering || !intervalRef.current) return
+
+        console.log(btnHovering)
+        console.log(intervalRef.current)
+
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+
+        setBtnHovering(false)
+    }
 
     const onSubmit = (data: IFormData) => {
         if (formState === FormState.SENDING) return
@@ -340,15 +389,43 @@ const Contact = () => {
 
                         <button
                             type='submit'
-                            className='self-start mt-4'
+                            className='w-[160px] h-[77px] self-start mt-4'
                             disabled={formState === FormState.SENDING}
+                            onMouseOver={handleBtnMouseOver}
+                            onMouseOut={handleBtnMouseOut}
                         >
-                            <Image
-                                src={Btn4}
-                                alt={'btn1'}
-                                width={160}
-                                height={77}
-                            />
+                            {currentBtn === 1 && (
+                                <Image
+                                    src={Btn1}
+                                    alt={'btn1'}
+                                    width={160}
+                                    height={77}
+                                />
+                            )}
+                            {currentBtn === 2 && (
+                                <Image
+                                    src={Btn2}
+                                    alt={'btn2'}
+                                    width={160}
+                                    height={77}
+                                />
+                            )}
+                            {currentBtn === 3 && (
+                                <Image
+                                    src={Btn3}
+                                    alt={'btn3'}
+                                    width={160}
+                                    height={77}
+                                />
+                            )}
+                            {currentBtn === 4 && (
+                                <Image
+                                    src={Btn4}
+                                    alt={'btn4'}
+                                    width={160}
+                                    height={77}
+                                />
+                            )}
                         </button>
                     </footer>
                 </form>
