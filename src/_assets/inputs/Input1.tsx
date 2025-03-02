@@ -55,7 +55,7 @@ const Input1: React.FC<
             x='0'
             y='0'
             strokeWidth={strokeWidth}
-            stroke='black'
+            stroke='currentColor'
             fill='none'
             style={{ filter: 'url(#pencilTexture3)' }}
         />

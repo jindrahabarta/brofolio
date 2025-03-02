@@ -32,11 +32,11 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     return (
         <header className='fixed w-screen text-white p-4 sm:p-8 z-50 pointer-events-none'>
             <nav className='flex z-40 items-center justify-between gap-2 '>
-                <div className='z-50 select-none pointer-events-auto'>
+                <div className='z-50 select-none pointer-events-auto flex'>
                     <Link
                         id='navLogo'
                         href='/'
-                        className='inline-block w-40 h-10 origin-left'
+                        className='inline-block w-16 sm:w-20 h-10 origin-left'
                     ></Link>
                 </div>
 

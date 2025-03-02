@@ -157,11 +157,11 @@
 }
 
 #navLogo {
-    mask-image: url(../../../public/brand/MotionLabsLogo.svg);
+    mask-image: url(../../../public/brand/ml\ _logo.svg);
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: 100%;
-    -webkit-backdrop-filter: invert(1) hue-rotate(1deg) contrast(300%)
+    -webkit-backdrop-filter: invert(1) hue-rotate(-22deg) contrast(300%)
         brightness(1);
-    backdrop-filter: invert(1) hue-rotate(1deg) contrast(300%) brightness(1);
+    backdrop-filter: invert(1) hue-rotate(-22deg) contrast(300%) brightness(1);
 }

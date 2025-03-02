@@ -8,6 +8,8 @@ import { useParams } from 'next/navigation'
 import ArrowBack from '@/_assets/icons/global/ArrowBack'
 import Link from 'next/link'
 
+import ContactForm from '@/_components/ContactForm/ContactForm'
+
 const Project = () => {
     const { slug } = useParams()
 
@@ -153,7 +155,7 @@ const Project = () => {
                 </section>
 
                 <section className='py-16 px-10 bg-black'>
-                    <header>
+                    {/* <header>
                         <h2 className='leading-normal text-xl text-center'>
                             <em className='block origin-left'>
                                 Chceš s náma rozjet projekt?
@@ -162,7 +164,10 @@ const Project = () => {
                         <h1 className='text-[clamp(1rem,7.5vw,3rem)] leading-[1.1em] mt-2 text-center'>
                             <strong className='inline-block '>Napiš nám</strong>
                         </h1>
-                    </header>
+                    </header> */}
+                    <div className='flex justify-center'>
+                        <ContactForm textColor='text-white'></ContactForm>
+                    </div>
                 </section>
             </div>
         </>

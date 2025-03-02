@@ -78,7 +78,7 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
                 .to(
                     '#navLogo',
                     {
-                        transform: 'translate(10px, 10px) scale(1.4)',
+                        transform: 'translate(10px, 10px) scale(1.2)',
 
                         translateY: 10,
                     },

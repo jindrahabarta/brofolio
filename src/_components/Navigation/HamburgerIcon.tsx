@@ -33,7 +33,7 @@ const HamburgerIcon = ({
             <button
                 onClick={handleClick}
                 aria-label='Hamburger icon open'
-                className='hamburgerIcon bg-black/30 w-fit h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
+                className='hamburgerIcon bg-black/30 w-fit h-12 sm:h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
                 <span className='font-owners backdrop:invert blurryBtnText'>
                     Zavřít
