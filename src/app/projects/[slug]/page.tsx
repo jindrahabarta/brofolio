@@ -156,15 +156,15 @@ const Project = () => {
 
                 <section className='py-16 px-10 bg-black'>
                     {/* <header>
-                        <h2 className='leading-normal text-xl text-center'>
-                            <em className='block origin-left'>
-                                Chceš s náma rozjet projekt?
-                            </em>
-                        </h2>
-                        <h1 className='text-[clamp(1rem,7.5vw,3rem)] leading-[1.1em] mt-2 text-center'>
-                            <strong className='inline-block '>Napiš nám</strong>
-                        </h1>
-                    </header> */}
+                            <h2 className='leading-normal text-xl text-center'>
+                                <em className='block origin-left'>
+                                    Chceš s náma rozjet projekt?
+                                </em>
+                            </h2>
+                            <h1 className='text-[clamp(1rem,7.5vw,3rem)] leading-[1.1em] mt-2 text-center'>
+                                <strong className='inline-block '>Napiš nám</strong>
+                            </h1>
+                        </header> */}
                     <div className='flex justify-center'>
                         <ContactForm textColor='text-white'></ContactForm>
                     </div>
