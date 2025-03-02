@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
+import './style.css'
 
 const Hero = () => {
     useEffect(() => {
@@ -62,13 +63,15 @@ const Hero = () => {
             id='home'
             className='text-white pt-9 h-screen bg-black relative '
         >
-            <Image
+            {/* <Image
                 src={'/images/Hero/motion_labs_fade.jpg'}
                 alt={'Hero image'}
                 width={1500}
                 height={1000}
                 className='absolute top-0 w-full h-full object-cover'
-            ></Image>
+            ></Image> */}
+
+            <div id='radial-gradient'></div>
 
             <div className='h-44 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black z-10 absolute '></div>
 
