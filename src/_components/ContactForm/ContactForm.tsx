@@ -1,13 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import React, {
-    FocusEventHandler,
-    MouseEventHandler,
-    useEffect,
-    useRef,
-    useState,
-} from 'react'
+import React, { FocusEventHandler, useEffect, useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Input1 from '@/_assets/inputs/Input1'
@@ -16,10 +9,6 @@ import 'react-phone-number-input/style.css'
 import './style.css'
 import { nextClient } from '@/_axios/axios'
 import contactFormValidationSchema from '@/_validators/contact'
-import Btn1 from '@/../public/images/contact/btn1.png'
-import Btn2 from '@/../public/images/contact/btn2.png'
-import Btn3 from '@/../public/images/contact/btn3.png'
-import Btn4 from '@/../public/images/contact/btn4.png'
 
 interface IFormData {
     firstName: string
@@ -40,9 +29,6 @@ enum FormState {
 const ContactForm = ({ textColor }: { textColor?: string }) => {
     const [mounted, setMounted] = useState(false)
     const [formState, setFormState] = useState<FormState>(FormState.IDLE)
-    const [currentBtn, setCurrentBtn] = useState(4)
-    const [btnHovering, setBtnHovering] = useState(false)
-    const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
     const {
         register,
@@ -86,10 +72,24 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
         container.classList.remove('focused')
     }
 
+    const handleSetBtnSvg = () => {
+        const button = document.querySelector('button')
+        if (!button) return
+        const { offsetWidth, offsetHeight } = button
+        if (!offsetWidth || !offsetHeight) return
+
+        const svg = button.querySelector('svg')
+        if (!svg) return
+        svg.setAttribute('width', offsetWidth.toString())
+        svg.setAttribute('height', offsetHeight.toString())
+    }
+
     useEffect(() => {
         setMounted(true)
 
         handlePageResize()
+
+        handleSetBtnSvg()
 
         window.addEventListener('resize', handlePageResize)
 
@@ -97,46 +97,6 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
             window.removeEventListener('resize', handlePageResize)
         }
     }, [])
-
-    const changeBtn = () => {
-        switch (currentBtn) {
-            case 1:
-                setCurrentBtn(2)
-                break
-            case 2:
-                setCurrentBtn(3)
-                break
-            case 3:
-                setCurrentBtn(4)
-                break
-            default:
-                setCurrentBtn(1)
-                break
-        }
-    }
-
-    const handleBtnMouseOver: MouseEventHandler<HTMLButtonElement> = () => {
-        if (btnHovering || intervalRef.current) return
-
-        console.log(btnHovering)
-        console.log(intervalRef.current)
-
-        intervalRef.current = setInterval(changeBtn, 300)
-
-        setBtnHovering(true)
-    }
-
-    const handleBtnMouseOut: MouseEventHandler<HTMLButtonElement> = () => {
-        if (!btnHovering || !intervalRef.current) return
-
-        console.log(btnHovering)
-        console.log(intervalRef.current)
-
-        clearInterval(intervalRef.current)
-        intervalRef.current = null
-
-        setBtnHovering(false)
-    }
 
     const onSubmit = (data: IFormData) => {
         if (formState === FormState.SENDING) return
@@ -368,43 +328,16 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <button
                     type='submit'
-                    className='w-[160px] h-[77px] self-start mt-4'
+                    className='self-start relative px-4 py-2 mt-4'
                     disabled={formState === FormState.SENDING}
-                    onMouseOver={handleBtnMouseOver}
-                    onMouseOut={handleBtnMouseOut}
                 >
-                    {currentBtn === 1 && (
-                        <Image
-                            src={Btn1}
-                            alt={'btn1'}
-                            width={160}
-                            height={77}
-                        />
-                    )}
-                    {currentBtn === 2 && (
-                        <Image
-                            src={Btn2}
-                            alt={'btn2'}
-                            width={160}
-                            height={77}
-                        />
-                    )}
-                    {currentBtn === 3 && (
-                        <Image
-                            src={Btn3}
-                            alt={'btn3'}
-                            width={160}
-                            height={77}
-                        />
-                    )}
-                    {currentBtn === 4 && (
-                        <Image
-                            src={Btn4}
-                            alt={'btn4'}
-                            width={160}
-                            height={77}
-                        />
-                    )}
+                    <Input1
+                        width='100%'
+                        height='100%'
+                        strokeWidth={7}
+                        className='input-svg absolute inset-0 pointer-events-none select-none'
+                    />
+                    Odeslat
                 </button>
             </footer>
         </form>

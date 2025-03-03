@@ -3,6 +3,8 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import './style.css'
+import Noisy from './Noisy'
+import Logo from '@/../public/brand/ml_logo.svg'
 
 const Hero = () => {
     useEffect(() => {
@@ -61,7 +63,7 @@ const Hero = () => {
     return (
         <section
             id='home'
-            className='text-white pt-9 h-screen bg-black relative '
+            className='relative text-white pt-9 h-screen bg-black'
         >
             {/* <Image
                 src={'/images/Hero/motion_labs_fade.jpg'}
@@ -73,18 +75,28 @@ const Hero = () => {
 
             <div id='radial-gradient'></div>
 
-            <div className='h-44 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black z-10 absolute '></div>
+            <Noisy />
 
-            <main className='w-full h-full overflow-hidden flex flex-col justify-center items-center z-20 relative'>
-                <h1 className='relative text-[10vw] lg:text-[4.5vw] bottom-4 left-4 flex flex-col w-[90%] lg:w-1/2'>
-                    <span>
-                        <strong>Motion</strong>
-                    </span>
+            <div className='h-44 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black z-10 absolute'></div>
 
-                    <span className='self-end flex flex-col-reverse sm:flex-row gap-4 items-end'>
+            <main className='w-full h-full relative z-20 flex flex-col lg:flex-row-reverse lg:justify-evenly items-center justify-center lg:gap-8 px-4 sm:px-8 py-16 overflow-hidden'>
+                <div className='lg:flex-1 max-w-xl'>
+                    <Image
+                        src={Logo}
+                        alt={'logo'}
+                        width={1000}
+                        height={1000}
+                        className='invert'
+                    />
+                </div>
+                <div className='lg:flex-1 max-w-xl'>
+                    <h1 className='text-[10vw] md:text-[5rem] flex flex-col w-[90%] lg:w-1/2'>
+                        <strong>Motion Labs</strong>
+                    </h1>
+                    <span className='flex flex-col-reverse sm:flex-row gap-4 mt-4'>
                         <span
                             id='heroText1'
-                            className=' leading-none pb-1 text-4xl md:text-6xl text-motionGreen'
+                            className=' leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
                         >
                             <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0'>
                                 W
@@ -134,7 +146,7 @@ const Hero = () => {
                         </span>
                         <span
                             id='heroText2'
-                            className='hidden leading-none pb-1 text-4xl md:text-6xl text-motionGrape'
+                            className='hidden leading-none pb-1 text-4xl md:text-6xl text-motionPurple'
                         >
                             <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
                                 M
@@ -179,36 +191,9 @@ const Hero = () => {
                                 c
                             </span>
                         </span>
-                        <strong>Labs</strong>
                     </span>
-
-                    {/* <ul className='flex gap-10 text-2xl'>
-                        <li className='absolute -top-20 -left-5'>Vývoj webů</li>
-                        <li className='absolute -bottom-16 -left-20'>
-                            Motion Graphic
-                        </li>
-                        <li className='absolute -bottom-16 -right-5'>
-                            Motion Graphic
-                        </li>
-                        <li className='absolute -bottom-40 right-96'>
-                            Motion Graphic
-                        </li>
-                        <li className='absolute -top-20 -right-20'>
-                            Motion Graphic
-                        </li>
-                        <li className='absolute -top-52 right-80'>
-                            Motion Graphic
-                        </li>
-                        <li className='absolute -top-28 left-60'>
-                            Motion Graphic
-                        </li>
-                        <li className='absolute -top-10 right-56'>
-                            Motion Graphic
-                        </li>
-                    </ul> */}
-                </h1>
-
-                {/* <h2 className='font-league '>asdfjasdlfjl</h2> */}
+                    <p className='mt-4'>Motion & Designer websites nás baví</p>
+                </div>
             </main>
         </section>
     )

@@ -157,7 +157,7 @@
 }
 
 #navLogo {
-    mask-image: url(../../../public/brand/ml\ _logo.svg);
+    mask-image: url(../../../public/brand/ml_logo.svg);
     mask-repeat: no-repeat;
     mask-position: center center;
     mask-size: 100%;
