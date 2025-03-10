@@ -6,8 +6,7 @@ import Project from './Project'
 import { useRouter } from 'next/navigation'
 
 import { projectList } from '@/_constants/projects'
-
-const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a
+import { lerp } from '@/_utils/lerp'
 
 const ProjectsList = () => {
     const [hoveredProject, setHoveredProject] = useState<null | string>(

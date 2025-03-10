@@ -126,6 +126,21 @@ body::-webkit-scrollbar-thumb {
     text-shadow: none;
 }
 
+/* HERO */
+#hero-radial-gradient {
+    @apply absolute top-0 w-full h-full;
+
+    background: radial-gradient(ellipse at top, rgb(80, 115, 184), transparent),
+        radial-gradient(ellipse at bottom, #000, transparent);
+}
+
+#hero-mouse-gradient {
+    @apply absolute w-[70rem] aspect-square opacity-20;
+
+    background: radial-gradient(rgb(80, 115, 184), transparent 50%);
+    background-position: center;
+}
+
 #footerMail {
     text-shadow: rgb(249, 158, 11) -4px -4px 6px,
         rgb(249, 158, 11) -8px -10px 20px, black 2px 2px 1px;
