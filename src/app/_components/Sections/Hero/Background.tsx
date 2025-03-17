@@ -5,6 +5,7 @@ import gsap from 'gsap'
 
 const Background = () => {
     const mouseRef = useRef<HTMLDivElement | null>(null)
+    const backgroundRef = useRef<HTMLDivElement | null>(null)
     const mousePosition = useRef({
         x: 0,
         y: 0,
@@ -30,6 +31,22 @@ const Background = () => {
         }
     }
 
+    const animateMouse = (x: number, y: number) => {
+        gsap.set(mouseRef.current, {
+            x,
+            y,
+        })
+    }
+
+    const animateBackground = (y: number) => {
+        if (!backgroundRef.current) return
+
+        // TODO:
+        gsap.to(backgroundRef.current, {
+            x: -y / 2,
+        })
+    }
+
     useEffect(() => {
         const animate = () => {
             if (!mouseRef.current) return
@@ -41,10 +58,8 @@ const Background = () => {
                 y: lerp(y, mousePosition.current.y, 0.05),
             }
 
-            gsap.set(mouseRef.current, {
-                x: delayedMousePosition.current.x,
-                y: delayedMousePosition.current.y,
-            })
+            animateMouse(x, y)
+            // animateBackground(y)
 
             window.requestAnimationFrame(animate)
         }
@@ -58,7 +73,7 @@ const Background = () => {
 
     return (
         <>
-            <div id='hero-radial-gradient' />
+            <div ref={backgroundRef} id='hero-radial-gradient' />
 
             {/* TODO: create other fades on the edges */}
             <div ref={mouseRef} id='hero-mouse-gradient' />
