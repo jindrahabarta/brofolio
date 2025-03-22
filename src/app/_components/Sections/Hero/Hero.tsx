@@ -12,48 +12,65 @@ const Hero = () => {
                     this.restart()
                 },
             })
-            .set('#heroText1', {
-                display: 'inline-block',
-            })
-            .set('#heroText2', {
-                display: 'none',
-            })
-            .set('.heroHeadingSpan', {
-                transform: 'translate(0,15px) ',
-            })
-            .to('.heroHeadingSpan', {
-                transform: 'translate(0,0)',
-                duration: 0.2,
-                stagger: 0.05,
-                opacity: 1,
-            })
-            .to('.heroHeadingSpan', {
-                transform: 'translate(0,-0.1em) rotateX(-90deg)',
+            // .set('#heroText1', {
+            //     display: 'inline-block',
+            // })
+            // .set('#heroText2', {
+            //     display: 'none',
+            // })
+            // .set('.heroHeadingSpan', {
+            //     transform: 'translate(0,15px) ',
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,0)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 1,
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,-0.1em) rotateX(-90deg)',
 
-                duration: 0.2,
-                stagger: 0.05,
-            })
-            .set('#heroText1', {
-                display: 'none',
-            })
-            .set('#heroText2', {
-                display: 'inline-block',
-            })
-            .set('.heroHeadingSpan', {
-                transform: 'translate(0,15px)',
-            })
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            // })
+            // .set('#heroText1', {
+            //     display: 'none',
+            // })
+            // .set('#heroText2', {
+            //     display: 'inline-block',
+            // })
+            // .set('.heroHeadingSpan', {
+            //     transform: 'translate(0,15px)',
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,0)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 1,
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,-15px)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 0,
+            // })
             .to('.heroHeadingSpan', {
-                transform: 'translate(0,0)',
-                duration: 0.2,
+                rotateX: 90,
+                translateY: -25 + '%',
                 stagger: 0.05,
-                opacity: 1,
+
+                duration: 1,
             })
-            .to('.heroHeadingSpan', {
-                transform: 'translate(0,-15px)',
-                duration: 0.2,
-                stagger: 0.05,
-                opacity: 0,
-            })
+            .to(
+                '.heroHeadingSpan2',
+                {
+                    rotateX: 0,
+                    translateY: 0,
+                    stagger: 0.05,
+                    duration: 1,
+                },
+                '<'
+            )
 
         heroTl.play()
     }, [])
@@ -73,62 +90,32 @@ const Hero = () => {
                         <h1 className='text-[10vw] md:text-[5rem] flex flex-col w-[90%] lg:w-1/2'>
                             <strong>Motion Labs</strong>
                         </h1>
-                        <span className='flex flex-col-reverse sm:flex-row gap-4 mt-4'>
+                        <div className='flex flex-col relative mt-4'>
                             <span
-                                id='heroText1'
-                                className=' leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
+                                id='heroSubHeadig'
+                                className='leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
                             >
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0'>
+                                <span className='heroHeadingSpan inline-block font-league'>
                                     W
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    e
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    b
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    &nbsp;
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    d
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    e
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    v
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    e
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    l
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    o
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    p
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    m
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    e
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    n
-                                </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
-                                    t
+                            </span>
+
+                            <span
+                                id='heroText1'
+                                className='absolute top-0 left-0 leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
+                            >
+                                <span
+                                    style={{ transform: 'rotateX(-90deg)' }}
+                                    className='heroHeadingSpan2 inline-block font-league translate-y-[100%]'
+                                >
+                                    W
                                 </span>
                             </span>
-                            <span
+                            {/*   <span
                                 id='heroText2'
                                 className='hidden leading-none pb-1 text-4xl md:text-6xl text-motionPurple'
                             >
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0'>
                                     M
                                 </span>
                                 <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
@@ -170,8 +157,8 @@ const Hero = () => {
                                 <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
                                     c
                                 </span>
-                            </span>
-                        </span>
+                            </span> */}
+                        </div>
                         <p className='mt-4'>Motion weby nás baví</p>
                     </div>
                 </div>
