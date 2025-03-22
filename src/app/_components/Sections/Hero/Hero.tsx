@@ -12,47 +12,52 @@ const Hero = () => {
                     this.restart()
                 },
             })
-            .set('#heroText1', {
-                display: 'inline-block',
-            })
-            .set('#heroText2', {
-                display: 'none',
-            })
-            .set('.heroHeadingSpan', {
-                transform: 'translate(0,15px) ',
-            })
-            .to('.heroHeadingSpan', {
-                transform: 'translate(0,0)',
-                duration: 0.2,
-                stagger: 0.05,
-                opacity: 1,
-            })
-            .to('.heroHeadingSpan', {
-                transform: 'translate(0,-0.1em) rotateX(-90deg)',
+            // .set('#heroText1', {
+            //     display: 'inline-block',
+            // })
+            // .set('#heroText2', {
+            //     display: 'none',
+            // })
+            // .set('.heroHeadingSpan', {
+            //     transform: 'translate(0,15px) ',
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,0)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 1,
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,-0.1em) rotateX(-90deg)',
 
-                duration: 0.2,
-                stagger: 0.05,
-            })
-            .set('#heroText1', {
-                display: 'none',
-            })
-            .set('#heroText2', {
-                display: 'inline-block',
-            })
-            .set('.heroHeadingSpan', {
-                transform: 'translate(0,15px)',
-            })
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            // })
+            // .set('#heroText1', {
+            //     display: 'none',
+            // })
+            // .set('#heroText2', {
+            //     display: 'inline-block',
+            // })
+            // .set('.heroHeadingSpan', {
+            //     transform: 'translate(0,15px)',
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,0)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 1,
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,-15px)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 0,
+            // })
             .to('.heroHeadingSpan', {
-                transform: 'translate(0,0)',
-                duration: 0.2,
+                rotateX: 90,
+                translateY: -25 + '%',
                 stagger: 0.05,
-                opacity: 1,
-            })
-            .to('.heroHeadingSpan', {
-                transform: 'translate(0,-15px)',
-                duration: 0.2,
-                stagger: 0.05,
-                opacity: 0,
             })
 
         heroTl.play()
@@ -73,62 +78,113 @@ const Hero = () => {
                         <h1 className='text-[10vw] md:text-[5rem] flex flex-col w-[90%] lg:w-1/2'>
                             <strong>Motion Labs</strong>
                         </h1>
-                        <span className='flex flex-col-reverse sm:flex-row gap-4 mt-4'>
+                        <div className='flex flex-col relative mt-4'>
                             <span
-                                id='heroText1'
-                                className=' leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
+                                id='heroSubHeadig'
+                                className='absolute top-0 left-0 leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
                             >
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0'>
+                                <span className='heroHeadingSpan inline-block font-league'>
                                     W
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     e
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     b
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     &nbsp;
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     d
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     e
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     v
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     e
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     l
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     o
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     p
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     m
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     e
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     n
                                 </span>
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league '>
                                     t
                                 </span>
                             </span>
+
                             <span
+                                id='heroText1'
+                                className='absolute top-0 left-0 leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
+                            >
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]'>
+                                    W
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    e
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    b
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    &nbsp;
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    d
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    e
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    v
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    e
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    l
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    o
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    p
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    m
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    e
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    n
+                                </span>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
+                                    t
+                                </span>
+                            </span>
+                            {/*   <span
                                 id='heroText2'
                                 className='hidden leading-none pb-1 text-4xl md:text-6xl text-motionPurple'
                             >
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
+                                <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0'>
                                     M
                                 </span>
                                 <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
@@ -170,8 +226,8 @@ const Hero = () => {
                                 <span className='heroHeadingSpan inline-block font-league translate-y-[15px] opacity-0 '>
                                     c
                                 </span>
-                            </span>
-                        </span>
+                            </span> */}
+                        </div>
                         <p className='mt-4'>Motion weby nás baví</p>
                     </div>
                 </div>
