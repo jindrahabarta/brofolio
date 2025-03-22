@@ -54,11 +54,65 @@ const Hero = () => {
             //     stagger: 0.05,
             //     opacity: 0,
             // })
+            // .set('#heroText1', {
+            //     display: 'inline-block',
+            // })
+            // .set('#heroText2', {
+            //     display: 'none',
+            // })
+            // .set('.heroHeadingSpan', {
+            //     transform: 'translate(0,15px) ',
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,0)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 1,
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,-0.1em) rotateX(-90deg)',
+
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            // })
+            // .set('#heroText1', {
+            //     display: 'none',
+            // })
+            // .set('#heroText2', {
+            //     display: 'inline-block',
+            // })
+            // .set('.heroHeadingSpan', {
+            //     transform: 'translate(0,15px)',
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,0)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 1,
+            // })
+            // .to('.heroHeadingSpan', {
+            //     transform: 'translate(0,-15px)',
+            //     duration: 0.2,
+            //     stagger: 0.05,
+            //     opacity: 0,
+            // })
             .to('.heroHeadingSpan', {
                 rotateX: 90,
                 translateY: -25 + '%',
                 stagger: 0.05,
+
+                duration: 1,
             })
+            .to(
+                '.heroHeadingSpan2',
+                {
+                    rotateX: 0,
+                    translateY: 0,
+                    stagger: 0.05,
+                    duration: 1,
+                },
+                '<'
+            )
 
         heroTl.play()
     }, [])
@@ -78,6 +132,16 @@ const Hero = () => {
                         <h1 className='text-[10vw] md:text-[5rem] flex flex-col w-[90%] lg:w-1/2'>
                             <strong>Motion Labs</strong>
                         </h1>
+                        <div className='flex flex-col relative mt-4'>
+                            <span
+                                id='heroSubHeadig'
+                                className='leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
+                            >
+                                <span className='heroHeadingSpan inline-block font-league'>
+                                    W
+                                </span>
+                            </span>
+
                         <div className='flex flex-col relative mt-4'>
                             <span
                                 id='heroSubHeadig'
@@ -134,7 +198,10 @@ const Hero = () => {
                                 id='heroText1'
                                 className='absolute top-0 left-0 leading-none pb-1 text-4xl md:text-6xl text-motionBlue'
                             >
-                                <span className='heroHeadingSpan inline-block font-league translate-y-[25%]'>
+                                <span
+                                    style={{ transform: 'rotateX(-90deg)' }}
+                                    className='heroHeadingSpan2 inline-block font-league translate-y-[100%]'
+                                >
                                     W
                                 </span>
                                 <span className='heroHeadingSpan inline-block font-league translate-y-[25%]  '>
