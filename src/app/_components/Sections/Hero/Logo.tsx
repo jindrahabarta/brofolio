@@ -75,8 +75,16 @@ const Logo = () => {
             onMouseOver={handleMouseOver}
             onMouseOut={handeMouseOut}
             onMouseMove={handleMouseMove}
-            className='flex-1 lg:h-full flex items-center justify-center'
+            className='flex-1 lg:h-full flex items-center justify-center relative'
         >
+            <Image
+                src={LogoSvg}
+                alt={'logo'}
+                width={1000}
+                height={1000}
+                ref={imageRef}
+                className='max-w-xl absolute translate-x-4 translate-y-4 blur-lg opacity-75 '
+            />
             <Image
                 src={LogoSvg}
                 alt={'logo'}
