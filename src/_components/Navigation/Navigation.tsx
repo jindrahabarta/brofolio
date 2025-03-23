@@ -36,7 +36,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                     <Link
                         id='navLogo'
                         href='/'
-                        className='inline-block w-16 sm:w-20 h-10 origin-left'
+                        className='inline-block w-16 sm:w-20 aspect-[8/5] origin-left'
                     ></Link>
                 </div>
 
