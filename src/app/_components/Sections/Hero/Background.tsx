@@ -38,14 +38,14 @@ const Background = () => {
         })
     }
 
-    const animateBackground = (y: number) => {
-        if (!backgroundRef.current) return
+    // const animateBackground = (y: number) => {
+    //     if (!backgroundRef.current) return
 
-        // TODO:
-        gsap.to(backgroundRef.current, {
-            x: -y / 2,
-        })
-    }
+    //     // TODO:
+    //     gsap.to(backgroundRef.current, {
+    //         x: -y / 2,
+    //     })
+    // }
 
     useEffect(() => {
         const animate = () => {
