@@ -254,8 +254,8 @@ const gsapAnimationsInit = (path: string) => {
         ease: 'power1.out',
         scrollTrigger: {
             trigger: '#footer',
-            start: 'bottom-=10px bottom',
-            end: 'bottom-=10px bottom',
+            start: 'bottom-=50px bottom',
+            end: 'bottom-=50px bottom',
             toggleActions: 'play none none reverse',
         },
     })
