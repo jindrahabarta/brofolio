@@ -9,9 +9,7 @@ import { projectList } from '@/_constants/projects'
 import { lerp } from '@/_utils/lerp'
 
 const ProjectsList = () => {
-    const [hoveredProject, setHoveredProject] = useState<null | string>(
-        '/images/Projects/Avantgarda.webp'
-    )
+    const [hoveredProject, setHoveredProject] = useState<null | string>(null)
     const [isTransitioning, setIsTransitioning] = useState(false)
     const cursor = useRef<HTMLImageElement | null>(null)
     const router = useRouter()
