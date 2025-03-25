@@ -64,25 +64,7 @@ const Project = () => {
                 <figure
                     id='bannerOverlay'
                     className='absolute top-0 left-0 w-full h-full bg-black/0 flex items-end justify-start px-10'
-                >
-                    {/* <Links
-                        href={'/projects'}
-                        className='border flex justify-center items-center relatve border-white rounded-full w-20 aspect-square translate-y-1/2 group hover:scale-110 duration-200'
-                    >
-                        <figure className='w-full h-full bg-gray-300 absolute top-0 rounded-full flex items-center justify-center scale-0 group-hover:scale-100 delay-100 duration-300 ease-out'>
-                            <div className='w-full h-full bg-white rounded-full scale-0 group-hover:scale-100 delay-200 duration-300 ease-out'></div>
-                        </figure>
-
-                        <span className='relative font-semibold  duration-200 delay-100 flex flex-col justify-start h-[1.1em] overflow-hidden'>
-                            <span className=' leading-[1.1em] group-hover:translate-y-[1.1em] duration-200 delay-100'>
-                                Jít zpět
-                            </span>
-                            <span className=' leading-[1.1em] group-hover:-translate-y-[1.1em] delay-100 duration-200 text-black'>
-                                Jít zpět
-                            </span>
-                        </span>
-                    </Links> */}
-                </figure>
+                ></figure>
             </section>
             <div className=' text-white min-h-screen overflow-hidden relative'>
                 <section className='h-[50vh] flex justify-start items-end px-10'>

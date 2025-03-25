@@ -136,7 +136,7 @@ const ProjectsList = () => {
                             handleMouseEnter={() => {
                                 if (isTransitioning) return
 
-                                setHoveredProject(project.coverImage)
+                                setHoveredProject(project.bannerImage)
                             }}
                             handleMouseLeave={() => {
                                 if (isTransitioning) return
