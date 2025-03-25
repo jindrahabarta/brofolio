@@ -1,4 +1,5 @@
 'use client'
+
 import Lenis from 'lenis'
 import Navigation from '@/_components/Navigation/Navigation'
 import {
@@ -11,9 +12,10 @@ import localFont from 'next/font/local'
 
 import './globals.css'
 import Footer from '@/_components/Footer/Footer'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
 import { usePathname } from 'next/navigation'
+import Loader from '@/_components/Loader/Loader'
 
 const source_serif_4 = Source_Serif_4({
     subsets: ['latin'],
@@ -52,10 +54,13 @@ export default function RootLayout({
 }>) {
     const path = usePathname()
     const lenis = useRef<null | Lenis>(null)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         //Lenis
         lenis.current = new Lenis()
+        lenis.current.stop()
+
         function raf(time: number) {
             if (!lenis.current) return
 
@@ -65,6 +70,13 @@ export default function RootLayout({
         requestAnimationFrame(raf)
 
         gsapAnimationsInit(path)
+
+        setTimeout(() => {
+            if (lenis.current) {
+                lenis.current.start()
+            }
+            setLoading(false)
+        }, 3000)
     }, [path])
 
     return (
@@ -81,6 +93,8 @@ export default function RootLayout({
                 `}
             >
                 <Navigation lenis={lenis}></Navigation>
+
+                <Loader loading={loading} />
 
                 <main>{children}</main>
 
