@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react'
-import Noisy from '@/app/_components/Sections/Hero/Noisy'
+import Noisy from '@/_components/Noisy/Noisy'
 import { lerp } from '@/_utils/lerp'
 import gsap from 'gsap'
 

@@ -1,3 +1,4 @@
+import { log } from 'console'
 import type { Config } from 'tailwindcss'
 
 export default {
@@ -35,6 +36,7 @@ export default {
             animation: {
                 marqueeLeft: 'marqueeLeft 10s linear infinite',
                 marqueeRight: 'marqueeRight 10s linear infinite',
+                logoFirst: 'logoFirst 3s ease-out infinite',
             },
             keyframes: {
                 marqueeLeft: {
@@ -44,6 +46,16 @@ export default {
                 marqueeRight: {
                     from: { transform: 'translateX(0)' },
                     to: { transform: 'translateX(100%)' },
+                },
+                logoFirst: {
+                    '0%': {
+                        transform: 'translateX(0) translateY(0)',
+                        opacity: '1',
+                    },
+                    '100%': {
+                        transform: 'translateX(1.5rem) translateY(1.5rem)',
+                        opacity: '0',
+                    },
                 },
             },
         },
