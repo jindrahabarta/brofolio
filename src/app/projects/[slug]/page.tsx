@@ -2,11 +2,11 @@ import React from 'react'
 import { projectList } from '@/_constants/projects'
 import PageContent from './_components/PageContent'
 
-interface IParams {
-    slug: string
-}
-
-export const generateMetadata = async ({ params }: { params: IParams }) => {
+export const generateMetadata = async ({
+    params,
+}: {
+    params: { slug: string }
+}) => {
     const { slug } = await params
 
     const selectedProject = projectList.find((project) => {
