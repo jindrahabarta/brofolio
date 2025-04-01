@@ -119,7 +119,7 @@ const ProjectsList = () => {
         animate()
         window.addEventListener('mousemove', getMousePosition)
         return () => window.removeEventListener('mousemove', getMousePosition)
-    }, [animate])
+    })
 
     useEffect(() => {
         if (hoveredProject !== null) {
