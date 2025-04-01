@@ -73,36 +73,45 @@ const ProjectsList = () => {
         setIsTransitioning(true)
         setHoveredProject(hoveredProject)
 
+        const mm = gsap.matchMedia()
+
         gsap.to('#footer', {
             opacity: 0,
         })
 
-        gsap.to('.projectsListItem', {
-            x: 50,
-            opacity: 0,
-            duration: 0.1,
-            stagger: 0.1,
-            onComplete: () => {
-                gsap.to('#projectsImage', {
-                    top: 0,
-                    left: 0,
-                    borderRadius: 0,
-                    width: '100%',
-                    height: '50vh',
-                    aspectRatio: 'auto',
-                    opacity: 1,
-                    xPercent: 0,
-                    yPercent: 0,
-                    x: 0,
-                    y: 0,
-                    duration: 1.2,
-                    ease: 'power2.out',
+        mm.add('(max-width: 639px)', () => {
+            router.push(`/projects/${slug}`)
+        })
 
-                    onComplete: () => {
-                        router.push(`/projects/${slug}`)
-                    },
-                })
-            },
+        //Tablet + PC
+        mm.add('(min-width: 640px)', () => {
+            gsap.to('.projectsListItem', {
+                x: 50,
+                opacity: 0,
+                duration: 0.1,
+                stagger: 0.1,
+                onComplete: () => {
+                    gsap.to('#projectsImage', {
+                        top: 0,
+                        left: 0,
+                        borderRadius: 0,
+                        width: '100%',
+                        height: '50vh',
+                        aspectRatio: 'auto',
+                        opacity: 1,
+                        xPercent: 0,
+                        yPercent: 0,
+                        x: 0,
+                        y: 0,
+                        duration: 1.2,
+                        ease: 'power2.out',
+
+                        onComplete: () => {
+                            router.push(`/projects/${slug}`)
+                        },
+                    })
+                },
+            })
         })
     }
 
@@ -155,7 +164,7 @@ const ProjectsList = () => {
                 ))}
             </ul>
 
-            {hoveredProject !== null && (
+            {window.innerWidth >= 640 && hoveredProject !== null && (
                 <Image
                     ref={cursor}
                     id='projectsImage'

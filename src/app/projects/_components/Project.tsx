@@ -21,7 +21,7 @@ const Project = ({
             <a
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className='px-4 group-hover:-translate-y-[6.5rem] sm:group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none     h-20 sm:h-[8.5rem]'
+                className='px-4 sm:group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none     h-20 sm:h-[8.5rem]'
                 href={`/projects/${project.slug}`}
                 onClick={(e) => handleClick(e)}
             >
@@ -51,7 +51,7 @@ const Project = ({
             <a
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className='px-4 group-hover:-translate-y-[6.5rem] sm:group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none text-8xl  h-[8.5rem]'
+                className='px-4  sm:group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none text-8xl  h-[8.5rem]'
                 href={`/projects/${project.slug}`}
                 onClick={(e) => handleClick(e)}
             >

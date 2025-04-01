@@ -3,7 +3,7 @@ import React from 'react'
 import ProjectsList from './_components/ProjectsList'
 
 export const metadata: Metadata = {
-    title: 'Projects | Motionlabs.cz',
+    title: 'Projekty | Motionlabs.cz',
     description: '',
 }
 
