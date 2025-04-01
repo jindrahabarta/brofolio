@@ -9,12 +9,20 @@ export const generateMetadata = async ({
 }) => {
     const { slug } = params
 
+    console.log(slug)
+
     const selectedProject = projectList.find((project) => {
         return project.slug === slug
     })
 
     return {
-        title: `Project ${selectedProject?.name} | Motionlabs.cz`,
+        title: `Projekt ${selectedProject?.name} | Motionlabs.cz`,
+        description: selectedProject?.content[0].slice(0, 160),
+        openGraph: {
+            title: `Motionlabs | Projekt - ${selectedProject?.name}`,
+            description: selectedProject?.content[0].slice(0, 160),
+            images: [selectedProject?.bannerImage],
+        },
     }
 }
 
