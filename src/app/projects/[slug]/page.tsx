@@ -5,11 +5,9 @@ import PageContent from './_components/PageContent'
 export const generateMetadata = async ({
     params,
 }: {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 }) => {
-    const { slug } = params
-
-    console.log(slug)
+    const { slug } = await params
 
     const selectedProject = projectList.find((project) => {
         return project.slug === slug
