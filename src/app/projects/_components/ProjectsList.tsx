@@ -164,7 +164,7 @@ const ProjectsList = () => {
                 ))}
             </ul>
 
-            {window.innerWidth >= 640 && hoveredProject !== null && (
+            {hoveredProject !== null && (
                 <Image
                     ref={cursor}
                     id='projectsImage'
