@@ -3,12 +3,15 @@ import Image from 'next/image'
 import MlLogoStroke from '@/_assets/brand/MlLogoStroke'
 import LogoSvg from '@/../public/brand/ml_logo.svg'
 
-const Loader: React.FC<{ loading: boolean }> = ({ loading }) => {
+const Loader = () => {
     return (
         <div
-            className={`fixed inset-0 z-[999] flex justify-center items-center bg-gray-900 select-none duration-500 ${
-                loading ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
+            className={`loader fixed inset-0 z-[999] flex justify-center items-center bg-gray-900 select-none duration-500 opacity-100`}
+            data-lenis-loaded='false'
+            data-logo-loaded='false'
+            data-tv-loaded='false'
+            data-about-1-loaded='false'
+            data-about-2-loaded='false'
         >
             <div
                 className='relative w-1/2 max-w-xs'

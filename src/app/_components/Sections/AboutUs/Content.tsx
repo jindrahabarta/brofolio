@@ -48,7 +48,7 @@ const Content = () => {
                         </h1>
 
                         <span className='w-full max-w-sm'>
-                            <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-base sm:text-lg font-semibold indent-4'>
+                            <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-base sm:text-xl indent-4 bg-stone-800/50 backdrop-blur-sm py-6 px-8'>
                                 Kreativec a tvůrce. Kromě projektu MotionLabs se
                                 věnuji své vlastní značce{' '}
                                 <Link
@@ -64,7 +64,7 @@ const Content = () => {
                                 originální, neotřelé a &quot;cool&quot; věci,
                                 toto je skvělá forma, jak ukojit své potřeby.
                             </p>
-                            <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-base sm:text-lg font-semibold indent-4 mt-4'>
+                            <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-base sm:text-xl indent-4 mt-4 bg-stone-800/50 backdrop-blur-sm py-6 px-8'>
                                 Tento zápal bych chtěl projevit i v tomto
                                 projektu a doufám, že se nám společně podaří
                                 naplnit tvé očekávání.
@@ -77,7 +77,7 @@ const Content = () => {
                             Front-end developer
                         </h1>
 
-                        <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-base sm:text-lg font-semibold indent-4'>
+                        <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4 bg-stone-800/50 backdrop-blur-sm py-6 px-8'>
                             Nudí tě standardy ve webové tvorbě? Chceš pro sebe
                             něco víc, než kam ti dovolí jít nudná šablona?
                             Pokusím se, tvé nápady zhmotnit v realitu!
@@ -117,14 +117,15 @@ const Content = () => {
                             <h1 className='font-league text-[10vw] md:text-[8vw] leading-[80%] md:hidden pb-10'>
                                 Full-stack developer
                             </h1>
-                            <p className='font-instrument text-justify text-lg indent-4'>
-                                Dicta aut voluptatem voluptas tenetur quam illum
-                                eaque expedita commodi fuga, cupiditate
-                                provident veniam necessitatibus facilis eius
-                                nesciunt.
+                            <p className='font-instrument text-justify text-xl indent-4'>
+                                A kdo vlastně jsem? Převážně programátor, který
+                                se snaží rozvíjet i v dalších oblastech
+                                (kreslení, hudba, sport). Jelikož nás s bráchou
+                                oba naplňuje tvorba webových aplikací, rozhodli
+                                jsme se spolu vytvořit projekt MotionLabs.
                             </p>
 
-                            <p className='font-instrument text-justify text-lg indent-4 mt-4'>
+                            <p className='font-instrument text-justify text-xl indent-4 mt-4'>
                                 Dicta aut voluptatem voluptas tenetur quam illum
                                 eaque expedita commodi fuga, cupiditate
                                 provident veniam necessitatibus facilis eius
@@ -137,11 +138,10 @@ const Content = () => {
                                 Full-stack developer
                             </h1>
 
-                            <p className='w-full max-w-sm font-instrument text-justify text-lg indent-4'>
-                                Dicta aut voluptatem voluptas tenetur quam illum
-                                eaque expedita commodi fuga, cupiditate
-                                provident veniam necessitatibus facilis eius
-                                nesciunt.
+                            <p className='w-full max-w-sm font-instrument text-justify text-xl indent-4'>
+                                Kolem webových aplikací se motám už více než
+                                půlku svého života a chtěl bych tu tyto
+                                dovednosti zužitkovat!
                             </p>
                         </div>
                     </section>

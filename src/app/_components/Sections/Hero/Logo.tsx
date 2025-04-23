@@ -116,8 +116,8 @@ const Logo = () => {
                 rotateY: `${
                     delayedMousePosition.current.x * deg + offsetDeg
                 }deg`,
-                translateX: `${delayedMousePosition.current.x * 4 + 4}rem`,
-                translateY: `${delayedMousePosition.current.y * 4 + 4}rem`,
+                translateX: `${delayedMousePosition.current.x * -4 + 4}rem`,
+                translateY: `${delayedMousePosition.current.y * -4 + 4}rem`,
             })
 
             window.requestAnimationFrame(animate)
@@ -140,7 +140,7 @@ const Logo = () => {
                 width={1000}
                 height={1000}
                 ref={imageRefShadow}
-                className='max-w-xl absolute  blur-lg opacity-50'
+                className='max-w-xl w-full absolute blur-lg opacity-50 scale-150'
             />
 
             <MlLogoStroke

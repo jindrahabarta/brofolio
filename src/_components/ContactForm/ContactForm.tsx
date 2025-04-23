@@ -127,20 +127,18 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
             className='flex-1 sm:max-w-xl flex flex-col gap-2'
         >
             <header>
-                <h2 className='leading-normal text-xl'>
-                    <em className='block origin-left'>
-                        Chceš s náma rozjet projekt?
-                    </em>
+                <h2 className='font-instrument leading-normal text-2xl block origin-left'>
+                    Chceš s náma rozjet projekt?
                 </h2>
-                <h1 className='text-[clamp(1rem,7.5vw,3rem)] leading-[1.1em] mt-2'>
-                    <strong className='inline-block '>Napiš nám</strong>
+                <h1 className='font-league uppercase text-[clamp(1rem,7.5vw,4rem)] leading-[1.1em] mt-2'>
+                    Napiš nám
                 </h1>
             </header>
 
             <section className='flex flex-col gap-4'>
                 <fieldset>
                     <label htmlFor='firstName'>
-                        <em className=''>Jméno*</em>
+                        <p className='font-instrument text-xl'>Jméno*</p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -166,7 +164,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
                     </label>
 
                     <label htmlFor='lastName'>
-                        <em>Příjmení*</em>
+                        <p className='font-instrument text-xl'>Příjmení*</p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -193,7 +191,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <fieldset>
                     <label htmlFor='email'>
-                        <em>E-mail*</em>
+                        <p className='font-instrument text-xl'>E-mail*</p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -218,7 +216,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
                     </label>
 
                     <label htmlFor='phone'>
-                        <em>Telefon*</em>
+                        <p className='font-instrument text-xl'>Telefon*</p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -254,7 +252,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <fieldset>
                     <label htmlFor='company'>
-                        <em>Společnost</em>
+                        <p className='font-instrument text-xl'>Společnost</p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -281,7 +279,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <fieldset>
                     <label htmlFor='message'>
-                        <em>Zpráva</em>
+                        <p className='font-instrument text-xl'>Zpráva</p>
                         <div className='container'>
                             <Input1
                                 width='100%'

@@ -5,11 +5,11 @@ import './style.css'
 
 const Projects = () => {
     return (
-        <section id='projects' className='overflow-hidden sm:pt-20'>
+        <section id='projects' className='overflow-hidden sm:py-20'>
             <header className='h-60 sm:h-80 flex items-center border-b border-gray-700 overflow-x-hidden px-4 sm:px-8'>
                 <h1
                     id='projectsTitle'
-                    className='flex flex-col font-league uppercase text-[clamp(1rem,25vw,12rem)]'
+                    className='flex flex-col font-league uppercase text-[clamp(1rem,25vw,8.5rem)]'
                 >
                     Projekty
                 </h1>

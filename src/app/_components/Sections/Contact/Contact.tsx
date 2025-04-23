@@ -9,7 +9,10 @@ import ContactForm from '@/_components/ContactForm/ContactForm'
 
 const Contact = () => {
     return (
-        <section id='contact' className='relative overflow-x-hidden w-full'>
+        <section
+            id='contact'
+            className='relative overflow-x-hidden w-full sm:py-12'
+        >
             <Image
                 src='/images/contact/paper_edge.png'
                 alt='Paper edge'

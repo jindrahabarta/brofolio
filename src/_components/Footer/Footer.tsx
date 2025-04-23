@@ -32,8 +32,9 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                     'https://daydrift.design/images/daydrift_logo.svg'
                                 }
                                 width={100}
-                                height={100}
+                                height={50}
                                 alt='Logo'
+                                className='h-12 aspect-[10/5] object-cover'
                             ></Image>
                         </div>
                         <ul className='mt-12'>

@@ -76,7 +76,7 @@ const Background = () => {
             <div ref={backgroundRef} id='hero-radial-gradient' />
 
             {/* TODO: create other fades on the edges */}
-            <div ref={mouseRef} id='hero-mouse-gradient' />
+            {/* <div ref={mouseRef} id='hero-mouse-gradient' /> */}
 
             <Noisy />
 

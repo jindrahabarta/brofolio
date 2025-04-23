@@ -143,12 +143,12 @@ body::-webkit-scrollbar-thumb {
         radial-gradient(ellipse at bottom, #000, transparent);
 }
 
-#hero-mouse-gradient {
-    @apply absolute w-[70rem] aspect-square opacity-20;
+/* #hero-mouse-gradient {
+    @apply absolute w-[200rem] aspect-square opacity-10;
 
     background: radial-gradient(rgb(80, 115, 184), transparent 50%);
     background-position: center;
-}
+} */
 
 #footerMail {
     text-shadow: rgb(249, 158, 11) -4px -4px 6px,
