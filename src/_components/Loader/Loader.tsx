@@ -1,17 +1,28 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import MlLogoStroke from '@/_assets/brand/MlLogoStroke'
 import LogoSvg from '@/../public/brand/ml_logo.svg'
 
-const Loader = () => {
+const Loader: React.FC<{ loaded: boolean }> = ({ loaded }) => {
+    const [animated, setAnimated] = useState(false)
+    const loaderRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        if (loaded) {
+            setTimeout(() => {
+                setAnimated(true)
+            }, 510)
+        }
+    }, [loaded])
+
+    if (animated) return null
+
     return (
         <div
-            className={`loader fixed inset-0 z-[999] flex justify-center items-center bg-gray-900 select-none duration-500 opacity-100`}
-            data-lenis-loaded='false'
-            data-logo-loaded='false'
-            data-tv-loaded='false'
-            data-about-1-loaded='false'
-            data-about-2-loaded='false'
+            ref={loaderRef}
+            className={`loader fixed inset-0 z-[999] flex justify-center items-center bg-gray-900 select-none duration-500 ${
+                loaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
+            }`}
         >
             <div
                 className='relative w-1/2 max-w-xs'

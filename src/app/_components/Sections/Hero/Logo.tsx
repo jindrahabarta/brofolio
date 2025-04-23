@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { lerp } from '@/_utils/lerp'
 import MlLogoStroke from '@/_assets/brand/MlLogoStroke'
 
-const Logo = () => {
+const Logo: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
     const containerRef = useRef<HTMLDivElement | null>(null)
     const logoRef = useRef<HTMLImageElement | null>(null)
     const stroke1Ref = useRef<SVGSVGElement | null>(null)
@@ -140,6 +140,7 @@ const Logo = () => {
                 width={1000}
                 height={1000}
                 ref={imageRefShadow}
+                priority
                 className='max-w-xl w-full absolute blur-lg opacity-50 scale-150'
             />
 
@@ -166,6 +167,8 @@ const Logo = () => {
                 width={1000}
                 height={1000}
                 ref={logoRef}
+                onLoad={onLogoLoad}
+                priority
                 className='invert max-w-xl w-full'
                 style={{ transform: 'rotate3d(1, 1, 0, 10deg)' }}
             />

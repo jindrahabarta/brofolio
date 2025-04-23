@@ -7,7 +7,10 @@ import LubaImg from '@/../public/images/AboutUs/LubaHabarta.webp'
 import TVGLitch from './TVGLitch'
 import Link from 'next/link'
 
-const Content = () => {
+const Content: React.FC<{
+    onAbout1Load: () => void
+    onAbout2Load: () => void
+}> = ({ onAbout1Load, onAbout2Load }) => {
     return (
         <div
             id='aboutUsContent'
@@ -36,6 +39,8 @@ const Content = () => {
                         alt='Jindra Habarta'
                         width={1500}
                         height={2000}
+                        onLoad={onAbout1Load}
+                        priority
                         className='w-full h-full absolute object-cover object-[0%_25%]'
                     />
 
@@ -96,6 +101,8 @@ const Content = () => {
                                 alt='Luba Habarta'
                                 width={1500}
                                 height={200}
+                                onLoad={onAbout2Load}
+                                priority
                                 className='w-full h-full md:h-[calc(100%+18rem)] object-cover aboutUsScrollSpeed md:translate-y-72'
                             />
                         </div>

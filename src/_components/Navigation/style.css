@@ -157,6 +157,10 @@
 }
 
 #navLogo {
+    /* background-image: url(../../../public/brand/ml_logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%; */
     mask-image: url(../../../public/brand/ml_logo.svg);
     mask-repeat: no-repeat;
     mask-position: center center;

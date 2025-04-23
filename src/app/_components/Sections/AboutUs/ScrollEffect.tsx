@@ -4,7 +4,7 @@ import Image from 'next/image'
 import TVImg from '@/../public/images/AboutUs/TVTransitionImage.webp'
 import MobileTVImg from '@/../public/images/AboutUs/MobileTVTransitionImage.webp'
 
-const ScrollEffect = () => {
+const ScrollEffect: React.FC<{ onTvLoad: () => void }> = ({ onTvLoad }) => {
     return (
         <div
             id='aboutUsScrollSection'
@@ -21,6 +21,8 @@ const ScrollEffect = () => {
                             width={1500}
                             height={857}
                             alt='Television image'
+                            onLoad={onTvLoad}
+                            priority
                             className='w-full h-full object-cover object-center block sm:hidden'
                         ></Image>
                         <Image
@@ -29,6 +31,8 @@ const ScrollEffect = () => {
                             width={1080}
                             height={1920}
                             alt='Television image'
+                            onLoad={onTvLoad}
+                            priority
                             className='w-full h-full object-cover object-center hidden sm:block'
                         ></Image>
                     </div>

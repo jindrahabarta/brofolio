@@ -1,10 +1,8 @@
-'use client'
-
 import React from 'react'
 import Logo from './Logo'
 import Background from './Background'
 
-const Hero = () => {
+const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
     return (
         <section
             id='home'
@@ -13,7 +11,7 @@ const Hero = () => {
             <Background />
 
             <main className='w-full h-full relative z-20 flex flex-col lg:flex-row-reverse justify-end gap-32 items-center lg:gap-8 px-4 sm:px-8 overflow-hidden'>
-                <Logo />
+                <Logo onLogoLoad={onLogoLoad} />
 
                 <div className='md:flex-1 flex items-end md:items-center justify-center pb-20 md:pb-0'>
                     <div className='max-w-xl'>
