@@ -6,19 +6,17 @@ const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
     return (
         <section
             id='home'
-            className='relative text-white pt-9 h-screen bg-black overflow-hidden'
+            className='relative flex justify-center text-white pt-9 h-screen bg-black overflow-hidden'
         >
             <Background />
 
-            <main className='w-full h-full relative z-20 flex flex-col lg:flex-row-reverse justify-end gap-32 items-center lg:gap-8 px-4 sm:px-8 overflow-hidden'>
+            <main className='w-full h-full relative z-20 flex flex-col lg:flex-row-reverse gap-32 items-center justify-evenly lg:gap-8 px-4 sm:px-8'>
                 <Logo onLogoLoad={onLogoLoad} />
 
                 <div className='md:flex-1 flex items-end md:items-center justify-center pb-20 md:pb-0'>
                     <div className='max-w-xl'>
-                        <h1 className='flex flex-col w-[90%] lg:w-1/2'>
-                            <strong className='w-fit text-[10vw] md:text-[4rem] xl:text-[5rem]'>
-                                Motion Labs
-                            </strong>
+                        <h1 className='flex font-sans font-extrabold text-[10vw] md:text-[6rem] lg:text-[8rem]'>
+                            Motion Labs
                         </h1>
                         <div className='flex flex-col relative mt-4'>
                             <div

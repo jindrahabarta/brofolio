@@ -3,8 +3,8 @@
 import Lenis from 'lenis'
 import Navigation from '@/_components/Navigation/Navigation'
 import {
-    Source_Serif_4,
-    Charm,
+    // Source_Serif_4,
+    // Charm,
     Instrument_Serif,
     League_Gothic,
 } from 'next/font/google'
@@ -16,25 +16,25 @@ import { useEffect, useRef } from 'react'
 import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
 import { usePathname } from 'next/navigation'
 
-const source_serif_4 = Source_Serif_4({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-    variable: '--source-serif',
-})
-const charm = Charm({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-    variable: '--charm',
-    display: 'swap',
-})
+// const source_serif_4 = Source_Serif_4({
+//     subsets: ['latin'],
+//     weight: ['400', '700'],
+//     variable: '--source-serif',
+// })
+// const charm = Charm({
+//     subsets: ['latin'],
+//     weight: ['400', '700'],
+//     variable: '--charm',
+//     display: 'swap',
+// })
 const owners = localFont({
     src: '../_assets/fonts/owners-xxwide.ttf',
     variable: '--owners',
 })
-const emberly_regular = localFont({
-    src: '../_assets/fonts/Emberly-Regular.otf',
-    variable: '--emberly-regular',
-})
+// const emberly_regular = localFont({
+//     src: '../_assets/fonts/Emberly-Regular.otf',
+//     variable: '--emberly-regular',
+// })
 const instrument = Instrument_Serif({
     subsets: ['latin'],
     weight: ['400'],
@@ -44,6 +44,10 @@ const league = League_Gothic({
     subsets: ['latin'],
     weight: ['400'],
     variable: '--league',
+})
+const satoshi = localFont({
+    src: '../_assets/fonts/Satoshi-Bold.ttf',
+    variable: '--satoshi',
 })
 
 export default function RootLayout({
@@ -73,14 +77,15 @@ export default function RootLayout({
     return (
         <html lang='cs'>
             <body
+                // ${charm.variable}
+                // ${source_serif_4.variable}
+                // ${emberly_regular.variable}
                 className={`antialiased
                     bg-black 
-                    ${charm.variable}
-                    ${owners.variable}
-                    ${source_serif_4.variable}
-                    ${emberly_regular.variable}
                     ${instrument.variable}
                     ${league.variable}
+                    ${satoshi.variable}
+                    ${owners.variable}
                 `}
             >
                 <Navigation lenis={lenis}></Navigation>

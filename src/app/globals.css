@@ -12,7 +12,8 @@
 }
 
 * {
-    @apply font-sourceSerif;
+    @apply font-instrument;
+    /* @apply font-league; */
 }
 
 html {
@@ -69,7 +70,7 @@ strong {
 }
 
 em {
-    @apply font-charm italic font-bold;
+    @apply italic font-bold;
 }
 
 /* ScrollBar */

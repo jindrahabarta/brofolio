@@ -26,12 +26,13 @@ export default {
                 '120': '1.2',
             },
             fontFamily: {
-                sourceSerif: 'var(--source-serif)',
-                charm: 'var(--charm)',
+                // sourceSerif: 'var(--source-serif)',
+                // charm: 'var(--charm)',
                 owners: 'var(--owners)',
-                emberlyRegular: 'var(--emberly-regular)',
+                // emberlyRegular: 'var(--emberly-regular)',
                 instrument: 'var(--instrument)',
                 league: 'var(--league)',
+                satoshi: 'var(--satoshi)',
             },
             animation: {
                 marqueeLeft: 'marqueeLeft 10s linear infinite',

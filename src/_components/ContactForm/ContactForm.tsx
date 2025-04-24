@@ -326,7 +326,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <button
                     type='submit'
-                    className='self-start relative px-4 py-2 mt-4'
+                    className='self-start text-lg relative px-4 py-2 mt-4'
                     disabled={formState === FormState.SENDING}
                 >
                     <Input1

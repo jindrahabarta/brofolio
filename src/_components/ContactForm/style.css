@@ -20,7 +20,7 @@ form {
         @apply w-full flex flex-col gap-2 text-base;
 
         & > span {
-            @apply text-xs leading-tight text-red-600;
+            @apply text-base leading-tight text-red-600;
         }
     }
 
@@ -34,7 +34,7 @@ form {
 
     input,
     textarea {
-        @apply w-full text-sm bg-transparent border-none placeholder:text-stone-600 focus:outline-none hover:cursor-text p-3;
+        @apply w-full font-sans text-sm bg-transparent border-none placeholder:text-stone-600 focus:outline-none hover:cursor-text p-3;
 
         -webkit-background-clip: text;
 

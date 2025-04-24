@@ -52,7 +52,7 @@ const BlurryButton = ({
                 id={`btnBlur-${id}`}
                 className='blurryBtnFill hidden sm:block w-0 absolute top-0 left-0 aspect-square rounded-full -translate-x-1/2 -translate-y-1/2'
             ></figure>
-            <span className='blurryBtnText backdrop:invert z-10 font-owners'>
+            <span className='blurryBtnText backdrop:invert z-10 font-instrument text-xl'>
                 {text}
             </span>
         </Link>

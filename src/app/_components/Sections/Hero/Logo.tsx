@@ -132,7 +132,7 @@ const Logo: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
             onMouseOver={handleMouseOver}
             onMouseOut={handeMouseOut}
             onMouseMove={handleMouseMove}
-            className='md:flex-1 lg:h-full w-full flex items-center justify-center relative max-w-80 sm:max-w-md md:max-w-none'
+            className='md:flex-1 lg:h-full w-full flex items-center justify-center relative'
         >
             <Image
                 src={LogoSvg}
@@ -141,23 +141,23 @@ const Logo: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                 height={1000}
                 ref={imageRefShadow}
                 priority
-                className='max-w-xl w-full absolute blur-lg opacity-50 scale-150'
+                className='max-w-md w-full absolute blur-lg opacity-50 scale-150'
             />
 
             <MlLogoStroke
                 ref={stroke3Ref}
-                className='max-w-xl absolute translate-x-6 translate-y-6 text-motionGreen'
+                className='max-w-md absolute translate-x-6 translate-y-6 text-motionGreen'
                 style={{ transform: 'rotate3d(1, 1, 0, 10deg)' }}
             ></MlLogoStroke>
 
             <MlLogoStroke
                 ref={stroke2Ref}
-                className='max-w-xl absolute translate-x-4 translate-y-4  text-motionEmerald'
+                className='max-w-md absolute translate-x-4 translate-y-4  text-motionEmerald'
                 style={{ transform: 'rotate3d(1, 1, 0, 10deg)' }}
             ></MlLogoStroke>
             <MlLogoStroke
                 ref={stroke1Ref}
-                className='heroLogo max-w-xl absolute translate-x-2 translate-y-2  text-motionBlue'
+                className='heroLogo max-w-md absolute translate-x-2 translate-y-2  text-motionBlue'
                 style={{ transform: 'rotate3d(1, 1, 0, 10deg)' }}
             ></MlLogoStroke>
 
@@ -169,7 +169,7 @@ const Logo: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                 ref={logoRef}
                 onLoad={onLogoLoad}
                 priority
-                className='invert max-w-xl w-full'
+                className='invert max-w-md w-full'
                 style={{ transform: 'rotate3d(1, 1, 0, 10deg)' }}
             />
         </div>

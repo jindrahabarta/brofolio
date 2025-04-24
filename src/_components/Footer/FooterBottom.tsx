@@ -5,12 +5,12 @@ const FooterBottom = () => {
     return (
         <section className='select-none mt-10'>
             <div className='w-full max-w-full overflow-hidden'>
-                <h1 className='text-[11.1vw] sm:text-[12vw] leading-tight text-center text-nowrap overflow-hidden'>
-                    <span className='footerHeading translate-y-full inline-block'>
-                        <em>Motion</em>
+                <h1 className='flex text-[17vw] leading-tight text-center text-nowrap overflow-hidden'>
+                    <span className='font-sans font-extrabold footerHeading translate-y-full inline-block'>
+                        Motion
                     </span>{' '}
-                    <span className='footerHeading translate-y-full inline-block'>
-                        <strong>labs</strong>
+                    <span className='font-sans font-extrabold footerHeading translate-y-full inline-block'>
+                        Labs
                     </span>
                 </h1>
                 <div className='w-full overflow-hidden'>
