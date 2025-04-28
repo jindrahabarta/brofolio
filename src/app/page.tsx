@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Metadata } from 'next'
+// import { Metadata } from 'next'
 import AboutUs from './_components/Sections/AboutUs/AboutUs'
 import Contact from './_components/Sections/Contact/Contact'
 // import FAQ from './_components/Sections/FAQ/FAQ'

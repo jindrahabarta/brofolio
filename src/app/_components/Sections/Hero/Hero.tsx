@@ -15,10 +15,10 @@ const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
 
                 <div className='md:flex-1 flex items-end md:items-center justify-center pb-20 md:pb-0'>
                     <div className='max-w-xl'>
-                        <h1 className='flex font-sans font-extrabold text-[10vw] md:text-[6rem] lg:text-[8rem]'>
+                        <h1 className='flex font-morn leading-[80%] font-black text-[10vw] md:text-[8rem] lg:text-[10rem]'>
                             Motion Labs
                         </h1>
-                        <div className='flex flex-col relative mt-4'>
+                        <div className='flex flex-col relative'>
                             <div
                                 id='heroSubHeadig'
                                 className='pb-1 text-4xl md:text-5xl text-gray-300'

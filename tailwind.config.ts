@@ -32,7 +32,7 @@ export default {
                 // emberlyRegular: 'var(--emberly-regular)',
                 instrument: 'var(--instrument)',
                 league: 'var(--league)',
-                satoshi: 'var(--satoshi)',
+                morn: 'var(--morn)',
             },
             animation: {
                 marqueeLeft: 'marqueeLeft 10s linear infinite',

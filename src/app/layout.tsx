@@ -45,9 +45,9 @@ const league = League_Gothic({
     weight: ['400'],
     variable: '--league',
 })
-const satoshi = localFont({
-    src: '../_assets/fonts/Satoshi-Bold.ttf',
-    variable: '--satoshi',
+const morn = localFont({
+    src: '../_assets/fonts/Morn-Black.ttf',
+    variable: '--morn',
 })
 
 export default function RootLayout({
@@ -84,8 +84,8 @@ export default function RootLayout({
                     bg-black 
                     ${instrument.variable}
                     ${league.variable}
-                    ${satoshi.variable}
                     ${owners.variable}
+                    ${morn.variable}
                 `}
             >
                 <Navigation lenis={lenis}></Navigation>
