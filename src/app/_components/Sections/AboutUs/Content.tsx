@@ -125,11 +125,17 @@ const Content: React.FC<{
                                 Full-stack developer
                             </h1>
                             <p className='font-instrument text-justify text-base sm:text-xl indent-4'>
-                                A kdo vlastně jsem? Převážně programátor, který
+                                {/* A kdo vlastně jsem? Převážně programátor, který
                                 se snaží rozvíjet i v dalších oblastech
                                 (kreslení, hudba, sport). Jelikož nás s bráchou
                                 oba naplňuje tvorba webových aplikací, rozhodli
-                                jsme se spolu vytvořit projekt MotionLabs.
+                                jsme se spolu vytvořit projekt MotionLabs. */}
+                                A kdo vlastně jsem? Trochu plavec, trochu
+                                kytarista, trochu umělec... Ale hlavně webař a
+                                programátor. A protože nás s bráchou oba baví
+                                nestandartní, animované a umělecké weby,
+                                rozhodli jsme se vytvořit Motion Labs, kde
+                                bychom chtěli tyto hodnoty ztvárnit.
                             </p>
                             {/* 
                             <p className='font-instrument text-justify text-xl indent-4 mt-4'>
@@ -146,9 +152,9 @@ const Content: React.FC<{
                             </h1>
 
                             <p className='w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4'>
-                                Kolem webových aplikací se motám už více než
+                                {/* Kolem webových aplikací se motám už více než
                                 půlku svého života a chtěl bych tu tyto
-                                dovednosti zužitkovat!
+                                dovednosti zužitkovat! */}
                             </p>
                         </div>
                     </section>
