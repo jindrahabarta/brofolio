@@ -5,7 +5,7 @@ const FooterBottom = () => {
     return (
         <section className='select-none mt-10'>
             <div className='w-full max-w-full overflow-hidden'>
-                <h1 className='flex text-[17.8vw] leading-tight text-center text-nowrap overflow-hidden'>
+                <h1 className='flex text-[17.3vw] leading-tight text-center text-nowrap overflow-hidden'>
                     <span className='font-morn font-black footerHeading translate-y-full inline-block'>
                         Motion
                     </span>{' '}

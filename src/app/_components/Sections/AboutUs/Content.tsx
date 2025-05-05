@@ -23,13 +23,6 @@ const Content: React.FC<{
             </div>
 
             <div className='flex flex-col uppercase text-red-500 relative'>
-                {/* <div className='absolute -translate-y-1/2 z-20 top-0 left-0 w-full flex justify-center'>
-                    <div className='bg-red-500 -rotate-3 text-white px-6 py-4 shadow-[-10px_10px_0px_0px_black] hover:shadow-[-5px_5px_0px_0px_black] duration-200 hover:mt-2 hover:mr-2'>
-                        <h1 className='text-[2rem]'>
-                            <strong>About us</strong>
-                        </h1>
-                    </div>
-                </div> */}
                 <article
                     id='sectionJindra'
                     className='relative w-full md:h-[120vh] flex flex-col md:flex-row'
@@ -92,9 +85,9 @@ const Content: React.FC<{
 
                 <article
                     id='aboutUsThemeSwitcher'
-                    className='flex flex-col md:flex-row-reverse md:justify-end items-center select-text'
+                    className='relative flex flex-col md:flex-row-reverse md:justify-end items-center select-text'
                 >
-                    <section className='absolute md:relative w-full md:w-3/5 h-[-webkit-fill-available] md:h-[120vh] md:flex md:flex-col justify-end items-end aspect-square overflow-y-hidden'>
+                    <section className='absolute md:relative w-full md:w-3/5 h-full md:h-[120vh] md:flex md:flex-col justify-end items-end aspect-square overflow-y-hidden'>
                         <div className='absolute md:relative w-full h-full flex justify-center items-center overflow-hidden'>
                             <Image
                                 src={LubaImg}
@@ -119,31 +112,19 @@ const Content: React.FC<{
                         </div>
                     </section>
 
-                    <section className='relative w-full h-auto md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-[35vw] md:p-8'>
+                    <section className='relative w-full md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-[35vw] md:p-8'>
                         <span className='w-full max-w-md self-end md:self-start'>
                             <h1 className='font-league text-[10vw] md:text-[8vw] leading-[80%] md:hidden pb-10'>
                                 Full-stack developer
                             </h1>
                             <p className='font-instrument text-justify text-base sm:text-xl indent-4'>
-                                {/* A kdo vlastně jsem? Převážně programátor, který
-                                se snaží rozvíjet i v dalších oblastech
-                                (kreslení, hudba, sport). Jelikož nás s bráchou
-                                oba naplňuje tvorba webových aplikací, rozhodli
-                                jsme se spolu vytvořit projekt MotionLabs. */}
                                 A kdo vlastně jsem? Trochu plavec, trochu
                                 kytarista, trochu umělec... Ale hlavně webař a
                                 programátor. A protože nás s bráchou oba baví
                                 nestandartní, animované a umělecké weby,
                                 rozhodli jsme se vytvořit Motion Labs, kde
-                                bychom chtěli tyto hodnoty ztvárnit.
+                                bychom chtěli tyto hodnoty prosazovat.
                             </p>
-                            {/* 
-                            <p className='font-instrument text-justify text-xl indent-4 mt-4'>
-                                Dicta aut voluptatem voluptas tenetur quam illum
-                                eaque expedita commodi fuga, cupiditate
-                                provident veniam necessitatibus facilis eius
-                                nesciunt.
-                            </p> */}
                         </span>
 
                         <div className='self-start md:self-end flex flex-col-reverse gap-12'>
@@ -152,15 +133,9 @@ const Content: React.FC<{
                             </h1>
 
                             <p className='w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4'>
-                                {/* Kolem webových aplikací se motám už více než
-                                půlku svého života a chtěl bych tu tyto
-                                dovednosti zužitkovat! */}
-                                A kdo vlastně jsem? Trochu plavec, trochu
-                                kytarista, trochu umělec... Ale hlavně webař a
-                                programátor. A protože nás s bráchou oba baví
-                                nestandartní, animované a umělecké weby,
-                                rozhodli jsme se vytvořit Motion Labs, kde
-                                bychom chtěli tyto hodnoty ztvárnit.
+                                Technologie mě fascinují už od dětství. Bavilo
+                                mě zkoumat, jak věci fungují, a postupně jsem
+                                začal tvořit vlastní projekty.
                             </p>
                         </div>
                     </section>
