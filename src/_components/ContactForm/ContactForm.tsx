@@ -124,7 +124,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className='flex-1 sm:max-w-xl flex flex-col gap-2'
+            className='flex-1 w-full sm:max-w-xl flex flex-col gap-2'
         >
             <header>
                 <h2 className='font-instrument leading-normal text-2xl block origin-left'>
