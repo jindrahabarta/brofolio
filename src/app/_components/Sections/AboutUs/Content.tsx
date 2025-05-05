@@ -119,7 +119,7 @@ const Content: React.FC<{
                         </div>
                     </section>
 
-                    <section className='relative w-full md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-[35vw] md:p-8'>
+                    <section className='relative w-full h-auto md:flex-1 flex flex-col-reverse md:items-center justify-center gap-12 overflow-hidden p-4 pb-10 pt-[35vw] md:p-8'>
                         <span className='w-full max-w-md self-end md:self-start'>
                             <h1 className='font-league text-[10vw] md:text-[8vw] leading-[80%] md:hidden pb-10'>
                                 Full-stack developer
@@ -155,6 +155,12 @@ const Content: React.FC<{
                                 {/* Kolem webových aplikací se motám už více než
                                 půlku svého života a chtěl bych tu tyto
                                 dovednosti zužitkovat! */}
+                                A kdo vlastně jsem? Trochu plavec, trochu
+                                kytarista, trochu umělec... Ale hlavně webař a
+                                programátor. A protože nás s bráchou oba baví
+                                nestandartní, animované a umělecké weby,
+                                rozhodli jsme se vytvořit Motion Labs, kde
+                                bychom chtěli tyto hodnoty ztvárnit.
                             </p>
                         </div>
                     </section>
