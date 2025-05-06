@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import LoaderProvider from '@/_components/Loader/LoaderProvider'
 
-export const metadata = {
+export const metadata: Metadata = {
     title: {
         default: 'Motionlabs',
         template: '%s | Motionlabs',
