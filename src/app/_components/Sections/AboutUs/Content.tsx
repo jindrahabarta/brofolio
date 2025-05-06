@@ -119,11 +119,11 @@ const Content: React.FC<{
                             </h1>
                             <p className='font-instrument text-justify text-base sm:text-xl indent-4'>
                                 A kdo vlastně jsem? Trochu plavec, trochu
-                                kytarista, trochu umělec... Ale hlavně webař a
+                                kytarista, trochu umělec… Ale hlavně webař a
                                 programátor. A protože nás s bráchou oba baví
-                                nestandartní, animované a umělecké weby,
+                                nestandardní, animované a umělecké weby,
                                 rozhodli jsme se vytvořit Motion Labs, kde
-                                bychom chtěli tyto hodnoty prosazovat.
+                                chceme tyto hodnoty prosazovat.
                             </p>
                         </span>
 
@@ -133,9 +133,9 @@ const Content: React.FC<{
                             </h1>
 
                             <p className='w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4'>
-                                Technologie mě fascinují už od dětství. Bavilo
-                                mě zkoumat, jak věci fungují, a postupně jsem
-                                začal tvořit vlastní projekty.
+                                K technologiím mě to táhlo už od malička a
+                                postupem času jsem se dostal k programování a
+                                tvorbě vlastních projektů.
                             </p>
                         </div>
                     </section>

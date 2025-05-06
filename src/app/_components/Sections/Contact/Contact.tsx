@@ -22,7 +22,7 @@ const Contact = () => {
             />
             <div id='contact-bg' className='absolute inset-0' />
 
-            <div className='relative w-full flex flex-col lg:flex-row-reverse justify-evenly items-center gap-12 lg:gap-8 px-4 sm:px-8 py-16 pt-[11.8vw]'>
+            <div className='relative w-full flex flex-col lg:flex-row-reverse justify-evenly items-center gap-12 lg:gap-8 px-8 py-16 pt-[11.8vw]'>
                 <div className='flex-1 sm:max-w-xl'>
                     <Image
                         src='/images/contact/ContactGif2.webp'
