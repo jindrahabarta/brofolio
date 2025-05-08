@@ -133,8 +133,8 @@ const Content: React.FC<{
                             </h1>
 
                             <p className='w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4'>
-                                K technologiím mě to táhlo už od malička a
-                                postupem času jsem se dostal k programování a
+                                K technologiím mě to táhlo už od malička.
+                                Postupem času jsem se dostal k programování a
                                 tvorbě vlastních projektů.
                             </p>
                         </div>
