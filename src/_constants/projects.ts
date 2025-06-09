@@ -44,7 +44,12 @@ export const projectList: IProject[] = [
         badges: ['Next.js', 'React', 'Express.js'],
         pin: true,
         color: 'bg-violet-500',
-        content: [],
+        content: ['Webové stránky se zaměřením 3D tisku na zakázku. Součástí webu je 3D kalkulátor, který umožňuje v několika krocích poptat zakázku s vypočítanou cenou.',
+            '<h2>Design',
+            'Celé stránky jsou lazené do fialového designu podle požadavku klienta. Jedná se zejména o prezentaci služby 3D tisku společně s CTA tlačítky pro možnost objednání si vyhotovení vlastního 3D Modelu na zakázku. Webové stránky popisují objednávkový proces a nabízejí možnost objednat přes formulář, nebo specializovaný kalkulátor. Jsou velmi jednoduché, přehledné a tím pádem snadno čitelné.',
+            '<h2>3D Kalkulátor',
+            'Zadáním bylo vytvořit poptávkový formulář s možností vypočítat cenu tisku a to dle spotřeby materiálu tak, aby zákazník nemusel čekat. Kalkulátor potencionálního zákazníka provede v několika krocích různými možnostmi tisku (např: Odolný materiál, Pevnost objektu, Barva...), tak aby vyhovoval přesně jeho požadavkům. Po nahrátí 3D modelu se vypočítá cena podle zadaných parametrů. Následně zákazník odešle poptávku. Tyto kroky urychlují celý proces objednávání modelu šitého na míru a zvyšuje konverzi objednávek.'
+        ],
     },
     {
         name: 'Avantgarda',
@@ -58,7 +63,7 @@ export const projectList: IProject[] = [
         badges: ['Next.js'],
         pin: true,
         color: 'bg-orange-500',
-        content: [],
+        content: ['Solární studio Avantgarda v centru Olomouce. Prezentační webové stránky tvořené klientovi na míru.'],
     },
     {
         name: 'Habartovi.cz',
@@ -74,7 +79,7 @@ export const projectList: IProject[] = [
         color: 'bg-orange-400',
         content: [
             'Prezentační webové stránky rodinného ubytování v Červené Vodě, které nabízí možnost vyzkoušet si keramické řemeslo v domácí keramické dílně.',
-            '<h2>"Fresh" kabát',
+            '<h2>Nový/starý design',
             'Starému designu byl navléknutý nový kabát. Projekt zahrnoval kompletní přestavbu a redesign veškerého obsahu, včetně modernizace loga. U tvorby nového designu byl kladen důraz na přehlednost stránek, vytvoření svižných stránek, které návštěvníka nenudí při jejich listování. Proto do designu byly zahrnuty animace pro oživení celkového dojmu. Zadáním také bylo, zachovat určité prvky původních stránek. Proto web kombinuje jak moderní přistup k tvorbě stránek, tak starší sekce, odkazující na původní atmosféru webových stránek.',
             '<h2>Vícejazyčnost',
             'Pro širší zásah a návštěvnost webu ze zahraničí, jsou stránky přeložené do 4 jazyků. To umožňuje návštěvníkům ze zahraničí číst obsah webu bez jakéhokoliv rozšíření nebo překladače.',

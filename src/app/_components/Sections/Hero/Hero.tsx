@@ -90,7 +90,7 @@ const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                                 ů
                             </span>
                         </span>
-                        <p className='text-xl md:text-2xl lg:text-3xl'>
+                        <p className='text-xl md:text-2xl'>
                             In publishing and graphic design, lorem ipsum is
                             common placeholder text used to demonstrate the
                             graphic elements of a document.

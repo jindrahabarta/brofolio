@@ -23,7 +23,7 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                 <div className='flex-1 p-4 border-white border flex flex-col justify-between'>
                     <div>
                         <div
-                            className='cursor-pointer w-fit'
+                            className='cursor-pointer w-fit h-20'
                             onClick={scrollToTop}
                         >
                             <Image
@@ -34,7 +34,7 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                 width={100}
                                 height={50}
                                 alt='Logo'
-                                className='h-12 aspect-[10/5] object-cover'
+                                className='h-full aspect-[10/5] object-cover'
                             ></Image>
                         </div>
                         <ul className='mt-12 text-lg flex flex-col'>
