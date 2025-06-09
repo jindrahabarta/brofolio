@@ -3,8 +3,8 @@
 import Lenis from 'lenis'
 import Navigation from '@/_components/Navigation/Navigation'
 import {
+    Charm,
     // Source_Serif_4,
-    // Charm,
     Instrument_Serif,
     League_Gothic,
 } from 'next/font/google'
@@ -21,12 +21,12 @@ import { usePathname } from 'next/navigation'
 //     weight: ['400', '700'],
 //     variable: '--source-serif',
 // })
-// const charm = Charm({
-//     subsets: ['latin'],
-//     weight: ['400', '700'],
-//     variable: '--charm',
-//     display: 'swap',
-// })
+const charm = Charm({
+    subsets: ['latin'],
+    weight: ['400', '700'],
+    variable: '--charm',
+    display: 'swap',
+})
 const owners = localFont({
     src: '../_assets/fonts/owners-xxwide.ttf',
     variable: '--owners',
@@ -78,6 +78,7 @@ export default function RootLayout({
                     ${instrument.variable}
                     ${league.variable}
                     ${owners.variable}
+                    ${charm.variable}
                 `}
             >
                 <Navigation lenis={lenis}></Navigation>

@@ -1,4 +1,3 @@
-import { log } from 'console'
 import type { Config } from 'tailwindcss'
 
 export default {
@@ -27,7 +26,7 @@ export default {
             },
             fontFamily: {
                 // sourceSerif: 'var(--source-serif)',
-                // charm: 'var(--charm)',
+                charm: 'var(--charm)',
                 owners: 'var(--owners)',
                 // emberlyRegular: 'var(--emberly-regular)',
                 instrument: 'var(--instrument)',
