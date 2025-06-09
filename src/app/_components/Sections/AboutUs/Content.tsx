@@ -123,7 +123,7 @@ const Content: React.FC<{
                                 programátor. A protože nás s bráchou oba baví
                                 nestandardní, animované a umělecké weby,
                                 rozhodli jsme se vytvořit Motion Labs, kde
-                                chceme tyto hodnoty prosazovat.
+                                chceme tyto hodnoty ztvárnit.
                             </p>
                         </span>
 

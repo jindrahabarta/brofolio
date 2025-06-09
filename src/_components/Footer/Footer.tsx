@@ -37,8 +37,8 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                 className='h-12 aspect-[10/5] object-cover'
                             ></Image>
                         </div>
-                        <ul className='mt-12'>
-                            <li>IČO: 123 23</li>
+                        <ul className='mt-12 text-lg flex flex-col'>
+                            <li>IČO: 22371575</li>
                             <li>Moravský Karlov 103</li>
                             <li>Červená Voda</li>
                         </ul>
@@ -46,7 +46,7 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
 
                     <p className='text-right mt-12'>
                         @2025 -{' '}
-                        <Link className='hover:underline' href={'/'}>
+                        <Link className='hover:underline text-lg' href={'/'}>
                             MotionLabs.cz
                         </Link>
                     </p>

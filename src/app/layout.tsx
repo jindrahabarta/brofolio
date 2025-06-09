@@ -45,10 +45,6 @@ const league = League_Gothic({
     weight: ['400'],
     variable: '--league',
 })
-const morn = localFont({
-    src: '../_assets/fonts/Morn-Black.ttf',
-    variable: '--morn',
-})
 
 export default function RootLayout({
     children,
@@ -82,7 +78,6 @@ export default function RootLayout({
                     ${instrument.variable}
                     ${league.variable}
                     ${owners.variable}
-                    ${morn.variable}
                 `}
             >
                 <Navigation lenis={lenis}></Navigation>
