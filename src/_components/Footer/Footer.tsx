@@ -8,8 +8,10 @@ import RetroButton from '../Buttons/RetroButton'
 import MailButton from './MailButton'
 import SadCat from '@/../public/images/Footer/sadcat.gif'
 
+
 const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
-    const scrollToTop = () => {
+    const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault()
         if (!lenis) return
         lenis.current?.scrollTo('#home')
     }
@@ -22,21 +24,15 @@ const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
             >
                 <div className='flex-1 p-4 border-white border flex flex-col justify-between'>
                     <div>
-                        <div
-                            className='cursor-pointer w-fit h-20'
-                            onClick={scrollToTop}
-                        >
-                            <Image
+                        <div className='z-50 select-none pointer-events-auto flex'>
+                            <Link
                                 id='navLogo'
-                                src={
-                                    'https://daydrift.design/images/daydrift_logo.svg'
-                                }
-                                width={100}
-                                height={50}
-                                alt='Logo'
-                                className='h-full aspect-[10/5] object-cover'
-                            ></Image>
+                                href='/'
+                                className='inline-block w-16 sm:w-20 aspect-[8/5] origin-left'
+                                onClick={(e) => scrollToTop(e)}
+                            ></Link>
                         </div>
+
                         <ul className='mt-12 text-lg flex flex-col'>
                             <li>IČO: 22371575</li>
                             <li>Moravský Karlov 103</li>

@@ -29,6 +29,10 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
         lenis.current.start()
     }
 
+    const scrollTo = () => {
+        lenis.current?.scrollTo('#contact')
+    }
+
     return (
         <header className='fixed w-screen text-white p-4 sm:p-8 z-50 pointer-events-none'>
             <nav className='flex z-40 items-center justify-between gap-2 '>
@@ -45,6 +49,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                         text='Kontakt'
                         link='/'
                         id='blurry1'
+                        onClick={scrollTo}
                     ></BlurryButton>
 
                     <HamburgerIcon
