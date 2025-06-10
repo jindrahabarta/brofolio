@@ -15,7 +15,7 @@ const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
 
                 <div className='self-start lg:self-center md:flex-1 flex items-end md:items-center justify-center pb-20 md:pb-0'>
                     <div className='max-w-xl flex flex-col gap-2'>
-                        <h1 className='flex font-owners uppercase leading-[90%] font-black text-[13vw] md:text-[5rem] lg:text-[5rem]'>
+                        <h1 className='flex font-owners uppercase leading-[90%] font-black text-[10vw] md:text-[5rem] lg:text-[5rem]'>
                             Motion Labs
                         </h1>
                         <span

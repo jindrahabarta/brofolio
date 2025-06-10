@@ -13,8 +13,8 @@ const Projects = () => {
             <ProjectsList></ProjectsList>
 
             <section className='projectsListItem pt-24 pb-32'>
-                <p className='font-charm text-center text-[clamp(3vw,10vw,3rem)]'>
-                    ...víc toho tady už není :&#40;
+                <p className='font-charm text-center text-[clamp(3vw,7vw,2rem)]'>
+                    ...víc toho tady zatím není :&#40;
                 </p>
             </section>
         </div>

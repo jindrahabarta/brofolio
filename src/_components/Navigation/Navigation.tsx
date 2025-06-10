@@ -11,9 +11,13 @@ import RainbowBar from './RainbowBar'
 import './style.css'
 import BlurryButton from '../Buttons/BlurryButton'
 import useNavTimeline from '@/_animations/useNavTimeline'
+import { usePathname } from 'next/navigation'
+
 
 const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     const navTl = useNavTimeline()
+    const path = usePathname()
+
 
     const openMenu = () => {
         if (!lenis.current) return
@@ -30,7 +34,11 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
     }
 
     const scrollTo = () => {
-        lenis.current?.scrollTo('#contact')
+        if (path === '/') {
+            lenis.current?.scrollTo('#contact')
+        } else {
+            return
+        }
     }
 
     return (
@@ -47,7 +55,7 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                 <div className='flex items-center gap-4 pointer-events-auto'>
                     <BlurryButton
                         text='Kontakt'
-                        link='/'
+                        link='/#contact'
                         id='blurry1'
                         onClick={scrollTo}
                     ></BlurryButton>
