@@ -75,9 +75,9 @@ const ProjectsList = () => {
 
         const mm = gsap.matchMedia()
 
-        gsap.to('#footer', {
-            opacity: 0,
-        })
+        // gsap.to('#footer', {
+        //     opacity: 0,
+        // })
 
         mm.add('(max-width: 639px)', () => {
             router.push(`/projects/${slug}`)
@@ -119,6 +119,7 @@ const ProjectsList = () => {
         animate()
         window.addEventListener('mousemove', getMousePosition)
         return () => window.removeEventListener('mousemove', getMousePosition)
+
     })
 
     useEffect(() => {

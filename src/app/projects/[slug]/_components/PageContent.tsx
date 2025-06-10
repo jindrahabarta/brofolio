@@ -23,6 +23,9 @@ const Project = () => {
             .set('#footer', {
                 opacity: 1,
             })
+            .set(document.body, {
+                backgroundColor: 'black'
+            })
             .to('#bannerOverlay', {
                 backgroundColor: 'rgba(0,0,0,0.2)',
             })
@@ -38,7 +41,7 @@ const Project = () => {
                 '<'
             )
         landingTl.play()
-    }, [])
+    }, [slug])
 
     if (!selectedProject)
         return (

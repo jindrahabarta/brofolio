@@ -35,7 +35,7 @@ const HamburgerIcon = ({
                 aria-label='Hamburger icon open'
                 className='hamburgerIcon bg-black/30 w-fit h-12 sm:h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
-                <span className='font-owners text-base backdrop:invert blurryBtnText'>
+                <span className='font-owners text-xs md:text-base backdrop:invert blurryBtnText'>
                     Zavřít
                 </span>
             </button>
