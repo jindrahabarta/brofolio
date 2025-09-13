@@ -1,7 +1,5 @@
-'use client'
-
-import Lenis from 'lenis'
-import Navigation from '@/_components/Navigation/Navigation'
+// import Lenis from 'lenis'
+// import Navigation from '@/_components/Navigation/Navigation'
 import {
     Charm,
     // Source_Serif_4,
@@ -11,10 +9,13 @@ import {
 import localFont from 'next/font/local'
 
 import './globals.css'
+import ReactLenis from 'lenis/react'
+import Navigation from '@/_components/Navigation/Navigation'
 import Footer from '@/_components/Footer/Footer'
-import { useEffect, useRef } from 'react'
-import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
-import { usePathname } from 'next/navigation'
+// import Footer from '@/_components/Footer/Footer'
+// import { useEffect, useRef } from 'react'
+// import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
+// import { usePathname } from 'next/navigation'
 
 // const source_serif_4 = Source_Serif_4({
 //     subsets: ['latin'],
@@ -51,42 +52,44 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
-    const path = usePathname()
-    const lenis = useRef<null | Lenis>(null)
+    //     const path = usePathname()
+    // const lenis = useRef<null | Lenis>(null)
 
-    useEffect(() => {
-        //Lenis
-        lenis.current = new Lenis()
-        if (!lenis.current) return
+    // useEffect(() => {
+    //     //Lenis
+    //     lenis.current = new Lenis()
+    //     if (!lenis.current) return
 
-        function raf(time: number) {
-            if (!lenis.current) return
+    //     function raf(time: number) {
+    //         if (!lenis.current) return
 
-            lenis.current.raf(time)
-            requestAnimationFrame(raf)
-        }
-        requestAnimationFrame(raf)
+    //         lenis.current.raf(time)
+    //         requestAnimationFrame(raf)
+    //     }
+    //     requestAnimationFrame(raf)
 
-        gsapAnimationsInit(path)
-    }, [path])
+    //     gsapAnimationsInit(path)
+    // }, [path])
 
     return (
         <html lang='cs'>
-            <body
-                className={`antialiased
+            <ReactLenis root options={{ lerp: 0.1, duration: 1.5 }}>
+                <body
+                    className={`antialiased
                     bg-black 
                     ${instrument.variable}
                     ${league.variable}
                     ${owners.variable}
                     ${charm.variable}
                 `}
-            >
-                <Navigation lenis={lenis}></Navigation>
+                >
+                    <Navigation></Navigation>
 
-                <main>{children}</main>
+                    <main>{children}</main>
 
-                <Footer lenis={lenis} />
-            </body>
+                    <Footer />
+                </body>
+            </ReactLenis>
         </html>
     )
 }

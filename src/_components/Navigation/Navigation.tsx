@@ -1,5 +1,5 @@
-import React, { RefObject } from 'react'
-import Lenis from 'lenis'
+'use client'
+import React, { useEffect } from 'react'
 
 import HamburgerIcon from './HamburgerIcon'
 
@@ -12,34 +12,40 @@ import './style.css'
 import BlurryButton from '../Buttons/BlurryButton'
 import useNavTimeline from '@/_animations/useNavTimeline'
 import { usePathname } from 'next/navigation'
+import { useLenis } from 'lenis/react'
+import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
 
-
-const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
+const Navigation = () => {
     const navTl = useNavTimeline()
     const path = usePathname()
 
+    const lenis = useLenis()
 
     const openMenu = () => {
-        if (!lenis.current) return
+        if (!lenis) return
 
-        lenis.current.stop()
+        lenis.stop()
         navTl.current.play()
     }
 
     const closeMenu = () => {
-        if (!lenis.current) return
+        if (!lenis) return
 
         navTl.current.reverse()
-        lenis.current.start()
+        lenis.start()
     }
 
     const scrollTo = () => {
         if (path === '/') {
-            lenis.current?.scrollTo('#contact')
+            lenis?.scrollTo('#contact')
         } else {
             return
         }
     }
+
+    useEffect(() => {
+        gsapAnimationsInit(path)
+    }, [path])
 
     return (
         <header className='fixed w-screen text-white p-4 sm:p-8 z-50 pointer-events-none'>
@@ -92,25 +98,21 @@ const Navigation = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
                                         text='Úvod'
                                         link='#home'
                                         altLink='/'
-                                        lenis={lenis}
                                     ></NavLink>
                                     <NavLink
                                         text='O nás'
                                         link='#about'
                                         altLink='/#about'
-                                        lenis={lenis}
                                     ></NavLink>
                                     <NavLink
                                         text='Projekty'
                                         link='#projects'
                                         altLink='/#projects'
-                                        lenis={lenis}
                                     ></NavLink>
                                     <NavLink
                                         text='Kontakt'
                                         link='#contact'
                                         altLink='/#contact'
-                                        lenis={lenis}
                                     ></NavLink>
                                 </ul>
                             </div>

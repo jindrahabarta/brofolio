@@ -1,27 +1,26 @@
-import Lenis from 'lenis'
+import { useLenis } from 'lenis/react'
 import { usePathname } from 'next/navigation'
-import React, { RefObject } from 'react'
+import React from 'react'
 
 const NavLink = ({
     link,
     altLink,
     text,
-    lenis,
 }: {
     link: string
     altLink: string
     text: string
-    lenis: RefObject<Lenis | null>
 }) => {
     const path = usePathname()
+    const lenis = useLenis()
 
     const handleScrollTo: React.MouseEventHandler<HTMLAnchorElement> = (e) => {
-        if (!lenis.current) return
+        if (!lenis) return
 
         if (path === '/') {
             e.preventDefault()
-            lenis.current.start()
-            lenis.current.scrollTo(link)
+            lenis.start()
+            lenis.scrollTo(link)
         }
     }
 

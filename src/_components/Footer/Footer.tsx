@@ -1,19 +1,22 @@
-import React, { RefObject } from 'react'
+'use client'
+import React from 'react'
 import FooterBottom from './FooterBottom'
 import Image from 'next/image'
-
-import Lenis from 'lenis'
 import Link from 'next/link'
 import RetroButton from '../Buttons/RetroButton'
 import MailButton from './MailButton'
 import SadCat from '@/../public/images/Footer/sadcat.gif'
+import { useLenis } from 'lenis/react'
 
+const Footer = () => {
+    const lenis = useLenis()
 
-const Footer = ({ lenis }: { lenis: RefObject<Lenis | null> }) => {
-    const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    const scrollToTop = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    ) => {
         e.preventDefault()
         if (!lenis) return
-        lenis.current?.scrollTo('#home')
+        lenis?.scrollTo('#home')
     }
 
     return (
