@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
-
 import { projectList } from '@/_constants/projects'
 import { useParams } from 'next/navigation'
 import ArrowBack from '@/_assets/icons/global/ArrowBack'
@@ -24,7 +23,7 @@ const Project = () => {
                 opacity: 1,
             })
             .set(document.body, {
-                backgroundColor: 'black'
+                backgroundColor: 'black',
             })
             .to('#bannerOverlay', {
                 backgroundColor: 'rgba(0,0,0,0.2)',
@@ -61,7 +60,7 @@ const Project = () => {
                     width={1500}
                     height={1000}
                     className='object-cover w-full h-full object-center'
-                    priority
+                    priority={true}
                 ></Image>
                 /
                 <figure

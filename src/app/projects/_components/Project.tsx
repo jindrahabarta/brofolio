@@ -1,5 +1,6 @@
 import React from 'react'
 import { IProject } from '@/_constants/projects'
+import Link from 'next/link'
 
 const Project = ({
     handleMouseEnter,
@@ -18,7 +19,8 @@ const Project = ({
 }) => {
     return (
         <li className='projectsListItem h-20 sm:h-[8.5rem] overflow-hidden relative w-full border-t-[1px] border-white/20 group bg-black hover:bg-white duration-500 ease-out '>
-            <a
+            <Link
+                prefetch
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 className='px-4 sm:group-hover:-translate-y-[8.5rem] duration-500 ease-out flex justify-between items-center w-full select-none     h-20 sm:h-[8.5rem]'
@@ -47,7 +49,7 @@ const Project = ({
                         )
                     })}
                 </div>
-            </a>
+            </Link>
             <a
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
