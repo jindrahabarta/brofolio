@@ -27,15 +27,13 @@ const FooterBottom = () => {
                                 Website developement
                             </span>
                             <span className='text-sm'>&#9679;</span>
-                            <span className='font-charm'>Social media</span>
-                            <span className='text-sm'>&#9679;</span>
                             <span className='font-charm'>UX</span>
                             <span className='text-sm'>&#9679;</span>
                             <span className='font-charm'>UI</span>
                             <span className='text-sm'>&#9679;</span>
-                            <span className='font-charm'>
-                                Website developement
-                            </span>
+                            <span className='font-charm'>Performance</span>
+                            <span className='text-sm'>&#9679;</span>
+                            <span className='font-charm'>Design</span>
                             <span className='text-sm'>&#9679;</span>
                         </Marquee>
                     </p>
