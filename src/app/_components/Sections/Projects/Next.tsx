@@ -6,7 +6,7 @@ import ArrowBack from '@/_assets/icons/global/ArrowBack'
 
 const Next = () => {
     return (
-        <Link href={'/projects'}>
+        <Link aria-label='Navigation link to all projects' href={'/projects'}>
             <div className='group flex justify-center items-center hover:cursor-pointer mt-10'>
                 <Marquee
                     sets={6}
@@ -36,7 +36,11 @@ const Next = () => {
                     />
                 </ul>
                 <div className='absolute z-30'>
-                    <button className='border relatve border-white rounded-full w-20 aspect-square group/arrowBtn hover:scale-110 duration-200 sm:scale-0 group-hover:scale-100 ease-out origin-center'>
+                    <button
+                        type='button'
+                        aria-label='Go to all projects'
+                        className='border relatve border-white rounded-full w-20 aspect-square group/arrowBtn hover:scale-110 duration-200 sm:scale-0 group-hover:scale-100 ease-out origin-center'
+                    >
                         <figure className='w-full h-full bg-gray-300 opacity-0 group-hover/arrowBtn:opacity-100 absolute top-0 rounded-full flex items-center justify-center scale-0 group-hover/arrowBtn:scale-100 delay-100 duration-300 ease-out'>
                             <div className='w-full h-full bg-white rounded-full  sm:scale-0 group-hover/arrowBtn:scale-100 delay-200 duration-300 ease-out'></div>
                         </figure>

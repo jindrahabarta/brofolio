@@ -326,6 +326,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <button
                     type='submit'
+                    aria-label='Submit contact form'
                     className='self-start text-lg relative px-4 py-2 mt-4'
                     disabled={formState === FormState.SENDING}
                 >

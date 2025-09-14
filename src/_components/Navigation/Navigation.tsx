@@ -35,11 +35,22 @@ const Navigation = () => {
         lenis.start()
     }
 
-    const scrollTo = () => {
+    // const scrollTo = () => {
+    //     if (path === '/') {
+    //         lenis?.scrollTo('#contact')
+    //     } else {
+    //         return
+    //     }
+    // }
+    const scrollTo = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+        id: string
+    ) => {
+        if (!lenis) return
+
         if (path === '/') {
-            lenis?.scrollTo('#contact')
-        } else {
-            return
+            e.preventDefault()
+            lenis?.scrollTo(id)
         }
     }
 
@@ -53,7 +64,9 @@ const Navigation = () => {
                 <div className='z-50 select-none pointer-events-auto flex'>
                     <Link
                         id='navLogo'
+                        aria-label='Motion labs logo'
                         href='/'
+                        onClick={(e) => scrollTo(e, '#home')}
                         className='inline-block w-16 sm:w-20 aspect-[8/5] origin-left'
                     ></Link>
                 </div>
@@ -126,7 +139,7 @@ const Navigation = () => {
                         <em>Motion</em> <strong>Labs</strong>
                     </h1>
                     <p className='navBarTitle opacity-0 font-instrument text-gray-400 text-2xl'>
-                        Design, web dev, etc..
+                        Web development. Design &amp; performance
                     </p>
                 </div>
             </figure>
@@ -135,7 +148,3 @@ const Navigation = () => {
 }
 
 export default Navigation
-
-// const NavigationContent = () => {
-//     return <div></div>
-// }

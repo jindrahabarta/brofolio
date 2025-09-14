@@ -13,6 +13,7 @@ const ListItem: React.FC<{ project: IProject }> = ({ project }) => {
                 className={`group h-60 sm:h-80 block relative bg-opacity-0 hover:bg-opacity-100 ${
                     project.color || ''
                 } border-b border-gray-700 ease-out duration-200`}
+                aria-label={`Navigation link to project ${project.name}`}
             >
                 <Marquee
                     duration='40s'

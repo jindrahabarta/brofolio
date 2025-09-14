@@ -140,7 +140,6 @@ const Logo: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                 width={1000}
                 height={1000}
                 ref={imageRefShadow}
-                priority
                 className='max-w-md w-full absolute blur-lg opacity-50 scale-150'
             />
 
@@ -168,7 +167,6 @@ const Logo: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                 height={1000}
                 ref={logoRef}
                 onLoad={onLogoLoad}
-                priority
                 className='invert max-w-md w-full'
                 style={{ transform: 'rotate3d(1, 1, 0, 10deg)' }}
             />

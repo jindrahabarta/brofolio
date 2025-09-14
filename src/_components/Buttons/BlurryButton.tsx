@@ -6,12 +6,15 @@ const BlurryButton = ({
     text,
     link,
     id,
-    onClick
+    onClick,
 }: {
     text: string
     link: string
     id: string
-    onClick?: () => void
+    onClick: (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+        id: string
+    ) => void
 }) => {
     const mouseEnter: React.MouseEventHandler<HTMLAnchorElement> = () => {
         gsap.to(`#btnBlur-${id}`, {
@@ -48,8 +51,9 @@ const BlurryButton = ({
             onMouseLeave={mouseLeave}
             id={id}
             href={link}
-            onClick={onClick}
+            onClick={(e) => onClick(e, '#contact')}
             className='btnFilter blurryBtn h-12 sm:h-14 w-fit px-4 sm:px-8 flex items-center rounded-xl text-xs sm:text-sm relative overflow-hidden'
+            aria-label={`Navigation link to ${text}`}
         >
             <figure
                 id={`btnBlur-${id}`}

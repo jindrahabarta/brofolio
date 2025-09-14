@@ -7,16 +7,22 @@ import RetroButton from '../Buttons/RetroButton'
 import MailButton from './MailButton'
 import SadCat from '@/../public/images/Footer/sadcat.gif'
 import { useLenis } from 'lenis/react'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
     const lenis = useLenis()
+    const path = usePathname()
 
-    const scrollToTop = (
-        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    const scrollTo = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+        id: string
     ) => {
-        e.preventDefault()
         if (!lenis) return
-        lenis?.scrollTo('#home')
+
+        if (path === '/') {
+            e.preventDefault()
+            lenis?.scrollTo(id)
+        }
     }
 
     return (
@@ -30,9 +36,10 @@ const Footer = () => {
                         <div className='z-50 select-none pointer-events-auto flex'>
                             <Link
                                 id='navLogo'
-                                href='/'
+                                aria-label='Motion labs logo'
+                                href='/#home'
                                 className='inline-block w-16 sm:w-20 aspect-[8/5] origin-left'
-                                onClick={(e) => scrollToTop(e)}
+                                onClick={(e) => scrollTo(e, '#home')}
                             ></Link>
                         </div>
 
@@ -45,7 +52,12 @@ const Footer = () => {
 
                     <p className='text-right mt-12'>
                         @2025 -{' '}
-                        <Link className='hover:underline text-lg' href={'/'}>
+                        <Link
+                            aria-label='MotionLabs Link'
+                            className='hover:underline text-lg'
+                            href={'/#home'}
+                            onClick={(e) => scrollTo(e, '#home')}
+                        >
                             MotionLabs.cz
                         </Link>
                     </p>
@@ -92,16 +104,40 @@ const Footer = () => {
                     <h2 className='font-semibold'>Odkazy</h2>
                     <ul>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
-                            <Link href={'/'}>Uvod</Link>
+                            <Link
+                                aria-label='Navigation link to home'
+                                href={'/#home'}
+                                onClick={(e) => scrollTo(e, '#home')}
+                            >
+                                Uvod
+                            </Link>
                         </li>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
-                            <Link href={'/'}>O nas</Link>
+                            <Link
+                                href={'/#about'}
+                                aria-label='Navigation link to about us'
+                                onClick={(e) => scrollTo(e, '#about')}
+                            >
+                                O nas
+                            </Link>
                         </li>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
-                            <Link href={'/'}>Projects</Link>
+                            <Link
+                                href={'/#projects'}
+                                aria-label='Navigation link to projects'
+                                onClick={(e) => scrollTo(e, '#projects')}
+                            >
+                                Projects
+                            </Link>
                         </li>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
-                            <Link href={'/'}>Kontakt</Link>
+                            <Link
+                                href={'/#contact'}
+                                aria-label='Navigation link to contact'
+                                onClick={(e) => scrollTo(e, '#contact')}
+                            >
+                                Kontakt
+                            </Link>
                         </li>
                     </ul>
                 </div>

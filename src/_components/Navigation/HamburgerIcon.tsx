@@ -10,8 +10,9 @@ const HamburgerIcon = ({
     if (!variant || variant === 'open')
         return (
             <button
+                type='button'
+                aria-label='Open menu'
                 onClick={handleClick}
-                aria-label='Hamburger icon open'
                 className='hamburgerIcon btnFilter group w-12 h-12 sm:w-14 sm:h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
                 <div className='flex flex-col justify-center items-center gap-[0.4rem] sm:gap-2'>
@@ -31,8 +32,9 @@ const HamburgerIcon = ({
     else if (variant === 'close')
         return (
             <button
+                type='button'
                 onClick={handleClick}
-                aria-label='Hamburger icon open'
+                aria-label='Close menu'
                 className='hamburgerIcon bg-black/30 w-fit h-12 sm:h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
                 <span className='font-owners text-xs md:text-base backdrop:invert blurryBtnText'>

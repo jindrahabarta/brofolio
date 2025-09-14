@@ -26,7 +26,7 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
                 .to('#navBg', {
                     css: {
                         backdropFilter: 'blur(8px)',
-                        WebkitBackdropFilter: 'blur(8px)',
+                        // WebkitBackdropFilter: 'blur(8px)',
                         backgroundColor: 'rgba(0,0,0,0.5)',
                     },
                 })
@@ -71,7 +71,7 @@ export default function useNavTimeline(): RefObject<gsap.core.Timeline> {
                 .to('#navBg', {
                     css: {
                         backdropFilter: 'blur(8px)',
-                        WebkitBackdropFilter: 'blur(8px)',
+                        // WebkitBackdropFilter: 'blur(8px)',
                         backgroundColor: 'rgba(0,0,0,0.5)',
                     },
                 })

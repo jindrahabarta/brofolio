@@ -20,80 +20,15 @@ const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                         </h1>
                         <span
                             id='heroSubHeadig'
-                            className='pb-1 text-4xl md:text-5xl text-white'
+                            className='font-league pb-1 text-4xl md:text-5xl text-white'
                         >
-                            <span className='heroHeadingSpan inline-block font-league'>
-                                T
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league'>
-                                v
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                o
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                r
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                b
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                a
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                &nbsp;
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                z
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                a
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                k
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                á
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                z
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                k
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                o
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                v
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                ý
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                ch
-                            </span>
-
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                &nbsp;
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                w
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                e
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                b
-                            </span>
-                            <span className='heroHeadingSpan inline-block font-league '>
-                                ů
-                            </span>
+                            Tvoříme unikátní weby na zakázku.
                         </span>
                         <p className='text-xl md:text-2xl'>
-                            In publishing and graphic design, lorem ipsum is
-                            common placeholder text used to demonstrate the
-                            graphic elements of a document.
+                            Naším cílem je doručovat vyladěné weby do posledního
+                            pixelu, ovšem ne na úkor jejich{' '}
+                            <span className=' underline'>výkonu</span>. Rychlost
+                            a design jsou klíčem.
                         </p>
                     </div>
                 </div>

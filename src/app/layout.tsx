@@ -1,9 +1,4 @@
-import {
-    Charm,
-    // Source_Serif_4,
-    Instrument_Serif,
-    League_Gothic,
-} from 'next/font/google'
+import { Charm, Instrument_Serif, League_Gothic } from 'next/font/google'
 import localFont from 'next/font/local'
 
 import './globals.css'
@@ -11,11 +6,6 @@ import ReactLenis from 'lenis/react'
 import Navigation from '@/_components/Navigation/Navigation'
 import Footer from '@/_components/Footer/Footer'
 
-// const source_serif_4 = Source_Serif_4({
-//     subsets: ['latin'],
-//     weight: ['400', '700'],
-//     variable: '--source-serif',
-// })
 const charm = Charm({
     subsets: ['latin'],
     weight: ['400', '700'],
@@ -26,10 +16,7 @@ const owners = localFont({
     src: '../_assets/fonts/owners-xxwide.ttf',
     variable: '--owners',
 })
-// const emberly_regular = localFont({
-//     src: '../_assets/fonts/Emberly-Regular.otf',
-//     variable: '--emberly-regular',
-// })
+
 const instrument = Instrument_Serif({
     subsets: ['latin'],
     weight: ['400'],

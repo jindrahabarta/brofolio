@@ -7,8 +7,9 @@ export const metadata: Metadata = {
         template: '%s | Motionlabs',
     },
     authors: [{ name: 'Motionlabs', url: 'https://motionlabs.cz' }],
-    description: '',
-    keywords: [],
+    description:
+        'Tvoříme unikátní weby na zakázku. Náš cíl je doručovat weby vyladěné do posledního pixelu, ovšem ne na úkor jejich výkonu. Design a rychlost jsou klíčem.',
+    keywords: ['Zakázkové weby', 'Tvorba webů', 'Motion labs'],
     twitter: {
         card: 'summary_large_image',
     },

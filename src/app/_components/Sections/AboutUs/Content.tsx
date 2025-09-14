@@ -55,6 +55,7 @@ const Content: React.FC<{
                                     href={
                                         'https://www.instagram.com/drippy_rugs'
                                     }
+                                    aria-label='Link to drippy rugs instagram account'
                                 >
                                     @drippy_rugs
                                 </Link>

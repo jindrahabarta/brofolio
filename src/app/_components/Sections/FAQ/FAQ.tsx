@@ -28,7 +28,11 @@ const FAQ = () => {
 
                 <p className='p-2 bg-gray-100/80 rounded-xl text-black w-fit flex gap-6 items-center mt-6'>
                     <span>contact@email.cz</span>
-                    <button className='bg-white hover:bg-gray-100 duration-200 py-2 px-4 rounded-lg font-emberlyRegular text-xl'>
+                    <button
+                        type='button'
+                        aria-label='Copy email'
+                        className='bg-white hover:bg-gray-100 duration-200 py-2 px-4 rounded-lg font-emberlyRegular text-xl'
+                    >
                         copy
                     </button>
                 </p>

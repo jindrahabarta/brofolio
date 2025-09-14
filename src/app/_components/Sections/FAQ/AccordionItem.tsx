@@ -17,6 +17,8 @@ const AccordionItem = ({
     return (
         <div className='py-2'>
             <button
+                type='button'
+                aria-label='Open/close accordion'
                 onClick={onClick}
                 id={id.toString()}
                 className='flex justify-between w-full border-b border-black/40 pb-2'

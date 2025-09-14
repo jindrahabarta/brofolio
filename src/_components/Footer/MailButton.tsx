@@ -47,7 +47,7 @@ const MailButton = () => {
             onMouseMove={mouseMove}
             id='footerMail'
             className='text-[clamp(1rem,7vw,3.75rem)] sm:text-2xl md:text-2xl lg:text-4xl relative w-fit'
-            href={'mailto:motionlabs.cz'}
+            href={'mailto:jindriskuv@email.cz'}
         >
             motionlabs@info.cz
             <Image
@@ -59,7 +59,7 @@ const MailButton = () => {
                 height={100}
                 alt='Letter icon'
                 id='mailBtnLetter'
-                className={`absolute duration-200  ${
+                className={`absolute duration-200 w-auto  ${
                     cursor ? 'opacity-70' : 'opacity-0'
                 }`}
             ></Image>
