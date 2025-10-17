@@ -15,6 +15,26 @@ export interface IProject {
 
 export const projectList: IProject[] = [
     {
+        name: 'Lucie co ráda fotí',
+        slug: 'lucie-co-rada-foti',
+        description: 'Rodinné a svatební focení',
+        coverImage: '/images/Projects/lucie_small.webp',
+        bannerImage: '/images/Projects/lucie_full.webp',
+        logo: '/images/Projects/Logo/LucieLogo.svg',
+        url: 'https://www.luciefoti.cz/',
+        target: '_blank',
+        badges: ['Supabase', 'Next.js', 'Cloudinary'],
+        pin: true,
+        color: 'bg-orange-400',
+        content: [
+            'One page web, reprezentující práci svatební a rodinné fotografky se zaměřením na její fotografie. Stránky umožňují si pohodlně objednat focení přes kontaktní formulář. Obsah webu je nyní nově možné upravovat z naší administrace, kterou nově nabízíme našim klientům',
+            '<h2>Design',
+            '',
+            '<h2>Administrace',
+            'Novinka, admin',
+        ],
+    },
+    {
         name: 'Drippy Rugs',
         slug: 'drippy-rugs',
         description: 'Zakázková výroba koberečků',
@@ -44,11 +64,12 @@ export const projectList: IProject[] = [
         badges: ['Next.js', 'React', 'Express.js'],
         pin: true,
         color: 'bg-violet-500',
-        content: ['Webové stránky se zaměřením 3D tisku na zakázku. Součástí webu je 3D kalkulátor, který umožňuje v několika krocích poptat zakázku s vypočítanou cenou.',
+        content: [
+            'Webové stránky se zaměřením 3D tisku na zakázku. Součástí webu je 3D kalkulátor, který umožňuje v několika krocích poptat zakázku s vypočítanou cenou.',
             '<h2>Design',
             'Celé stránky jsou lazené do fialového designu podle požadavku klienta. Jedná se zejména o prezentaci služby 3D tisku společně s CTA tlačítky pro možnost objednání si vyhotovení vlastního 3D Modelu na zakázku. Webové stránky popisují objednávkový proces a nabízejí možnost objednat přes formulář, nebo specializovaný kalkulátor. Jsou velmi jednoduché, přehledné a tím pádem snadno čitelné.',
             '<h2>3D Kalkulátor',
-            'Zadáním bylo vytvořit poptávkový formulář s možností vypočítat cenu tisku a to dle spotřeby materiálu tak, aby zákazník nemusel čekat. Kalkulátor potencionálního zákazníka provede v několika krocích různými možnostmi tisku (např: Odolný materiál, Pevnost objektu, Barva...), tak aby vyhovoval přesně jeho požadavkům. Po nahrátí 3D modelu se vypočítá cena podle zadaných parametrů. Následně zákazník odešle poptávku. Tyto kroky urychlují celý proces objednávání modelu šitého na míru a zvyšuje konverzi objednávek.'
+            'Zadáním bylo vytvořit poptávkový formulář s možností vypočítat cenu tisku a to dle spotřeby materiálu tak, aby zákazník nemusel čekat. Kalkulátor potencionálního zákazníka provede v několika krocích různými možnostmi tisku (např: Odolný materiál, Pevnost objektu, Barva...), tak aby vyhovoval přesně jeho požadavkům. Po nahrátí 3D modelu se vypočítá cena podle zadaných parametrů. Následně zákazník odešle poptávku. Tyto kroky urychlují celý proces objednávání modelu šitého na míru a zvyšuje konverzi objednávek.',
         ],
     },
     {
@@ -63,7 +84,9 @@ export const projectList: IProject[] = [
         badges: ['Next.js'],
         pin: true,
         color: 'bg-orange-500',
-        content: ['Solární studio Avantgarda v centru Olomouce. Prezentační webové stránky tvořené klientovi na míru.'],
+        content: [
+            'Solární studio Avantgarda v centru Olomouce. Prezentační webové stránky tvořené klientovi na míru.',
+        ],
     },
     {
         name: 'Habartovi.cz',
@@ -76,7 +99,7 @@ export const projectList: IProject[] = [
         target: '_blank',
         badges: ['WordPress', 'Next.js'],
         pin: true,
-        color: 'bg-orange-400',
+        color: 'bg-green-400',
         content: [
             'Prezentační webové stránky rodinného ubytování v Červené Vodě, které nabízí možnost vyzkoušet si keramické řemeslo v domácí keramické dílně.',
             '<h2>Nový/starý design',
