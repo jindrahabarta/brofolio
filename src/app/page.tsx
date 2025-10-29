@@ -4,7 +4,7 @@ import LoaderProvider from '@/_components/Loader/LoaderProvider'
 export const metadata: Metadata = {
     title: {
         default: 'Motionlabs',
-        template: '%s | Motionlabs',
+        template: 'Motionlabs | %s',
     },
     authors: [{ name: 'Motionlabs', url: 'https://motionlabs.cz' }],
     description:
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         title: 'Motionlabs - Web development',
         description:
             'V MotionLabs vyvíjíme weby v laboratorních podmínkách. Každý detail testujeme, dokud nevznikne výsledek, který spojuje design, výkon a smysl.',
-        images: '/brand/open-graph.png',
+        images: 'https://motionlabs.cz/brand/open-graph.png',
     },
     icons: {
         icon: [
