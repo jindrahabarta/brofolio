@@ -3,7 +3,7 @@ import React from 'react'
 import ProjectsList from './_components/ProjectsList'
 
 export const metadata: Metadata = {
-    title: 'Motionlabs | Projekty',
+    title: 'Projekty',
     description:
         'Projekty za kterými si stojíme. U každého projektu nám záleží hlavně na spokojenosti zákazníka. Design, animace a přehlednost jsou naším standardem.',
 }

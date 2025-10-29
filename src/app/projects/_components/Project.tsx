@@ -33,7 +33,7 @@ const Project = ({
                         {i.toString().padStart(2, '0')}
                     </div>
 
-                    <div className='pl-4 sm:pl-10 text-[clamp(11vw,14vw,10%)] md:text-[10vw] lg:text-7xl ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black'>
+                    <div className='pl-4 sm:pl-10 text-[clamp(11vw,14vw,10%)] md:text-[10vw] lg:text-7xl ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black text-nowrap'>
                         {project.name}
                     </div>
                 </div>
@@ -63,7 +63,7 @@ const Project = ({
                         {i.toString().padStart(2, '0')}
                     </div>
 
-                    <div className='pl-4 sm:pl-10 text-[clamp(11vw,14vw,10%)] md:text-[10vw] lg:text-7xl  ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black'>
+                    <div className='pl-4 sm:pl-10 text-[clamp(11vw,14vw,10%)] md:text-[10vw] lg:text-7xl  ease-out duration-300 font-emberlyRegular leading-none text-white group-hover:text-black text-nowrap'>
                         {project.name}
                     </div>
                 </div>
