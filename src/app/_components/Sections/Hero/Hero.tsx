@@ -25,10 +25,9 @@ const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                             Tvoříme unikátní weby na zakázku.
                         </span>
                         <p className='text-xl md:text-2xl'>
-                            Naším cílem je doručovat vyladěné weby do posledního
-                            pixelu, ovšem ne na úkor jejich{' '}
-                            <span className=' underline'>výkonu</span>. Rychlost
-                            a design jsou klíčem.
+                            Mícháme design s výkonem. Každý web je pečlivě
+                            ověřený experiment. Výsledek spojuje krásu, výkon a
+                            smysl🧪.
                         </p>
                     </div>
                 </div>
