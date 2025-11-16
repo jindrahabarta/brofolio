@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 export const metadata: Metadata = {
-    title: 'Ooops, tato stránka neexistuje | Motionlabs',
+    title: 'Ooops, tato stránka neexistuje',
     description:
         'Tvoříme unikátní weby na zakázku. Náš cíl je doručovat weby vyladěné do posledního pixelu, ovšem ne na úkor jejich výkonu. Design a rychlost jsou klíčem.',
     keywords: ['Zakázkové weby', 'Tvorba webů', 'Motion labs'],
@@ -15,6 +15,10 @@ export const metadata: Metadata = {
         title: 'Motionlabs - Web development',
         description: '',
         images: [''],
+    },
+    robots: {
+        index: false,
+        follow: false,
     },
 }
 

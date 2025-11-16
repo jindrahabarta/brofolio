@@ -14,6 +14,7 @@ import useNavTimeline from '@/_animations/useNavTimeline'
 import { usePathname } from 'next/navigation'
 import { useLenis } from 'lenis/react'
 import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
+import LanguageSelector from './LanguageSelector'
 
 const Navigation = () => {
     const navTl = useNavTimeline()
@@ -77,12 +78,11 @@ const Navigation = () => {
                         link='/#contact'
                         id='blurry1'
                         onClick={scrollTo}
-                    ></BlurryButton>
+                    />
 
-                    <HamburgerIcon
-                        handleClick={openMenu}
-                        variant='open'
-                    ></HamburgerIcon>
+                    <LanguageSelector />
+
+                    <HamburgerIcon handleClick={openMenu} variant='open' />
                 </div>
             </nav>
 
