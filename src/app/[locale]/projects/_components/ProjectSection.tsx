@@ -42,7 +42,7 @@ const ProjectSection = ({
     return (
         <section
             ref={sectionRef}
-            className={`projectSection flex-col ${
+            className={`projectSection flex-col sm:flex-row ${
                 isEven && 'sm:flex-row-reverse'
             } flex gap-4 min-h-screen`}
         >
