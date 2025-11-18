@@ -15,8 +15,8 @@ export async function POST(request: NextRequest) {
             process.env.EMAILJS_TEMPLATE_ID!,
             template_params,
             {
-                publicKey: process.env.EMAILJS_PUBLIC_KEY,
-                privateKey: process.env.EMAILJS_PRIVATE_KEY,
+                publicKey: process.env.EMAILJS_PUBLIC_KEY!,
+                privateKey: process.env.EMAILJS_PRIVATE_KEY!,
             }
         )
         if (res.status !== 200) {

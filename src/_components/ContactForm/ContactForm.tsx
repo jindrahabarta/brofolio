@@ -324,17 +324,17 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
             <footer>
                 {formState === FormState.SENDING && (
                     <span role='alert' className='text-yellow-600'>
-                        <em> {t1('sending')}</em>
+                        <em> {t('sending')}</em>
                     </span>
                 )}
                 {formState === FormState.ERROR && (
                     <span role='alert' className='text-red-600'>
-                        <em>{t1('unsuccessfull')}</em>
+                        <em>{t('unsuccessfull')}</em>
                     </span>
                 )}
                 {formState === FormState.SUCCESS && (
                     <span role='alert' className='text-green-600'>
-                        <em>{t1('success')}</em>
+                        <em>{t('success')}</em>
                     </span>
                 )}
 
