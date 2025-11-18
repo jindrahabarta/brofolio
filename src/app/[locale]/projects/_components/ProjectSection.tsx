@@ -42,18 +42,18 @@ const ProjectSection = ({
     return (
         <section
             ref={sectionRef}
-            className={`projectSection ${
-                isEven && 'flex-row-reverse'
+            className={`projectSection flex-col ${
+                isEven && 'sm:flex-row-reverse'
             } flex gap-4 min-h-screen`}
         >
-            <div className='flex-1 h-full overflow-hidden'>
+            <div className='flex-1 h-full overflow-hidden aspect-video sm:aspect-auto'>
                 <Image
                     src={project.bannerImage}
                     alt={`Project Logo`}
                     width={1500}
                     height={1500}
                     id={`ProjectImage${index}`}
-                    className=' w-full h-full min-h-screen object-cover grayscale'
+                    className=' w-full h-full sm:min-h-screen object-cover grayscale'
                 ></Image>
             </div>
             <div className='flex-1 flex items-end p-4 pb-8'>
