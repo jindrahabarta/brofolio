@@ -9,7 +9,7 @@ const Loader: React.FC<{ loaded: boolean }> = ({ loaded }) => {
     const loaderRef = useRef<HTMLDivElement>(null)
 
     const lenis = useLenis()
-    lenis?.scrollTo(0)
+    lenis?.scrollTo(0, { immediate: true })
 
     useEffect(() => {
         if (loaded) {

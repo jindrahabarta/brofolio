@@ -44,7 +44,7 @@ const ProjectSection = ({
             ref={sectionRef}
             className={`projectSection flex-col sm:flex-row ${
                 isEven && 'sm:flex-row-reverse'
-            } flex gap-4 min-h-screen`}
+            } flex gap-4 h-[100dvh] min-h-screen`}
         >
             <div className='flex-1 h-full overflow-hidden aspect-video sm:aspect-auto'>
                 <Image

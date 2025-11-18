@@ -41,7 +41,7 @@ const Footer = () => {
                 toggleActions: 'play none none reverse',
             },
         })
-    }, [])
+    }, [path])
 
     return (
         <footer id='footer' className='bg-black text-white pb-10 relative'>

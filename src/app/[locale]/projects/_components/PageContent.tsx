@@ -4,10 +4,14 @@ import { getProjects } from '@/_constants/projects'
 import { ScrollTrigger } from 'gsap/all'
 import ProjectSection from './ProjectSection'
 import { useTranslations } from 'next-intl'
+import { useLenis } from 'lenis/react'
 
 const Project = () => {
     const t = useTranslations('projects')
     const projectList = getProjects(t)
+
+    const lenis = useLenis()
+    lenis?.scrollTo(0, { immediate: true })
 
     useEffect(() => {
         ScrollTrigger.create({
