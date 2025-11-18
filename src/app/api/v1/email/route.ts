@@ -6,7 +6,9 @@ export async function POST(request: NextRequest) {
     try {
         const template_params = await request.json()
 
-        contactFormValidationSchema.parse(template_params)
+        const schema = contactFormValidationSchema()
+
+        schema.parse(template_params)
 
         const res = await emailjs.send(
             process.env.EMAILJS_SERVICE_ID!,

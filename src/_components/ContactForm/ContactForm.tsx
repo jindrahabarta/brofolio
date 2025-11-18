@@ -253,7 +253,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
                         {errors.phone && (
                             <span role='alert' id='phone-error'>
                                 {errors.phone.message === 'Required'
-                                    ? 'Toto pole je povinné.'
+                                    ? t2('mandatory')
                                     : errors.phone.message}
                             </span>
                         )}
