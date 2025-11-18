@@ -29,12 +29,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 1,
+            alternates: {
+                languages: {
+                    cs: `https://motionlabs.cz/cs`,
+                    en: `https://motionlabs.cz/en`,
+                },
+            },
         },
         {
             url: `${baseUrl}/projects`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
+            alternates: {
+                languages: {
+                    cs: `https://motionlabs.cz/cs/projects`,
+                    en: `https://motionlabs.cz/en/projects`,
+                },
+            },
         },
         // ...projects,
     ]
