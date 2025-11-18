@@ -1,0 +1,20 @@
+{
+    "fields": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "phone": "Phone",
+        "company": "Company",
+        "message": "Message",
+        "send": "Send",
+        "sending": "Sending form",
+        "unsuccessfull": "Failed to send the form",
+        "success": "Message has been sent"
+    },
+    "zod": {
+        "mandatory": "This field is required.",
+        "emailFormat": "The email format is not valid.",
+        "phoneFormat": "The phone number is not valid.",
+        "max": "Maximum of {number} characters.",
+        "min": "At least {number, plural, one {# character} other {# characters}}."
+    }
+}

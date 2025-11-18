@@ -1,0 +1,59 @@
+{
+    "seo": {
+        "title": "We create unique custom-made websites",
+        "description": "At MotionLabs, we develop websites in laboratory-like conditions. We test every detail until we achieve a result that blends design, performance, and purpose.",
+        "keywords": [
+            "Website creation",
+            "Custom websites",
+            "MotionLabs",
+            "Modern websites",
+            "Website development",
+            "Web applications",
+            "Web app development",
+            "Responsive websites",
+            "Fast websites",
+            "Professional websites",
+            "Website design",
+            "Webdesign",
+            "UI/UX design",
+            "Website optimization",
+            "SEO optimization",
+            "E-shop development",
+            "Company websites",
+            "Portfolio websites",
+            "Landing page",
+            "Tailor-made website",
+            "Custom website development",
+            "Frontend development",
+            "Next.js development",
+            "React development",
+            "Web development",
+            "Custom development",
+            "Digital laboratory",
+            "Website laboratory",
+            "Innovative websites",
+            "Modern web design",
+            "Website speed and performance",
+            "Website development Nový Jičín",
+            "Web studio",
+            "Creative studio",
+            "Web solutions development"
+        ]
+    },
+    "navigation": {
+        "contact": "Contact",
+        "close": "Close",
+        "mailBtn": "Text us",
+        "links": {
+            "hero": "Home",
+            "about": "About",
+            "projects": "Projects",
+            "contact": "Contact"
+        }
+    },
+    "footer": {
+        "textUs": "Text us",
+        "ourSocials": "Our socials",
+        "links": "Links"
+    }
+}

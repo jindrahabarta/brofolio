@@ -1,6 +1,5 @@
+import { Link, usePathname } from '@/i18n/navigation'
 import { useLenis } from 'lenis/react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const NavLink = ({
@@ -31,7 +30,7 @@ const NavLink = ({
                 onClick={handleScrollTo}
                 aria-label={`Navigation link to ${text}`}
                 className='font-instrument text-6xl md:text-7xl text-black group-hover/navMainBlock:text-black/50 hover:!text-black/100 duration-200'
-                href={path === '/' ? link : altLink}
+                href={path === '/en' ? link : altLink}
             >
                 {text}
             </Link>

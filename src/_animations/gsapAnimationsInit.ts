@@ -245,20 +245,6 @@ const gsapAnimationsInit = (path: string) => {
             },
         })
     }
-
-    //FOOTER
-
-    gsap.to('.footerHeading', {
-        translateY: 0,
-        stagger: 0.2,
-        ease: 'power1.out',
-        scrollTrigger: {
-            trigger: '#footer',
-            start: 'bottom-=50px bottom',
-            end: 'bottom-=50px bottom',
-            toggleActions: 'play none none reverse',
-        },
-    })
 }
 
 export default gsapAnimationsInit

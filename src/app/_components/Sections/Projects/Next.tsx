@@ -1,8 +1,8 @@
 import React from 'react'
 import NextCard from './NextCard'
 import Marquee from '@/_components/Marquee/Marquee'
-import Link from 'next/link'
 import ArrowBack from '@/_assets/icons/global/ArrowBack'
+import { Link } from '@/i18n/navigation'
 
 const Next = () => {
     return (

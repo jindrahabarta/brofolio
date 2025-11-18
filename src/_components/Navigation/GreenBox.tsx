@@ -2,8 +2,10 @@ import React from 'react'
 import LetterIcon from '../Icons/LetterIcon'
 import Link from 'next/link'
 import PhoneIcon from '../Icons/PhoneIcon'
+import { useTranslations } from 'next-intl'
 
 const GreenBox = () => {
+    const t = useTranslations('navigation')
     return (
         <div className='bg-green-400 rounded-xl flex gap-4 p-4 select-none'>
             <Link
@@ -11,7 +13,7 @@ const GreenBox = () => {
                 className='py-4 flex gap-2 justify-center items-center flex-1 rounded-xl bg-black/20 text-black border-black/10 border-2 box-content hover:bg-black/100 hover:text-white duration-200'
             >
                 <LetterIcon className='h-6' />
-                <p className=' font-league text-xl'>Napište nám</p>
+                <p className=' font-league text-xl'>{t('mailBtn')}</p>
             </Link>
 
             <Link

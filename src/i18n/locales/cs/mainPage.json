@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "subtitle": "Tvoříme unikátní weby na zakázku.",
+        "text": "Mícháme design s výkonem. Každý web je pečlivě ověřený experiment. Výsledek spojuje krásu, výkon a smysl🧪."
+    },
+    "about": {
+        "j1": "Kreativec a tvůrce. Kromě projektu MotionLabs se věnuji své vlastní značce @drippy_rugs. Jelikož mě neskutečně naplňuje tvořit originální, neotřelé a 'cool' věci, toto je skvělá forma, jak ukojit své potřeby.",
+        "j2": "Tento zápal bych chtěl projevit i v tomto projektu a doufám, že se nám společně podaří naplnit tvé očekávání.",
+        "j3": "Nudí tě standardy ve webové tvorbě? Chceš pro sebe něco víc, než kam ti dovolí jít nudná šablona? Pokusím se, tvé nápady zhmotnit v realitu!",
+        "l1": "K technologiím mě to táhlo už od malička. Postupem času jsem se dostal k programování a tvorbě vlastních projektů.",
+        "l2": "A kdo vlastně jsem? Trochu plavec, trochu kytarista, trochu umělec… Ale hlavně webař a programátor. A protože nás s bráchou oba baví nestandardní, animované a umělecké weby, rozhodli jsme se vytvořit Motion Labs, kde chceme tyto hodnoty ztvárnit."
+    },
+    "projectsSection": {
+        "title": "Projekty",
+        "text": "Všechny realizované projekty na kterých jsme pracovali"
+    },
+    "contact": {
+        "title": "Chceš s náma rozjet projekt?",
+        "subtitle": "Napiš nám"
+    }
+}

@@ -1,5 +1,5 @@
+import { Link } from '@/i18n/navigation'
 import { Metadata } from 'next'
-import Link from 'next/link'
 import React from 'react'
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
 }
 
-const E404 = () => {
+const page = () => {
     return (
         <section className='text-white pt-9 h-screen bg-black overflow-hidden flex flex-col items-center justify-center'>
             <h1 className=' bottom-4 text-[4vw] left-4 text-center'>
@@ -41,4 +41,4 @@ const E404 = () => {
     )
 }
 
-export default E404
+export default page

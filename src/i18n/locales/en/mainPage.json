@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "subtitle": "We create unique websites tailored for you.",
+        "text": "We blend design with performance. Every website is a carefully tested experiment. The result combines beauty, speed, and purpose🧪."
+    },
+    "about": {
+        "j1": "A creative and a maker. Besides the MotionLabs project, I focus on my own brand @drippy_rugs. Creating original, unconventional and 'cool' things fulfills me incredibly — and this is the perfect outlet for that energy.",
+        "j2": "I want to bring this passion into our work here, and I hope we’ll be able to meet your expectations together.",
+        "j3": "Bored of the standards in web design? Want something more than what a dull template allows you to have? I’ll do my best to turn your ideas into reality!",
+        "l1": "I’ve been drawn to technology since I was a kid. Over time, I got into programming and building my own projects.",
+        "l2": "And who am I, really? A bit of a swimmer, a bit of a guitarist, a bit of an artist… But mainly a web developer and programmer. Since both my brother and I enjoy unconventional, animated and artistic websites, we created Motion Labs to bring these values to life."
+    },
+    "projectsSection": {
+        "title": "Projects",
+        "text": "All completed projects we’ve worked on"
+    },
+    "contact": {
+        "title": "Want to start a project with us?",
+        "subtitle": "Text us"
+    }
+}

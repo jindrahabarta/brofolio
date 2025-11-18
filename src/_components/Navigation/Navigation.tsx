@@ -1,22 +1,21 @@
 'use client'
 import React, { useEffect } from 'react'
-
 import HamburgerIcon from './HamburgerIcon'
-
-import Link from 'next/link'
 import NavLink from './NavLink'
 import GreenBox from './GreenBox'
 import RainbowBar from './RainbowBar'
-
 import './style.css'
 import BlurryButton from '../Buttons/BlurryButton'
 import useNavTimeline from '@/_animations/useNavTimeline'
-import { usePathname } from 'next/navigation'
 import { useLenis } from 'lenis/react'
-import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
 import LanguageSelector from './LanguageSelector'
+import gsapAnimationsInit from '@/_animations/gsapAnimationsInit'
+import { Link, usePathname } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 
 const Navigation = () => {
+    const t = useTranslations('navigation')
+
     const navTl = useNavTimeline()
     const path = usePathname()
 
@@ -36,13 +35,6 @@ const Navigation = () => {
         lenis.start()
     }
 
-    // const scrollTo = () => {
-    //     if (path === '/') {
-    //         lenis?.scrollTo('#contact')
-    //     } else {
-    //         return
-    //     }
-    // }
     const scrollTo = (
         e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
         id: string
@@ -74,7 +66,7 @@ const Navigation = () => {
 
                 <div className='flex items-center gap-4 pointer-events-auto'>
                     <BlurryButton
-                        text='Kontakt'
+                        text={t('contact')}
                         link='/#contact'
                         id='blurry1'
                         onClick={scrollTo}
@@ -108,22 +100,22 @@ const Navigation = () => {
                             <div className='text-right'>
                                 <ul>
                                     <NavLink
-                                        text='Úvod'
+                                        text={t('links.hero')}
                                         link='#home'
                                         altLink='/'
                                     ></NavLink>
                                     <NavLink
-                                        text='O nás'
+                                        text={t('links.about')}
                                         link='#about'
                                         altLink='/#about'
                                     ></NavLink>
                                     <NavLink
-                                        text='Projekty'
+                                        text={t('links.projects')}
                                         link='#projects'
                                         altLink='/#projects'
                                     ></NavLink>
                                     <NavLink
-                                        text='Kontakt'
+                                        text={t('links.contact')}
                                         link='#contact'
                                         altLink='/#contact'
                                     ></NavLink>

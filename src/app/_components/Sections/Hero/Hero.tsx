@@ -1,8 +1,11 @@
 import React from 'react'
 import Logo from './Logo'
 import Background from './Background'
+import { useTranslations } from 'next-intl'
 
 const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
+    const t = useTranslations()
+
     return (
         <section
             id='home'
@@ -22,13 +25,9 @@ const Hero: React.FC<{ onLogoLoad: () => void }> = ({ onLogoLoad }) => {
                             id='heroSubHeadig'
                             className='font-league pb-1 text-4xl md:text-5xl text-white'
                         >
-                            Tvoříme unikátní weby na zakázku.
+                            {t('hero.subtitle')}
                         </span>
-                        <p className='text-xl md:text-2xl'>
-                            Mícháme design s výkonem. Každý web je pečlivě
-                            ověřený experiment. Výsledek spojuje krásu, výkon a
-                            smysl🧪.
-                        </p>
+                        <p className='text-xl md:text-2xl'>{t('hero.text')}</p>
                     </div>
                 </div>
             </main>

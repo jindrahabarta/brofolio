@@ -1,0 +1,20 @@
+{
+    "fields": {
+        "firstName": "Jméno",
+        "lastName": "Příjmení",
+        "phone": "Telefon",
+        "company": "Společnost",
+        "message": "Zpráva",
+        "send": "Odeslat",
+        "sending": "Odesílání formuláře",
+        "unsuccessfull": "Nepodařilo se odeslat formulář",
+        "success": "Zpráva byla odeslána"
+    },
+    "zod": {
+        "mandatory": "Toto pole je povinné.",
+        "emailFormat": "E-mail není ve správném formátu.",
+        "phoneFormat": "Telefon není ve správném formátu.",
+        "max": "Maximálně {number} znaků.",
+        "min": "Minimálně {number, plural, one {# znak} few {# znaky} other {# znaků}}."
+    }
+}

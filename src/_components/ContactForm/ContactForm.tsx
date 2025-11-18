@@ -9,6 +9,7 @@ import 'react-phone-number-input/style.css'
 import './style.css'
 import { nextClient } from '@/_axios/axios'
 import contactFormValidationSchema from '@/_validators/contact'
+import { useTranslations } from 'next-intl'
 
 interface IFormData {
     firstName: string
@@ -27,8 +28,13 @@ enum FormState {
 }
 
 const ContactForm = ({ textColor }: { textColor?: string }) => {
+    const t = useTranslations('fields')
+    const t1 = useTranslations('contact')
+    const t2 = useTranslations('zod')
     const [mounted, setMounted] = useState(false)
     const [formState, setFormState] = useState<FormState>(FormState.IDLE)
+
+    const schema = contactFormValidationSchema(t2)
 
     const {
         register,
@@ -37,7 +43,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
         reset,
         formState: { errors },
     } = useForm<IFormData>({
-        resolver: zodResolver(contactFormValidationSchema),
+        resolver: zodResolver(schema),
     })
 
     const handlePageResize = () => {
@@ -128,17 +134,19 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
         >
             <header>
                 <h2 className='font-instrument leading-normal text-2xl block origin-left'>
-                    Chceš s náma rozjet projekt?
+                    {t1('title')}
                 </h2>
                 <h1 className='font-league uppercase text-[clamp(1rem,7.5vw,4rem)] leading-[1.1em] mt-2'>
-                    Napiš nám
+                    {t1('subtitle')}
                 </h1>
             </header>
 
             <section className='flex flex-col gap-4'>
                 <fieldset>
                     <label htmlFor='firstName'>
-                        <p className='font-instrument text-xl'>Jméno*</p>
+                        <p className='font-instrument text-xl'>
+                            {t('firstName')}*
+                        </p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -164,7 +172,9 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
                     </label>
 
                     <label htmlFor='lastName'>
-                        <p className='font-instrument text-xl'>Příjmení*</p>
+                        <p className='font-instrument text-xl'>
+                            {t('lastName')}*
+                        </p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -216,7 +226,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
                     </label>
 
                     <label htmlFor='phone'>
-                        <p className='font-instrument text-xl'>Telefon*</p>
+                        <p className='font-instrument text-xl'>{t('phone')}*</p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -252,7 +262,9 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <fieldset>
                     <label htmlFor='company'>
-                        <p className='font-instrument text-xl'>Společnost</p>
+                        <p className='font-instrument text-xl'>
+                            {t('company')}
+                        </p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -279,7 +291,9 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
 
                 <fieldset>
                     <label htmlFor='message'>
-                        <p className='font-instrument text-xl'>Zpráva</p>
+                        <p className='font-instrument text-xl'>
+                            {t('message')}
+                        </p>
                         <div className='container'>
                             <Input1
                                 width='100%'
@@ -310,17 +324,17 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
             <footer>
                 {formState === FormState.SENDING && (
                     <span role='alert' className='text-yellow-600'>
-                        <em>Odesílání formuláře</em>
+                        <em> {t1('sending')}</em>
                     </span>
                 )}
                 {formState === FormState.ERROR && (
                     <span role='alert' className='text-red-600'>
-                        <em>Nepodařilo se odeslat formulář</em>
+                        <em>{t1('unsuccessfull')}</em>
                     </span>
                 )}
                 {formState === FormState.SUCCESS && (
                     <span role='alert' className='text-green-600'>
-                        <em>Zpráva byla odeslána</em>
+                        <em>{t1('success')}</em>
                     </span>
                 )}
 
@@ -336,7 +350,7 @@ const ContactForm = ({ textColor }: { textColor?: string }) => {
                         strokeWidth={7}
                         className='input-svg absolute inset-0 pointer-events-none select-none'
                     />
-                    Odeslat
+                    {t('send')}
                 </button>
             </footer>
         </form>

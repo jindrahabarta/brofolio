@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 const HamburgerIcon = ({
@@ -7,6 +8,8 @@ const HamburgerIcon = ({
     handleClick: () => void
     variant?: string
 }) => {
+    const t = useTranslations('navigation')
+
     if (!variant || variant === 'open')
         return (
             <button
@@ -38,7 +41,7 @@ const HamburgerIcon = ({
                 className='hamburgerIcon bg-black/30 w-fit h-12 sm:h-14 rounded-lg cursor-pointer flex items-center justify-center select-none'
             >
                 <span className='font-owners text-xs md:text-base backdrop:invert blurryBtnText'>
-                    Zavřít
+                    {t('close')}
                 </span>
             </button>
         )

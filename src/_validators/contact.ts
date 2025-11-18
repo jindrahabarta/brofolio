@@ -1,32 +1,35 @@
 import { z } from 'zod'
 import validator from 'validator'
 
-const contactFormValidationSchema = z.object({
-    firstName: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .min(3, 'Minimálně 3 znaky.')
-        .max(255, 'Maximálně 255 znaků.'),
-    lastName: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .min(3, 'Minimálně 3 znaky.')
-        .max(255, 'Maximálně 255 znaků.'),
-    email: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .email('E-mail není ve správném formátu.'),
-    phone: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .max(13, 'Maximálně 13 znaků.')
-        .refine(validator.isMobilePhone, 'Telefon není ve správném formátu'),
-    company: z.string().optional(),
-    message: z
-        .string()
-        .nonempty('Toto pole je povinné.')
-        .min(10, 'Minimálně 10 znaků.')
-        .max(1000, 'Maximálně 1000 znaků.'),
-})
+const contactFormValidationSchema = (
+    t: (
+        key: string,
+        values?: Record<string, string | number | Date> | undefined
+    ) => string
+) =>
+    z.object({
+        firstName: z
+            .string()
+            .nonempty(t('mandatory'))
+            .min(3, t('min', { number: 3 }))
+            .max(255, t('max', { number: 255 })),
+        lastName: z
+            .string()
+            .nonempty(t('mandatory'))
+            .min(3, t('min', { number: 3 }))
+            .max(255, t('max', { number: 255 })),
+        email: z.string().nonempty(t('mandatory')).email(t('emailFormat')),
+        phone: z
+            .string()
+            .nonempty(t('mandatory'))
+            .max(13, t('max', { number: 13 }))
+            .refine(validator.isMobilePhone, t('phoneFormat')),
+        company: z.string().optional(),
+        message: z
+            .string()
+            .nonempty(t('mandatory'))
+            .min(10, t('min', { number: 10 }))
+            .max(1000, t('max', { number: 1000 })),
+    })
 
 export default contactFormValidationSchema

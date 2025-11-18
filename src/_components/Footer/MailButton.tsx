@@ -47,9 +47,9 @@ const MailButton = () => {
             onMouseMove={mouseMove}
             id='footerMail'
             className='text-[clamp(1rem,7vw,3.75rem)] sm:text-2xl md:text-2xl lg:text-4xl relative w-fit'
-            href={'mailto:jindriskuv@email.cz'}
+            href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#111;&#111;&#116;&#105;&#111;&#110;&#108;&#97;&#98;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;'
         >
-            motionlabs@info.cz
+            &#109;&#111;&#111;&#116;&#105;&#111;&#110;&#108;&#97;&#98;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
             <Image
                 src={
                     'https://media.tenor.com/m-OEv4Zz1zEAAAAM/mailman-postman.gif'

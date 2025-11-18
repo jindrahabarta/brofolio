@@ -1,0 +1,59 @@
+{
+    "seo": {
+        "title": "Tvoříme unikátní weby na zakázku",
+        "description": "V MotionLabs vyvíjíme weby v laboratorních podmínkách. Každý detail testujeme, dokud nevznikne výsledek, který spojuje design, výkon a smysl.",
+        "keywords": [
+            "Tvorba webů",
+            "Zakázkové weby",
+            "MotionLabs",
+            "Moderní weby",
+            "Tvorba webových stránek",
+            "Webové aplikace",
+            "Vývoj webových aplikací",
+            "Responzivní weby",
+            "Rychlé weby",
+            "Profesionální weby",
+            "Design webu",
+            "Webdesign",
+            "UI/UX design",
+            "Optimalizace webu",
+            "SEO optimalizace",
+            "Tvorba e-shopů",
+            "Firemní weby",
+            "Portfolio weby",
+            "Landing page",
+            "Web na míru",
+            "Tvorba webu na zakázku",
+            "Frontend vývoj",
+            "Next.js vývoj",
+            "React vývoj",
+            "Web development",
+            "Vývoj na míru",
+            "Digitální laboratoř",
+            "Laboratoř na weby",
+            "Inovativní weby",
+            "Moderní design webu",
+            "Výkon a rychlost webu",
+            "Tvorba webu Nový Jičín",
+            "Webové studio",
+            "Kreativní studio",
+            "Vývoj webových řešení"
+        ]
+    },
+    "navigation": {
+        "contact": "Kontakt",
+        "close": "Zavřít",
+        "mailBtn": "Napište nám",
+        "links": {
+            "hero": "Úvod",
+            "about": "O nás",
+            "projects": "Projects",
+            "contact": "Kontakt"
+        }
+    },
+    "footer": {
+        "textUs": "Napište nám",
+        "ourSocials": "Naše sítě",
+        "links": "Odkazy"
+    }
+}

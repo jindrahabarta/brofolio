@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import FooterBottom from './FooterBottom'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,11 +7,15 @@ import RetroButton from '../Buttons/RetroButton'
 import MailButton from './MailButton'
 import SadCat from '@/../public/images/Footer/sadcat.gif'
 import { useLenis } from 'lenis/react'
-import { usePathname } from 'next/navigation'
+import gsap from 'gsap'
+import { usePathname } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 
 const Footer = () => {
     const lenis = useLenis()
     const path = usePathname()
+    const t = useTranslations('footer')
+    const t2 = useTranslations('navigation.links')
 
     const scrollTo = (
         e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -24,6 +28,20 @@ const Footer = () => {
             lenis?.scrollTo(id)
         }
     }
+
+    useEffect(() => {
+        gsap.to('.footerHeading', {
+            translateY: 0,
+            stagger: 0.2,
+            ease: 'power1.out',
+            scrollTrigger: {
+                trigger: '#footer',
+                start: 'bottom-=50px bottom',
+                end: 'bottom-=50px bottom',
+                toggleActions: 'play none none reverse',
+            },
+        })
+    }, [])
 
     return (
         <footer id='footer' className='bg-black text-white pb-10 relative'>
@@ -46,7 +64,7 @@ const Footer = () => {
                         <ul className='mt-12 text-lg flex flex-col'>
                             <li>IČO: 22371575</li>
                             <li>Moravský Karlov 103</li>
-                            <li>Červená Voda</li>
+                            <li>Červená Voda - Czech Republic</li>
                         </ul>
                     </div>
 
@@ -63,7 +81,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className='flex-1 p-4 flex flex-col justify-between gap-6 border-white border bg-motionPink shadow-inner shadow-gray-800'>
-                    <h2 className='text-2xl'>Napište nám</h2>
+                    <h2 className='text-2xl'>{t('textUs')}</h2>
 
                     <MailButton></MailButton>
                 </div>
@@ -80,7 +98,7 @@ const Footer = () => {
                         <div className='absolute w-full h-full bg-black/20'></div>
                     </div>
                     <div className='p-4 h-full flex flex-col gap-20 justify-between relative'>
-                        <h2 className='font-semibold'>Naše sítě</h2>
+                        <h2 className='font-semibold'>{t('ourSocials')}</h2>
 
                         <ul>
                             <li>
@@ -101,7 +119,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='border-white border p-4 flex flex-col gap-8 justify-between bg-motionOrange shadow-inner shadow-gray-800'>
-                    <h2 className='font-semibold'>Odkazy</h2>
+                    <h2 className='font-semibold'>{t('links')}</h2>
                     <ul>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
                             <Link
@@ -109,7 +127,7 @@ const Footer = () => {
                                 href={'/#home'}
                                 onClick={(e) => scrollTo(e, '#home')}
                             >
-                                Uvod
+                                {t2('hero')}
                             </Link>
                         </li>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
@@ -118,7 +136,7 @@ const Footer = () => {
                                 aria-label='Navigation link to about us'
                                 onClick={(e) => scrollTo(e, '#about')}
                             >
-                                O nas
+                                {t2('about')}
                             </Link>
                         </li>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
@@ -127,7 +145,7 @@ const Footer = () => {
                                 aria-label='Navigation link to projects'
                                 onClick={(e) => scrollTo(e, '#projects')}
                             >
-                                Projects
+                                {t2('projects')}
                             </Link>
                         </li>
                         <li className='text-lg hover:underline hover:text-black w-fit'>
@@ -136,7 +154,7 @@ const Footer = () => {
                                 aria-label='Navigation link to contact'
                                 onClick={(e) => scrollTo(e, '#contact')}
                             >
-                                Kontakt
+                                {t2('contact')}
                             </Link>
                         </li>
                     </ul>

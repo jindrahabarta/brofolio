@@ -1,0 +1,25 @@
+{
+    "projects": {
+        "seo": {
+            "title": "Projects",
+            "description": "Projects we truly stand behind. For every project, customer satisfaction is our priority. Design, animation, and clarity are our standard."
+        },
+        "allProjects": {
+            "LucieCoRadaFoti": {
+                "text": "A one-page website representing the work of a wedding and family photographer, focused mainly on showcasing her photos. The site allows visitors to easily book a photoshoot through a contact form. The website content can now be updated through our custom admin, which we newly offer to our clients."
+            },
+            "DrippyRugs": {
+                "text": "A simple website created to introduce the brand, showcase the work, and offer the option to request a custom product. The site emphasizes maximum simplicity, clean design, and clarity."
+            },
+            "Printujto": {
+                "text": "A website focused on custom 3D printing. The site includes a 3D calculator that allows users to submit an order request in a few steps with an automatically calculated price."
+            },
+            "SolariumAvantgarda": {
+                "text": "Avantgarda tanning studio located in the center of Olomouc. A custom-made presentation website created specifically for the client."
+            },
+            "Habartovi": {
+                "text": "The old design received a brand new look. The project included a complete rebuild and redesign of all content, including a modernized logo. The new design emphasizes clarity and creating fast pages that don’t bore visitors while browsing. Animations were added to bring the design to life. The client also requested keeping certain elements from the original site, so the new web combines a modern approach with older sections that preserve the original atmosphere."
+            }
+        }
+    }
+}

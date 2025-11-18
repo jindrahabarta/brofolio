@@ -5,12 +5,14 @@ import DiCaprioGifs from './DiCaprioGifs'
 import JindraImg from '@/../public/images/AboutUs/JindraHabarta.webp'
 import LubaImg from '@/../public/images/AboutUs/LubaHabarta.webp'
 import TVGLitch from './TVGLitch'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 const Content: React.FC<{
     onAbout1Load: () => void
     onAbout2Load: () => void
 }> = ({ onAbout1Load, onAbout2Load }) => {
+    const t = useTranslations('about')
+
     return (
         <div
             id='aboutUsContent'
@@ -47,26 +49,10 @@ const Content: React.FC<{
 
                         <span className='w-full max-w-sm'>
                             <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-base sm:text-xl indent-4 sm:bg-stone-800/50 sm:backdrop-blur-sm sm:py-6 sm:px-8'>
-                                Kreativec a tvůrce. Kromě projektu MotionLabs se
-                                věnuji své vlastní značce{' '}
-                                <Link
-                                    className='font-semibold hover:underline'
-                                    target='_blank'
-                                    href={
-                                        'https://www.instagram.com/drippy_rugs'
-                                    }
-                                    aria-label='Link to drippy rugs instagram account'
-                                >
-                                    @drippy_rugs
-                                </Link>
-                                . Jelikož mě neskutečně naplňuje tvořit
-                                originální, neotřelé a &quot;cool&quot; věci,
-                                toto je skvělá forma, jak ukojit své potřeby.
+                                {t('j1')}
                             </p>
                             <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-base sm:text-xl indent-4 mt-4 sm:bg-stone-800/50 sm:backdrop-blur-sm sm:py-6 sm:px-8'>
-                                Tento zápal bych chtěl projevit i v tomto
-                                projektu a doufám, že se nám společně podaří
-                                naplnit tvé očekávání.
+                                {t('j2')}
                             </p>
                         </span>
                     </section>
@@ -77,9 +63,7 @@ const Content: React.FC<{
                         </h1>
 
                         <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4 sm:bg-stone-800/50 sm:backdrop-blur-sm sm:py-6 sm:px-8'>
-                            Nudí tě standardy ve webové tvorbě? Chceš pro sebe
-                            něco víc, než kam ti dovolí jít nudná šablona?
-                            Pokusím se, tvé nápady zhmotnit v realitu!
+                            {t('j3')}
                         </p>
                     </section>
                 </article>
@@ -119,12 +103,7 @@ const Content: React.FC<{
                                 Full-stack developer
                             </h1>
                             <p className='font-instrument text-justify text-base sm:text-xl indent-4'>
-                                A kdo vlastně jsem? Trochu plavec, trochu
-                                kytarista, trochu umělec… Ale hlavně webař a
-                                programátor. A protože nás s bráchou oba baví
-                                nestandardní, animované a umělecké weby,
-                                rozhodli jsme se vytvořit Motion Labs, kde
-                                chceme tyto hodnoty ztvárnit.
+                                {t('l2')}
                             </p>
                         </span>
 
@@ -134,9 +113,7 @@ const Content: React.FC<{
                             </h1>
 
                             <p className='w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4'>
-                                K technologiím mě to táhlo už od malička.
-                                Postupem času jsem se dostal k programování a
-                                tvorbě vlastních projektů.
+                                {t('l1')}
                             </p>
                         </div>
                     </section>

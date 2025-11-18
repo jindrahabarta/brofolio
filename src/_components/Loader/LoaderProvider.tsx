@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from 'react'
 import Loader from './Loader'
 import Hero from '@/app/_components/Sections/Hero/Hero'

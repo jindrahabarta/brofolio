@@ -2,10 +2,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import MlLogoStroke from '@/_assets/brand/MlLogoStroke'
 import LogoSvg from '@/../public/brand/ml_logo.svg'
+import { useLenis } from 'lenis/react'
 
 const Loader: React.FC<{ loaded: boolean }> = ({ loaded }) => {
     const [animated, setAnimated] = useState(false)
     const loaderRef = useRef<HTMLDivElement>(null)
+
+    const lenis = useLenis()
+    lenis?.scrollTo(0)
 
     useEffect(() => {
         if (loaded) {
