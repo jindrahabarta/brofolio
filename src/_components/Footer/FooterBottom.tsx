@@ -21,9 +21,11 @@ const FooterBottom = () => {
                             direction='left'
                             className='gap-2 sm:gap-4 pr-2 sm:pr-4'
                         >
-                            <span className='font-charm'>Motion graphic</span>
+                            <span className='font-charm text-nowrap whitespace-nowrap'>
+                                Motion graphic
+                            </span>
                             <span className='text-sm'>&#9679;</span>
-                            <span className='font-charm'>
+                            <span className='font-charm text-nowrap whitespace-nowrap'>
                                 Website developement
                             </span>
                             <span className='text-sm'>&#9679;</span>

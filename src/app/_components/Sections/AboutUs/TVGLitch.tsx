@@ -31,7 +31,7 @@ const TVGLitch = () => {
                         id='aboutUsHeading'
                         className='flex gap-10 justify-start'
                     >
-                        <h1 className='inline-flex gap-44 text-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
+                        <h1 className='inline-flex gap-44 text-nowrap whitespace-nowrap relative text-white leading-[0.8em] md:leading-[2.3em]'>
                             <strong className='text-[1rem] md:text-[5rem] '>
                                 About us
                             </strong>
