@@ -55,5 +55,9 @@
         "textUs": "Text us",
         "ourSocials": "Our socials",
         "links": "Links"
+    },
+    "notFound": {
+        "text": "Page not found",
+        "button": "Go home"
     }
 }

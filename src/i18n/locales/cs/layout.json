@@ -55,5 +55,9 @@
         "textUs": "Napište nám",
         "ourSocials": "Naše sítě",
         "links": "Odkazy"
+    },
+    "notFound": {
+        "text": "Tato stránka neexistuje",
+        "button": "Jít domů"
     }
 }
