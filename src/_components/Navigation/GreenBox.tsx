@@ -17,7 +17,7 @@ const GreenBox = () => {
             </Link>
 
             <Link
-                href='tel:775180052'
+                href='tel:+420775180052'
                 className='h-full flex flex-1 gap-2 justify-center items-center rounded-xl bg-black hover:bg-motionBlue hover:text-black relative duration-200'
             >
                 <PhoneIcon className='h-6' />
