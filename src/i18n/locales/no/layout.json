@@ -1,0 +1,59 @@
+{
+    "seo": {
+        "title": "Vi lager unike nettsider på bestilling",
+        "description": "Hos MotionLabs utvikler vi nettsider under laboratorieforhold. Vi tester hver eneste detalj til vi oppnår et resultat som kombinerer design, ytelse og mening.",
+        "keywords": [
+            "Nettside utvikling",
+            "Skreddersydde nettsider",
+            "MotionLabs",
+            "Moderne nettsider",
+            "Webutvikling",
+            "Webapplikasjoner",
+            "Utvikling av webapplikasjoner",
+            "Responsive nettsider",
+            "Raske nettsider",
+            "Profesjonelle nettsider",
+            "Nettside design",
+            "Webdesign",
+            "UI/UX design",
+            "Nettside optimalisering",
+            "SEO optimalisering",
+            "Nettbutikk utvikling",
+            "Bedriftsnettsider",
+            "Portfolio nettsider",
+            "Landing page",
+            "Skreddersydd nettside",
+            "Custom nettside utvikling",
+            "Frontend utvikling",
+            "Next.js utvikling",
+            "React utvikling",
+            "Web development",
+            "Digitalt laboratorium",
+            "Innovativt nettside design",
+            "Nettside hastighet og ytelse",
+            "Webstudio",
+            "Kreativt studio",
+            "Webutviklingsløsninger"
+        ]
+    },
+    "navigation": {
+        "contact": "Kontakt",
+        "close": "Lukk",
+        "mailBtn": "Skriv til oss",
+        "links": {
+            "hero": "Hjem",
+            "about": "Om oss",
+            "projects": "Prosjekter",
+            "contact": "Kontakt"
+        }
+    },
+    "footer": {
+        "textUs": "Skriv til oss",
+        "ourSocials": "Våre sosiale medier",
+        "links": "Lenker"
+    },
+    "notFound": {
+        "text": "Siden finnes ikke",
+        "button": "Gå hjem"
+    }
+}

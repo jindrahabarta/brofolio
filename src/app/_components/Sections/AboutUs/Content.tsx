@@ -48,10 +48,10 @@ const Content: React.FC<{
                         </h1>
 
                         <span className='w-full max-w-sm'>
-                            <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-base sm:text-xl indent-4 sm:bg-stone-800/50 sm:backdrop-blur-sm sm:py-6 sm:px-8'>
+                            <p className='aboutUsScrollSpeed md:translate-y-44 font-instrument text-justify text-base sm:text-xl indent-4 p-2 bg-stone-800/50 backdrop-blur-sm sm:py-6 sm:px-8'>
                                 {t('j1')}
                             </p>
-                            <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-base sm:text-xl indent-4 mt-4 sm:bg-stone-800/50 sm:backdrop-blur-sm sm:py-6 sm:px-8'>
+                            <p className='aboutUsScrollSpeed md:translate-y-72 font-instrument text-justify text-base sm:text-xl indent-4 mt-4 p-2 bg-stone-800/50 backdrop-blur-sm sm:py-6 sm:px-8'>
                                 {t('j2')}
                             </p>
                         </span>
@@ -62,7 +62,7 @@ const Content: React.FC<{
                             Front-end developer
                         </h1>
 
-                        <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4 sm:bg-stone-800/50 sm:backdrop-blur-sm sm:py-6 sm:px-8'>
+                        <p className='aboutUsScrollSpeed md:-translate-y-44 w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4 p-2 bg-stone-800/50 backdrop-blur-sm sm:py-6 sm:px-8'>
                             {t('j3')}
                         </p>
                     </section>
@@ -102,7 +102,7 @@ const Content: React.FC<{
                             <h1 className='font-league text-[10vw] md:text-[8vw] leading-[80%] md:hidden pb-10'>
                                 Full-stack developer
                             </h1>
-                            <p className='font-instrument text-justify text-base sm:text-xl indent-4'>
+                            <p className='font-instrument text-justify text-base sm:text-xl indent-4 p-2 sm:p-0 sm:bg-transparent sm:backdrop-blur-0 bg-stone-800/50 backdrop-blur-sm'>
                                 {t('l2')}
                             </p>
                         </span>
@@ -112,7 +112,7 @@ const Content: React.FC<{
                                 Full-stack developer
                             </h1>
 
-                            <p className='w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4'>
+                            <p className='w-full max-w-sm font-instrument text-justify text-base sm:text-xl indent-4 p-2 sm:p-0 sm:bg-transparent sm:backdrop-blur-0 bg-stone-800/50 backdrop-blur-sm'>
                                 {t('l1')}
                             </p>
                         </div>

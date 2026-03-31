@@ -6,19 +6,32 @@
         },
         "allProjects": {
             "LucieCoRadaFoti": {
+                "description": "Rodinné a svatební focení",
                 "text": "One page web, reprezentující práci svatební a rodinné fotografky se zaměřením na její fotografie. Stránky umožňují si pohodlně objednat focení přes kontaktní formulář. Obsah webu je nyní nově možné upravovat z naší administrace, kterou nově nabízíme našim klientům"
             },
             "DrippyRugs": {
+                "description": "Zakázková výroba koberečků",
                 "text": "Jednoduché webové stránky sloužící pro představení značky, ukázku práce a možností objednávky vlastního produktu. U stránek je kladen důraz na co největší jednoduchost, čistotu designu a přehlednost."
             },
             "Printujto": {
+                "description": "Zakázkový 3D tisk",
                 "text": "Webové stránky se zaměřením 3D tisku na zakázku. Součástí webu je 3D kalkulátor, který umožňuje v několika krocích poptat zakázku s vypočítanou cenou."
             },
             "SolariumAvantgarda": {
+                "description": "Solární studio",
                 "text": "Solární studio Avantgarda v centru Olomouce. Prezentační webové stránky tvořené klientovi na míru."
             },
             "Habartovi": {
+                "description": "Soukromé ubytování a keramická dílna",
                 "text": "Starému designu byl navléknutý nový kabát. Projekt zahrnoval kompletní přestavbu a redesign veškerého obsahu, včetně modernizace loga. U tvorby nového designu byl kladen důraz na přehlednost stránek, vytvoření svižných stránek, které návštěvníka nenudí při jejich listování. Proto do designu byly zahrnuty animace pro oživení celkového dojmu. Zadáním také bylo, zachovat určité prvky původních stránek. Proto web kombinuje jak moderní přistup k tvorbě stránek, tak starší sekce, odkazující na původní atmosféru webových stránek."
+            },
+            "Plenklipperen": {
+                "description": "Údržba zahrad a sněhu v Bergenu",
+                "text": "Prezentační web pro norskou firmu Plenklipperen.no AS nabízející profesionální péči o zahrady a zimní údržbu v okolí Bergenu. Stránky přehledně představují nabízené služby – od sekání trávníku a kácení stromů až po zimní posyp a odvoz sněhu. Součástí projektu byl kompletní redesign s důrazem na moderní vizuální styl a přehlednou strukturu stránek. Velká část práce spočívala v SEO optimalizaci, díky níž firma výrazně posílila svou viditelnost ve vyhledávačích na norském trhu."
+            },
+            "VaktmesterBergen": {
+                "description": "Správa a údržba nemovitostí v Bergenu",
+                "text": "Web pro norskou společnost Vaktmester Bergen zajišťující komplexní správu a údržbu nemovitostí v regionu Bergen. Projekt zahrnoval návrh nového designu, který lépe odráží profesionalitu firmy a usnadňuje orientaci návštěvníkům. Zároveň jsme se zaměřili na důkladnou SEO optimalizaci, která firmě pomáhá oslovit nové klienty z řad majitelů bytových domů, komerčních objektů i soukromých nemovitostí."
             }
         }
     }

@@ -1,0 +1,38 @@
+{
+    "projects": {
+        "seo": {
+            "title": "Prosjekter",
+            "description": "Prosjekter vi virkelig står bak. For hvert prosjekt er kundetilfredshet vår prioritet. Design, animasjon og klarhet er vår standard."
+        },
+        "allProjects": {
+            "LucieCoRadaFoti": {
+                "description": "Familie- og bryllupsfotografering",
+                "text": "En ensidig nettside som representerer arbeidet til en bryllups- og familiefotograf, med fokus på å vise frem bildene hennes. Siden lar besøkende enkelt bestille en fotografering via et kontaktskjema. Nettsidens innhold kan nå oppdateres gjennom vårt egenutviklede admin-panel, som vi nå tilbyr kundene våre."
+            },
+            "DrippyRugs": {
+                "description": "Skreddersydd teppeproduksjon",
+                "text": "En enkel nettside laget for å introdusere merkevaren, vise frem arbeidet og gi mulighet til å bestille et skreddersydd produkt. Siden legger vekt på maksimal enkelhet, rent design og klarhet."
+            },
+            "Printujto": {
+                "description": "Skreddersydd 3D-printing",
+                "text": "En nettside med fokus på skreddersydd 3D-printing. Siden inkluderer en 3D-kalkulator som lar brukere sende inn en bestillingsforespørsel i noen enkle steg med en automatisk beregnet pris."
+            },
+            "SolariumAvantgarda": {
+                "description": "Solstudio",
+                "text": "Avantgarda solstudio i sentrum av Olomouc. En skreddersydd presentasjonsnettside laget spesielt for klienten."
+            },
+            "Habartovi": {
+                "description": "Privat overnatting og keramikkverksted",
+                "text": "Den gamle designen fikk et helt nytt utseende. Prosjektet inkluderte en komplett ombygging og redesign av alt innhold, inkludert et modernisert logo. Det nye designet legger vekt på klarhet og raske sider som ikke kjeder besøkende under surfing. Animasjoner ble lagt til for å gi designet liv. Klienten ønsket også å beholde visse elementer fra den opprinnelige siden, så det nye nettstedet kombinerer en moderne tilnærming med eldre seksjoner som bevarer den opprinnelige atmosfæren."
+            },
+            "Plenklipperen": {
+                "description": "Hage- og snørydding i Bergen",
+                "text": "En presentasjonsnettside for det norske selskapet Plenklipperen.no AS, som tilbyr profesjonell hageskjøtsel og vinterdrift i Bergen-området. Prosjektet innebar en komplett redesign med fokus på moderne visuell stil og tydelig nettstedsstruktur. En betydelig del av arbeidet ble viet SEO-optimalisering, som hjelper selskapet å forbedre sin synlighet i søkemotorer på det norske markedet."
+            },
+            "VaktmesterBergen": {
+                "description": "Eiendomsforvaltning og vedlikehold i Bergen",
+                "text": "Nettside for det norske selskapet Vaktmester Bergen, som tilbyr helhetlig eiendomsforvaltning og vedlikeholdstjenester i Bergen-regionen. Prosjektet inkluderte et nytt design som bedre gjenspeiler selskapets profesjonalitet og forbedrer navigasjonen for besøkende. Vi fokuserte også på grundig SEO-optimalisering, som hjelper selskapet å nå nye kunder blant eiere av boligbygg, næringseiendommer og private eiendommer."
+            }
+        }
+    }
+}

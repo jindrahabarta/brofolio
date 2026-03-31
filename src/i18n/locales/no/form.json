@@ -1,0 +1,20 @@
+{
+    "fields": {
+        "firstName": "Fornavn",
+        "lastName": "Etternavn",
+        "phone": "Telefon",
+        "company": "Bedrift",
+        "message": "Melding",
+        "send": "Send",
+        "sending": "Sender skjema",
+        "unsuccessfull": "Klarte ikke å sende skjemaet",
+        "success": "Meldingen er sendt"
+    },
+    "zod": {
+        "mandatory": "Dette feltet er påkrevd.",
+        "emailFormat": "E-postformatet er ikke gyldig.",
+        "phoneFormat": "Telefonnummeret er ikke gyldig.",
+        "max": "Maksimalt {number} tegn.",
+        "min": "Minst {number, plural, one {# tegn} other {# tegn}}."
+    }
+}
