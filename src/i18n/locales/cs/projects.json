@@ -32,6 +32,10 @@
             "VaktmesterBergen": {
                 "description": "Správa a údržba nemovitostí v Bergenu",
                 "text": "Web pro norskou společnost Vaktmester Bergen zajišťující komplexní správu a údržbu nemovitostí v regionu Bergen. Projekt zahrnoval návrh nového designu, který lépe odráží profesionalitu firmy a usnadňuje orientaci návštěvníkům. Zároveň jsme se zaměřili na důkladnou SEO optimalizaci, která firmě pomáhá oslovit nové klienty z řad majitelů bytových domů, komerčních objektů i soukromých nemovitostí."
+            },
+            "TaisRugs": {
+                "description": "Prezentace a e-shop ručně tkaných koberečků",
+                "text": "Plně zakázkový web pro značku Tais Rugs kombinující prezentaci a e-shop. Zákaznice Tája tvoří ručně tuftované koberečky a pořádá workshopy v Praze. Web běží na platformě Shoptet a je doplněn o vlastní rezervační systém pro přihlašování na kurzy. Důraz byl kladen na výrazný vizuální styl odpovídající charakteru značky – tučná typografie, tmavé pozadí a živé barvy produktů."
             }
         }
     }

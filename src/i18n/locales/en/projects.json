@@ -32,6 +32,10 @@
             "VaktmesterBergen": {
                 "description": "Property management and maintenance in Bergen",
                 "text": "Website for Norwegian company Vaktmester Bergen, providing comprehensive property management and maintenance services in the Bergen region. The project included a new design that better reflects the company’s professionalism and improves navigation for visitors. We also focused on thorough SEO optimization, helping the company reach new clients among owners of residential buildings, commercial properties, and private real estate."
+            },
+            "TaisRugs": {
+                "description": "Presentation and e-shop for handmade tufted rugs",
+                "text": "A fully custom-built website for the Tais Rugs brand, combining a presentation site with a fully functional e-shop. The founder Tája handcrafts tufted rugs and runs workshops in Prague. The site is built on the Shoptet platform and extended with a custom reservation system for course sign-ups. Strong emphasis was placed on a bold visual identity matching the brand’s character — heavy typography, dark background, and vivid product colours."
             }
         }
     }
