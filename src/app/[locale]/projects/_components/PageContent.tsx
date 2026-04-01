@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/all'
 import ProjectSection from './ProjectSection'
 import { useTranslations } from 'next-intl'
 import { useLenis } from 'lenis/react'
+import gsap from 'gsap'
 
 const Project = () => {
     const t = useTranslations('projects')
@@ -14,15 +15,19 @@ const Project = () => {
     lenis?.scrollTo(0, { immediate: true })
 
     useEffect(() => {
-        ScrollTrigger.create({
-            trigger: '#projectsContainer',
-            start: 'top top',
-            end: 'bottom bottom',
-            snap: {
-                snapTo: 1 / (projectList.length - 1),
-                duration: 0.75,
-                ease: 'power1.inOut',
-            },
+        const mm = gsap.matchMedia()
+
+        mm.add('(min-width: 640px)', () => {
+            ScrollTrigger.create({
+                trigger: '#projectsContainer',
+                start: 'top top',
+                end: 'bottom bottom',
+                snap: {
+                    snapTo: 1 / (projectList.length - 1),
+                    duration: 0.75,
+                    ease: 'power1.inOut',
+                },
+            })
         })
     }, [projectList.length])
 
