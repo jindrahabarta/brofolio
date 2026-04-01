@@ -71,7 +71,7 @@ export const getProjects = (
             logo: '/images/Projects/Logo/TaisRugsLogo.png',
             url: 'https://www.taisrugs.cz/',
             target: '_blank',
-            badges: ['Shoptet', 'Next.js', 'TypeScript'],
+            badges: ['Shopify', 'Next.js', 'TypeScript'],
             pin: true,
             color: 'bg-pink-400',
             content: t('allProjects.TaisRugs.text'),
